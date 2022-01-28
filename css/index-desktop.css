@@ -1,0 +1,127 @@
+@media screen and (min-width: 1000px) {
+   
+    /* ====== btn style ==================================================== */
+    .btn-search {
+        /* text style */
+        font-size: 25px;
+
+        /* content box style */
+        height: 50px;
+    }
+
+    /* ======= layout ============================================ */
+    /* 각 방들의 너비를 1000px로 한정하시오. */
+    body {
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body>* {
+        /* layout */
+        width: 1000px;
+    }
+    
+    .header {
+        /* layout */
+        width: 1000px;
+    }
+    
+    .header-bottom-bg-box {
+        /* layout */
+        height: 550px;
+    }
+    
+    .header-bottom {
+        /* layout */
+        height: 60px;
+    }
+
+    /* -------- simple-search --------------------------------------- */
+    .simple-search {
+        /* layout */
+        height: 400px;
+        margin-top: 60px;
+    }
+
+    .simple-search form {
+        /* layout */
+        width: 70%;
+    }
+
+
+    .chat {
+        /* layout */
+        left: 90%;
+    }
+
+    /* -------- introduce --------------------------------------- */
+    .introduce {
+        /* layout */
+        height: 400px;
+
+        /* item layout */
+        grid-template-columns: 200px 300px;
+        column-gap: 50px;
+        
+    }
+
+    /* -------- facilities --------------------------------------- */
+    
+
+    /* ====== content block ============================================== */
+
+    /* -------- simple-search --------------------------------------- */
+    .simple-search form .select-date div {
+        /* layout */
+        width: 300px;
+        height: 150px;
+    }
+
+    .select-date div input {
+        /* layout */
+        height: 100%;
+    }
+
+    .simple-search form .select-num div {
+        /* layout */
+        height: 50px;
+    } 
+    
+    /* -------- introduce --------------------------------------- */
+    .introduce .introduce-title {
+        /* text style */
+        font-size: 23px;
+    }
+    
+    .introduce div {
+        /* layout */
+        height: 170px;
+    }
+    
+    .introduce img {
+        /* layout */
+        width: 200px;
+        height: 160px;
+    }
+
+    .introduce p {
+        /* text style */
+        font-size: 16px;
+    }
+
+    /* -------- facilities --------------------------------------- */
+
+
+/* ----------------------------------------------- */
+
+    .facilities-title,
+    .services-title,
+    .rooms-title,
+    .gallery-title,
+    .review-title,
+    .location-title {
+        font-size: 30px;
+    }
+}

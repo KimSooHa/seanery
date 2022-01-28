@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/user/signup.css" type="text/css">
+    <title>회원가입</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="d-none">sign-up</h1>
+
+        <div class="btn-header">
+            <a class="img-btn-go-back" href="/index.html">뒤로가기</a>
+            <a class="img-btn-menu" href="">메뉴</a>
+        </div>
+    </header>
+
+    <div class="header-bg-box"></div>
+
+    <section class="signup">   
+        <h1 class="signup-title">회원가입</h1>
+
+        <form action="signup">
+            
+            <fieldset>
+
+                <legend class="d-none">회원가입정보</legend>
+
+                <div class="name">
+                    <input type="text" placeholder="이름" required pattern="\D{2}" autofocus autocomplete="off">
+                    <output class="d-none">이름 2자리 이상 입력해주세요.</output>
+                </div>
+                <div class="email">
+                    <input type="text" placeholder="Email" name="email" autocomplete="off">
+                    <output class="d-none">유효한 이메일 형식이 아닙니다.</output>
+                </div>
+                <div class="id">
+                    <input type="text" placeholder="아이디">
+                    <input class="btn-duplicate-confirm" type="submit" value="중복확인">
+                    <output class="d-none">유효하지 않습니다.</output>
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="비밀번호" name="psw">
+                    <output class="d-none">안전한 비밀번호가 아닙니다.</output>
+                </div>
+                <div class="confirm-password">
+                    <input type="password" placeholder="비밀번호 확인">
+                    <output class="d-none">비밀번호가 일치하지 않습니다.</output>
+                </div>
+                <div class="phone-num">
+                    <input type="tel" placeholder="휴대폰 번호" name="phone number" required pattern="01[01689]-\d{3,4}-\d{4}" autocomplete="off">
+                    <output class="d-none">유효한 전화번호 형식이 아닙니다.</output>
+                </div>
+            </fieldset>
+
+            <input class="btn-signup" type="submit" value="회원가입">
+
+        </form>
+    </section>
+</body>
+</html>

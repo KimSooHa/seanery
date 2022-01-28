@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/room/select-opt.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Reservation</h1>
+
+        <div class="btn-header">
+            <a class="img-btn-go-back" href="/index.html">뒤로가기</a>
+            <a class="img-btn-menu" href="">메뉴</a>
+        </div>
+
+        <div class="blur"></div>
+    </header>
+
+    <article class="select-schedule">
+        <h1 class="select-schedule-title">일정 선택</h1>
+
+        <p>
+            예약을 원하시는 날짜, 인원, 객실을 선택해주세요. 
+        </p>
+
+        <form action="select-opt">
+
+            <fieldset>
+                <legend class="d-none">객실검색 정보</legend>
+
+                <div class="select-num">
+                    <label class="d-none">인원수 선택</label>
+                    <span>Room</span>
+                    <input type="number" name="room-num" id="room-num" value="1" readonly>
+
+                    <span>&sol;</span>
+
+                    <span>Adults</span>
+                    <input type="number" name="room1_adult-num" id="room1_adult-num" value="1" readonly>
+
+                    <span>&sol;</span>
+
+                    <span>Kid</span>
+                    <input type="number" name="room1_kid-num" id="room1_kid-num" value="0" readonly>
+                </div>
+
+                <div class="select-room">
+                    <label class="d-none">객실 선택</label>
+                    <input type="text" name="room-select" value="객실 선택" readonly>
+                    <!-- <ol>
+                        <li>
+                            <input type="text" name="room" id="room1" value="Room 1" readonly>
+                            <span>&minus;</span>
+                            <input type="text" name="room1-type" id="room1-type" value="Superior/village" readonly>
+                        </li>
+                    </ol> -->
+                </div>
+
+                <div class="check-in">
+                    <label class="d-none">체크인</label>
+                    <input type="date" value="체크인 날짜" required>
+                </div>
+                
+                <div class="check-out">
+                    <label class="d-none">체크아웃</label>
+                    <input type="date" value="체크아웃 날짜" required>
+                </div>
+            </fieldset>
+
+            <input class="btn-search" type="submit" value="Search">
+        </form>
+    </article>
+</body>
+</html>

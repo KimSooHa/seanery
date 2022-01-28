@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seanery-메인페이지</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Seanery</h1>
+        <div>
+            <a class="img-btn-login" href="./user/login.html">로그인 버튼</a>
+            <a class="img-btn-menu" href="">메뉴</a>
+        </div>
+    </header>
+    
+    <!-- ------------------------------------------------------------- -->
+    
+    <div class="header-bottom-bg-box">
+        <div class="header-bottom">
+            <section>
+                <h1 class="d-none">날짜와 날씨</h1>
+                <!-- <div class="date">
+                </div> -->
+                <div>
+                    <span>11/8</span>
+                    <span>MON</span>
+                    <span class="img-weather">날씨상태</span>
+                    <span class="temperature">12℃</span>
+                </div>
+            </section>
+            
+            <div class="book-a-room"><a href="./room/rooms.html">Book A Room ></a></div>
+        </div>
+
+        <div class="img-box">
+            <img src="./images/hotel-intro1.jpg" alt="호텔 메인 이미지1">
+            <img src="./images/hotel-intro2.jpg" alt="호텔 메인 이미지2">
+            <img src="./images/객실/hotel-intro3.jpg" alt="호텔 메인 이미지3">
+            <img src="./images/restaurant.jpg" alt="호텔 메인 이미지4">
+        </div>
+    </div>
+    
+    <!-- ------------------------------------------------------------- -->
+    <section class="simple-search">
+        
+        <h1 class="d-none">날짜와 인원수 선택</h1>
+
+            <form action="select">
+                <fieldset class="select-date">
+                    <legend class="d-none">날짜 선택</legend>
+
+                    <div class="check-in">
+                        <label>체크인</label>
+                        <input type="text" class="flatpickr" id="start-date" placeholder="날짜 선택" readonly>
+                    </div>
+                    
+                    <div class="check-out">
+                        <label>체크아웃</label>
+                        <input type="text" class="flatpickr" id="end-date" placeholder="날짜 선택" readonly>
+                    </div>
+                </fieldset>
+
+                <fieldset class="select-num">
+                    <legend class="d-none">인원수 선택</legend>
+
+                    <div class="adult">
+                        <label>성인</label>
+                        <span class="img-btn-minus">빼기 버튼</span>
+                        <input type="number" value="1" name="adult-num" id="adult-num" max="2" readonly disabled>
+                        <span class="img-btn-plus">더하기 버튼</span>
+                    </div>
+
+                    <div class="kid">
+                        <label>아동</label>
+                        <span class="img-btn-minus">빼기 버튼</span>
+                        <input type="number" value="0" name="kid-num" id="kid-num" max="1" readonly disabled>
+                        <span class="img-btn-plus">더하기 버튼</span>
+                    </div>
+
+                </fieldset>
+                
+                <input class="btn-search" type="submit" value="Search">
+            </form>
+    </section>
+
+
+    <!-- ------------------------------------------------------------- -->
+    <div class="chat"><a class="img-btn-chat" href="">채팅버튼</a></div>
+
+
+    <!-- ---------호텔 소개---------------------------------------------------- -->
+
+    <article class="introduce">
+
+        <h1 class="introduce-title">Welcome to Seanery Hotel!</h1>
+        <div>
+            <img src="images/pexels-asad-photo-maldives-1456291.jpg" alt="바다 배경">
+            <img src="images/hotel-bar.jpg" alt="호텔 실내바">
+        </div>
+
+        <p>
+            It is a long established fact that
+            a reader will be distracted by
+            the readable content of a page
+            when looking at its layout.
+        </p>
+    </article>
+
+    <!-- ------------------Facilities------------------------------------------- -->
+
+
+        <section class="facilities">
+            
+            <h1 class="facilities-title">Facilities</h1>
+    
+            <article class="facilities-list">
+    
+                <h1 class="facilities-list-title">Pool</h1>
+                
+                <div>
+                    <img src="images/outside-pool.jpg" alt="야외 수영장">
+                    <a href="" class="btn-more">More</a>
+                </div>
+    
+                <p>
+                    히팅펌프 시스템으로
+                    사계절 내내 따뜻한 풀에서
+                    제주도 파도 소리를 들으며
+                    로맨틱한 여행의 추억을 만드세요.
+                </p>
+    
+            </article>
+    
+            <article class="facilities-list">
+    
+                <h1 class="facilities-list-title">Spa</h1>
+    
+                <div>
+                    <img src="images/spa.jpg" alt="스파 테라피">
+                    <a href="" class="btn-more">More</a>
+                </div>
+    
+                <p>
+                    맞춤 에센스를 블렌딩하여 만든
+                    단 하나뿐인 케어로 청명한 제주
+                    자연 속 나만의 힐링을 누려보세요.
+                </p>
+    
+            </article>
+    
+            <article class="facilities-list">
+    
+                <h1 class="facilities-list-title">Bar</h1>
+    
+                <div>
+                    <img src="images/hotel-rounge.jpg" alt="칵테일바">
+                    <a href="" class="btn-more">More</a>
+                </div>
+    
+                <p>
+                    감미로운 라이브 연주와 함께
+                    와인, 칵테일, 위스키 등
+                    다양한 음료를 품격 있는
+                    분위기에서 즐겨보세요.
+                </p>
+    
+            </article>
+    
+        </section>
+
+
+    <!-- ------------Services------------------------------------------------- -->
+
+    <section class="services">
+        <h1 class="services-title">Services</h1>
+
+        <ul>
+            <li>무료 Wi-Fi</li>
+            <li>세탁실 무료 이용</li>
+            <li>룸 서비스</li>
+            <li>수영장 무료 이용</li>
+        </ul>
+
+    </section>
+
+    <!-- -------------Rooms------------------------------------------------ -->
+
+    <section class="rooms">
+
+         <h1 class="rooms-title">Rooms</h1>
+        
+        <!--<div>
+            <img src="images/객실/superior/image_3876681721528089326130.jpg" alt="main-superior" width="200">
+            <img src="images/객실/studio twin/mosaIjyiL3.jpeg" alt="main-studio-twin" width="200">
+        </div> -->
+        
+        <nav class="rooms-list">
+            <h1 class="d-none">객실목록</h1>
+            <ul>
+                <li>
+                    <a href="/room/detail/superior.html">Superior</a>    
+                </li>
+                <li>
+                    <a href="">Standard</a>
+                </li>
+                <li>
+                    <a href="">Studio Twin</a>
+                </li>
+                <li>
+                    <a href="">Royal Suite</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <a class="btn-more" href="">More</a>
+        </div>
+
+    </section>
+
+    <!-- -------------Gallery------------------------------------------------ -->
+
+    <section class="gallery">
+        
+        <h1 class="gallery-title">Gallery</h1>
+
+        <ul> 
+            <li>
+                <img src="images/outside-bar.jpg" alt="야외 칵테일바" width="100">
+            </li>
+            <li>
+                <img src="images/spa-pool.jpg" alt="스파 테라피" width="100">
+            </li>
+            <li>
+                <img src="images/outside-pool.jpg" alt="야외 수영장" width="100">
+            </li>
+            <li>
+                <img src="images/hotel-loby.jpg" alt="호텔 로비" width="100">
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- -------------Review------------------------------------------------ -->
+
+    <section class="review">
+
+         <h1 class="review-title">Review</h1>
+        <div class="review-full-list">
+            <article class="review-list">
+                <h1 class="d-none">리뷰1</h1>
+                <div><svg id="구성_요소_111_1" data-name="구성 요소 111 – 1" xmlns="http://www.w3.org/2000/svg" width="101.5" height="16.25" viewBox="0 0 101.5 16.25">
+                    <g id="Icon_ionic-ios-star" data-name="Icon ionic-ios-star">
+                      <path id="Icon_ionic-ios-star-2" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                    <g id="Icon_ionic-ios-star-3" data-name="Icon ionic-ios-star" transform="translate(21)">
+                      <path id="Icon_ionic-ios-star-4" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                    <g id="Icon_ionic-ios-star-5" data-name="Icon ionic-ios-star" transform="translate(42)">
+                      <path id="Icon_ionic-ios-star-6" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                    <g id="Icon_ionic-ios-star-7" data-name="Icon ionic-ios-star" transform="translate(63)">
+                      <path id="Icon_ionic-ios-star-8" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                    <g id="Icon_ionic-ios-star-9" data-name="Icon ionic-ios-star" transform="translate(84)">
+                      <path id="Icon_ionic-ios-star-10" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                  </svg>
+                </div>
+    
+                <p>
+                    &quot;친구와 제주에서 보내는 완벽한<br>
+                    여행이었어요!&quot;
+                </p>
+    
+                <footer>
+                    <span>2021.11.20</span>
+                    <span>seanery77</span>
+                </footer>
+            </article>    
+    
+            <article class="review-list">
+                <h1 class="d-none">리뷰2</h1>
+                <div><svg id="구성_요소_111_1" data-name="구성 요소 111 – 1" xmlns="http://www.w3.org/2000/svg" width="101.5" height="16.25" viewBox="0 0 101.5 16.25">
+                    <g id="Icon_ionic-ios-star" data-name="Icon ionic-ios-star">
+                      <path id="Icon_ionic-ios-star-2" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                    <g id="Icon_ionic-ios-star-3" data-name="Icon ionic-ios-star" transform="translate(21)">
+                      <path id="Icon_ionic-ios-star-4" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                    <g id="Icon_ionic-ios-star-5" data-name="Icon ionic-ios-star" transform="translate(42)">
+                      <path id="Icon_ionic-ios-star-6" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                    <g id="Icon_ionic-ios-star-7" data-name="Icon ionic-ios-star" transform="translate(63)">
+                      <path id="Icon_ionic-ios-star-8" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                    <g id="Icon_ionic-ios-star-9" data-name="Icon ionic-ios-star" transform="translate(84)">
+                      <path id="Icon_ionic-ios-star-10" data-name="Icon ionic-ios-star" d="M19.086,9H13.34L11.594,3.789a.633.633,0,0,0-1.188,0L8.66,9H2.875a.627.627,0,0,0-.625.625.459.459,0,0,0,.012.105.6.6,0,0,0,.262.441L7.246,13.5,5.434,18.77a.627.627,0,0,0,.215.7A.6.6,0,0,0,6,19.625a.766.766,0,0,0,.391-.141L11,16.2l4.609,3.285a.732.732,0,0,0,.391.141.561.561,0,0,0,.348-.152.619.619,0,0,0,.215-.7L14.75,13.5l4.684-3.359.113-.1A.6.6,0,0,0,19.086,9Z" transform="translate(-2.25 -3.375)" fill="#707070"/>
+                    </g>
+                  </svg>
+                </div>
+    
+                <p>
+                    &quot;친구와 제주에서 보내는 완벽한<br>
+                    여행이었어요!&quot;
+                </p>
+    
+                <footer>
+                    <span>2021.11.20</span>
+                    <span>seanery77</span>
+                </footer>
+            </article>    
+        </div>
+        
+        <div class="review-btn-more">
+            <a class="btn-more" href="">More</a>
+        </div>
+
+    </section>
+
+    <!-- -------------Location------------------------------------------------ -->
+
+    <section class="location">
+         
+        <h1 class="location-title">Location</h1>
+
+        <section class="map">
+            
+            <h1 class="d-none">위치</h1>
+
+            <div>
+                <img src="images/화면 캡처 2021-11-04 003836.png" alt="지도 이미지">
+                <span class="img-btn-map-full-screen">전체보기</span>
+            </div>
+            <div class="btn-map-zoom">
+                <span class="img-btn-zoom-out">축소</span>
+                <span class="img-btn-zoom-in">확대</span>
+            </div>
+
+            <div class="map-address">제주특별자치도 서귀포시 표선면 민속해안로 537</div>
+
+        </section>
+
+        <section class="transport">
+
+            <h1 class="d-none">대중교통</h1>   <!-- 아웃라인 잡기 -->
+
+            <div class="depart-destination">
+                <span>제주국제공항</span>
+                <span>다음 경로</span>
+                <span>Seanery Hotel</span>
+            </div>
+
+            <div class="transport-route">
+                <span>121(제주민속촌)</span>
+                <span>다음 경로</span>
+                <span>6분</span>
+                
+                <span>1시간 27분</span>
+            </div>
+
+
+            <div class="transport-btn-more">
+                <a class="btn-detail" href="">Detail</a>
+            </div>
+
+        </section>
+
+    </section>
+
+    <footer class="footer">
+         <h1 class="footer-title">Information</h1>
+
+         <div class="hotel-logo"><img src="images/Seanery_hotel-removebg-preview.png" alt="seanery-hotel"></div>
+
+        <div class="address">
+            <span>주소</span>
+            <span>제주특별자치도 서귀포시 표선면 민속해안로 537</span>
+        </div>
+
+        <div class="email">
+            <span>이메일</span>
+            <span>info@seaneryhotel.co.kr</span>
+        </div>
+    </footer>
+
+
+    <script src="/script/index.js"></script>
+</body>
+</html>

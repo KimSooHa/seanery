@@ -1,0 +1,111 @@
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/user/style.css);
+@import url(/css/buttons.css);
+
+/* ====== btn style ================================================== */
+/* 기존 버튼 스타일에서 덮어쓰기 */
+.img-btn-menu {
+
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3C/svg%3E%0A");
+    padding: 0;
+}
+
+/* ====== outer block ================================================== */
+.user-reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .user-reservation-header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+
+    .user-reservation form {
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 58px;
+    }
+
+    .user-reservation form .user-reserv-info .phone-num {
+        margin-top: 30px;
+    }
+
+    .user-reservation form textarea {
+        margin-top: 27px;
+    }
+
+    .user-reservation form .info-collect-agree {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-top: 12px;
+    }
+
+    .user-reservation form .info-collect-agree div {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: space-between;
+    }
+
+    .user-reservation form .btn-submit {
+        margin-top: 34px;
+    }
+
+
+
+
+/* ======= content block ========================================= */
+.user-reservation {
+    padding-top: 98px;
+}
+
+
+.user-reservation .user-reserv-info div input {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 15px;
+
+    /* content box style */
+    width: 340px;
+    height: 33px;
+    border: none;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.user-reservation form textarea {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 600;
+    font-size: 11px;
+    color: #6B6B6B;
+
+    /* content box style */
+    width: 300px;
+    height: 66px;
+    background-color: white;
+    border: 1px solid #707070;
+}
+
+.user-reservation .info-collect-agree label {
+     /* text style */
+     font-family: 'Minion Pro', "Montserrat";
+     font-weight: normal;
+     font-size: 13px;
+     color: #6B6B6B;
+}
+
+.user-reservation .info-collect-agree input {
+    width: 18px;
+    height: 18px;
+}

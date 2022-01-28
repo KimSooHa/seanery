@@ -1,0 +1,190 @@
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/style.css);
+@import url(/css/buttons.css);
+
+body {
+    background-color: #F1F0F2;
+}
+
+
+/* ====== btn style ==================================================== */
+.img-btn-go-back {
+    /* text style */
+    text-indent: -999px;
+
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back-2' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 14px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.img-btn-menu {
+    /* text  style */
+    text-indent: -999px;
+
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 27px;
+    height: 15.75px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.signup form fieldset div input.btn-duplicate-confirm {
+    /* text style */
+    font-family: '나눔스퀘어라운드', "Minion Pro";
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFFFF;
+
+    /* content box style */
+    width: 67px;
+    height: 26px;
+    border: 1px solid #B6BFC5;
+    background-color: #B6BFC5;
+    border-radius: 7px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.signup form fieldset div input.btn-duplicate-confirm:hover {
+    /* text style */
+    color: #436A81;
+    
+    /* content box style */
+    border: 1px solid #1E3146;
+    background-color: transparent;
+}
+
+.btn-signup {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+
+    /* content box style */
+    background-color: #5782B9;
+    border: none;
+    width: 90%;
+    height: 52px;
+    border-radius: 82px;
+    margin-top: 46px;
+}
+
+/* ====== outer block ================================================== */
+/* -------- header --------------------------------------- */
+.header {
+    width: 100%;
+    height: 73px;
+    background-color: transparent;
+    
+    /* layout */
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+
+    .header .btn-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 31px;
+        padding-right: 21px;
+    }
+
+.header-bg-box {
+    width: 100%;
+    height: 307px;
+    background-color: #5782B9;
+    z-index: -1;
+    border-radius: 0 0 0 75px;
+}
+
+/* ----- signup -------------------------------------- */
+.signup {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.signup form fieldset {
+    width: 85%;
+    height: 474px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px;
+    box-sizing: border-box;
+    /* justify-content: space-evenly; */
+}
+
+/* ======= content block ========================================= */
+.signup .signup-title {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 600;
+    font-size: 15px;
+    color: #FFFFFF;
+
+    /* content box style */
+    display: flex;
+    justify-content: center;
+}
+
+.signup form fieldset div {
+    width: 100%;
+    margin-top: 42px;
+}
+
+.signup form fieldset .name {
+    margin-top: 32px;
+}
+
+.signup form fieldset .id {
+    display: flex;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.signup form fieldset div input {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 16px;
+    
+    /* content box style */
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.signup form fieldset .id input {
+    border: none;
+}
+

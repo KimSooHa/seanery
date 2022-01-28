@@ -1,0 +1,148 @@
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/user/style.css);
+@import url(/css/buttons.css);
+
+
+/* ====== btn style ==================================================== */
+
+
+.img-btn-menu {
+
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3C/svg%3E%0A");
+    padding: 0;
+}
+
+/* ====== outer block ================================================== */
+
+/* -------- login --------------------------------------- */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .login .login-header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+
+    .login form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-around; */
+        margin-top: 58px;
+    }
+
+    .login form fieldset {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 120px; */
+    }
+
+    .login form fieldset .password {
+        margin-top: 30px;
+    }
+
+    .login form .btn-submit {
+        margin-top: 40px;
+    }
+
+    .login .other-items {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+
+    .login .login-through-sns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        width: 100%;
+    }
+
+        .login .login-through-sns div {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            margin-top: 33px;
+        }
+
+/* ======= content block ========================================= */
+
+/* -------- login ------------------------------------------- */
+.login {
+    padding-top: 98px;
+}
+
+.login .login-header h1 {
+    /* text style */
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 15px;
+    color: #FFFFFF;
+
+
+    /* content box style */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 39px;
+    border: none;
+    border-radius: 30px;
+    background-color: #B19D74;
+}
+
+.login fieldset {
+    border: none;   
+}
+
+    .login fieldset div input {
+        /* text style */
+        font-family: 'Montserrat', "Minion Pro";
+        font-weight: 500;
+        font-size: 15px;
+
+        /* content box style */
+        width: 340px;
+        height: 33px;
+        border: none;
+        border-bottom: 1px solid #DDDDDD;
+    }
+
+    .login fieldset .id input {
+        /* border-bottom: 2px solid #352641; */
+    }
+
+    .login .other-items div a {
+        /* text style */
+        font-family: 'Montserrat', "Minion Pro";
+        font-weight: 600;
+        font-size: 11px;
+        color: #436A81;
+
+        /* content box style */
+        padding: 0 27px;
+    }
+
+    .login .other-items div .search-password {
+        border-left: 1px solid #707070;
+        border-right: 1px solid #707070;
+    }
+
+    .login .login-through-sns .login-through-sns-title {
+        /* text style */
+        font-family: 'Montserrat', "Minion Pro";
+        font-weight: 600;
+        font-size: 11px;
+        color: #436A81;
+    }

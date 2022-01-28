@@ -1,0 +1,226 @@
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/style.css);
+@import url(/css/buttons.css);
+
+/* ====== btn style ==================================================== */
+
+/* ------- header -------------------------------------- */
+.img-btn-go-back {
+    /* text style */
+    text-indent: -999px;
+
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23eee'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 14px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+.img-btn-menu {
+    /* text  style */
+    text-indent: -999px;
+
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 27px;
+    height: 15.75px;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 21px;
+}
+
+/* ------- rooms -------------------------------------- */
+.btn-select-schedule  {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    /* content box style */
+    width: 262px;
+    height: 41px;
+    background-color: #B19D74;
+    border-radius: 10px;
+
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====== outer block ================================================== */
+
+.header {
+    /* content box style */
+    box-sizing: border-box;
+    height: 181px;
+    background: url("/images/객실/studio-twin/mosaIjyiL3.jpeg")
+    no-repeat 0 -20px / 725px 340px;
+    padding-top: 73px;
+    border-radius: 0 0 60px 0;
+
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .header h1{
+        z-index: 1;
+        margin-top: 30px;
+    }
+
+    .header .btn-header {
+        /* content box style */
+        background-color: rgba(67, 106, 129, 0.19);
+        width: 100%;
+        height: 73px;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+
+        /* layout */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .blur {
+        /* content box style */
+        height: 181px;
+        background-color: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(1px);
+        border-radius: 0 0 60px 0;
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+
+/* ------- rooms -------------------------------------- */
+
+.rooms {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+}
+
+.rooms .room-list {
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+    .rooms .room-list .room-list-introduct {
+        /* layout */
+        position: absolute;
+        display: none;
+        align-items: center;
+        
+        /* effect */
+        transition: 0.6s;
+    }
+
+    .rooms .room-list:hover .room-list-introduct {
+        display: flex;
+    }
+
+    
+
+/* ======= content block ========================================= */
+
+/* ------- header -------------------------------------- */
+.header-title {
+    /* text style */
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+}
+
+/* ------- rooms -------------------------------------- */
+.rooms .rooms-introduct {
+    /* text style */
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: bold;
+    color: #707070;
+
+    /* content box style */
+    margin-top: 27px;
+
+}
+
+.rooms .select-schedule {
+    margin-top: 35px;
+}
+
+
+/* ------- room-list -------------------------------------- */
+.rooms .room-list {
+    width: 255px;
+    height: 154px;
+    margin-top: 111px;
+}
+
+.rooms .room-list:nth-child(4) {
+    margin-top: 127px;
+}
+
+.room-list img {
+    width: 255px;
+    height: 155px;
+}
+
+.rooms .room-list .room-list-title {
+    font-family: 'Times New Roman';
+    font-size: 19px;
+    font-weight: normal;
+    color: #FFFFFF;
+
+    position: absolute;
+    left: 25px;
+    bottom: 24px;
+    margin: 0;
+}
+
+.room-list-img {
+    width: 100%;
+    height: 100%;
+}
+
+.rooms .room-list .room-list-introduct {
+    /* content box style */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.57);
+    
+}
+
+    .rooms .room-list .room-list-introduct a {
+        font-family: 'Montserrat';
+        font-size: 10px;
+        font-weight: 600;
+        color: #FFFFFF;
+        text-decoration: none;
+        line-height: 2.5;
+
+        position: absolute;
+        left: 25px;
+    }
+

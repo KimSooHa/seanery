@@ -1,0 +1,70 @@
+@media screen and (min-width: 450px) {
+    
+    /* -------- facilities --------------------------------------- */
+    .facilities {
+        height: 800px;
+    }
+
+    /* -------- rooms --------------------------------------- */
+    .rooms {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 540px) {
+
+    .header-bottom-bg-box {
+        /* height: 400px; */
+    }
+
+    /* -------- rooms --------------------------------------- */
+    .rooms {
+        height: 500px;
+    }
+
+    .facilities {
+        height: 1000px;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    
+    .header-bottom-bg-box {
+        height: 450px;
+    }
+
+     /* -------- rooms --------------------------------------- */
+     .rooms {
+        height: 750px;
+    }
+
+
+    /* -------- facilities --------------------------------------- */
+    .facilities {
+        height: 1500px;
+    }
+
+    .facilities-list {
+        grid-template-rows: 1fr 3fr;
+        grid-template-rows: 50px 120px;
+
+    }
+
+    
+    /* ====== content block ============================================== */
+    .facilities-list {
+        /* content box style */
+        width: 600px;
+        height: 250px;
+        padding: 40px;
+    }
+
+    .facilities-list-title {
+        font-size: 30px;
+    }
+
+    .facilities-list p {
+        font-size: 13px;
+    }
+}

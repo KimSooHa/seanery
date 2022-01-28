@@ -1,0 +1,46 @@
+.svg-white-check {
+    /* layout */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-checkmark-circle-outline' data-name='Icon ionic-ios-checkmark-circle-outline' xmlns='http://www.w3.org/2000/svg' width='23.133' height='23.133' viewBox='0 0 23.133 23.133'%3E%3Cpath id='패스_254' data-name='패스 254' d='M22.346,13.279l-.979-1.007a.21.21,0,0,0-.156-.067h0a.2.2,0,0,0-.156.067l-6.784,6.834L11.8,16.638a.215.215,0,0,0-.311,0l-.99.99a.222.222,0,0,0,0,.317l3.114,3.114a.985.985,0,0,0,.651.317,1.032,1.032,0,0,0,.645-.306h.006L22.351,13.6A.238.238,0,0,0,22.346,13.279Z' transform='translate(-4.851 -5.222)' fill='%23707070'/%3E%3Cpath id='패스_255' data-name='패스 255' d='M14.942,4.932A10.006,10.006,0,1,1,7.863,7.863a9.943,9.943,0,0,1,7.079-2.931m0-1.557A11.567,11.567,0,1,0,26.508,14.942,11.565,11.565,0,0,0,14.942,3.375Z' transform='translate(-3.375 -3.375)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}
+
+.svg-black-check {
+    /* layout */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-checkmark-circle' data-name='Icon ionic-ios-checkmark-circle' xmlns='http://www.w3.org/2000/svg' width='23.13' height='23.13' viewBox='0 0 23.13 23.13'%3E%3Cpath id='Icon_ionic-ios-checkmark-circle-2' data-name='Icon ionic-ios-checkmark-circle' d='M14.94,3.375A11.565,11.565,0,1,0,26.5,14.94,11.563,11.563,0,0,0,14.94,3.375Zm5.922,8.368L13.428,19.21h-.006a1,1,0,0,1-.645.306.973.973,0,0,1-.651-.317L9.013,16.085a.222.222,0,0,1,0-.317l.99-.99a.215.215,0,0,1,.311,0l2.469,2.469,6.783-6.833a.22.22,0,0,1,.156-.067h0a.2.2,0,0,1,.156.067l.973,1.006A.219.219,0,0,1,20.862,11.743Z' transform='translate(-3.375 -3.375)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}
+
+.svg-room {
+    /* layout */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-bed' data-name='Icon awesome-bed' xmlns='http://www.w3.org/2000/svg' width='28.132' height='16.879' viewBox='0 0 28.132 16.879'%3E%3Cpath id='Icon_awesome-bed-2' data-name='Icon awesome-bed' d='M7.736,12.939A3.516,3.516,0,1,0,4.22,9.423,3.521,3.521,0,0,0,7.736,12.939ZM23.209,7.313H13.363a.7.7,0,0,0-.7.7v6.33H2.813V5.2a.7.7,0,0,0-.7-.7H.7a.7.7,0,0,0-.7.7V20.676a.7.7,0,0,0,.7.7H2.11a.7.7,0,0,0,.7-.7v-2.11H25.318v2.11a.7.7,0,0,0,.7.7h1.407a.7.7,0,0,0,.7-.7V12.236A4.923,4.923,0,0,0,23.209,7.313Z' transform='translate(0 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}
+
+.svg-member {
+    /* layout */
+    background-image: url("data:image/svg+xml,%3Csvg id='bg_white-gray' data-name='bg/white-gray' xmlns='http://www.w3.org/2000/svg' width='23.783' height='27.058' viewBox='0 0 23.783 27.058'%3E%3Cpath id='Icon_awesome-user' data-name='Icon awesome-user' d='M11.892,13.529A6.764,6.764,0,1,0,5.1,6.764,6.779,6.779,0,0,0,11.892,13.529Zm4.757,1.691h-.887a9.28,9.28,0,0,1-7.74,0H7.135A7.121,7.121,0,0,0,0,22.323v2.2a2.543,2.543,0,0,0,2.548,2.537H21.235a2.543,2.543,0,0,0,2.548-2.537v-2.2A7.121,7.121,0,0,0,16.648,15.22Z' transform='translate(0)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}
+
+.svg-ring {
+    /* layout */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-room-service' data-name='Icon material-room-service' xmlns='http://www.w3.org/2000/svg' width='28.385' height='19.87' viewBox='0 0 28.385 19.87'%3E%3Cpath id='Icon_material-room-service-2' data-name='Icon material-room-service' d='M.833,19.115H29.219v2.839H.833Zm16.8-13.071a2.928,2.928,0,0,0,.227-1.121,2.839,2.839,0,0,0-5.677,0,2.928,2.928,0,0,0,.227,1.121A12.79,12.79,0,0,0,2.253,17.7H27.8A12.79,12.79,0,0,0,17.637,6.043Z' transform='translate(-0.833 -2.083)' fill='%236b6b6b'/%3E%3C/svg%3E%0A");
+}
+
+.svg-review {
+    /* layout */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-rate-review' data-name='Icon material-rate-review' xmlns='http://www.w3.org/2000/svg' width='23.585' height='23.585' viewBox='0 0 23.585 23.585'%3E%3Cpath id='Icon_material-rate-review-2' data-name='Icon material-rate-review' d='M24.226,3H5.358A2.355,2.355,0,0,0,3.012,5.358L3,26.585l4.717-4.717H24.226a2.365,2.365,0,0,0,2.358-2.358V5.358A2.365,2.365,0,0,0,24.226,3ZM7.717,17.151V14.238L15.83,6.125a.584.584,0,0,1,.837,0l2.087,2.087a.584.584,0,0,1,0,.837l-8.125,8.1Zm14.151,0H13.024l2.358-2.358h6.486Z' transform='translate(-3 -3)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}
+
+.svg-notice {
+    /* layout */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-announcement' data-name='Icon material-announcement' xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath id='Icon_material-announcement-2' data-name='Icon material-announcement' d='M23.7,3H5.3A2.3,2.3,0,0,0,3.011,5.3L3,26l4.6-4.6H23.7A2.307,2.307,0,0,0,26,19.1V5.3A2.307,2.307,0,0,0,23.7,3ZM15.65,13.35h-2.3V6.45h2.3Zm0,4.6h-2.3v-2.3h2.3Z' transform='translate(-3 -3)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}
+
+.svg-coupon {
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_metro-discout' data-name='Icon metro-discout' xmlns='http://www.w3.org/2000/svg' width='28.415' height='14.549' viewBox='0 0 28.415 14.549'%3E%3Cpath id='Icon_metro-discout-2' data-name='Icon metro-discout' d='M30.926,16.946a4.477,4.477,0,0,1-2.785,4.238v2.127a.909.909,0,0,1-.908.909H6.2a.909.909,0,0,1-.909-.909V21.184a4.476,4.476,0,0,1-2.785-4.238A4.477,4.477,0,0,1,5.3,12.708V10.58a.908.908,0,0,1,.909-.909H27.234a.909.909,0,0,1,.908.909v2.127a4.477,4.477,0,0,1,2.784,4.238Zm-17.447,0H9.842v.909h3.637v-.909Zm4.318-3.1a1.524,1.524,0,0,0-2.107,0,1.878,1.878,0,0,0-.385,1.3,1.887,1.887,0,0,0,.385,1.3,1.022,1.022,0,0,0,.894.422,1.751,1.751,0,0,0,1.214-.422,1.892,1.892,0,0,0,.384-1.3,1.885,1.885,0,0,0-.385-1.3Zm3.093-.565L16.226,20.6h.924l4.642-7.324Zm1.453,4.2a1.528,1.528,0,0,0-2.108,0,1.884,1.884,0,0,0-.383,1.3,1.89,1.89,0,0,0,.383,1.3,1.368,1.368,0,0,0,1.066.423,1.339,1.339,0,0,0,1.043-.423,1.89,1.89,0,0,0,.384-1.3A1.888,1.888,0,0,0,22.344,17.482ZM21.279,19.8a.352.352,0,0,1-.308-.165,1.678,1.678,0,0,1-.147-.855,1.7,1.7,0,0,1,.147-.858.348.348,0,0,1,.308-.162.359.359,0,0,1,.312.162,1.747,1.747,0,0,1,.142.858,1.7,1.7,0,0,1-.147.858.346.346,0,0,1-.308.162Zm-4.546-3.636A.351.351,0,0,1,16.426,16a1.678,1.678,0,0,1-.147-.855,1.7,1.7,0,0,1,.147-.858.347.347,0,0,1,.308-.161.359.359,0,0,1,.312.161,1.747,1.747,0,0,1,.142.858,1.7,1.7,0,0,1-.147.858A.349.349,0,0,1,16.733,16.165Z' transform='translate(-2.511 -9.671)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}
+
+.svg-alarm {
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-bell' data-name='Icon awesome-bell' xmlns='http://www.w3.org/2000/svg' width='23.364' height='26.702' viewBox='0 0 23.364 26.702'%3E%3Cpath id='Icon_awesome-bell-2' data-name='Icon awesome-bell' d='M11.682,26.7a3.337,3.337,0,0,0,3.336-3.338H8.346A3.337,3.337,0,0,0,11.682,26.7Zm11.233-7.808c-1.008-1.083-2.893-2.711-2.893-8.047A8.236,8.236,0,0,0,13.35,2.756V1.669a1.668,1.668,0,1,0-3.336,0V2.756a8.236,8.236,0,0,0-6.672,8.092c0,5.335-1.885,6.964-2.893,8.047A1.629,1.629,0,0,0,0,20.026,1.67,1.67,0,0,0,1.674,21.7H21.69a1.67,1.67,0,0,0,1.674-1.669A1.629,1.629,0,0,0,22.915,18.894Z' transform='translate(0 0)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}
+
+.svg-question {
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-question' data-name='Icon awesome-question' xmlns='http://www.w3.org/2000/svg' width='17.411' height='24.422' viewBox='0 0 17.411 24.422'%3E%3Cpath id='Icon_awesome-question-2' data-name='Icon awesome-question' d='M10.529,0A9.683,9.683,0,0,0,2.013,4.342,1.119,1.119,0,0,0,2.27,5.91L4.4,7.47a1.218,1.218,0,0,0,1.645-.2c1.239-1.5,2.159-2.359,4.095-2.359,1.522,0,3.4.944,3.4,2.367,0,1.076-.921,1.628-2.424,2.441-1.753.947-4.072,2.126-4.072,5.075v.467A1.167,1.167,0,0,0,8.24,16.409h3.586a1.167,1.167,0,0,0,1.187-1.145v-.275c0-2.044,6.2-2.13,6.2-7.662C19.211,3.16,14.728,0,10.529,0Zm-.5,17.814a3.306,3.306,0,1,0,0,6.608,3.306,3.306,0,1,0,0-6.608Z' transform='translate(-1.8)' fill='%23707070'/%3E%3C/svg%3E%0A");
+}

@@ -1,0 +1,24 @@
+/* ======reset style====================================== */
+
+body,
+h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    /* layout */
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+fieldset {
+    border: none;
+}

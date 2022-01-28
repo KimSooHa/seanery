@@ -1,0 +1,240 @@
+@import url(/css/reset.css);
+@import url(/css/style.css);
+@import url(/css/utils.css);
+@import url(/css/buttons.css);
+@import url(/css/svg.css);
+
+/* ====== btn style ==================================================== */
+.img-btn-go-back {
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23eee'/%3E%3C/svg%3E%0A");
+    margin-left: 30px;
+}
+
+.img-btn-menu {
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    margin-right: 21px;
+}
+
+.btn-search {
+     /* text style */
+     font-family: '나눔스퀘어라운드';
+     font-size: 15px;
+     font-weight: bold;
+     color: #FFFFFF;
+
+     /* content box style */
+     width: 170px;
+     height: 41px;
+     background-color: #B19D74;
+     border: none;
+     border-radius: 10px;
+     margin-top: 110px;
+     transition: 0.4s;
+}
+
+.btn-search:hover {
+    background-color: #977E4B;
+}
+
+/* ====== outer block ================================================== */
+.header {
+    /* content box style */
+    box-sizing: border-box;
+    height: 181px;
+    background: url("/images/객실/studio-twin/mosaIjyiL3.jpeg")
+    no-repeat 0 -20px / 725px 340px;
+    padding-top: 73px;
+    border-radius: 0 0 60px 0;
+
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .header h1 {
+        z-index: 1;
+        margin-top: 30px;
+    }
+
+    .header .btn-header {
+        /* content box style */
+        background-color: rgba(67, 106, 129, 0.19);
+        width: 100%;
+        height: 73px;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+
+        /* layout */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .blur {
+        /* content box style */
+        height: 181px;
+        background-color: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(1px);
+        border-radius: 0 0 60px 0;
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+
+/* ------- select-schedule -------------------------------------- */
+.select-schedule {
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+    .select-schedule form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+
+    .select-schedule .select-schedule-title {
+        /* layout */
+        display: flex;
+        align-items: flex-end;
+        padding: 0 0 18px 21px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* ------- select-num -------------------------------------- */
+
+    .select-schedule form fieldset .select-num {
+        width: 210px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px 2px 10px;
+        border-bottom: 1px solid #707070;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='17.591' viewBox='0 0 8.596 17.591'%3E%3Cg id='Icon_feather-chevron-up' data-name='Icon feather-chevron-up' transform='translate(0.707 0.5)'%3E%3Cpath id='Icon_feather-chevron-up-2' data-name='Icon feather-chevron-up' d='M16.182,17.091,12.591,13.5,9,17.091' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 13.5)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right 10px top;
+        margin-top: 45px;
+    }
+
+    /* ------- select-num -------------------------------------- */
+    .select-schedule form fieldset .select-room {
+        width: 210px;
+        padding: 0 10px 3px 10px;
+        border-bottom: 1px solid #707070;
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-bed' data-name='Icon awesome-bed' xmlns='http://www.w3.org/2000/svg' width='29.8' height='17.88' viewBox='0 0 29.8 17.88'%3E%3Cpath id='Icon_awesome-bed-2' data-name='Icon awesome-bed' d='M8.195,13.44A3.725,3.725,0,1,0,4.47,9.715,3.729,3.729,0,0,0,8.195,13.44Zm16.39-5.96H14.155a.745.745,0,0,0-.745.745v6.7H2.98V5.245A.745.745,0,0,0,2.235,4.5H.745A.745.745,0,0,0,0,5.245v16.39a.745.745,0,0,0,.745.745h1.49a.745.745,0,0,0,.745-.745V19.4H26.82v2.235a.745.745,0,0,0,.745.745h1.49a.745.745,0,0,0,.745-.745v-8.94A5.215,5.215,0,0,0,24.585,7.48Z' transform='translate(0 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        margin-top: 25px;
+    }
+
+    .select-schedule form fieldset .check-in {
+        width: 210px;
+        margin-top: 28px;
+        padding: 0 10px 3px 10px;
+        border-bottom: 1px solid #707070;
+    }
+    
+    .select-schedule form fieldset .check-out {
+        width: 210px;
+        margin-top: 28px;
+        padding: 0 10px 3px 10px;
+        border-bottom: 1px solid #707070;
+    }
+
+/* ======= content block =============================================== */
+
+/* ------- header -------------------------------------- */
+.header h1 {
+    /* text style */
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+/* ------- select room -------------------------------------- */
+
+.select-schedule .select-schedule-title {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 17px;
+    font-weight: bold;
+    color: #436A81;
+
+    /* content box style */
+    background-color: rgba(177, 157, 116, 0.23);
+    border-radius: 0 0 60px 0;
+    width: 100%;
+    height: 237px;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.select-schedule p {
+    /* text style */
+    font-family: 'Minion Pro';
+    font-size: 13px;
+    font-weight: normal;
+    color: #707070;
+
+    /* content box sytle */
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.select-schedule form fieldset {
+    border: none;
+}
+
+.select-schedule form fieldset .select-num span, input, .select-room input {
+    /* text style */
+    font-family: 'Minion Pro';
+    font-size: 13px;
+    font-weight: normal;
+    color: #707070;
+    cursor: pointer;
+}
+
+.select-schedule form fieldset .select-num span:nth-child(5), span:nth-child(8) {
+    margin-left: 2px;
+    box-sizing: border-box;
+}
+
+
+.select-schedule form fieldset .select-num input {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 13px;
+    padding: 0;
+    padding-left: 5px;
+}
+
+.select-schedule form fieldset .select-room input {
+    width: 75%;
+    padding: 0;
+    margin-left: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right center;
+    border: none;
+}
+
+.select-schedule form fieldset .check-in input, .check-out input {
+    width: 100%;
+    border: none;
+}
+

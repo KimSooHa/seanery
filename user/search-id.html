@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/user/search-id.css" type="text/css">
+    <title>아이디 찾기</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="d-none">search-id</h1>
+
+        <div>
+            <a class="img-btn-go-back" href="./login.html">뒤로가기 버튼</a>
+            <a class="img-btn-menu" href="">메뉴</a>
+        </div>
+    </header>
+
+
+    <article class="search-id">
+
+        <header class="search-id-header">
+            <h1>아이디 찾기</h1>
+            <div><a class="btn-search-password" href="./search-password.html">비밀번호 찾기</a></div>
+        </header>
+
+        <p>가입시 사용하신 이름과 Email을 입력해주세요.</p>
+
+        <form action="search-id">
+            <fieldset>
+                <legend class="d-none">회원정보</legend>
+
+                <div class="name">
+                    <input type="text" placeholder="이름" required pattern="\D{2,3,4}" autofocus autocomplete="off">
+                    <output class="d-none">이름 2자리 이상 입력해주세요.</output>
+                </div>
+                
+                <div class="email">
+                    <input type="text" placeholder="Email" required name="email" autocomplete="off">
+                    <output class="d-none">유효한 이메일 형식이 아닙니다.</output>
+                    <input class="btn-send-num" type="submit" value="인증번호 발송">
+                </div>
+
+                <div class="confirm-num">
+                    <input type="text" placeholder="인증번호" required pattern="\D{6}" autofocus autocomplete="off">
+                    <span>3:00</span>
+                    <label>email로 발송된 인증번호를 입력해주세요.</label>
+                </div>
+            </fieldset>
+
+            <div class="btn-box">
+                <input class="btn-reset" type="reset" value="취소">
+                <input class="btn-submit" type="submit" value="확인">
+            </div>
+        </form>
+    </article>
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/style.css);
+@import url(/css/buttons.css);
+@import url(/css/svg.css);
+
+/* ====== btn style ==================================================== */
+.btn-reject {
+    /* text */
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000;
+    
+    /* layout */
+    border-radius: 20px;
+    border: 2px solid #5782B9;
+    padding: 10px 20px;
+}
+
+.btn-accept {
+    /* text */
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000;
+    
+    /* layout */
+    border-radius: 20px;
+    border: 2px solid #5782B9;
+    padding: 10px 33px;
+    background-color: #5782B9;
+}
+
+
+/* ====== outer block ================================================== */
+body {
+    /* layout */
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    /* layout */
+    width: 85%;
+    height: 270px;
+    background-color: #EEEEEE;
+    border-radius: 38px;
+    padding: 0 21px;
+    box-sizing: border-box;
+    
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ======= content block =============================================== */
+
+section h1 {
+    /* text */
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000;
+
+    /* layout */
+    margin-top: 20px;
+}

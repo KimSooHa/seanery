@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/user/search-reserv.css" type="text/css">
+    <title>비회원 예약 조회</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="d-none">search-reservation</h1>
+
+        <div>
+            <a class="img-btn-go-back" href="./login.html">뒤로가기 버튼</a>
+            <a class="img-btn-menu" href="">메뉴</a>
+        </div>
+    </header>
+
+
+    <article class="search-reserv">
+
+        <header class="search-reserv-header">
+            <h1>비회원 예약조회</h1>
+            <div><a class="btn-login" href="./login.html">Login</a></div>
+        </header>
+
+        <p>객실 예약하실 때 사용하신<br>
+             성함과 휴대폰 번호를 입력해주세요.</p>
+
+        <form action="reserv-search">
+            <fieldset>
+                <legend class="d-none">회원조회정보</legend>
+
+                <div class="name">
+                    <input type="text" placeholder="성함" required pattern="\D{2}" autofocus autocomplete="off">
+                    <output class="d-none">이름 2자리 이상 입력해주세요.</output>
+                </div>
+
+                <div class="phone-num">
+                    <input type="tel" placeholder="휴대폰 번호" name="phone number" required pattern="01[01689]-\d{3,4}-\d{4}" autocomplete="off">
+                    <output class="d-none">유효한 전화번호 형식이 아닙니다.</output>
+                </div>
+            </fieldset>
+
+            <input class="btn-submit" type="submit" value="비회원 예약조회">
+        </form>
+
+    </article>
+</body>
+</html>

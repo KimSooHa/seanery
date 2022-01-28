@@ -1,0 +1,187 @@
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/user/style.css);
+@import url(/css/buttons.css);
+
+/* ====== btn style ================================================== */
+/* 기존 버튼 스타일에서 덮어쓰기 */
+.img-btn-menu {
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23b19d74'/%3E%3C/svg%3E%0A");
+    padding: 0;
+}
+
+.btn-submit {
+    /* text style */
+    font-size: 14px;
+
+    width: 108px;
+    height: 48px;
+}
+
+.search-id fieldset div .btn-send-num {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
+
+    /* layout */
+    width: 98px;
+    height: 27px;
+    background-color: #CDBD9D;
+    border-radius: 8px;
+
+    /* item layout */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /* effect */
+   transition: 0.4s;
+}
+
+.search-id fieldset div .btn-send-num:hover {
+    background-color: #B19D74;
+}
+
+/* ====== outer block ================================================== */
+.search-id {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: 42px; */
+}
+
+.search-id .search-id-header {
+    /* layout */
+    width: 100%;
+
+    /* item layout */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.search-id form {
+    /* layout */
+    margin-top: 62px;
+}
+
+.search-id form fieldset {
+    /* layout */
+    width: 340px;
+}
+
+
+.search-id form .email {
+    /* layout */
+    margin-top: 30px;
+    
+    /* item layout */
+    display: grid;
+    grid-template: 30px 20px / auto, 100px;
+    row-gap: 10px;
+}
+
+.search-id form .email input[type="text"] {
+        /* layout */
+        grid-area: 1/1/2/3;
+    }
+    
+    .search-id form .email output {
+        /* layout */
+        grid-area: 2/1/3/3;
+        margin-left: 7px;
+    }
+    
+    .search-id form .email .btn-send-num {
+        /* layout */
+        grid-area: 1/2/2/3;
+        align-self: center;
+    }
+    
+    
+.search-id form .confirm-num {
+    /* layout */
+    margin-top: 30px;
+    
+    /* item layout */
+    display: grid;
+    grid-template: 30px 20px / auto, 50px;
+    row-gap: 10px;
+}   
+
+.search-id form .confirm-num input[type="text"] {
+    /* layout */
+    grid-area: 1/1/2/3;
+}
+
+.search-id form .confirm-num label {
+        /* layout */
+        grid-area: 2/1/3/3;
+        margin-left: 7px;
+    }
+    
+    .search-id form .confirm-num span {
+        /* layout */
+        grid-area: 1/2/2/3;
+        align-self: center;
+        margin-right: 10px;
+    }
+    
+.search-id form .btn-box {
+    /* layout */
+    margin-top: 50px;
+    
+    /* item layout */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* ======= content block ========================================= */
+
+.search-id {
+    /* layout */
+    padding-top: 98px;
+}
+
+
+.search-id form fieldset div input {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 15px;
+    
+    /* content box style */
+    width: 340px;
+    height: 33px;
+    border: none;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.search-id form fieldset div output {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 13px;
+    color: #707070;
+}
+
+.confirm-num span {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 13px;
+    color: #B15252;
+}
+
+.confirm-num label {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 13px;
+    color: #707070;
+}

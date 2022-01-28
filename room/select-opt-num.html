@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/room/select-opt-num.css" type="text/css">
+    <title>객실 - 인원수 선택</title>
+</head>
+<body>
+    <h1 class="d-none">객실수/인원수 선택</h1>
+
+    <section>
+        <h1 class="d-none">객실별 인원수</h1>
+
+        <form action="">
+            <fieldset>
+                <legend class="d-none">인원수 선택</legend>
+                
+                <div class="room-num-title">Room1</div>
+                <div class="adults-num">
+                    <label>Adults</label>
+                    <span class="img-btn-minus">빼기 버튼</span>
+                    <input type="number" value="1" name="room1_adult-num" id="adult-num" readonly disabled>
+                    <span class="img-btn-plus">더하기 버튼</span>
+                </div>
+                
+                <div class="kid-num">
+                    <label>Kid</label>
+                    <span class="img-btn-minus">빼기 버튼</span>
+                    <input type="number" value="0" name="room1_kid-num" id="kid-num" readonly disabled>
+                    <span class="img-btn-plus">더하기 버튼</span>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend class="d-none">인원수 선택</legend>
+
+                <div class="img-btn-close">닫기버튼</div>
+                
+                <div class="room-num-title">Room2</div>
+                <div class="adults-num">
+                    <label>Adults</label>
+                    <span class="img-btn-minus">빼기 버튼</span>
+                    <input type="number" value="1" name="room1_adult-num" id="adult-num" readonly disabled>
+                    <span class="img-btn-plus">더하기 버튼</span>
+                </div>
+
+                <div class="kid-num">
+                    <label>Kid</label>
+                    <span class="img-btn-minus">빼기 버튼</span>
+                    <input type="number" value="0" name="room1_kid-num" id="kid-num" readonly disabled>
+                    <span class="img-btn-plus">더하기 버튼</span>
+                </div>
+
+            </fieldset>
+            
+            <div class="btn-box">
+                <span class="btn-add-room">Add Room</span>
+                <input class="btn-select" type="submit" value="Select">
+            </div>
+        </form>
+    </section>
+</body>
+</html>

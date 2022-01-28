@@ -1,0 +1,1109 @@
+body {
+    width: 100%;
+}
+/* ====== outer block ================================================== */
+
+.header {
+    width: 100%;
+    height: 73px;
+    background-color: rgba(134, 191, 255, 0.19);
+    border-bottom: 1px solid #93BED6;
+    
+    /* layout */
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.header-bottom-bg-box {
+    height: 355px;
+    padding-top: 73px;
+    box-sizing: border-box;
+    /* background: url("../images/hotel-intro.jpg")
+    no-repeat center / cover; */
+    position: relative;
+}
+
+    .header-bottom-bg-box .img-box {
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    .header-bottom {
+        width: 100%;
+        height: 43px;
+        background-color: rgba(0, 0, 0, 0.56);
+        position: absolute;
+        bottom: 0;
+
+        /* layout */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+
+    .header-bottom section {
+        display: flex;
+        align-items: center;
+    }
+    
+    .header-bottom section div {
+        display: grid;
+        grid-template-columns: 28px 28px 23px;
+        grid-template-rows: repeat(2,16px);
+        column-gap: 7px;
+        /* display: flex;
+        align-items: center;
+        margin-top: 5px; */
+    }
+
+    .header-bottom section div span:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .header-bottom section div span:nth-child(2) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .header-bottom section div span:nth-child(3) {
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    .header-bottom section div span:nth-child(4) {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+    /* .header-bottom section .date {
+        flex-direction: column;
+        margin-right: 8px;
+        justify-content: center;
+    } */
+
+    /* .header-bottom .date span:last-child {
+        margin-top: 3px;
+    } */
+
+    .header-bottom .temperature {
+        /* layout */
+        /* margin-left: 4px;
+        margin-top: 15px;
+        align-self: flex-end; */
+    }
+
+    .header-bottom .book-a-room {
+        margin-top: 5px;
+    }
+
+
+/* -------- simple-search --------------------------------------- */
+.simple-search {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 60px 0;
+}
+
+    .simple-search form {
+        width: 320px;
+        height: 100%;
+        display: flex;   
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .simple-search form fieldset {
+        width: 100%;
+        display: flex;
+    }
+    
+    .simple-search form .select-date {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        border: none;
+    }
+
+        .simple-search form .select-date div {
+            /* layout */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    .simple-search form .select-num {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .simple-search form .select-num div {
+            /* layout */
+            display: flex;
+            align-items: center;
+        }
+
+    
+
+
+    
+
+.chat {
+    position: fixed;
+    z-index: 999;
+    bottom: 10px;
+    right: 20px;
+}
+
+/* -------- introduce --------------------------------------- */
+
+.introduce {
+    height: 281px;
+    background-color: rgba(210, 227, 235, 0.9);
+    border-radius: 50px 0 0 0;
+
+    /* layout */
+    display: grid;
+    grid-template-columns: 174px 188px;
+    grid-template-rows: 30px 87px;
+    column-gap: 20px;
+    row-gap: 10px;
+    align-content: center;
+    justify-content: center;
+}
+
+    .introduce h1 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .introduce .introduce-img {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    .introduce p {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+/* -------- facilities --------------------------------------- */
+.facilities {
+    /* width: 100%; */
+    height: 679px;
+    background: rgba(0, 0, 0, 0.4) url("../images/facilities-bg.jpg")
+                no-repeat -100px / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.facilities-list {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    /* item layout */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20px 62px;
+    column-gap: 11px;
+    
+    /* margin-top: 10px; */
+}
+
+.facilities-list:nth-child(2n) {
+    /* item layout */
+    row-gap: 9px;
+    align-self: start;
+}
+
+    .facilities-list:nth-child(2n) .facilities-list-title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-left: 19px;
+    }
+
+    .facilities-list:nth-child(2n) div {
+        position: relative;
+        
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+        .facilities-list:nth-child(2n) div>.btn-more {
+            position: absolute;
+            right: 5%;
+            bottom: 7%;
+        }
+
+    .facilities-list:nth-child(2n) p {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-self: center;
+    }
+
+.facilities-list:nth-child(2n+1) {
+    /* layout */
+    row-gap: 16px;
+    align-self: end;
+}
+
+    .facilities-list:nth-child(2n+1) .facilities-list-title {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        justify-self: end;
+        margin-right: 19px;
+    }
+
+    .facilities-list:nth-child(2n+1) div {
+        position: relative;
+        
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+        .facilities-list:nth-child(2n+1) div>.btn-more {
+            position: absolute;
+            left: 5%;
+            bottom: 7%;
+        }
+
+    .facilities-list:nth-child(2n+1) p {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: center;
+    }
+
+
+
+/* -------- services --------------------------------------- */
+
+.services {
+    padding-top: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services ul li {
+    display: flex;
+}
+
+/* -------- rooms --------------------------------------- */
+.rooms {
+    height: 386px;
+    background: url("../images/객실/superior/image_3876681721528089326130.jpg")
+                no-repeat -95px / cover;
+    position: relative;
+
+    transition: 0.7s;
+}
+
+
+    .rooms .rooms-list {
+        position: absolute;
+        left: 28px;
+        bottom: 0;
+    }
+
+    .rooms .rooms-list>ul {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+    }
+
+    .rooms div {
+        position: absolute;
+        right: 17px;
+        bottom: 16px;
+    }
+
+/* -------- gallery --------------------------------------- */
+.gallery {
+    margin-top: 105px;
+}
+
+
+/* -------- review --------------------------------------- */
+.review {
+    height: 380px;
+    /* background: url("../images/163701843.jpg")
+                no-repeat -120px 30px / 641px 361px; */
+    background: url("../images/163701843.jpg")
+                no-repeat -120px 30px / cover;
+    position: relative;
+    margin-top: 100px;
+
+    /* layout */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-evenly; */
+}
+
+.review .review-full-list {
+    display: flex;
+    margin-top: 100px;
+}
+
+    .review .review-full-list .review-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .review .review-btn-more {
+        position: absolute;
+        right: 25px;
+        bottom: 23px;
+    }
+
+/* -------- location --------------------------------------- */
+.location {
+    height: 600px;
+    box-sizing: border-box;
+    margin-top: 100px;
+
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location .map {
+    position: relative;
+}
+
+.location .map div span.img-btn-map-full-screen {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+}
+
+.location .map .btn-map-zoom {
+    position: absolute;
+    left: 9px;
+    bottom: 50px;
+}
+
+.location .transport {
+    position: relative;
+}
+
+.location .transport .transport-btn-more {
+    position: absolute;
+    right: 13px;
+    bottom: 11px;
+}
+
+    .transport .depart-destination {
+        display: flex;
+        align-items: center;
+    }
+
+    .transport .transport-route {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+/* -------- footer --------------------------------------- */
+
+.footer {
+    /* text */
+    /* layout */
+    height: 184px;
+    background: rgba(112, 112, 112, 0.23) url("../images/sand.jpg")
+                no-repeat center / cover;
+    align-content: center;
+    justify-content: center;
+    /* item layout */
+    display: grid;
+    grid-template: 17px 40px 40px / 100px auto;
+    column-gap: 21px;
+    row-gap: 13px;
+    /* effect */
+    
+}
+
+    .footer .footer-title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .footer .hotel-logo {
+        grid-column: 1/2;
+        grid-row: 2/4;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .footer .address {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .footer .email {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        align-self: center;
+    }
+
+/* ======= content block ========================================= */
+/* -------- header --------------------------------------- */
+
+.header-title {
+    width: 160px;
+    height: 160px;
+    background-image: url(/images/Seanery_hotel-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: center bottom 5px;
+    background-size: cover;
+    padding: 0;
+    text-indent: -999px;
+}
+
+
+/* -------- header-bottom-bg-box --------------------------------------- */
+
+    .header-bottom div span {
+        /* text style */
+        font-family: 'Sitka Heading', "Minion Pro";
+        font-weight: normal;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    
+    .header-bottom .img-weather {
+        /* text style */
+        text-indent: -999px;
+        
+        /* content box style */
+        display: inline-block;
+        width: 27.85px;
+        height: 27.88px;
+        overflow: hidden;
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_weather-day-sunny' data-name='Icon weather-day-sunny' xmlns='http://www.w3.org/2000/svg' width='27.85' height='27.876' viewBox='0 0 27.85 27.876'%3E%3Cpath id='Icon_weather-day-sunny-2' data-name='Icon weather-day-sunny' d='M5.244,18.725a1.108,1.108,0,0,1,.328-.813,1.133,1.133,0,0,1,.787-.315H9.033a.994.994,0,0,1,.76.328,1.232,1.232,0,0,1,.013,1.6.975.975,0,0,1-.76.328H6.372a1.07,1.07,0,0,1-.787-.328A1.091,1.091,0,0,1,5.244,18.725Zm3.75,9.087a1.214,1.214,0,0,1,.3-.8l1.927-1.875a1.008,1.008,0,0,1,.774-.3,1.111,1.111,0,0,1,.787.3.98.98,0,0,1,.315.747,1.237,1.237,0,0,1-.315.839l-1.862,1.862a1.191,1.191,0,0,1-1.613,0A1.059,1.059,0,0,1,8.994,27.812Zm0-18.147a1.214,1.214,0,0,1,.3-.8,1.259,1.259,0,0,1,.839-.328,1.1,1.1,0,0,1,.774.315l1.875,1.927a1.018,1.018,0,0,1,.315.774,1.076,1.076,0,0,1-1.1,1.1,1.018,1.018,0,0,1-.774-.315L9.309,10.464A1.1,1.1,0,0,1,8.994,9.665Zm3.344,9.06a6.618,6.618,0,0,1,.918-3.409,6.848,6.848,0,0,1,2.5-2.5,6.727,6.727,0,0,1,6.058-.367,6.85,6.85,0,0,1,2.177,1.469,6.88,6.88,0,0,1,1.993,4.825,6.631,6.631,0,0,1-.918,3.422,6.877,6.877,0,0,1-2.491,2.491,6.839,6.839,0,0,1-6.844,0,6.876,6.876,0,0,1-2.491-2.491A6.966,6.966,0,0,1,12.338,18.725Zm2.229,0a4.633,4.633,0,0,0,4.615,4.642,4.656,4.656,0,0,0,4.642-4.642,4.42,4.42,0,0,0-1.364-3.239,4.492,4.492,0,0,0-3.278-1.337,4.433,4.433,0,0,0-3.252,1.337A4.37,4.37,0,0,0,14.567,18.725Zm3.488,10.2a1.03,1.03,0,0,1,.328-.787,1.11,1.11,0,0,1,.787-.315,1.1,1.1,0,0,1,.8.315,1.067,1.067,0,0,1,.315.787v2.609a1.108,1.108,0,0,1-.328.813,1.07,1.07,0,0,1-.787.328,1.05,1.05,0,0,1-.787-.328,1.108,1.108,0,0,1-.328-.813V28.926Zm0-20.324V5.928a1.07,1.07,0,0,1,.328-.787,1.091,1.091,0,0,1,.8-.341,1.05,1.05,0,0,1,.787.328,1.07,1.07,0,0,1,.328.787V8.6a.994.994,0,0,1-.328.76,1.1,1.1,0,0,1-.787.3,1.133,1.133,0,0,1-.787-.3A1.032,1.032,0,0,1,18.054,8.6Zm7.238,17.282a1.03,1.03,0,0,1,1.036-1.036,1.111,1.111,0,0,1,.787.3l1.914,1.875a1.141,1.141,0,0,1,.315.8,1.059,1.059,0,0,1-.315.774,1.168,1.168,0,0,1-1.573,0l-1.862-1.862A1.277,1.277,0,0,1,25.292,25.884Zm0-14.318a1.017,1.017,0,0,1,.3-.774l1.862-1.927a1.1,1.1,0,0,1,.774-.315,1.03,1.03,0,0,1,.787.328,1.07,1.07,0,0,1,.328.787,1.107,1.107,0,0,1-.315.813l-1.914,1.875a1.156,1.156,0,0,1-.787.315.952.952,0,0,1-.734-.315A1.111,1.111,0,0,1,25.292,11.566Zm2.963,7.159a1.173,1.173,0,0,1,.315-.813,1.021,1.021,0,0,1,.747-.315h2.649a1.113,1.113,0,0,1,.787,1.914,1.07,1.07,0,0,1-.787.328H29.318a.975.975,0,0,1-.76-.328A1.133,1.133,0,0,1,28.256,18.725Z' transform='translate(-5.244 -4.8)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+    }
+    
+    .header-bottom .temperature {
+        /* text style */
+        font-family: 'Minion Pro', "Sika Heading";
+        font-size: 11px;
+        color: #fff;    
+    }
+
+
+    .header-bottom>div a {
+        font-family: 'Minion Pro', "Sika Heading";
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .header-bottom-bg-box .img-box img {
+        width: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    
+    /* -------- simple-search --------------------------------------- */
+    
+    
+.simple-search form div {
+    font-family: '나눔스퀘어라운드', "굴림";
+    font-size: 15px;
+}
+    
+    .simple-search form div label {
+        color: #436A81;
+    }
+    
+    .simple-search form div input {
+        /*  text-style */
+        font-family: '나눔스퀘어라운드', "굴림";
+        font-size: 15px;
+        border: none;
+    
+        /* content box style */
+    }
+        
+
+
+.simple-search form .select-date div {
+    /* text style */
+    text-align: center;
+    
+    /* content box style */
+    width: 153px;
+    height: 102px;
+    border: 1px solid #667FA0;
+    border-radius: 7px;
+    /* margin-left: 16px; */
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+    .simple-search form .select-date label {
+        /* content box style */
+        width: 100%;
+        height: 34px;
+        border-bottom: 1px solid #949494;
+
+        /* layout */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .select-date div input {
+        /* text style */
+        text-align: center;
+        
+        /* content box style */
+        width: 90%;
+        height: 65px;
+        border: 1px solid #667FA0;
+
+        /* layout */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.simple-search form .select-num {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #667FA0;
+    border-radius: 7px;
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+    .simple-search form .select-num div {
+        /* content box style */
+        width: 100%;
+        height: 35px;
+        padding: 0 20px 0 50px;
+        box-sizing: border-box;
+    }
+
+        .simple-search form .select-num div label {
+            margin-right: auto;
+        }
+
+        .simple-search form .select-num div input {
+            /* text style */
+            color: #436A81;
+            text-align: center;
+
+            /* content box style */
+            width: 25px;
+            margin-right: 15px;
+            margin-left: 30px;
+            padding-top: 3px;
+
+            /* layout */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* effect */
+            /* cursor: pointer; */
+        }
+        
+    .simple-search form .select-num>.adult {
+        border-bottom: 1px solid #949494;
+    }
+
+
+/* -------- introduce --------------------------------------- */
+
+.introduce {
+    color: #436A81;
+}
+
+    .introduce .introduce-title {
+        font-family: 'Times New Roman';
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    .introduce div {
+        position: relative;
+        width: 100%;
+        height: 133px;
+    }
+
+    .introduce img {
+        width: 163px;
+        height: 122px;
+    }
+
+    .introduce img:first-child {
+        position: absolute;
+        left: 11px;
+        bottom: 0;
+    }
+
+    .introduce img:last-child {
+        position: absolute;
+        left: 21px;
+        /* z-index: 1; */
+    }
+
+    .introduce p {
+        font-family: 'Sitka Heading', "Minion Pro" ;
+        font-size: 14px;
+    }
+
+/* -------- facilities --------------------------------------- */
+
+.facilities-title {
+    /* text  style */
+    font-family: 'SimSun-ExtB', "Sitka Heading";
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+
+    /* content box style */
+
+    /* layout */
+    display: flex;
+    justify-content: center;
+}
+
+.facilities-list {
+    /* content box style */
+    width: 332px;
+    height: 139px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+    .facilities-list-title {
+        /* text  style */
+        font-family: 'Sitka Heading', "SimSun-ExtB";
+        font-size: 20px;
+        font-weight: normal;
+        color: #FFFFFF;
+
+        /* content box style */
+        margin: 0;
+    }
+
+
+    .facilities img {
+        /* width: 147px;*/
+        /* height: 98px; */
+        width: 100%;
+        height: 100%;
+    }
+
+    .facilities-list p {
+        /* text  style */
+        font-family: 'Nueva Std', "SimSun-ExtB";
+        font-size: 10px;
+        font-weight: bold;
+        color: #E6EEF2;
+    }
+
+/* ----------------------------------------------- */
+
+.services-title,
+.gallery-title,
+.review-title,
+.location-title {
+    font-family: 'SimSun-ExtB', "Sitka Heading";
+    font-size: 25px;
+    font-weight: normal;
+    color: #436A81;
+}
+
+/* -------- services --------------------------------------- */
+
+.services .services-title {
+    margin: 0;
+}
+
+.services ul {
+    padding-left: 0;
+    margin-top: 54px;
+}
+
+.services ul li {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 15px;
+    font-weight: bold;
+    color: #6B6B6B;
+    list-style-type: none;
+
+    /* content box style */
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+    .services ul li:first-child {
+        width: 69px;
+        height: 63px;
+        padding-top: 50px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33.305' height='23.313' viewBox='0 0 33.305 23.313'%3E%3Cg id='Icon_awesome-wifi' data-name='Icon awesome-wifi' transform='translate(0)'%3E%3Cg id='Icon_awesome-wifi-2' data-name='Icon awesome-wifi' transform='translate(0)'%3E%3Cpath id='Icon_awesome-wifi-3' data-name='Icon awesome-wifi' d='M33.04,7.02a24.2,24.2,0,0,0-32.775,0,.827.827,0,0,0-.018,1.2L2.028,9.983A.845.845,0,0,0,3.194,10a19.966,19.966,0,0,1,26.917,0,.846.846,0,0,0,1.166-.02l1.782-1.768a.828.828,0,0,0-.019-1.2ZM16.652,17.277a3.33,3.33,0,1,0,3.33,3.33A3.33,3.33,0,0,0,16.652,17.277ZM27.2,12.928a15.976,15.976,0,0,0-21.093,0,.823.823,0,0,0-.03,1.2L7.868,15.9a.849.849,0,0,0,1.147.042,11.721,11.721,0,0,1,15.273,0,.849.849,0,0,0,1.147-.042l1.792-1.769A.823.823,0,0,0,27.2,12.928Z' transform='translate(0 -0.625)' fill='%236b6b6b'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");    
+    }
+
+    .services ul li:nth-child(2) {
+        width: 107px;
+        height: 79.95px;
+        padding-top: 62px;
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_map-laundry' data-name='Icon map-laundry' xmlns='http://www.w3.org/2000/svg' width='33.3' height='40.131' viewBox='0 0 33.3 40.131'%3E%3Cpath id='Icon_map-laundry-2' data-name='Icon map-laundry' d='M1.2,8.738V37.547c0,1.255,1.056,2.784,2.357,2.784H31.92a3,3,0,0,0,2.58-2.784V8.738ZM17.816,31.6a8.915,8.915,0,0,1-9.06-8.763,8.915,8.915,0,0,1,9.06-8.763,8.915,8.915,0,0,1,9.06,8.763A8.914,8.914,0,0,1,17.816,31.6ZM31.92.2H3.557A2.208,2.208,0,0,0,1.2,2.339V7.031H34.5V2.339A2.419,2.419,0,0,0,31.92.2ZM12.3,5.323H2.908V1.908H12.3V5.323Zm16.348-.239A1.9,1.9,0,0,1,26.72,3.216a1.93,1.93,0,0,1,3.859,0A1.9,1.9,0,0,1,28.648,5.084Z' transform='translate(-1.2 -0.2)' fill='%236b6b6b'/%3E%3C/svg%3E%0A");
+    }
+
+    .services ul li:nth-child(3) {
+        width: 60px;
+        height: 62.95px;
+        padding-top: 47px;
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-room-service' data-name='Icon material-room-service' xmlns='http://www.w3.org/2000/svg' width='33.3' height='23.31' viewBox='0 0 33.3 23.31'%3E%3Cpath id='Icon_material-room-service-2' data-name='Icon material-room-service' d='M.833,22.063h33.3v3.33H.833ZM20.547,6.729a3.435,3.435,0,0,0,.266-1.315,3.33,3.33,0,0,0-6.66,0,3.435,3.435,0,0,0,.266,1.315A15,15,0,0,0,2.5,20.4h29.97A15,15,0,0,0,20.547,6.729Z' transform='translate(-0.833 -2.083)' fill='%236b6b6b'/%3E%3C/svg%3E%0A");
+    }
+
+    .services ul li:last-child {
+        width: 105px;
+        height: 62.95px;
+        padding-top: 47px;
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-swimming-pool' data-name='Icon awesome-swimming-pool' xmlns='http://www.w3.org/2000/svg' width='33.3' height='23.31' viewBox='0 0 33.3 23.31'%3E%3Cpath id='Icon_awesome-swimming-pool-2' data-name='Icon awesome-swimming-pool' d='M32.467,20.6h-.832a4.388,4.388,0,0,1-2.918-.931,2.465,2.465,0,0,0-1.653-.734h-.848a2.465,2.465,0,0,0-1.653.734,4.383,4.383,0,0,1-2.917.931,4.388,4.388,0,0,1-2.918-.931,2.465,2.465,0,0,0-1.653-.734h-.848a2.465,2.465,0,0,0-1.653.734,4.383,4.383,0,0,1-2.917.931,4.388,4.388,0,0,1-2.918-.931,2.465,2.465,0,0,0-1.653-.734H6.235a2.465,2.465,0,0,0-1.653.734,4.383,4.383,0,0,1-2.917.931H.832A.832.832,0,0,0,0,21.438V23.1a.832.832,0,0,0,.832.833h.832A7.758,7.758,0,0,0,6.66,22.278a7.755,7.755,0,0,0,4.995,1.657,7.758,7.758,0,0,0,4.995-1.657,7.755,7.755,0,0,0,5,1.657,7.758,7.758,0,0,0,4.995-1.657,7.755,7.755,0,0,0,5,1.657h.832A.832.832,0,0,0,33.3,23.1V21.438A.832.832,0,0,0,32.467,20.6ZM11.655,18.94V13.945h9.99V18.94a2.851,2.851,0,0,0,1.789-.49,4.5,4.5,0,0,1,1.541-.94V5.62a1.665,1.665,0,1,1,3.33,0v.833a.832.832,0,0,0,.833.832H30.8a.832.832,0,0,0,.833-.832V5.62a4.995,4.995,0,1,0-9.99,0v4.995h-9.99V5.62a1.665,1.665,0,0,1,3.33,0v.833a.832.832,0,0,0,.832.832h1.665a.832.832,0,0,0,.833-.832V5.62a5,5,0,0,0-9.99,0V17.509a4.506,4.506,0,0,1,1.541.94A2.846,2.846,0,0,0,11.655,18.94Z' transform='translate(0 -0.625)' fill='%236b6b6b'/%3E%3C/svg%3E%0A");
+    }
+
+/* -------- rooms --------------------------------------- */
+
+.rooms-title {
+    /* text style */
+    font-family: 'SimSun-ExtB', "Sitka Heading";
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+
+    /* content box style */
+    margin: 0;
+    padding-top: 30px;
+
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rooms-list {
+    /* content box style */
+    width: 167px;
+    height: 209px;
+    background-color: rgba(0, 0, 0, 0.66);
+}
+    .rooms-list>ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .rooms-list>ul>li {
+        list-style-type: none;
+        padding-top: 30px;
+    }
+
+    .rooms-list>ul>li:first-child {
+        padding: 0;
+    }
+
+    .rooms-list>ul>li>a {
+        /* text style */
+        font-family: 'SimSun-ExtB', "Sitka Heading";
+        font-size: 15px;
+        color: #fff;
+
+        /* layout */
+        display: inline-block;
+        padding-right: 4px;
+        border: 1px solid transparent;
+        
+        /* effect */
+        transition: 0.5s;
+    }
+
+    .rooms-list>ul>li>a:hover {
+        border-bottom: 1px solid #B19D74;
+    }
+
+/* -------- gallery --------------------------------------- */
+.gallery .gallery-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery>ul {
+    display: flex;
+    margin-top: 54px;
+    padding: 0;
+}
+
+.gallery>ul>li {
+    list-style-type: none;
+    width: 131px;
+    height: 97px;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.gallery>ul>li:first-child {
+    margin-left: 18px;
+}
+
+.gallery>ul>li>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------- review --------------------------------------- */
+.review .review-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+
+.review-list {
+    /* content box style */
+    width: 295px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.6);
+    padding-left: 24px;
+    margin-left: 20px;
+} 
+
+    .review-list>p {
+        /* text  style */
+        font-family: '나눔스퀘어라운드';
+        font-size: 15px;
+        font-weight: bold;
+        color: #436A81;
+    }
+    
+    .review .review-full-list .review-list footer span:last-child {
+        margin-left: 11px;
+        padding-left: 11px;
+        border-left: 1px solid #707070;
+    }
+
+    .review-list>footer span {
+        /* text  style */
+        font-family: 'Montserrat';
+        font-size: 11px;
+        font-weight: 500;
+        color: #6B6B6B;
+    }
+
+/* ------ location ----------------------------------------- */
+.location .location-title {
+    margin: 0;
+
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location .map {
+    margin-top: 47px;
+}
+
+.location .map img {
+    /* content box style */
+    width: 325px;
+    height: 218px;
+    border-radius: 60px 15px;
+    object-fit: cover;
+}
+
+.location .map .map-address {
+    /*  text style */
+    font-family: 'Times New Roman';
+    font-size: 14px;
+    font-weight: normal;
+    color: #707070;
+    
+    /* content box style */
+    margin-top: 17px;
+}
+
+.transport {
+    width: 325px;
+    height: 146px;
+    padding-top: 21px;
+    margin: 19px;
+    box-sizing: border-box;
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.22);
+}
+
+.transport .depart-destination {
+    margin-left: 15px;
+}
+
+    .transport .depart-destination>span, .transport-route>span {
+        font-family: 'Times New Roman';
+    }
+
+        .transport .depart-destination>span:nth-child(1) {
+            /*  text style */
+            font-size: 14px;
+            font-weight: normal;
+            color: #707070;
+
+            /* content box style */
+            margin-right: 11px;
+
+        }
+
+        .transport .depart-destination>span:nth-child(2), 
+        .transport-route>span:nth-child(2) {
+            /*  text style */
+            text-indent: -999px;
+
+            /* content box style */
+            display: inline-block;
+            width: 9px;
+            height: 17px;
+            overflow: hidden;
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_metro-chevron-thin-right' data-name='Icon metro-chevron-thin-right' xmlns='http://www.w3.org/2000/svg' width='8.966' height='16.5' viewBox='0 0 8.966 16.5'%3E%3Cpath id='Icon_metro-chevron-thin-right-2' data-name='Icon metro-chevron-thin-right' d='M18.838,11.951,11.879,4.833a.661.661,0,0,1,0-.939.671.671,0,0,1,.944,0l7.63,7.586a.661.661,0,0,1,0,.939l-7.63,7.586a.67.67,0,0,1-.944,0,.661.661,0,0,1,0-.939l6.959-7.115Z' transform='translate(-11.683 -3.7)' fill='%23a9a9a9'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+        }
+
+        .transport .depart-destination>span:nth-child(3) {
+            /*  text style */
+            font-size: 15px;
+            color: #707070;
+
+            /* content box style */
+            margin-left: 12px;
+        }
+
+    .transport .transport-route {
+        margin-top: 15px;
+    }
+
+        .transport-route>span:nth-child(1) {
+            /*  text style */
+            font-size: 12px;
+            font-weight: bold;
+            color: #B19D74;
+
+            /* content box style */
+            display: inline-block;
+            padding-left: 31px;
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-directions-bus' data-name='Icon material-directions-bus' xmlns='http://www.w3.org/2000/svg' width='13.895' height='16.5' viewBox='0 0 13.895 16.5'%3E%3Cpath id='Icon_material-directions-bus-2' data-name='Icon material-directions-bus' d='M6,15.158a2.593,2.593,0,0,0,.868,1.928v1.546a.871.871,0,0,0,.868.868h.868a.871.871,0,0,0,.868-.868v-.868h6.947v.868a.871.871,0,0,0,.868.868h.868a.871.871,0,0,0,.868-.868V17.086a2.593,2.593,0,0,0,.868-1.928V6.474C19.895,3.434,16.786,3,12.947,3S6,3.434,6,6.474Zm3.039.868a1.3,1.3,0,1,1,1.3-1.3A1.3,1.3,0,0,1,9.039,16.026Zm7.816,0a1.3,1.3,0,1,1,1.3-1.3A1.3,1.3,0,0,1,16.855,16.026Zm1.3-5.211H7.737V6.474H18.158Z' transform='translate(-6 -3)' fill='%23707070'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+        }
+
+        .transport-route>span:nth-child(3) {
+            /*  text style */
+            font-size: 12px;
+            font-weight: normal;
+            color: #707070;
+
+            /* content box style */
+            display: inline-block;
+            padding-left: 20px;
+            /* margin-left: 15px; */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.977' height='16.5' viewBox='0 0 9.977 16.5'%3E%3Cpath id='Icon_material-directions-walk' data-name='Icon material-directions-walk' d='M14.756,5.32a1.535,1.535,0,1,0-1.535-1.535A1.539,1.539,0,0,0,14.756,5.32Zm-2.84,2.609L9.767,18.75h1.612l1.381-6.14,1.612,1.535v4.6h1.535V12.994L14.3,11.459l.46-2.3a5.62,5.62,0,0,0,4.221,1.919V9.541a3.775,3.775,0,0,1-3.3-1.842l-.767-1.228A1.583,1.583,0,0,0,13.6,5.7c-.23,0-.384.077-.614.077L9,7.469v3.607h1.535V8.466l1.381-.537' transform='translate(-9 -2.25)' fill='%23707070'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+        }
+
+        .transport-route>span:nth-child(4) {
+            /*  text style */
+            font-size: 12px;
+            font-weight: bold;
+            color: #707070;
+
+            /* content box style */
+            /* margin-left: 40px; */
+        }
+
+
+
+/* ----------------------------------------------- */
+.footer-title {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer img {
+    height: 100px;
+}
+
+.footer .address {
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.footer .address span {
+    /* text style */
+    font-family: 'Minion Pro';
+    font-size: 11px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.footer .email {
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.footer .email span {
+    /* text style */
+    font-family: 'Minion Pro';
+    font-size: 11px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.footer .email span:last-child {
+    font-size: 12px;
+}
