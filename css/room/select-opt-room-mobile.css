@@ -1,0 +1,100 @@
+/* === layout ============================== */
+body{
+    /* layout */
+    background-color: rgba(0, 0, 0, 0.72);
+    height: 100vh;
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === content block ============================== */
+/* --- select-room ------------------------------ */
+form{
+    /* layout */
+    background-color: #EEEEEE;
+    display: block;
+    width: 255px;
+    height: 231px;
+    border-radius: 14px;
+    border: 1px solid #707070;
+}
+
+    form>fieldset{
+        /* layout */
+        height: 85.5px;
+        border-bottom: 1px solid #A9A9A9;
+
+        /* item layout */
+        position: relative;
+    }
+        form>fieldset>legend{
+            /* text */
+            font-family: "Minion Pro";
+            font-size: 17px;
+            font-weight: bold;
+            color: #707070;
+
+            /* layout */
+            position: absolute;
+            top: 29px;
+            left: 24px;
+        }
+        form>fieldset>div{
+            /* layout */
+            display: inline-block;
+            width: 117px;
+            border-bottom: 1px solid #707070;
+
+            position: absolute;
+            top: 29px;
+            right: 16px;
+        }
+
+        form>fieldset>div>span{
+            /* text */
+            font-family: "Minion Pro";
+            font-size: 17px;
+            font-weight: normal;
+            color: #707070;
+        }
+
+        form>fieldset>div>a{
+            /* text */
+            text-indent: -9999px;
+            overflow: hidden;
+
+            /* layout */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            display: inline-block;
+            width: 10px;
+            height: 5px;
+
+            margin-bottom: 3px;
+        }
+
+
+    form>input{
+        /* text */
+        font-family: "Minion Pro";
+        font-size: 17px;
+        font-weight: bold;
+        color: #707070;
+
+        /* layout */
+        margin-top: 15.8px;
+        margin-left: 103px;
+
+        /* utils */
+        background-color: #EEEEEE;
+        cursor: pointer;
+    }
+    
+    

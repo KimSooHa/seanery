@@ -1,0 +1,359 @@
+/* === LAYOUT ======================== */
+/* --- header ------------------------------- */
+.header{
+    /* layout */
+    background-color: rgba(134, 191, 255, 0.19);
+
+    height: 73px;
+    padding-left: 16px;
+    padding-right: 21.5px;
+    box-sizing: border-box;
+
+    position: fixed;
+    width: 100%;
+
+    /* item layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- main ------------------------------- */
+.main{
+    /* layout */
+    height: 355.3px;
+    background-image: url(../../images/hotel-intro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- menu ------------------------------- */
+.menu{
+    /* layout */
+    height: 489px;
+
+    /* item layout */
+    padding-top: 77.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* === Content block ======================== */
+/* --- header ------------------------------- */
+.header>h1{
+    /* text */
+    text-indent: -9999px;
+
+    /* layout */
+    background-image: url(../../images/Seanery_hotel-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -50px;
+
+    display: inline-block;
+    width: 160px;
+    height: 73px;
+}
+    .header>div{
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+        .header>div>a:first-child{
+            /* text */
+            text-indent: -9999px;
+
+            /* layout */
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_open-account-logout' data-name='Icon open-account-logout' xmlns='http://www.w3.org/2000/svg' width='23.703' height='20.74' viewBox='0 0 23.703 20.74'%3E%3Cpath id='Icon_open-account-logout-2' data-name='Icon open-account-logout' d='M8.889,0V2.963H20.74V17.777H8.889V20.74H23.7V0ZM5.926,5.926,0,10.37l5.926,4.444V11.852H17.777V8.889H5.926Z' fill='%23fff'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            display: inline-block;
+            width: 23.7px;
+            height: 20.7px;
+        }
+
+        .header>div>a:nth-child(2){
+            /* text */
+            text-indent: -9999px;
+
+            /* layout */
+            margin-left: 29.6px;
+
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            display: inline-block;
+            width: 27px;
+            height: 15.7px;
+        }
+/* --- main ------------------------------- */
+.main>div{
+    /* layout */
+    margin-top: auto;
+    height: 43px;
+    background-color: rgba(0, 0, 0, 0.56);
+
+    /* item layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+    .main dl{
+        /* text */
+        font-family: "Sitka Heading";
+        font-size: 13px;
+        font-weight: normal;
+        color: #fff;
+
+        /* layout */
+        margin-left: 25px;
+        width: 100px;
+        height: 44px;
+
+        /* item layout */
+        display: grid;
+        grid-template: 
+            "date weather no" 1fr
+            "day weather temp" 1fr
+            / 1fr 2fr 1fr;
+    }
+
+        .main dl dt{
+            display: none;
+        }
+
+        .main dl li:first-child{
+            /* layout */
+            grid-area: date;
+            margin-top: 6px;
+        }
+
+        .main dl li:nth-child(2){
+            grid-area: day;
+        }
+
+        .main dl li:nth-child(3){
+            /* text */
+            text-indent: -9999px;
+
+            /* layout */
+            grid-area: weather;
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_weather-day-sunny' data-name='Icon weather-day-sunny' xmlns='http://www.w3.org/2000/svg' width='27.85' height='27.876' viewBox='0 0 27.85 27.876'%3E%3Cpath id='Icon_weather-day-sunny-2' data-name='Icon weather-day-sunny' d='M5.244,18.725a1.108,1.108,0,0,1,.328-.813,1.133,1.133,0,0,1,.787-.315H9.033a.994.994,0,0,1,.76.328,1.232,1.232,0,0,1,.013,1.6.975.975,0,0,1-.76.328H6.372a1.07,1.07,0,0,1-.787-.328A1.091,1.091,0,0,1,5.244,18.725Zm3.75,9.087a1.214,1.214,0,0,1,.3-.8l1.927-1.875a1.008,1.008,0,0,1,.774-.3,1.111,1.111,0,0,1,.787.3.98.98,0,0,1,.315.747,1.237,1.237,0,0,1-.315.839l-1.862,1.862a1.191,1.191,0,0,1-1.613,0A1.059,1.059,0,0,1,8.994,27.812Zm0-18.147a1.214,1.214,0,0,1,.3-.8,1.259,1.259,0,0,1,.839-.328,1.1,1.1,0,0,1,.774.315l1.875,1.927a1.018,1.018,0,0,1,.315.774,1.076,1.076,0,0,1-1.1,1.1,1.018,1.018,0,0,1-.774-.315L9.309,10.464A1.1,1.1,0,0,1,8.994,9.665Zm3.344,9.06a6.618,6.618,0,0,1,.918-3.409,6.848,6.848,0,0,1,2.5-2.5,6.727,6.727,0,0,1,6.058-.367,6.85,6.85,0,0,1,2.177,1.469,6.88,6.88,0,0,1,1.993,4.825,6.631,6.631,0,0,1-.918,3.422,6.877,6.877,0,0,1-2.491,2.491,6.839,6.839,0,0,1-6.844,0,6.876,6.876,0,0,1-2.491-2.491A6.966,6.966,0,0,1,12.338,18.725Zm2.229,0a4.633,4.633,0,0,0,4.615,4.642,4.656,4.656,0,0,0,4.642-4.642,4.42,4.42,0,0,0-1.364-3.239,4.492,4.492,0,0,0-3.278-1.337,4.433,4.433,0,0,0-3.252,1.337A4.37,4.37,0,0,0,14.567,18.725Zm3.488,10.2a1.03,1.03,0,0,1,.328-.787,1.11,1.11,0,0,1,.787-.315,1.1,1.1,0,0,1,.8.315,1.067,1.067,0,0,1,.315.787v2.609a1.108,1.108,0,0,1-.328.813,1.07,1.07,0,0,1-.787.328,1.05,1.05,0,0,1-.787-.328,1.108,1.108,0,0,1-.328-.813V28.926Zm0-20.324V5.928a1.07,1.07,0,0,1,.328-.787,1.091,1.091,0,0,1,.8-.341,1.05,1.05,0,0,1,.787.328,1.07,1.07,0,0,1,.328.787V8.6a.994.994,0,0,1-.328.76,1.1,1.1,0,0,1-.787.3,1.133,1.133,0,0,1-.787-.3A1.032,1.032,0,0,1,18.054,8.6Zm7.238,17.282a1.03,1.03,0,0,1,1.036-1.036,1.111,1.111,0,0,1,.787.3l1.914,1.875a1.141,1.141,0,0,1,.315.8,1.059,1.059,0,0,1-.315.774,1.168,1.168,0,0,1-1.573,0l-1.862-1.862A1.277,1.277,0,0,1,25.292,25.884Zm0-14.318a1.017,1.017,0,0,1,.3-.774l1.862-1.927a1.1,1.1,0,0,1,.774-.315,1.03,1.03,0,0,1,.787.328,1.07,1.07,0,0,1,.328.787,1.107,1.107,0,0,1-.315.813l-1.914,1.875a1.156,1.156,0,0,1-.787.315.952.952,0,0,1-.734-.315A1.111,1.111,0,0,1,25.292,11.566Zm2.963,7.159a1.173,1.173,0,0,1,.315-.813,1.021,1.021,0,0,1,.747-.315h2.649a1.113,1.113,0,0,1,.787,1.914,1.07,1.07,0,0,1-.787.328H29.318a.975.975,0,0,1-.76-.328A1.133,1.133,0,0,1,28.256,18.725Z' transform='translate(-5.244 -4.8)' fill='%23fff'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: 27.8px;
+            background-position: center;
+        }
+
+        .main dl li:nth-child(4){
+            /* text */
+            font-family: "Minion Pro";
+            font-style: 11px;
+            font-weight: normal;
+
+            /* layout */
+            grid-area: temp;
+            margin-left: -7px;
+        }
+
+    .main div>div{
+        /* layout */
+        margin-top: 10px;
+        margin-right: 30px;
+    }
+
+    .main div>a{
+        /* text */
+        font-family: "Minion Pro";
+        font-size: 20px;
+        font-weight: normal;
+        color: #fff;
+    }
+
+        .main div>a>span{
+            /* layout */
+            display: inline-block;
+            padding-left: 15px;
+        }
+/* --- menu ------------------------------- */
+.menu ul{
+    /* layout */
+    width: 268px;
+    height: 234px;
+    margin-left: -34px;
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "reserve service" 1fr
+        "mamage notice" 1fr
+        "nothing message"
+        / 1fr 1fr;
+    row-gap: 57px;
+    column-gap: 34px;
+}
+
+.menu ul>li:nth-child(n+1):nth-child(-n+4){
+    /* text */
+    font-family: "NanumSquareRound";
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 117px;
+    color: #fff;
+
+    /* layout */
+    display: inline-block;
+    width: 134px;
+    height: 117px;
+    border-radius: 30px;
+
+    /* item layout */
+    position: relative;
+}
+    .menu ul>li:nth-child(n+1):nth-child(-n+4)>a{
+        /* text */
+        color: #fff;
+
+        /* layout */
+        display: inline-block;
+        width: 134px;
+        height: 117px;
+    }
+
+    /* ... 번호 공통 스타일 */
+    .menu ul>li>span{
+        /* text */
+        text-size-adjust: 17px;
+        text-align: center;
+        line-height: 30px;
+
+        /* layout */
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        border-radius: 50px;
+        background-color: #5782B9;
+
+        position: absolute;
+        top: -11px;
+        right: -11px;
+    }
+
+    .menu ul>li:first-child{
+        /* layout */
+        background-image: url(../../images/room-spa.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+        .menu ul>li:first-child>a{
+            /* 시계 */
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-checkmark-circle-outline' data-name='Icon ionic-ios-checkmark-circle-outline' xmlns='http://www.w3.org/2000/svg' width='27.133' height='27.133' viewBox='0 0 27.133 27.133'%3E%3Cpath id='패스_254' data-name='패스 254' d='M26.325,13.279l-1.306-1.007a.332.332,0,0,0-.208-.067h0a.317.317,0,0,0-.208.067l-9.05,6.834-3.294-2.469a.357.357,0,0,0-.415,0l-1.32.99a.186.186,0,0,0,0,.317l4.154,3.114a1.525,1.525,0,0,0,.868.317,1.586,1.586,0,0,0,.861-.306h.007L26.332,13.6A.2.2,0,0,0,26.325,13.279Z' transform='translate(-4.851 -3.221)' fill='%23eee'/%3E%3Cpath id='패스_255' data-name='패스 255' d='M16.942,5.2a11.736,11.736,0,1,1-8.3,3.437,11.663,11.663,0,0,1,8.3-3.437m0-1.826A13.567,13.567,0,1,0,30.508,16.942,13.564,13.564,0,0,0,16.942,3.375Z' transform='translate(-3.375 -3.375)' fill='%23eee'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: 53.9px 80.8px;
+        }
+
+    .menu ul>li:nth-child(2){
+        /* layout */
+        background-image: url(../../images/hotel-intro.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+        .menu ul>li:nth-child(2)>a{
+            /* layout */
+                /* 접시 */
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-room-service' data-name='Icon material-room-service' xmlns='http://www.w3.org/2000/svg' width='33.3' height='23.31' viewBox='0 0 33.3 23.31'%3E%3Cpath id='Icon_material-room-service-2' data-name='Icon material-room-service' d='M.833,22.063h33.3v3.33H.833ZM20.547,6.729a3.435,3.435,0,0,0,.266-1.315,3.33,3.33,0,0,0-6.66,0,3.435,3.435,0,0,0,.266,1.315A15,15,0,0,0,2.5,20.4h29.97A15,15,0,0,0,20.547,6.729Z' transform='translate(-0.833 -2.083)' fill='%23eee'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: 53.4px 79.8px;
+        }
+
+    .menu ul>li:nth-child(3){
+        /* layout */
+        background-image: url(../../images/hotel-main.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+        .menu ul>li:nth-child(3)>a{
+            /* text */
+            font-size: 13px;
+
+            /* layout */
+                /* 침대 */
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-bed' data-name='Icon awesome-bed' xmlns='http://www.w3.org/2000/svg' width='33.133' height='19.88' viewBox='0 0 33.133 19.88'%3E%3Cpath id='Icon_awesome-bed-2' data-name='Icon awesome-bed' d='M9.112,14.44A4.142,4.142,0,1,0,4.97,10.3,4.146,4.146,0,0,0,9.112,14.44ZM27.335,7.813h-11.6a.828.828,0,0,0-.828.828V16.1H3.313V5.328A.828.828,0,0,0,2.485,4.5H.828A.828.828,0,0,0,0,5.328V23.552a.828.828,0,0,0,.828.828H2.485a.828.828,0,0,0,.828-.828V21.067H29.82v2.485a.828.828,0,0,0,.828.828H32.3a.828.828,0,0,0,.828-.828v-9.94A5.8,5.8,0,0,0,27.335,7.813Z' transform='translate(0 -4.5)' fill='%23eee'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: 50.4px 84px;
+        }
+
+    .menu ul>li:nth-child(4){
+        /* layout */
+        background-image: url(../../images/hotel-rounge.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+        .menu ul>li:nth-child(4)>a{
+            /* 느낌표 */
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-announcement' data-name='Icon material-announcement' xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath id='Icon_material-announcement-2' data-name='Icon material-announcement' d='M30,3H6A3,3,0,0,0,3.015,6L3,33l6-6H30a3.009,3.009,0,0,0,3-3V6A3.009,3.009,0,0,0,30,3ZM19.5,16.5h-3v-9h3Zm0,6h-3v-3h3Z' transform='translate(-3 -3)' fill='%23eee'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: 54.6px 75px;
+        }
+
+.menu ul>li:nth-child(5){
+    /* layout */
+    grid-area: message;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+
+    /* item layout */
+    position: relative;
+    top: -30px;
+    left : 80px;
+}
+    .menu ul>li:nth-child(5)>a{
+        /* text */
+        text-indent: -9999px;
+
+        /* layout */
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='82' height='82' viewBox='0 0 82 82'%3E%3Cdefs%3E%3Cfilter id='패스_20' x='0' y='0' width='82' height='82' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='5' input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='3' result='blur'/%3E%3CfeFlood flood-opacity='0.161'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg id='chat' transform='translate(9 4)'%3E%3Cg transform='matrix(1, 0, 0, 1, -9, -4)' filter='url(%23패스_20)'%3E%3Cpath id='패스_20-2' data-name='패스 20' d='M32,0A32,32,0,1,1,0,32,32,32,0,0,1,32,0Z' transform='translate(9 4)' fill='%23479ddc'/%3E%3C/g%3E%3Cpath id='Icon_material-chat' data-name='Icon material-chat' d='M29.842,3H5.982A2.978,2.978,0,0,0,3.015,5.982L3,32.824l5.965-5.965H29.842a2.991,2.991,0,0,0,2.982-2.982V5.982A2.991,2.991,0,0,0,29.842,3ZM8.965,13.438H26.859v2.982H8.965Zm11.93,7.456H8.965V17.912h11.93Zm5.965-8.947H8.965V8.965H26.859Z' transform='translate(13.914 13.991)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 70px;
+        background-position: center;
+    }
+
+    .menu ul>li:nth-child(5)>span:nth-child(2){
+        /* text */
+        font-family: "NanumSquareRound";
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+
+        /* layout */
+        background-color: #B19D74;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -11px;
+        right: -6px;
+    }

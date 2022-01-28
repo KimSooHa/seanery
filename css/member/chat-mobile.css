@@ -1,0 +1,165 @@
+/* === layout ======================================*/
+/* --- body -----------------------------------------*/
+body{
+    /* layout */
+    height: 100vh;
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "header" 73px
+        "inquiry" 1fr 
+        / 1fr;
+}
+/* --- header -----------------------------------------*/
+.header{
+    /* layout */
+    grid-area: header;
+    background-color: #5782B9;
+
+    /* item layout */
+    padding-left: 31px;
+    padding-right: 21.5px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 13.5px 1fr 27px;
+    align-items: center;
+}
+
+/* --- inquiry -----------------------------------------*/
+.inquiry {
+    /* layout */
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "dialog" 1fr
+        "input" 135px
+        / 1fr;
+}
+
+/* === content block ======================================*/
+/* --- header -----------------------------------------*/
+.header>h1{
+    /* text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-size: 14px; */
+    font-size: 25px;
+    font-weight: normal;
+    color: #E6EEF2;
+
+    /* layout*/
+    margin-left: 22.5px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.header>div:nth-child(2){
+    /* layout */
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: inline-block;
+}
+
+    .header>div:nth-child(2)>a{
+        /* text  */
+        text-indent: -999px;
+
+        /* layout */
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back-2' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        display: inline-block;
+        width: 13.5px;
+        height: 23.6px;
+    }
+
+.header>div:nth-child(3){
+    /* layout */
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+    .header>div:nth-child(3)>a{
+        /* text */
+        text-indent: -9999px;
+
+        /* layout */
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        display: inline-block;
+        width: 27px;
+        height: 15.75px;
+    }
+
+/* --- inquiry ----------------------------------------*/
+.inquiry .inquiry-dialog {
+    /* layout */
+    grid-area: dialog;
+    background-color: #E6EEF2;
+}
+
+.inquiry form{
+    /* layout */
+    grid-area: input;
+
+    /* item layout */
+    position: relative;
+}
+
+    .inquiry form input:nth-child(2){
+        /* layout */
+        height: 32px;
+        border-left: 1px solid black;
+
+        position: absolute;
+        top: 35px;
+        left: 35px;
+    }
+
+    .inquiry form input:nth-child(3){
+        /* text */
+        text-indent: -9999px;
+
+        /* layout */
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.666' height='26.414' viewBox='0 0 24.666 26.414'%3E%3Cg id='Icon_feather-send' data-name='Icon feather-send' transform='translate(1 1.414)'%3E%3Cpath id='패스_23' data-name='패스 23' d='M33,3,16.5,19.5' transform='translate(-10.748 -3)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='패스_24' data-name='패스 24' d='M25.252,3,17.464,27l-4.45-10.8L3,11.4Z' transform='translate(-3 -3)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-color: transparent;
+
+        position: absolute;
+        top: 43px;
+        right: 30px;
+
+        display: inline-block;
+        width: 22.5px;
+        height: 24px;
+
+        /* etc */
+        cursor: pointer;
+    }
+
+    .inquiry form a{
+        /* text */
+        overflow: hidden;
+        text-indent: -9999px;
+
+        /* layout */
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.579' height='16.448' viewBox='0 0 15.579 16.448'%3E%3Cg id='Icon_feather-paperclip' data-name='Icon feather-paperclip' transform='translate(0.5 0.71)'%3E%3Cpath id='Icon_feather-paperclip-2' data-name='Icon feather-paperclip' d='M17.374,9.225,10.58,16.02A4.439,4.439,0,1,1,4.3,9.743L11.1,2.948a2.959,2.959,0,0,1,4.185,4.185l-6.8,6.795a1.48,1.48,0,1,1-2.092-2.092l6.277-6.27' transform='translate(-3.002 -2.082)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        position: absolute;
+        top: 94.7px;
+        left: 35px;
+
+        display: inline-block;
+        width: 14.3px;
+        height: 15.2px;
+    }
