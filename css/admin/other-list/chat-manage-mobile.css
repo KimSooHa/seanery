@@ -1,10 +1,11 @@
+/* 저작자 : 조영인 */
 /* === layout =========================================*/
 /* --- header -----------------------------------------*/
 .header{
     /* layout */
     height: 194px;
     border-radius: 0 0 0 80px;
-    background-image: url(../../images/pexels-aaron-ulsh-2860705.jpg);
+    background-image: url(../../../images/ocean-wave.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
