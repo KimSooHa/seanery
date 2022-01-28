@@ -1,3 +1,4 @@
+/* 저작자: 김수하 */
 body {
     width: 100%;
 }
@@ -358,7 +359,7 @@ body {
     height: 380px;
     /* background: url("../images/163701843.jpg")
                 no-repeat -120px 30px / 641px 361px; */
-    background: url("../images/163701843.jpg")
+    background: url("../images/outside-sunset.jpg")
                 no-repeat -120px 30px / cover;
     position: relative;
     margin-top: 100px;
