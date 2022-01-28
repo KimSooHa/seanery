@@ -1,0 +1,275 @@
+/* === layout =========================================*/
+/* --- body -----------------------------------------*/
+body {
+    position: relative;
+    z-index: -2;
+}
+/* --- header -----------------------------------------*/
+.header{
+    height: 194px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .header::after{
+        background-color: #fff;
+        opacity: 0.15;
+        height: 194px;
+        width: 100%;
+        content: "";
+
+        position: absolute;
+        top: 0;
+    }
+
+    .header>h1{
+        /* layout*/
+        order: 1;
+        margin-top: 51px;
+        align-self: center;
+    }
+
+    .header>div{
+        /* layout */
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 73px;
+        padding-top: 29px;
+        padding-left: 31px;
+        padding-right: 21.5px;
+        box-sizing: border-box;
+
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+/* --- reserv-history -----------------------------------------*/
+.reserv-history{
+    position: relative;
+    top: -194px;
+    z-index: -1;
+}
+
+    .reserv-history>h1{
+        position: relative;
+        /* top: -194px; */
+        /* z-index: -1; */
+    }
+
+    .reserv-history>h1>span{
+        /* item layout */
+        position: absolute;
+        left: 54px;
+        bottom: 15px;
+    }
+
+/* --- reserv-history existence -----------------------------------------*/
+    .reserv-history .existence>div{
+        /* item layout */
+        margin-top: 26px;
+        padding-left: 61px;
+    }
+
+    .reserv-history .existence>nav{
+        /* layout */
+        margin-top: 16px;
+
+        /* item layout*/
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .reserv-history .existence>nav li{
+        /* item layout*/
+        padding-left: 79px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .reserv-history nav>dl>li>dd:nth-child(2){
+            /* layout */
+            padding-left: 25.2px;
+        }
+/* --- reserv-history empty -----------------------------------------*/
+.reserv-history .empty>div:first-child{
+    /* layout */
+    margin-top: 95.5px;
+}
+
+.reserv-history .empty>div:nth-child(2){
+    /* layout */
+    margin-top: 110px;
+}
+
+.reserv-history .empty>div:nth-child(2){
+    /* item layout */
+    padding-left: 42.8px;
+    padding-right: 39.8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* === content block ==================================*/
+/* --- header -----------------------------------------*/
+.header{
+    background-image: url(../../images/pexels-aaron-ulsh-2860705.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /* box style */
+    border-radius: 0 0 0 80px;
+}
+
+    .header>h1{
+        /* text */
+        font-family: "Montserrat";
+        font-size: 19px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .header>div>a:first-child{
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back-2' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        text-indent: -9999px;
+
+        /* box style */
+        display: inline-block;
+        width: 13.5px;
+        height: 23.6px;
+    }
+
+    .header>div>a:nth-child(2){
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23e6eef2'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23e6eef2'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23e6eef2'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        text-indent: -9999px;
+
+        /* box style */
+        display: inline-block;
+        width: 27px;
+        height: 15.7px;
+    }
+
+/* --- reserv-history -----------------------------------------*/
+.reserv-history>h1{
+    /* text */
+    font-family: "NanumSquareRound";
+    font-size: 17px;
+    font-weight: bold;
+    color: #436A81;
+
+    /* box style */
+    background-color: #E6EEF2;
+    height: 244px;
+    border-radius: 0 0 0 80px;
+}
+
+/* --- reserv-history existence -----------------------------------------*/
+.reserv-history .existence>div{
+    /* text */
+    font-family: "Sitka Heading";
+    font-size: 13px;
+    font-weight: normal;
+    color: #436A81;
+}
+
+.reserv-history .existence>nav>dl>li{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.823' height='24.94' viewBox='0 0 21.823 24.94'%3E%3Cpath id='Icon_awesome-calendar-check' data-name='Icon awesome-calendar-check' d='M21.238,7.794H.585A.585.585,0,0,1,0,7.209V5.456A2.338,2.338,0,0,1,2.338,3.118H4.676V.585A.585.585,0,0,1,5.261,0H7.209a.585.585,0,0,1,.585.585V3.118h6.235V.585A.585.585,0,0,1,14.613,0h1.948a.585.585,0,0,1,.585.585V3.118h2.338a2.338,2.338,0,0,1,2.338,2.338V7.209A.585.585,0,0,1,21.238,7.794ZM.585,9.353H21.238a.585.585,0,0,1,.585.585V22.6a2.338,2.338,0,0,1-2.338,2.338H2.338A2.338,2.338,0,0,1,0,22.6V9.937A.585.585,0,0,1,.585,9.353ZM16.82,14.026l-1.372-1.383a.584.584,0,0,0-.827,0L9.456,17.763l-2.24-2.258a.585.585,0,0,0-.827,0L5.006,16.874A.584.584,0,0,0,5,17.7l4.024,4.056a.584.584,0,0,0,.827,0l6.963-6.907a.584.584,0,0,0,0-.827Z' fill='%23707070'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 34.9px 32px;
+
+    /* text */
+    font-family: "Minion Pro";
+    font-size: 18px;
+    font-weight: bold;
+    color: #707070;
+
+    /* box style */
+    height: 79px;
+    border-bottom: 1px solid #A9A9A9;
+}
+
+    .reserv-history .existence>nav>dl:first-child>li{
+        /* box style */
+        border-top: 1px solid #A9A9A9;
+    }
+
+    .reserv-history .existence>nav>dl>li>dd:nth-child(2){
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.863' height='11.89' viewBox='0 0 14.863 11.89'%3E%3Cpath id='Icon_awesome-door-closed' data-name='Icon awesome-door-closed' d='M14.491,10.4h-2.6V1.18A1.15,1.15,0,0,0,10.776,0H4.087A1.15,1.15,0,0,0,2.972,1.18V10.4H.372A.371.371,0,0,0,0,10.776v.743a.371.371,0,0,0,.372.372h14.12a.371.371,0,0,0,.372-.372v-.743A.371.371,0,0,0,14.491,10.4ZM9.661,6.688a.743.743,0,1,1,.743-.743A.743.743,0,0,1,9.661,6.688Z' fill='%23707070'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: 0px 3px;
+
+        /* text */
+        font-size: 14px;
+    }
+
+/* --- reserv-history empty -----------------------------------------*/
+.reserv-history .empty>div:first-child{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='73.92' height='68.226' viewBox='0 0 73.92 68.226'%3E%3Cpath id='Icon_ionic-ios-warning' data-name='Icon ionic-ios-warning' d='M35.516,7.325,4.05,64.749a5.4,5.4,0,0,0,4.815,7.977H71.814a5.412,5.412,0,0,0,4.815-7.977L45.146,7.325A5.516,5.516,0,0,0,35.516,7.325Zm7.942,23.826-.64,21.676H37.843L37.2,31.151ZM40.331,64.624a3.271,3.271,0,1,1,3.394-3.269A3.3,3.3,0,0,1,40.331,64.624Z' transform='translate(-3.375 -4.5)' fill='%23bfbfbf'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 73.9px 68.2px;
+    background-position: center 0px;
+
+    /* text */
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: normal;
+    color: #6B6B6B;
+
+    /* box style */
+    /* height: 115px; */
+
+    /* item layout */
+    padding-top: 100.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    .reserv-history .empty>div:first-child>span{
+        font-weight: bold;
+    }
+
+.reserv-history .empty>div:nth-child(2)>a:first-child{
+    /* box style */
+    display: inline-block;
+    padding: 9px 11px 12px 11px;
+    border: 2px solid #436A81;
+    border-radius: 13px;
+}
+
+    .reserv-history .empty>div:nth-child(2)>a:first-child{
+        /* text */
+        font-family: "NanumSquareRound";
+        font-size: 15px;
+        font-weight: bold;
+        color: #436A81;
+    }
+
+.reserv-history .empty>div:nth-child(2)>a:nth-child(2){
+    /* box style */
+    background-color: #436A81;
+    display: inline-block;
+    padding: 11px 21px 9px 21px;
+    border-radius: 13px;
+}
+
+    .reserv-history .empty>div:nth-child(2)>a:nth-child(2){
+        /* text */
+        font-family: "NanumSquareRound";
+        font-size: 15px;
+        font-weight: bold;
+        color: #fff;
+
+        /* layout */
+        margin-left: 47px;
+    }

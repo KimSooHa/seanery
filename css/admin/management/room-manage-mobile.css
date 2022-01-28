@@ -1,0 +1,154 @@
+/* === layout =========================================*/
+/* --- header -----------------------------------------*/
+.header{
+    /* layout */
+    height: 194px;
+    border-radius: 0 0 0 80px;
+    background-image: url(../../images/pexels-aaron-ulsh-2860705.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+
+}
+    .header>h1{
+        /* layout*/
+        order: 1;
+        margin-top: 51px;
+        align-self: center;
+    }
+
+    .header>div{
+        /* layout */
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 73px;
+        padding-top: 29px;
+        padding-left: 31px;
+        padding-right: 21.5px;
+        box-sizing: border-box;
+
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+/* --- room-manage -----------------------------------------*/
+.room-manage{
+    /* layout */
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+/* === content block =========================================*/
+/* --- header -----------------------------------------*/
+.header>h1{
+    /* text */
+    font-family: "Montserrat";
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header>div>a:first-child{
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back-2' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    text-indent: -9999px;
+
+    /* box style */
+    display: inline-block;
+    width: 13.5px;
+    height: 23.6px;
+}
+
+.header>div>a:nth-child(2){
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23e6eef2'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23e6eef2'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23e6eef2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    text-indent: -9999px;
+
+    /* box style */
+    display: inline-block;
+    width: 27px;
+    height: 15.7px;
+}
+
+/* --- room-manage -----------------------------------------*/
+.room-manage{
+    /* item layout */
+}
+
+.room-manage>h1{
+    /* text */
+    font-family: "NanumSquareRound";
+    font-size: 17px;
+    font-weight: bold;
+    color: #436A81;
+
+    /* layout */
+    background-color: #E6EEF2;
+    height: 244px;
+    position: relative;
+}
+
+    .room-manage>h1>span{
+        /* item layout */
+        position: absolute;
+        left: 54px;
+        bottom: 15px;
+    }
+
+.room-manage ol li{
+    /* text */
+    font-family: "Minion Pro";
+    font-size: 15px;
+    font-weight: bold;
+
+    /* layout */
+    height: 50px;
+    border: 1px solid #A9A9A9;
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "padding1 room-no view link padding2" 50px
+        / 1fr 90px 270px 30px 1fr;
+}
+    .room-manage ol li>span:first-child{
+        /* layout */
+        grid-area: room-no;
+        margin-top: 13.9px;
+        margin-left: 25.8px;
+    }
+
+    .room-manage ol li>span:nth-child(2){
+        /* layout */
+        grid-area: view;
+        margin-top: 13.9px;
+    }
+
+    .room-manage ol li>a{
+        /* text */
+        text-indent: -9999px;
+
+        /* layout */
+        grid-area: link;
+        margin-top: 14.9px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.561' height='22.123' viewBox='0 0 12.561 22.123'%3E%3Cpath id='Icon_feather-chevron-right' data-name='Icon feather-chevron-right' d='M13.5,26.88l8.94-8.94L13.5,9' transform='translate(-11.379 -6.879)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+    }
