@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <h1>프로필 수정</h1>
-        <div><a href="">뒤로가기</a></div>
+        <div><a href="./menu/list.html">뒤로가기</a></div>
     </header>
 
     <section class="modification">
@@ -23,17 +23,17 @@
             <fieldset>
                 <legend class="d-none">회원정보 입력</legend>
                 <label>이름</label>
-                <input type="text" name="id" placeholder="김수하">
+                <input type="text" name="id" placeholder="김수하" required>
                 <label>Email</label>
-                <input type="email" name="email" placeholder="tngk1001@naver.com">
+                <input type="email" name="email" placeholder="tngk1001@naver.com" required>
                 <label>비밀번호</label>
-                <input type="password" name="password" placeholder="비밀번호">
+                <input type="password" name="password" placeholder="비밀번호" required>
                 <label>비밀번호 확인</label>
-                <input type="password" name="password" placeholder="비밀번호 확인">
+                <input type="password" name="password" placeholder="비밀번호 확인" required>
                 <label>휴대전화</label>
-                <input type="text" name="phone" placeholder="010-1234-1234">
+                <input type="text" name="phone" placeholder="010-1234-1234" required>
             </fieldset>
-            <button name="midified-complete" value="ON">수정완료</button>
+            <button type="submit">수정완료</button>
         </form>
     </section>
 </body>
