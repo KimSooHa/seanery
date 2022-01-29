@@ -1,10 +1,4 @@
 /* 저작자 : 조영인 */
-@import url(../../reset.css);
-@import url(../../utils.css);
-@import url(list-mobile.css);
-@import url(list-tablet.css);
-@import url(list-desktop.css);
-
 /*==== layout ==================== */
 /*---- body -------------------- */
 body{
@@ -204,4 +198,3 @@ body{
     width: 31.4px;
     height: 31.4px;
 }
-
