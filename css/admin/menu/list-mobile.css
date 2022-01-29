@@ -1,3 +1,4 @@
+/* 저작자 : 조영인 */
 /*==== layout ==================== */
 /*---- body -------------------- */
 body{
@@ -110,7 +111,7 @@ body{
     left: 45px;
 }
 
-.member-profile div a[href="../../member/profile"] {
+.member-profile div a[href="../../member/profile.html"] {
     /* text */
     font-family: "Sitka Heading";
     font-size: 13px;
@@ -134,7 +135,7 @@ body{
     border-radius: 15px;
 }
 
-.member-profile div a[href="../../member/coupon"] {
+.member-profile div a[href="../../member/coupon.html"] {
     /* text */
     font-family: "Sitka Heading";
     font-size: 13px;
