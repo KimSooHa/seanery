@@ -1,3 +1,4 @@
+/* 저작자 : 조영인 */
 /* === layout ============================== */
 body{
     /* layout */
@@ -30,6 +31,9 @@ form{
 
         /* item layout */
         position: relative;
+
+        /* reset */
+        padding: 0px;
     }
         form>fieldset>legend{
             /* text */
@@ -95,6 +99,9 @@ form{
         /* utils */
         background-color: #EEEEEE;
         cursor: pointer;
+
+        /* reset */
+        border: none;
     }
     
     
