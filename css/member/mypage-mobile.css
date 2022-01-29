@@ -8,6 +8,8 @@
     /* item layout */
     display: flex;
     flex-direction: column;
+
+    position: relative;
 }
 
 /* --- profile -----------------------------------------*/
@@ -47,6 +49,7 @@
 
         position: absolute;
         top: 0;
+        z-index: 2;
     }
 
 
@@ -59,13 +62,17 @@
 
         /* layout*/
         order: 1;
-        margin-top: 51px;
         align-self: center;
+
+        position: absolute;
+        bottom: 47px;
+        z-index: 1;
     }
 
     .header>div{
         /* layout */
         background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
         height: 73px;
         padding-top: 29px;
         padding-left: 31px;
@@ -76,6 +83,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        position: absolute;
+        top: 0;
+        z-index: 3;
     }
 
         .header>div>a:first-child{
