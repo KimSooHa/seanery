@@ -166,4 +166,7 @@ body{
         background-color: #5782B9;
         width: 342px;
         height: 52px;
+
+        /* utils */
+        cursor: pointer;
     }
