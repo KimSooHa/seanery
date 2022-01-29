@@ -10,7 +10,7 @@ a {
     text-decoration: none;
 }
 
-ul {
+ul, ol{
     /* layout */
     margin: 0;
     padding: 0;
