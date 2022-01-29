@@ -1,5 +1,6 @@
-@import url(../reset.css);
-@import url(../util.css);
+/* 저작자 : 조영인 */
+@import url(../../reset.css);
+@import url(../../utils.css);
 @import url(../style.css);
 @import url(member-manage-mobile.css);
 @import url(member-manage-tablet.css);
