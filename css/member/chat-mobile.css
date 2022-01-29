@@ -1,3 +1,4 @@
+/* 저작자 : 조영인 */
 /* === layout ======================================*/
 /* --- body -----------------------------------------*/
 body{
@@ -44,7 +45,7 @@ body{
     /* text */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* font-size: 14px; */
-    font-size: 25px;
+    font-size: 20px;
     font-weight: normal;
     color: #E6EEF2;
 
@@ -110,6 +111,10 @@ body{
     /* item layout */
     position: relative;
 }
+    .inquiry form input{
+        /* reset */
+        border: none;
+    }
 
     .inquiry form input:nth-child(2){
         /* layout */
