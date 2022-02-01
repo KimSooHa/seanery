@@ -1,7 +1,10 @@
 /* 저작자: 김수하 */
 /* ====== btn style ==================================================== */
 .img-btn-login {
-    color: #fff;
+    /* text style */
+    text-indent: -999px;
+    
+    /* content box style */
     background-image: url("data:image/svg+xml,%3Csvg id='Icon_open-account-login' data-name='Icon open-account-login' xmlns='http://www.w3.org/2000/svg' width='23.703' height='20.74' viewBox='0 0 23.703 20.74'%3E%3Cpath id='Icon_open-account-login-2' data-name='Icon open-account-login' d='M8.889,0V2.963H20.74V17.777H8.889V20.74H23.7V0Zm2.963,5.926V8.889H0v2.963H11.852v2.963l5.926-4.444Z' fill='%23fff'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: right top;
@@ -9,7 +12,6 @@
     height: 20.74px;
     display: inline-block;
     overflow: hidden;
-    text-indent: -999px;
 }
 
 .img-btn-menu {
@@ -75,7 +77,7 @@
     }
 
     .img-btn-go-back-weightedwhite{
-        background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23eee'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23eee'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23eee'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23eee'/%3E%3C/svg%3E%0A");
     }
 
 
@@ -314,7 +316,7 @@
     text-indent: -999px;
 
     /* content box style */
-    background-image: url("/images/sns-icon/naver-icon-style-removebg-preview.png");
+    background-image: url("/images/sns-icon/naver-icon.png");
     background-repeat: no-repeat;
     background-position: right top;
     background-size: cover;
@@ -329,7 +331,7 @@
     text-indent: -999px;
 
     /* content box style */
-    background-image: url("/images/sns-icon/png-transparent-kakaotalk-instant-messaging-android-android-text-telephone-call-logo-removebg-preview.png");
+    background-image: url("/images/sns-icon/kakaotalk-icon.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -344,7 +346,7 @@
     text-indent: -999px;
 
     /* content box style */
-    background-image: url("/images/sns-icon/google-icon-styl-removebg-preview.png");
+    background-image: url("/images/sns-icon/google-icon.png");
     background-repeat: no-repeat;
     background-position: right top;
     background-size: cover;
