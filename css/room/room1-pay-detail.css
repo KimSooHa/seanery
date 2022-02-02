@@ -1,0 +1,188 @@
+@import url(../style.css);
+
+
+
+
+
+/* -------------------font --------------------*/
+
+.font-bold{
+    font-family: 'Minion Pro',Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    
+    display: inline-block;
+    padding: 15px 0;
+
+}
+
+.font-c{
+    font-family: 'Minion Pro',Verdana, Geneva, Tahoma, sans-serif;
+    
+    display: inline-block;
+    padding: 15px 0;
+
+}
+
+.font-d{
+    font-size: 17px;
+    font-weight: bold;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ------------------line--------------------- */
+.div-line{
+    border-top: 1px solid #BFBFBF;
+    margin: 20px 0;
+}
+
+/* ==================바깥 상자================= */
+.total{
+    height: 1000px;
+    width: 100%;
+
+    background-color: #EEEEEE;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: #707070;
+    font-size: 14px;
+}
+
+.total>div{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* ---------------------header------------------------ */
+
+.header{
+    display: flex;
+    position: relative;
+
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.btn-back{
+    height: 31px;
+    width: 31px;
+
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_feather-plus' data-name='Icon feather-plus' xmlns='http://www.w3.org/2000/svg' width='31.776' height='31.776' viewBox='0 0 31.776 31.776'%3E%3Cg id='Icon_feather-plus-2' data-name='Icon feather-plus' transform='matrix(0.719, 0.695, -0.695, 0.719, 39.735, -35.779)'%3E%3Cpath id='패스_12' data-name='패스 12' d='M18,29.972V7.5' transform='translate(0.736 34.995)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='패스_13' data-name='패스 13' d='M7.5,18H29.972' transform='translate(0 35.731)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+/* ----------------------조식--------------------------- */
+
+.breakfast{
+    display: grid;
+    grid-template-columns: 50px repeat(2, 50px 100px);
+    grid-template-rows: 30px;
+}
+    .breakfast>div>input{
+        width: 30px;
+    }
+
+    .breakfast>div>span{
+        height: 10px;
+        width: 10px;
+
+    
+        display: inline-block;
+        overflow: hidden;
+        text-indent: -999px;
+    }
+
+    .btn-minus{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.239' height='2.074' viewBox='0 0 8.239 2.074'%3E%3Cg id='Icon_awesome-minus' data-name='Icon awesome-minus' transform='translate(0.5 0.5)'%3E%3Cpath id='Icon_awesome-minus-2' data-name='Icon awesome-minus' d='M6.722,4.062H.517c-.286,0-.517.16-.517.358v.358c0,.2.232.358.517.358h6.2c.286,0,.517-.16.517-.358V4.42C7.239,4.223,7.008,4.062,6.722,4.062Z' transform='translate(0 -4.062)' fill='%236b6b6b' stroke='%236b6b6b' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;    
+    }
+
+    .btn-plus{
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-plus' data-name='Icon awesome-plus' xmlns='http://www.w3.org/2000/svg' width='9.574' height='9.574' viewBox='0 0 9.574 9.574'%3E%3Cpath id='Icon_awesome-plus-2' data-name='Icon awesome-plus' d='M.684,6.438H3.761V9.515a.684.684,0,0,0,.684.684h.684a.684.684,0,0,0,.684-.684V6.438H8.89a.684.684,0,0,0,.684-.684V5.07a.684.684,0,0,0-.684-.684H5.813V1.309A.684.684,0,0,0,5.129.625H4.445a.684.684,0,0,0-.684.684V4.386H.684A.684.684,0,0,0,0,5.07v.684A.684.684,0,0,0,.684,6.438Z' transform='translate(0 -0.625)' fill='%236b6b6b'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;    
+    }
+
+    /* --------------전망----------------------------- */
+
+.vieww>div{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: repeat(2, 1fr);
+    
+
+    align-items: center;
+    justify-items: self-start;
+}
+
+/* .view{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
+} */
+
+
+
+.notice{
+    display: inline-block;
+    font-family: 'Minion Pro',Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+
+    color: #9A0436;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+/* ----------------------요청사항------------------- */
+
+.box-size{
+    height: 110px;
+    width: 100%;
+    text-align: start;
+}
+
+
+/* ----------------Total------------------------------ */
+.bill{
+    display: grid;
+    grid-template-columns: 70px 200px;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: right;
+    justify-content: space-between ;
+}
+
+.bill-category{
+    justify-self: center;
+}
+
+/* ---------------btn-rev ------------------*/
+
+.btn-rev{
+    position: relative;
+    top: -60px;
+}
+
+.btn-rev>input{
+
+    width: 100%;
+    height: 65px;
+
+    /* padding-top: 100px; */
+    border-radius: 25px 25px 20px 20px;
+    background-color: #B19D74;
+
+    color: white;
+
+}
+
+

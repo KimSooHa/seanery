@@ -1,0 +1,241 @@
+@import url(../../style.css);
+
+
+/* <!-- -----------header 바 ----------------------------------- --> */
+
+
+.header{
+    width: 100%;
+    height: 73px;
+    background-color: #436A8160;
+
+     
+    /* layout */
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+
+
+.btn-back{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23eee'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+.btn-menu{
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");    background-repeat: no-repeat;
+    background-position: left top;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -999px;
+    padding-right: 10px;
+}
+
+/* ========================body=========================== */
+
+.top1{
+    background-color: #436A8125;
+    width: 100%;
+    height: 62px;
+
+    font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    font-weight: bolder;
+    color: #1E3146;
+}
+
+    .header1{
+        position: absolute;
+        top: 89px;
+        left: 54px;
+    }
+
+.top2{
+    background-color: #E6EEF2;
+    width: 100%;
+    height: 44px;
+
+    font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #436A81;
+}
+    .header2{
+        position: absolute;
+        top: 143px;
+        left: 37px;
+    }
+/* -----------------------------img----------------------------- */
+
+.superior-photo{
+    height: 190px;
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+.superior-photo>img{
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    
+}
+
+.superior-photo>div{
+    text-align: center;
+    color:#fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #00000035;
+}
+
+.superior-photo:hover>div{
+    transform: translateY(-190px);
+}
+
+.table-height{
+    height: 300px;
+}
+
+/* --------------------table ---------------*/
+
+
+.member-table{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(5, 50px);
+
+
+}
+
+.member-table>div{
+    border: 1px solid #A9A9A9;
+    border-bottom: 0px;
+    padding: 15px 15px;
+
+    font-family: 'Minion Pro','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: grey;
+}
+
+.member-table>div:nth-child(2n+1){
+    border-right: 0px;
+}
+
+.member-table>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-bot{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.596' height='7.798' viewBox='0 0 14.596 7.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l6.591,6.591L22.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");    
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+.btn-pencil{
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-edit' data-name='Icon material-edit' xmlns='http://www.w3.org/2000/svg' width='13.406' height='13.406' viewBox='0 0 13.406 13.406'%3E%3Cpath id='Icon_material-edit-2' data-name='Icon material-edit' d='M4.5,15.11V17.9H7.292l8.236-8.236L12.736,6.874Zm13.188-7.6a.742.742,0,0,0,0-1.05L15.945,4.714a.742.742,0,0,0-1.05,0L13.533,6.077l2.792,2.792Z' transform='translate(-4.5 -4.496)' fill='%23707070'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+/* -------------------- ---------------*/
+
+
+
+
+.bg-btn-bottom{
+    width: 100%;
+    height: 68px;
+    background-color: #DAE5EA;
+    
+}
+
+.btn-bottom{
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 4em;
+}
+
+.btn-bottom>a>input{
+    height: 28px;
+    width: 83px;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1E3146;
+
+    background-color: #fff;
+    border-radius: 25px ;
+    border: 1px solid #BFBFBF;
+}
+        /* ------------버튼 효과--- */
+        .btn-bottom>a>input:hover{
+            background-color: #fff7;
+        }
+        .btn-bottom>a>input:active{
+            background-color: #fff1;
+        }
+
+
+
+/* ---------------------------footer-------------------------------- */
+.footer{
+    width: 100%;
+    height: 130px;
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+
+    background-color: #E6EFF2;
+    width: 100%;
+    height: 125px;
+}
+
+.img-footer{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text-footer{
+    font-size: 11px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 20px;
+}
