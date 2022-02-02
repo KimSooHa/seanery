@@ -22,6 +22,9 @@
     height: 23.27px;
     overflow: hidden;
     /* padding-left: 30px; */
+
+    /* effect */
+    cursor: pointer;
 }
 
 .img-btn-right-arrow {
@@ -37,6 +40,9 @@
     height: 23.27px;
     overflow: hidden;
     /* padding-left: 30px; */
+
+     /* effect */
+     cursor: pointer;
 }
 
 .btn-reservation {
