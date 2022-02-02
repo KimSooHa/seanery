@@ -55,6 +55,15 @@
         margin-top: 34px;
     }
 
+.btn-search-reserv {
+    /* layout */
+    margin-top: 30px;
+
+    /* item layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -102,4 +111,14 @@
 .user-reservation .info-collect-agree input {
     width: 18px;
     height: 18px;
+}
+
+/* ------------------------------------------------------ */
+
+.btn-search-reserv a {
+     /* text style */
+     font-family: 'Montserrat', "Minion Pro";
+     font-weight: 600;
+     font-size: 11px;
+     color: #436A81;
 }
