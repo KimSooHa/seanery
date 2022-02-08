@@ -46,11 +46,10 @@ body {
 
 section {
     /* layout */
-    width: 85%;
+    width: 328px;
     height: 270px;
     background-color: #EEEEEE;
     border-radius: 38px;
-    padding: 0 21px;
     box-sizing: border-box;
     
     /* item layout */
@@ -63,7 +62,7 @@ section {
 section div {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
