@@ -1,0 +1,175 @@
+/* === layout block ========================= */
+/* --- body -------------------------- */
+body{
+    background-color: rgba(0, 0, 0, 0.72);
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* --- month -------------------------- */
+.month{
+    /* layout */
+    width: 297px;
+    height: 294px;
+
+    /* item layout  */
+}
+/* --- month-first -------------------------- */
+.month-first{
+    /* layout */
+    margin-top: 33px;
+}
+/* --- month-second ------------------------- */
+.month-second{
+    /* layout */
+    margin-top: 43px;
+}
+/* --- expected-weather --------------------- */
+.expected-weather{
+    /* layout */
+    margin-top: 36.6px;
+}
+
+/* === content block ======================== */
+/* --- month -------------------------- */
+.month>h1{
+    /* text */
+    font-family: "Montserrat";
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+
+    /* layout */
+    margin-left: 35px;
+}
+
+.month .month-table{
+    /* layout */
+    margin-top: 23px;
+
+    /* item layout */
+    display: grid;
+    grid-template-rows: repeat(6, 41.6px);
+}
+    .month .month-table>div{
+        /* layout */
+        display: grid;
+        grid-template-columns: repeat(7, 40.6px);
+
+        overflow: hidden;
+
+        /* item layout */
+        align-items: center;
+        justify-items: center;
+    }
+
+        .month .month-table .month-table-head span{
+            /* text */
+            font-family: "Montserrat";
+            font-size: 9px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .month .month-table .month-table-body span{
+            /* text */
+            font-family: "Montserrat";
+            font-size: 9px;
+            font-weight: 400;
+            color: #fff;
+
+            /* util */
+            cursor: pointer;
+        }
+
+        .month .month-table .month-table-body span:hover{
+            /* text */
+            text-align: center;
+            line-height: 36px;
+
+            /* layout */
+            background-color: rgba(112, 112, 112, 0.72);
+            border-radius: 30px;
+
+            display: inline-block;
+            width: 34.8px;
+            height: 34.8px;
+        }
+
+.day-opaque{
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.select-start, .select-end, .select-middle{
+    /* text */
+    text-align: center;
+    line-height: 34.8px;
+
+    /* layout */
+    background-color: #83AECE !important;
+
+    display: inline-block;
+    width: 34.8px;
+    height: 34.8px;
+    border-radius: 30px;
+
+    /* item layout */
+    position: relative;
+}
+
+.select-middle{
+    /* layout */
+    background-color: #5782B9 !important;
+    border-radius: 0 !important;
+    width: 46px !important;
+}
+
+    .select-start::after, .select-end::after{
+        /* text */
+        content: "";
+
+        /* layout */
+        background-color: #5782B9;
+
+        display: inline-block;
+        width: 17.4px;
+        height: 34.8px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .select-end::after{
+        /* layout */
+        width: 23px;
+        left: -6px;
+    }
+
+/* --- expected-weather --------------------- */
+.expected-weather{
+    /* text */
+    font-family: Sitka Heading;
+    font-size: 15px;
+    font-weight: normal;
+    color: #fff;
+}
+
+    .expected-weather li{
+        /* layout */
+        margin-bottom: 14.3px;
+
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .expected-weather dd{
+        /* reset */
+        margin: 6px;
+    }
