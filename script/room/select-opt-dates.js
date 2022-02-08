@@ -35,8 +35,20 @@ window.addEventListener("load", function(){
 
         for (var i =0; i < spanList.length; i++){
             var middle = Number.parseInt(spanList[i].innerText);
-            if (start < middle && middle < end && !spanList[i].classList.contains("day-opaque"))
+
+            if (spanList[i].classList.contains("day-opaque"))
+                break;
+
+            if (start < middle && middle < end)
                 spanList[i].classList.add("select-middle");
+            else if (start == middle){
+                spanList[i].classList.remove("select-start");
+                spanList[i].classList.add("select-start-complete");
+            }
+            else if (end == middle){
+                spanList[i].classList.remove("select-end");
+                spanList[i].classList.add("select-end-complete");
+            }
         }
     };
 });
@@ -77,11 +89,20 @@ window.addEventListener("load", function(){
 
         for (var i =0; i < spanList.length; i++){
             var middle = Number.parseInt(spanList[i].innerText);
-            if (spanList[i].contains("day-opaque"))
+
+            if (spanList[i].classList.contains("day-opaque"))
                 break;
 
             if (start < middle && middle < end)
                 spanList[i].classList.add("select-middle");
+            else if (start == middle){
+                spanList[i].classList.remove("select-start");
+                spanList[i].classList.add("select-start-complete");
+            }
+            else if (end == middle){
+                spanList[i].classList.remove("select-end");
+                spanList[i].classList.add("select-end-complete");
+            }
         }
     };
 });
