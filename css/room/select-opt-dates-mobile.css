@@ -60,7 +60,7 @@ body{
 .month{
     /* layout */
     width: 297px;
-    height: 294px;
+    /* height: 294px; */
 
     /* item layout  */
 }
@@ -109,7 +109,7 @@ body{
 
     /* item layout */
     display: grid;
-    grid-template-rows: repeat(6, 41.6px);
+    grid-template-rows: repeat(7, 41.6px);
 }
     .month .month-table>div{
         /* layout */
