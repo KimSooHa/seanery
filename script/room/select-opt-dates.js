@@ -35,7 +35,7 @@ window.addEventListener("load", function(){
 
         for (var i =0; i < spanList.length; i++){
             var middle = Number.parseInt(spanList[i].innerText);
-            if (start < middle && middle < end)
+            if (start < middle && middle < end && !spanList[i].classList.contains("day-opaque"))
                 spanList[i].classList.add("select-middle");
         }
     };
@@ -77,6 +77,9 @@ window.addEventListener("load", function(){
 
         for (var i =0; i < spanList.length; i++){
             var middle = Number.parseInt(spanList[i].innerText);
+            if (spanList[i].contains("day-opaque"))
+                break;
+
             if (start < middle && middle < end)
                 spanList[i].classList.add("select-middle");
         }
