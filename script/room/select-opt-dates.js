@@ -43,13 +43,20 @@ window.addEventListener("load", function(){
     }
    
     function clearIndicated(){
-        startDay.node.classList.remove("select");
-        endDay.node.classList.remove("select");
-        startDay.node.classList.remove("select-start-complete");
-        endDay.node.classList.remove("select-end-complete");
+        if (startDay != null) {
+            startDay.node.classList.remove("select");
+            startDay.node.classList.remove("select-start-complete");
+        }
 
-        for (var i = 0; i < selectedDates.length; i++)
+        if (endDay != null) {
+            endDay.node.classList.remove("select");
+            endDay.node.classList.remove("select-end-complete");
+        }
+
+        for (var i = 0; i < selectedDates.length; i++) 
             selectedDates[i].classList.remove("select-middle");
+
+        selectedDates = [];
     }
 
     function indicateRangeOfDates(){
@@ -67,18 +74,20 @@ window.addEventListener("load", function(){
 
             var date = parseInt(spanListOfFirstSec[i].innerText);
 
-            if (startDay.date == date && startDay.month == monthOfFirstSec && startDay.year == yearOfFirstSec){
+            if (startDay != null && startDay.date == date && startDay.month == monthOfFirstSec && startDay.year == yearOfFirstSec){
                 startDay.node.classList.remove("select");
                 startDay.node.classList.remove("select-start-complete");
                 startDay.node = spanListOfFirstSec[i];
-                startDay.node.classList.add("select-start-complete");
+                startDay.node.classList.add("select");
+
+                console.log("selectedDates.length = " + selectedDates.length);
             }
 
-            if (endDay.date == date && endDay.month == monthOfFirstSec && endDay.year == yearOfFirstSec){
+            if (endDay != null && endDay.date == date && endDay.month == monthOfFirstSec && endDay.year == yearOfFirstSec){
                 endDay.node.classList.remove("select");
                 endDay.node.classList.remove("select-end-complete");
                 endDay.node = spanListOfFirstSec[i];
-                endDay.node.classList.add("select-end-complete");
+                endDay.node.classList.add("select");
             }
 
             if (!isIncludedRangeOfDates(date, monthOfFirstSec, yearOfFirstSec))
@@ -94,18 +103,18 @@ window.addEventListener("load", function(){
             
             var date = parseInt(spanListOfSecondSec[i].innerText);
 
-            if (startDay.date == date && startDay.month == monthOfSecondSec && startDay.year == yearOfSecondSec){
+            if (startDay != null && startDay.date == date && startDay.month == monthOfSecondSec && startDay.year == yearOfSecondSec){
                 startDay.node.classList.remove("select");
                 startDay.node.classList.remove("select-start-complete");
                 startDay.node = spanListOfSecondSec[i];
-                startDay.node.classList.add("select-start-complete");
+                startDay.node.classList.add("select");
             }
 
-            if (endDay.date == date && endDay.month == monthOfSecondSec && endDay.year == yearOfSecondSec){
+            if (endDay != null && endDay.date == date && endDay.month == monthOfSecondSec && endDay.year == yearOfSecondSec){
                 endDay.node.classList.remove("select");
                 endDay.node.classList.remove("select-end-complete");
                 endDay.node = spanListOfSecondSec[i];
-                endDay.node.classList.add("select-end-complete");
+                endDay.node.classList.add("select");
             }
 
             if (!isIncludedRangeOfDates(date, monthOfSecondSec, yearOfSecondSec))
@@ -114,9 +123,17 @@ window.addEventListener("load", function(){
             spanListOfSecondSec[i].classList.add("select-middle");
             selectedDates.push(spanListOfSecondSec[i]);
         }
+
+        if (selectedDates.length != 0) {
+            startDay.node.classList.add("select-start-complete");
+            endDay.node.classList.add("select-end-complete");
+        }
     }
 
     function checkValidRangeOfDates(startDay, endDay){
+        if (startDay == null || endDay == null)
+            return false;
+
         var start = getStringYYYYMMDD(startDay.year, startDay.month, startDay.date);
         var end = getStringYYYYMMDD(endDay.year, endDay.month, endDay.date);
 
@@ -126,6 +143,9 @@ window.addEventListener("load", function(){
     }
 
     function isIncludedRangeOfDates(date, month, year){
+        if (startDay == null || endDay == null)
+            return false;
+
         var middle = getStringYYYYMMDD(year, month, date);
         var start = getStringYYYYMMDD(startDay.year, startDay.month, startDay.date);
         var end = getStringYYYYMMDD(endDay.year, endDay.month, endDay.date);
