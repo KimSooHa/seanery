@@ -10,7 +10,6 @@ window.addEventListener("load", function(){
             && (e.target.innerText.length == 1 || e.target.innerText.length == 2)
             && !e.target.classList.contains("day-opaque");
 
-
         if (!value)
             return;
 
