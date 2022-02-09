@@ -80,7 +80,8 @@ window.addEventListener("load", function(){
                 startDay.node = spanListOfFirstSec[i];
                 startDay.node.classList.add("select");
 
-                console.log("selectedDates.length = " + selectedDates.length);
+                if (endDay != null) 
+                    startDay.node.classList.add("select-start-complete");
             }
 
             if (endDay != null && endDay.date == date && endDay.month == monthOfFirstSec && endDay.year == yearOfFirstSec){
@@ -88,6 +89,9 @@ window.addEventListener("load", function(){
                 endDay.node.classList.remove("select-end-complete");
                 endDay.node = spanListOfFirstSec[i];
                 endDay.node.classList.add("select");
+
+                if (selectedDates.length != 0) 
+                    endDay.node.classList.add("select-end-complete");
             }
 
             if (!isIncludedRangeOfDates(date, monthOfFirstSec, yearOfFirstSec))
@@ -108,6 +112,9 @@ window.addEventListener("load", function(){
                 startDay.node.classList.remove("select-start-complete");
                 startDay.node = spanListOfSecondSec[i];
                 startDay.node.classList.add("select");
+
+                if (endDay != null) 
+                    startDay.node.classList.add("select-start-complete");
             }
 
             if (endDay != null && endDay.date == date && endDay.month == monthOfSecondSec && endDay.year == yearOfSecondSec){
@@ -115,6 +122,9 @@ window.addEventListener("load", function(){
                 endDay.node.classList.remove("select-end-complete");
                 endDay.node = spanListOfSecondSec[i];
                 endDay.node.classList.add("select");
+
+                if (selectedDates.length != 0) 
+                    endDay.node.classList.add("select-end-complete");
             }
 
             if (!isIncludedRangeOfDates(date, monthOfSecondSec, yearOfSecondSec))
@@ -122,11 +132,6 @@ window.addEventListener("load", function(){
             
             spanListOfSecondSec[i].classList.add("select-middle");
             selectedDates.push(spanListOfSecondSec[i]);
-        }
-
-        if (selectedDates.length != 0) {
-            startDay.node.classList.add("select-start-complete");
-            endDay.node.classList.add("select-end-complete");
         }
     }
 
