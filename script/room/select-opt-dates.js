@@ -37,7 +37,7 @@ window.addEventListener("load", function(){
                     return;
                 }
 
-                IndicateRangeOfDates();
+                indicateRangeOfDates();
             };
         })(i);
     }
@@ -52,7 +52,7 @@ window.addEventListener("load", function(){
             selectedDates[i].classList.remove("select-middle");
     }
 
-    function IndicateRangeOfDates(){
+    function indicateRangeOfDates(){
         var monthOfFirstSec = parseInt(monthSections[0].querySelector("h1").innerText.split("월")[0]);
         var yearOfFirstSec = parseInt(monthSections[0].querySelector("h1>span").innerText);
         var spanListOfFirstSec = monthSections[0].querySelectorAll(".month-table-body span");
@@ -69,11 +69,15 @@ window.addEventListener("load", function(){
 
             if (startDay.date == date && startDay.month == monthOfFirstSec && startDay.year == yearOfFirstSec){
                 startDay.node.classList.remove("select");
+                startDay.node.classList.remove("select-start-complete");
+                startDay.node = spanListOfFirstSec[i];
                 startDay.node.classList.add("select-start-complete");
             }
 
             if (endDay.date == date && endDay.month == monthOfFirstSec && endDay.year == yearOfFirstSec){
                 endDay.node.classList.remove("select");
+                endDay.node.classList.remove("select-end-complete");
+                endDay.node = spanListOfFirstSec[i];
                 endDay.node.classList.add("select-end-complete");
             }
 
@@ -92,11 +96,15 @@ window.addEventListener("load", function(){
 
             if (startDay.date == date && startDay.month == monthOfSecondSec && startDay.year == yearOfSecondSec){
                 startDay.node.classList.remove("select");
+                startDay.node.classList.remove("select-start-complete");
+                startDay.node = spanListOfSecondSec[i];
                 startDay.node.classList.add("select-start-complete");
             }
 
             if (endDay.date == date && endDay.month == monthOfSecondSec && endDay.year == yearOfSecondSec){
                 endDay.node.classList.remove("select");
+                endDay.node.classList.remove("select-end-complete");
+                endDay.node = spanListOfSecondSec[i];
                 endDay.node.classList.add("select-end-complete");
             }
 
@@ -207,7 +215,7 @@ window.addEventListener("load", function(){
         engraveDatesOfMonth();
 
         clearIndicated()
-        IndicateRangeOfDates();
+        indicateRangeOfDates();
     };
 
     function engraveDatesOfMonth(){
