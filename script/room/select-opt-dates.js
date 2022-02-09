@@ -37,7 +37,7 @@ window.addEventListener("load", function(){
                     return;
                 }
 
-                IndicateRangeOfDates();
+                indicateRangeOfDates();
             };
         })(i);
     }
@@ -52,7 +52,7 @@ window.addEventListener("load", function(){
             selectedDates[i].classList.remove("select-middle");
     }
 
-    function IndicateRangeOfDates(){
+    function indicateRangeOfDates(){
         var monthOfFirstSec = parseInt(monthSections[0].querySelector("h1").innerText.split("월")[0]);
         var yearOfFirstSec = parseInt(monthSections[0].querySelector("h1>span").innerText);
         var spanListOfFirstSec = monthSections[0].querySelectorAll(".month-table-body span");
@@ -207,7 +207,7 @@ window.addEventListener("load", function(){
         engraveDatesOfMonth();
 
         clearIndicated()
-        IndicateRangeOfDates();
+        indicateRangeOfDates();
     };
 
     function engraveDatesOfMonth(){
