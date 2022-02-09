@@ -1,56 +1,140 @@
-/* select-start, select-end */
+/* select-dates */
 window.addEventListener("load", function(){
     var monthSections = document.querySelectorAll(".month");
+    var selectedDates = [];
     var startDay = null;
     var endDay = null;
 
-    for (var i = 0; i < monthSections.length; i++)
-        monthSections[i].onclick = (function(x) {
-                return function(e){
-                        var value = e.target.nodeName == "SPAN"
-                            && (e.target.innerText.length == 1 || e.target.innerText.length == 2);
+    for (var i = 0; i < monthSections.length; i++){
+        monthSections[i].onclick = (function(x){
+            return function(e){
+                if (!checkDateOrNot(e.target))
+                    return;
 
-                        if (!value)
-                            return;
+                var date = parseInt(e.target.innerText);
+                var month = parseInt(monthSections[x].querySelector("h1").innerText.split("월")[0]);
+                var year = parseInt(monthSections[x].querySelector("h1>span").innerText);
+        
+                if (startDay != null && endDay != null) {
+                    clearIndicated();
+                    startDay = endDay = null;
+                }
+        
+                if (startDay == null) {
+                    startDay = {"year": year, "month": month, "date": date, "node": e.target};
+                    startDay.node.classList.add("select");
+                    return;
+                }
+                else{
+                    endDay = {"year": year, "month": month, "date": date, "node": e.target};
+                    endDay.node.classList.add("select");
+                }
 
-                        if (startDay == null) {
-                            startDay = e.target;
-                            startDay.classList.add("select");
-                            return;
-                        } 
-                        else {
-                            endDay = e.target;
-                            endDay.classList.add("select");
-                        }
+                if(!checkValidRangeOfDates(startDay, endDay)){
+                    alert("입력이 잘 못되었습니다. 다시 입력하세요.");
+                    clearIndicated();
+                    startDay = endDay = null;
+                    return;
+                }
 
-                        var startDayInt = parseInt(startDay.innerText);
-                        var endDayInt = parseInt(endDay.innerText);
-                        if (startDayInt >= endDayInt) {
-                            alert("다시입력하세요!")
-                            startDay.classList.remove("select");
-                            endDay.classList.remove("select");
-                            startDay = null;
-                            endDay = null;
-                            return;
-                        }
+                IndicateRangeOfDates();
+            };
+        })(i);
+    }
+   
 
-                        var spanList = monthSections[x].querySelectorAll(".month-table-body span");
-                        for (var i = 0; i < spanList.length; i++){
-                            var middleInt = parseInt(spanList[i].innerText);
+    function clearIndicated(){
+        startDay.node.classList.remove("select");
+        endDay.node.classList.remove("select");
+        startDay.node.classList.remove("select-start-complete");
+        endDay.node.classList.remove("select-end-complete");
 
-                            if (startDayInt < middleInt && middleInt < endDayInt)
-                                spanList[i].classList.add("select-middle");
-                            else if (startDayInt == middleInt){
-                                spanList[i].classList.remove("select");
-                                spanList[i].classList.add("select-start-complete");
-                            }
-                            else if (endDayInt == middleInt){
-                                spanList[i].classList.remove("select");
-                                spanList[i].classList.add("select-end-complete");
-                            }
-                        }
-                    };
-            })(i);
+        for (var i = 0; i < selectedDates.length; i++)
+            selectedDates[i].classList.remove("select-middle");
+    }
+
+    function IndicateRangeOfDates(){
+        var monthOfFirstSec = parseInt(monthSections[0].querySelector("h1").innerText.split("월")[0]);
+        var yearOfFirstSec = parseInt(monthSections[0].querySelector("h1>span").innerText);
+        var spanListOfFirstSec = monthSections[0].querySelectorAll(".month-table-body span");
+
+        var monthOfSecondSec = parseInt(monthSections[1].querySelector("h1").innerText.split("월")[0]);
+        var yearOfSecondSec = parseInt(monthSections[1].querySelector("h1>span").innerText);
+        var spanListOfSecondSec = monthSections[1].querySelectorAll(".month-table-body span");
+
+        for (var i = 0; i < spanListOfFirstSec.length; i++) {
+            if (!checkDateOrNot(spanListOfFirstSec[i]))
+                continue;
+
+            var date = parseInt(spanListOfFirstSec[i].innerText);
+
+            if (!isIncludedRangeOfDates(date, monthOfFirstSec, yearOfFirstSec))
+                continue;
+
+            spanListOfFirstSec[i].classList.add("select-middle");
+            selectedDates.push(spanListOfFirstSec[i]);
+        }
+
+        for (var i = 0; i < spanListOfSecondSec.length; i++) {
+            if (!checkDateOrNot(spanListOfSecondSec[i]))
+                continue;
+            
+            var date = parseInt(spanListOfSecondSec[i].innerText);
+
+            if (!isIncludedRangeOfDates(date, monthOfSecondSec, yearOfSecondSec))
+                continue;
+            
+            spanListOfSecondSec[i].classList.add("select-middle");
+            selectedDates.push(spanListOfSecondSec[i]);
+        }
+
+        startDay.node.classList.remove("select");
+        endDay.node.classList.remove("select");
+        startDay.node.classList.add("select-start-complete");
+        endDay.node.classList.add("select-end-complete");
+    }
+
+    function checkValidRangeOfDates(startDay, endDay){
+        var start = getStringYYYYMMDD(startDay.year, startDay.month, startDay.date);
+        var end = getStringYYYYMMDD(endDay.year, endDay.month, endDay.date);
+
+        console.log(end-start);
+
+        return (end - start) > 0 ? true : false;
+    }
+
+    function isIncludedRangeOfDates(date, month, year){
+        var middle = getStringYYYYMMDD(year, month, date);
+        var start = getStringYYYYMMDD(startDay.year, startDay.month, startDay.date);
+        var end = getStringYYYYMMDD(endDay.year, endDay.month, endDay.date);
+
+        var b1 = middle - start > 0 ? true : false;
+        var b2 = end - middle > 0 ? true : false;
+
+        return b1 && b2;
+    }
+
+    function checkDateOrNot(dateOrNot){
+        var date = dateOrNot.innerText;
+        
+        return (dateOrNot.nodeName == "SPAN") 
+            && (date.length == 1 || date.length == 2) 
+            && ("number" == typeof(parseInt(date)));
+    }
+
+    function getStringYYYYMMDD(year, month, date){
+        var stringYYYY = year.toString();
+        var stringMM = month.toString();
+        var stringDD = date.toString();
+
+        if (stringMM.length == 1)
+            stringMM = "0" + stringMM;
+
+        if (stringDD.length == 1)
+            stringDD = "0" + stringDD;
+
+        return stringYYYY + stringMM + stringDD;
+    }
 });
 
 /* Month navigator 조작*/
