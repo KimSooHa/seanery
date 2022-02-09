@@ -156,11 +156,7 @@ body{
             height: 34.8px;
         }
 
-.day-opaque{
-    color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.select-start, .select-end, .select-middle,
+.select, .select-middle,
 .select-start-complete, .select-end-complete{
     /* text */
     text-align: center;

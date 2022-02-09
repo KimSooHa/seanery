@@ -1,109 +1,56 @@
-/* First Month : select-start, select-end */
+/* select-start, select-end */
 window.addEventListener("load", function(){
-    var monthFirst = document.querySelector(".month-first");
-    var spanList = monthFirst.querySelectorAll(".month-table-body span");
+    var monthSections = document.querySelectorAll(".month");
     var startDay = null;
     var endDay = null;
 
-    monthFirst.onclick = function(e){
-        var value = e.target.nodeName == "SPAN"
-            && (e.target.innerText.length == 1 || e.target.innerText.length == 2)
-            && !e.target.classList.contains("day-opaque");
+    for (var i = 0; i < monthSections.length; i++)
+        monthSections[i].onclick = (function(x) {
+                return function(e){
+                        var value = e.target.nodeName == "SPAN"
+                            && (e.target.innerText.length == 1 || e.target.innerText.length == 2);
 
-        if (!value)
-            return;
+                        if (!value)
+                            return;
 
-        if (startDay == null)
-            startDay = e.target;
-        else if (endDay == null)
-            endDay = e.target;
+                        if (startDay == null) {
+                            startDay = e.target;
+                            startDay.classList.add("select");
+                            return;
+                        } 
+                        else {
+                            endDay = e.target;
+                            endDay.classList.add("select");
+                        }
 
-        startDay.classList.add("select-start");
+                        var startDayInt = parseInt(startDay.innerText);
+                        var endDayInt = parseInt(endDay.innerText);
+                        if (startDayInt >= endDayInt) {
+                            alert("다시입력하세요!")
+                            startDay.classList.remove("select");
+                            endDay.classList.remove("select");
+                            startDay = null;
+                            endDay = null;
+                            return;
+                        }
 
-        var start = Number.parseInt(startDay.innerText);
-        var end = Number.parseInt(endDay.innerText);
-        if (start >= end) {
-            alert("다시입력하세요!")
-            startDay.classList.remove("select-start");
-            startDay = null;
-            endDay = null;
-            return;
-        }
+                        var spanList = monthSections[x].querySelectorAll(".month-table-body span");
+                        for (var i = 0; i < spanList.length; i++){
+                            var middleInt = parseInt(spanList[i].innerText);
 
-        endDay.classList.add("select-end");
-
-        for (var i =0; i < spanList.length; i++){
-            var middle = Number.parseInt(spanList[i].innerText);
-
-            if (spanList[i].classList.contains("day-opaque"))
-                break;
-
-            if (start < middle && middle < end)
-                spanList[i].classList.add("select-middle");
-            else if (start == middle){
-                spanList[i].classList.remove("select-start");
-                spanList[i].classList.add("select-start-complete");
-            }
-            else if (end == middle){
-                spanList[i].classList.remove("select-end");
-                spanList[i].classList.add("select-end-complete");
-            }
-        }
-    };
-});
-
-/* Second Month : select-start, select-end */
-window.addEventListener("load", function(){
-    var monthSecond= document.querySelector(".month-second");
-    var spanList = monthSecond.querySelectorAll(".month-table-body span");
-    var startDay = null;
-    var endDay = null;
-
-    monthSecond.onclick = function(e){
-        var value = e.target.nodeName == "SPAN"
-            && (e.target.innerText.length == 1 || e.target.innerText.length == 2)
-            && !e.target.classList.contains("day-opaque");
-
-        if (!value)
-            return;
-
-        if (startDay == null)
-            startDay = e.target;
-        else if (endDay == null)
-            endDay = e.target;
-
-        startDay.classList.add("select-start");
-
-        var start = Number.parseInt(startDay.innerText);
-        var end = Number.parseInt(endDay.innerText);
-        if (start >= end) {
-            alert("다시입력하세요!")
-            startDay.classList.remove("select-start");
-            startDay = null;
-            endDay = null;
-            return;
-        }
-
-        endDay.classList.add("select-end");
-
-        for (var i =0; i < spanList.length; i++){
-            var middle = Number.parseInt(spanList[i].innerText);
-
-            if (spanList[i].classList.contains("day-opaque"))
-                break;
-
-            if (start < middle && middle < end)
-                spanList[i].classList.add("select-middle");
-            else if (start == middle){
-                spanList[i].classList.remove("select-start");
-                spanList[i].classList.add("select-start-complete");
-            }
-            else if (end == middle){
-                spanList[i].classList.remove("select-end");
-                spanList[i].classList.add("select-end-complete");
-            }
-        }
-    };
+                            if (startDayInt < middleInt && middleInt < endDayInt)
+                                spanList[i].classList.add("select-middle");
+                            else if (startDayInt == middleInt){
+                                spanList[i].classList.remove("select");
+                                spanList[i].classList.add("select-start-complete");
+                            }
+                            else if (endDayInt == middleInt){
+                                spanList[i].classList.remove("select");
+                                spanList[i].classList.add("select-end-complete");
+                            }
+                        }
+                    };
+            })(i);
 });
 
 /* Month navigator 조작*/
@@ -117,10 +64,10 @@ window.addEventListener("load", function(){
     var secondMonth = document.querySelector(".month-second>h1");
     var yearOfSecondMonth = secondMonth.querySelector("span");
 
-    var firstMonthInt = Number.parseInt(firstMonth.innerText);
-    var secondMonthInt = Number.parseInt(secondMonth.innerText);
-    var yearOfFirstMonthInt = Number.parseInt(yearOfFirstMonth.innerText);
-    var yearOfSecondMonthInt = Number.parseInt(yearOfSecondMonth.innerText);
+    var firstMonthInt = parseInt(firstMonth.innerText);
+    var secondMonthInt = parseInt(secondMonth.innerText);
+    var yearOfFirstMonthInt = parseInt(yearOfFirstMonth.innerText);
+    var yearOfSecondMonthInt = parseInt(yearOfSecondMonth.innerText);
 
     ol.onclick = function(e){
         if (e.target.nodeName != "A")
@@ -157,8 +104,6 @@ window.addEventListener("load", function(){
             yearOfSecondMonthInt += 1;
         }
 
-        // firstMonth.innerText = firstMonthInt + "월";
-        // secondMonth.innerText = secondMonthInt+ "월";
         firstMonth.innerHTML = firstMonthInt + "월" + "<span>" + yearOfFirstMonthInt + "</span>";
         secondMonth.innerHTML = secondMonthInt + "월" + "<span>" + yearOfSecondMonthInt + "</span>";
 
@@ -181,7 +126,7 @@ window.addEventListener("load", function(){
         var monthSize = Math.abs(firstYear - base.year) * 12 + Number.parseInt(firstMonth);
         var dayNumber = base.day;
         for (var i = 0; i < monthSize; i++){
-            if (i % 12 == 1 && (Number.parseInt(i / 12)) % 4 == 0) // 윤년일 2월일 때
+            if (i % 12 == 1 && parseInt(i / 12) % 4 == 0) // 윤년일 2월일 때
                 dayNumber = (dayNumber + addFactor[i % 12] + 1) % 7;
             else 
                 dayNumber = (dayNumber + addFactor[i % 12]) % 7;
@@ -239,7 +184,7 @@ window.addEventListener("load", function(){
             }
         }
 
-        var secondMonth = firstMonth == 12 ? 1 : Number.parseInt(firstMonth)+ 1;
+        var secondMonth = firstMonth == 12 ? 1 : parseInt(firstMonth)+ 1;
 
         var secondSection = document.querySelector(".month-second");
         bodies = secondSection.querySelectorAll(".month-table-body");
