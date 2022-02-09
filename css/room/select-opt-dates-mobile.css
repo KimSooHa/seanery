@@ -212,6 +212,12 @@ body{
     font-weight: normal;
     color: #fff;
 }
+    .expected-weather dl{
+        /* layout */
+        width: 297px;
+
+        /* item layout */
+    }
 
     .expected-weather li{
         /* layout */
