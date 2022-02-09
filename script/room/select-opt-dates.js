@@ -1,4 +1,25 @@
 window.addEventListener("load", function(){
+    /* 페이지를 열 때 현재 달로 수정되어 로드되기 */
+    var monthSections = document.querySelectorAll(".month");
+
+    var h1OfFirstSec = monthSections[0].querySelector("h1");
+    var h1OfSecondSec = monthSections[1].querySelector("h1");
+
+    var today = new Date();
+
+    console.log(typeof(today.getMonth()));
+    console.log(typeof(today.getFullYear()));
+
+    h1OfFirstSec.innerHTML = (today.getMonth() + 1) + "월" + "<span>" + today.getFullYear() + "</span>";
+
+    if (today.getMonth() + 1 == 12) {
+        h1OfSecondSec.innerHTML = "1월" + "<span>" + (today.getFullYear() + 1) + "</span>";
+    } else {
+        h1OfSecondSec.innerHTML = (today.getMonth() + 2) + "월" + "<span>" + today.getFullYear() + "</span>";
+    }
+
+    engraveDatesOfMonth();
+
     /* select-dates */
     var monthSections = document.querySelectorAll(".month");
     var selectedDates = [];
