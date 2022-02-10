@@ -1,0 +1,246 @@
+/* === layout block ========================= */
+/* --- body -------------------------- */
+body{
+    background-color: rgba(0, 0, 0, 0.72);
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* --- month-nav -------------------------- */
+.month-nav{
+    width: 297px;
+
+    /* item layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+}
+.month-nav ol{
+    /* layout */
+    width: 65px;
+
+    position: absolute;
+    top: 40px;
+    right: 30px;
+
+    /* item layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.svg-base{
+    /* text */
+    text-indent: -9999px;
+
+    /* layout */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+    .arrow-up-white{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30.705' height='18.634' viewBox='0 0 30.705 18.634'%3E%3Cpath id='Icon_awesome-chevron-up' data-name='Icon awesome-chevron-up' d='M16.943,9.177,30.608,22.842a1.687,1.687,0,0,1,0,2.386l-1.594,1.594a1.687,1.687,0,0,1-2.384,0L15.75,16,4.869,26.825a1.687,1.687,0,0,1-2.384,0L.892,25.229a1.687,1.687,0,0,1,0-2.386L14.557,9.178A1.687,1.687,0,0,1,16.943,9.177Z' transform='translate(-0.398 -8.683)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    }
+
+    .arrow-down-white{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30.705' height='18.634' viewBox='0 0 30.705 18.634'%3E%3Cpath id='Icon_awesome-chevron-down' data-name='Icon awesome-chevron-down' d='M14.557,26.823.892,13.158a1.687,1.687,0,0,1,0-2.386L2.486,9.177a1.687,1.687,0,0,1,2.384,0L15.75,20,26.631,9.175a1.687,1.687,0,0,1,2.384,0l1.594,1.594a1.687,1.687,0,0,1,0,2.386L16.943,26.823A1.688,1.688,0,0,1,14.557,26.823Z' transform='translate(-0.398 -8.683)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    }
+
+/* --- month -------------------------- */
+.month{
+    /* layout */
+    width: 297px;
+    /* height: 294px; */
+
+    /* item layout  */
+}
+/* --- month-first -------------------------- */
+.month-first{
+    /* layout */
+    margin-top: 33px;
+}
+/* --- month-second ------------------------- */
+.month-second{
+    /* layout */
+    margin-top: 43px;
+}
+/* --- expected-weather --------------------- */
+.expected-weather{
+    /* layout */
+    margin-top: 36.6px;
+}
+
+/* === content block ======================== */
+/* --- month -------------------------- */
+.month>h1{
+    /* text */
+    font-family: "Montserrat";
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+
+    /* layout */
+    margin-left: 35px;
+}
+    .month>h1>span{
+        /* text */
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+
+        /* layout */
+        margin-left: 10px;
+    }
+
+.month .month-table{
+    /* layout */
+    margin-top: 23px;
+
+    /* item layout */
+    display: grid;
+    grid-template-rows: repeat(7, 41.6px);
+}
+    .month .month-table>div{
+        /* layout */
+        display: grid;
+        grid-template-columns: repeat(7, 40.6px);
+
+        overflow: hidden;
+
+        /* item layout */
+        align-items: center;
+        justify-items: center;
+    }
+
+        .month .month-table .month-table-head span{
+            /* text */
+            font-family: "Montserrat";
+            font-size: 9px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .month .month-table .month-table-body span{
+            /* text */
+            font-family: "Montserrat";
+            font-size: 9px;
+            font-weight: 400;
+            color: #fff;
+
+            /* util */
+            cursor: pointer;
+        }
+
+        .month .month-table .month-table-body span:hover{
+            /* text */
+            text-align: center;
+            line-height: 36px;
+
+            /* layout */
+            background-color: rgba(112, 112, 112, 0.72);
+            border-radius: 30px;
+
+            display: inline-block;
+            width: 34.8px;
+            height: 34.8px;
+        }
+
+.select, .select-middle,
+.select-start-complete, .select-end-complete{
+    /* text */
+    text-align: center;
+    line-height: 34.8px;
+
+    /* layout */
+    background-color: #83AECE !important;
+
+    display: inline-block;
+    width: 34.8px;
+    height: 34.8px;
+    border-radius: 30px;
+
+    /* item layout */
+    position: relative;
+}
+
+.select-middle{
+    /* layout */
+    background-color: #5782B9 !important;
+    border-radius: 0 !important;
+    width: 46px !important;
+}
+
+    .select-start-complete::after, .select-end-complete::after{
+        /* text */
+        content: "";
+
+        /* layout */
+        background-color: #5782B9;
+
+        display: inline-block;
+        width: 17.4px;
+        height: 34.8px;
+
+        position: absolute;
+        top: 0;
+        right: 1;
+        z-index: -1;
+    }
+
+    .select-end-complete::after{
+        /* layout */
+        width: 23px;
+        left: -6px;
+    }
+
+/* --- expected-weather --------------------- */
+.expected-weather{
+    /* text */
+    font-family: Sitka Heading;
+    font-size: 15px;
+    font-weight: normal;
+    color: #fff;
+}
+    .expected-weather dl{
+        /* layout */
+        width: 297px;
+
+        /* item layout */
+    }
+
+    .expected-weather li{
+        /* layout */
+        margin-bottom: 14.3px;
+
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .expected-weather dd{
+        /* reset */
+        margin: 6px;
+    }
+
+
+hr{
+    /* layout */
+    width: 297px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    /* reset */
+    border: none;
+}
