@@ -10,19 +10,19 @@ const flapickr = document.querySelectorAll(".flatpickr");
 // import rangePlugin from "plugins/rangePlugin";
 
 flatpickr("#start-date", {
-    mode: "range",
-    minDate: "today",
-    allowInput: true,
-    dateFormat: "Y-m-d",
-    // "plugins": [new rangePlugin({ input: "#end-date"})]
-  });
+  mode: "range",
+  minDate: "today",
+  allowInput: true,
+  dateFormat: "Y-m-d",
+  // "plugins": [new rangePlugin({ input: "#end-date"})]
+});
   
   
-  flatpickr("#end-date", {
-    mode: "range",
-    minDate: "today",
-    allowInput: true,
-    dateFormat: "Y-m-d",
+flatpickr("#end-date", {
+  mode: "range",
+  minDate: "today",
+  allowInput: true,
+  dateFormat: "Y-m-d",
 });
 
 // rangePlugin 호환문제 해결 못함...
