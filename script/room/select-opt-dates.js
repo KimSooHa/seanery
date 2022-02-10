@@ -108,9 +108,7 @@ window.addEventListener("load", function(){
                 endDay.node.classList.remove("select-end-complete");
                 endDay.node = spanListOfFirstSec[i];
                 endDay.node.classList.add("select");
-
-                if (selectedDates.length != 0) 
-                    endDay.node.classList.add("select-end-complete");
+                endDay.node.classList.add("select-end-complete");
             }
 
             if (!isIncludedRangeOfDates(date, monthOfFirstSec, yearOfFirstSec))
@@ -141,9 +139,7 @@ window.addEventListener("load", function(){
                 endDay.node.classList.remove("select-end-complete");
                 endDay.node = spanListOfSecondSec[i];
                 endDay.node.classList.add("select");
-
-                if (selectedDates.length != 0) 
-                    endDay.node.classList.add("select-end-complete");
+                endDay.node.classList.add("select-end-complete");
             }
 
             if (!isIncludedRangeOfDates(date, monthOfSecondSec, yearOfSecondSec))
