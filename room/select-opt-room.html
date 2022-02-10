@@ -6,33 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/room/select-opt-room.css" type="text/css" rel="stylesheet">
+    <script src="../script/room/select-opt-room.js"></script>
     <title>Document</title>
 </head>
 <body>
     <h1 class="d-none">객실 선택</h1>
     <form>
-        <fieldset>
-            <legend>Room1</legend>
-            <!-- <select>
-                <option>Select Room</option>
-                <option>ocean veiw1</option>
-                <option>ocean veiw2</option>
-            </select> -->
-            <div>
-                <span>Select Room</span>
-                <a href="">방 리스트 보기</a>
+        <fieldset class="select-room-box">
+            <header>
+                <legend>Room1</legend>
+                <div>
+                    <span>Select Room</span>
+                    <a href="">방 리스트 보기</a>
+                    <input type="hidden" name="room-1-select" value="">
+                </div>
+            </header>
+            
+            <div class="select-list">
+                <span>Superior Ocean View</span>
+                <span>Standard Ocean View</span>
+                <span>Superior Village View</span>
+                <span>Standard Village View</span>
             </div>
         </fieldset>
-        <fieldset>
-            <legend>Room2</legend>
-            <!-- <select>
-                <option>Select Room</option>
-                <option>ocean veiw1</option>
-                <option>ocean veiw2</option>
-            </select> -->
-            <div>
-                <span>Select Room</span>
-                <a href="">방 리스트 보기</a>
+
+        <fieldset class="select-room-box">
+            <header>
+                <legend>Room2</legend>
+                <div>
+                    <span>Select Room</span>
+                    <a href="">방 리스트 보기</a>
+                    <input type="hidden" name="room-2-select" value="">
+                </div>
+            </header>
+            
+            <div class="select-list">
+                <span>Superior Ocean View</span>
+                <span>Standard Ocean View</span>
+                <span>Superior Village View</span>
+                <span>Standard Village View</span>
             </div>
         </fieldset>
         <input type="submit" name="select-opt-room" value="Select">

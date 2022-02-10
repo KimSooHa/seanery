@@ -19,70 +19,128 @@ form{
     background-color: #EEEEEE;
     display: block;
     width: 255px;
-    height: 231px;
     border-radius: 14px;
     border: 1px solid #707070;
 }
 
     form>fieldset{
         /* layout */
-        height: 85.5px;
         border-bottom: 1px solid #A9A9A9;
 
         /* item layout */
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         /* reset */
         padding: 0px;
     }
-        form>fieldset>legend{
-            /* text */
-            font-family: "Minion Pro";
-            font-size: 17px;
-            font-weight: bold;
-            color: #707070;
 
+        form>fieldset header{
             /* layout */
-            position: absolute;
-            top: 29px;
-            left: 24px;
+            box-sizing: border-box;
+            width: 100%;
+            padding-top: 35px;
+            padding-left: 27px;
+            padding-right: 16px;
+
+            /* item layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
-        form>fieldset>div{
+
+            form>fieldset header>legend{
+                /* text */
+                font-family: "Minion Pro";
+                font-size: 17px;
+                font-weight: bold;
+                color: #707070;
+
+                /* layout */
+                align-self: flex-start;
+            }
+
+            form>fieldset header>div{
+                /* layout */
+                display: inline-block;
+                width: 117px;
+                border-bottom: 1px solid #707070;
+
+                align-self: flex-end;
+            }
+
+                form>fieldset header>div>span{
+                    /* text */
+                    font-family: "Minion Pro";
+                    font-size: 17px;
+                    font-weight: normal;
+                    color: #707070;
+                }
+
+                form>fieldset header>div>a{
+                    /* text */
+                    text-indent: -9999px;
+                    overflow: hidden;
+
+                    /* layout */
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+
+                    display: inline-block;
+                    width: 10px;
+                    height: 5px;
+
+                    margin-bottom: 3px;
+                }
+
+                form>fieldset header>div>a.open{
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(7.889 4.091) rotate(180)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+
+        form .select-list, form fieldset>div:nth-child(3){
             /* layout */
-            display: inline-block;
-            width: 117px;
-            border-bottom: 1px solid #707070;
-
-            position: absolute;
-            top: 29px;
-            right: 16px;
-        }
-
-        form>fieldset>div>span{
-            /* text */
-            font-family: "Minion Pro";
-            font-size: 17px;
-            font-weight: normal;
-            color: #707070;
-        }
-
-        form>fieldset>div>a{
-            /* text */
-            text-indent: -9999px;
+            width: 100%;
+            height: 0;
             overflow: hidden;
 
-            /* layout */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
 
-            display: inline-block;
-            width: 10px;
-            height: 5px;
+            /* item layout */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-            margin-bottom: 3px;
+            /* effect */
+            transition: height 1s;
         }
+
+        form .select-list.active{
+            height: 135px;
+        }
+
+            form .select-list span{
+                /* layout */
+                display: block;
+                margin-top: 10px;
+            }
+
+            form .select-list span:hover{
+                /* layout */
+                background-color: #707070;
+                border-radius: 15px;
+                padding: 5px;
+
+                /* util */
+                cursor: pointer;
+            }
 
 
     form>input{
@@ -94,7 +152,8 @@ form{
 
         /* layout */
         margin-top: 15.8px;
-        margin-left: 103px;
+        margin-left: 97px;
+        padding-bottom: 15px;
 
         /* utils */
         background-color: #EEEEEE;
