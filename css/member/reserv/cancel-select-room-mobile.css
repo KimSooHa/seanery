@@ -18,10 +18,13 @@ body{
 .cancel-room{
     /* layout */
     background-color: #fff;
+
     display: inline-block;
     width: 328px;
-    height: 360px;
+
     border-radius: 38px;
+    padding-top: 54px;
+    padding-bottom: 48px;
 
     /* item layout */
     display: flex;
@@ -37,35 +40,41 @@ body{
     font-weight: normal;
 
     /* layout */
-    margin-top: 74px;
 }
 
-.cancel-room>div:nth-child(n+2):nth-child(-n+3){
+.cancel-room .room{
+    /* text */
+    font-family: "Minion Pro";
+    font-size: 15px;
+    font-weight: normal;
+    color: #707070;
+
     /* layout */
     display: inline-block;
     width: 238px;
     height: 36px;
 
+    padding-left: 16px;
+    padding-right: 5px;
+
+    box-sizing: border-box;
+
+    margin-bottom: 21px;
+
     /* item layout */
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-    .cancel-room>div>span{
-        /* text */
-        font-family: "Minion Pro";
-        font-size: 15px;
-        font-weight: normal;
-        color: #707070;
-    }
+.cancel-room .room:hover, .room.selected{
+    background-color: rgba(169, 169, 169, 0.19);
+    cursor: pointer;
+}
+    .cancel-room .room::after{
+        content: "";
 
-    .cancel-room>div>a{
-        /* text */
-        text-indent: -9999px;
-
-        /* layout */
         background-image: url("data:image/svg+xml,%3Csvg id='_-' data-name='-' xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cg id='타원_81' data-name='타원 81' fill='%235782b9' stroke='%239599b3' stroke-width='1.5' opacity='0.207'%3E%3Ccircle cx='14.5' cy='14.5' r='14.5' stroke='none'/%3E%3Ccircle cx='14.5' cy='14.5' r='13.75' fill='none'/%3E%3C/g%3E%3Cg id='x' transform='translate(14.515 9.749) rotate(45)'%3E%3Cline id='선_280' data-name='선 280' x1='6.699' y2='6.699' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-size: contain;
@@ -75,19 +84,7 @@ body{
         width: 29px;
         height: 29px;
 
-        margin-left: 42px;
     }
-
-.cancel-room>div:nth-child(2){
-    /* layout */
-    margin-top: 29px;
-}
-
-.cancel-room>div:nth-child(3){
-    /* layout */
-    margin-top: 21px;
-    background-color: rgba(169, 169, 169, 0.19);
-}
 
 .cancel-room button{
     /* text */
@@ -96,7 +93,7 @@ body{
     font-weight: normal;
 
     /* layout */
-    margin-top: 48px;
+    margin-top: 27px;
 
     display: inline-block;
     width: 120px;
