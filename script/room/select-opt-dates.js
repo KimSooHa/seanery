@@ -12,16 +12,14 @@ window.addEventListener("load", function(){
 
     h1OfFirstSec.innerHTML = (today.getMonth() + 1) + "월" + "<span>" + today.getFullYear() + "</span>";
 
-    if (today.getMonth() + 1 == 12) {
+    if (today.getMonth() + 1 == 12) 
         h1OfSecondSec.innerHTML = "1월" + "<span>" + (today.getFullYear() + 1) + "</span>";
-    } else {
+    else 
         h1OfSecondSec.innerHTML = (today.getMonth() + 2) + "월" + "<span>" + today.getFullYear() + "</span>";
-    }
 
     engraveDatesOfMonth();
 
     /* select-dates */
-    var monthSections = document.querySelectorAll(".month");
     var selectedDates = [];
     var startDay = null;
     var endDay = null;
@@ -267,7 +265,7 @@ window.addEventListener("load", function(){
     function engraveDatesOfMonth(){
         // var base = {"year": 2020, "month": 1, "date": 1, "day": 3}; // 윤년
         var base = {"year": 1976, "month": 1, "date": 1, "day": 4}; // 윤년
-        var addFactor = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]; // 다음달 첫날이 몇 요일인지 구하기위해 이번달 요일번호(예:일요일 0번, 수요일 1번)에 각 월마다 정해진 인자를 더함
+        var addFactor = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]; // 다음달 첫날이 몇 요일인지 구하기위해 이번달 요일번호(예:일요일 0번, 수요일 3번)에 각 월마다 정해진 인자를 더함
 
         var firstSection = document.querySelector(".month-first");
         var firstMonth = firstSection.querySelector("h1").innerText.split('월')[0];
@@ -277,7 +275,7 @@ window.addEventListener("load", function(){
         var dayNumberOfFirst = 0;
         var dayNumberOfSecond = 0;
 
-        var monthSize = Math.abs(firstYear - base.year) * 12 + Number.parseInt(firstMonth);
+        var monthSize = Math.abs(firstYear - base.year) * 12 + parseInt(firstMonth);
         var dayNumber = base.day;
         for (var i = 0; i < monthSize; i++){
             if (i % 12 == 1 && parseInt(i / 12) % 4 == 0) // 윤년일 2월일 때
