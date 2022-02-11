@@ -146,7 +146,14 @@
     grid-template: 
         "padding1 room-no view link padding2" 50px
         / 1fr 90px 270px 30px 1fr;
+    align-items: center;
 }
+
+    .room-manage ol li span {
+        /* text */
+        color: #707070;
+    }
+
     .room-manage ol li>span:first-child{
         /* layout */
         grid-area: room-no;
