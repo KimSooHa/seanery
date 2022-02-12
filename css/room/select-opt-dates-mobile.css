@@ -1,3 +1,4 @@
+/* 저작자 : 조영인 */
 /* === layout block ========================= */
 /* --- body -------------------------- */
 body{
@@ -244,3 +245,35 @@ hr{
     /* reset */
     border: none;
 }
+
+/* --- selection ------------------------------------------ */
+.selection {
+    /* layout */
+    display: inline-block;
+    width: 297px;
+
+    /* item layout */
+}
+
+    .selection button{
+        /* reset */
+        border: none;
+
+        /* text */
+        font-family: "Montserrat";
+        font-size: 13px;
+        color: #fff;
+
+        /* layout */
+        background-color: #B19D74;
+        border-radius: 30px;
+        padding: 5px 40px 8px 42px;
+
+        position: relative;
+        top: -70px;
+        left: 130px;
+
+        /* util */
+        cursor: pointer;
+    }
+
