@@ -421,3 +421,27 @@
     display: inline-block;
     overflow: hidden;
 }
+
+/* -----------------reserv-confirm/check-detail 버튼--------------- */
+.btn-go-main, .btn-check-reserv{
+
+    width: 120px;
+    height: 40px;
+    border-radius: 12px 15px 12px 15px;
+    
+    font-family: 'NanumSquareRound','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+    .btn-go-main{
+        color: #446FA9;
+        border: 1px solid #446FA9;
+        background-color: white;
+    }
+
+    .btn-check-reserv{
+        color: white;
+        border: 1px solid white;
+        background-color: #446FA9;
+    }
