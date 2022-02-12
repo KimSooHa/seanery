@@ -1,69 +1,281 @@
 /* ------ 작성자 : psh-------------- */
-@import url(../../reset.css);
-@import url(../../utils.css);
-@import url(../style.css);
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/style.css);
+@import url(/css/buttons.css);
+@import url(/css/svg.css);
+/* ====== reset ==================================================== */
+fieldset {
+    padding: 0;
+}
 
 
-/* <!-- -----------header 바 ----------------------------------- --> */
+/* ====== btn style ==================================================== */
+.img-btn-go-back {
+    /* layout */
+    margin-left: 30px;
+}
 
+.img-btn-menu {
+    /* layout */
+    margin-right: 21px;
+}
 
-.header{
-    width: 100%;
-    height: 73px;
-    background-color: #436A8160;
+/* ====== outer block ================================================== */
 
-     
+/* -------- header --------------------------------------- */
+.header {
     /* layout */
     display: flex;
-    align-items: center;
+    flex-direction: column-reverse;
+    padding-top: 73px;
+    /* align-items: center; */
+}
 
+.header div {
+    /* layout */
+    background-color: rgba(67, 106, 129, 0.6);
+    width: 100%;
+    height: 73px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+
+    /* item layout */
+    display: flex;
     justify-content: space-between;
-    padding: 0 15px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.edit-room-info .room-info ul li {
+    /* item layout */
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-rows: 50px;
     box-sizing: border-box;
 }
 
 
 
-.btn-back{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23eee'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: left top;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    overflow: hidden;
-    text-indent: -999px;
-}
-
-.btn-menu{
-    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");    background-repeat: no-repeat;
-    background-position: left top;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    overflow: hidden;
-    text-indent: -999px;
-    padding-right: 10px;
-}
-
-/* ========================body=========================== */
-
-.top1{
-    background-color: #436A8125;
-    width: 100%;
-    height: 62px;
-
-    font-family: 'Montserrat','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 19px;
-    font-weight: bolder;
-    color: #1E3146;
-}
-
-    .header1{
-        position: absolute;
-        top: 89px;
-        left: 54px;
+.edit-room-info
+.room-info ul li label {
+        padding: 15px 0 16px 0;
     }
+
+.edit-room-info>li>div{
+    display: flex;
+}
+
+    
+    
+.edit-room-info form .btn-box {
+    background-color: #DAE5EA;
+    display: flex;
+    padding: 18px 0;
+    justify-content: space-evenly;
+}
+
+
+/* ---------------photo---------------------------------------------- */
+
+
+.room-photo{
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.room-photo>div>img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.room-photo>div>div{
+    text-align: center;
+    color:#fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #00000035;
+    height: 180px;
+    width: 100%;
+
+
+}
+
+.room-photo:hover>div>div{
+    transform: translateY(-180px);
+}
+
+
+/* ======= content block ========================================= */
+
+
+.header h1 {
+    /* text style */
+    font-family: 'Montserrat';
+    font-size: 19px;
+    font-weight: bold;
+    color: #1E3146;
+
+    /* layout */
+    background-color: rgba(67, 106, 129, 0.25);
+    padding: 16px 0 20px 47px;
+}
+
+.edit-room-info>h1 {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 17px;
+    font-weight: bold;
+    color: #436A81;
+
+    /* layout */
+    padding: 13px 0 13px 47px;
+    background-color: #E6EEF2;
+}
+
+.room-info>h1,
+.room-info h1 {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 15px;
+    font-weight: bold;
+    color: #436A81;
+
+    /* layout */
+    width: 100%;
+    padding: 12px 0 12px 49px;
+    background-color: #E1E7EA;
+}
+
+
+
+section ul li {
+    /* layout */
+    border-bottom: 1px solid #A9A9A9;
+}
+
+    section ul li:last-child {
+        /* layout */
+        border-bottom: 0;
+    }
+
+
+section ul li select {
+    /* layout */
+    cursor: pointer;
+    border: none;
+    padding: 15px 0 16px 0;
+    margin-right: 25px;
+    height: 100%;
+    appearance:none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.596' height='6.798' viewBox='0 0 12.596 6.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l5.591,5.591L20.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+    section ul li select:focus {
+        /* layout */
+        outline: none;
+    }
+
+section ul li span {
+    /* layout */
+    padding: 15px 0 16px 0;
+    /* padding-right: 28px; */
+    box-sizing: border-box;
+}
+
+
+section ul li>span:first-child,
+section ul li label {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #A9A9A9;
+    justify-content: center;
+}
+
+section ul li label {
+    /* layout */
+    width: 89px;
+}
+
+section ul li>div{
+    margin: 0 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section ul li span:nth-child(2),  select {
+    /* layout */
+    margin-left: 25px; 
+}
+
+section ul li span,
+label,
+select,
+option {
+    /* text style */
+    font-family: 'Minion Pro';
+    font-size: 13px;
+    font-weight: bold;
+    color: #707070;
+}
+
+
+.edit-room-info .room-info ul li select {
+    /* layout */
+    padding: 0;
+}
+
+
+
+/* =============================footer========================== */
+
+.footer{
+    width: 100%;
+    height: 130px;
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+
+    background-color: #E6EFF2;
+    width: 100%;
+    height: 125px;
+}
+
+.footer>div>img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footer-text>*{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 11px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 20px;
+}
+.footer-text>div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
 
 .top2{
     background-color: #E6EEF2;
@@ -78,62 +290,35 @@
     .header2{
         position: absolute;
         top: 143px;
-        left: 37px;
+        left: 54px;
     }
-/* -----------------------------img----------------------------- */
 
-.superior-photo{
-    height: 190px;
-    width: 100%;
+/* ---------------contents---------------------------------------------- */
 
-    overflow: hidden;
-
-}
+ 
 
 .superior-photo>img{
     height: 190px;
     width: 100%;
     object-fit: cover;
-    vertical-align: middle;
     
-}
-
-.superior-photo>div{
-    text-align: center;
-    color:#fff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-    width: 100%;
-    height: 100%;
-
     background-color: #00000035;
+    vertical-align: middle;
 }
 
-.superior-photo:hover>div{
-    transform: translateY(-190px);
-}
-
-.table-height{
-    height: 300px;
-}
-
-/* --------------------table ---------------*/
-
+/* --------------------table ----------------------*/
 
 .member-table{
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(5, 50px);
 
+    vertical-align: ;
 
 }
 
-.member-table>div{
-    border: 1px solid #A9A9A9;
+.member-table>span{
+    border: 1px solid grey;
     border-bottom: 0px;
     padding: 15px 15px;
 
@@ -141,37 +326,12 @@
     font-weight: bold;
     font-size: 13px;
     color: grey;
+
 }
 
-.member-table>div:nth-child(2n+1){
+
+.member-table>span:nth-child(2n+1){
     border-right: 0px;
-}
-
-.member-table>div{
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn-bot{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.596' height='7.798' viewBox='0 0 14.596 7.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l6.591,6.591L22.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");    
-    background-repeat: no-repeat;
-    background-position: left;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    overflow: hidden;
-    text-indent: -999px;
-}
-
-.btn-pencil{
-    background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-edit' data-name='Icon material-edit' xmlns='http://www.w3.org/2000/svg' width='13.406' height='13.406' viewBox='0 0 13.406 13.406'%3E%3Cpath id='Icon_material-edit-2' data-name='Icon material-edit' d='M4.5,15.11V17.9H7.292l8.236-8.236L12.736,6.874Zm13.188-7.6a.742.742,0,0,0,0-1.05L15.945,4.714a.742.742,0,0,0-1.05,0L13.533,6.077l2.792,2.792Z' transform='translate(-4.5 -4.496)' fill='%23707070'/%3E%3C/svg%3E ");
-    background-repeat: no-repeat;
-    background-position: left;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    overflow: hidden;
-    text-indent: -999px;
 }
 
 /* -------------------- ---------------*/
@@ -195,7 +355,7 @@
     padding: 0 4em;
 }
 
-.btn-bottom>a>input{
+.btn-bottom>input{
     height: 28px;
     width: 83px;
     
@@ -209,16 +369,14 @@
     border: 1px solid #BFBFBF;
 }
         /* ------------버튼 효과--- */
-        .btn-bottom>a>input:hover{
+        .btn-bottom>input:hover{
             background-color: #fff7;
         }
-        .btn-bottom>a>input:active{
+        .btn-bottom>input:active{
             background-color: #fff1;
         }
-
-
-
 /* ---------------------------footer-------------------------------- */
+
 .footer{
     width: 100%;
     height: 130px;
