@@ -114,14 +114,23 @@
 
     .select-schedule form fieldset .select-num {
         width: 210px;
+        border-bottom: 1px solid #707070;
+        padding: 0 7px 2px 10px;
+
+    }
+
+    .select-schedule form fieldset .select-num ol li {
+        width: 100%;
         height: 20px;
         display: flex;
         align-items: center;
-        padding: 0 10px 2px 10px;
-        border-bottom: 1px solid #707070;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='17.591' viewBox='0 0 8.596 17.591'%3E%3Cg id='Icon_feather-chevron-up' data-name='Icon feather-chevron-up' transform='translate(0.707 0.5)'%3E%3Cpath id='Icon_feather-chevron-up-2' data-name='Icon feather-chevron-up' d='M16.182,17.091,12.591,13.5,9,17.091' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 13.5)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
-        background-position: right 10px top;
+        background-position: right 3px top;
+        margin-top: 10px;
+    }
+    
+    .select-schedule form fieldset .select-num ol li:first-child {
         margin-top: 45px;
     }
 
@@ -132,8 +141,14 @@
         border-bottom: 1px solid #707070;
         background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-bed' data-name='Icon awesome-bed' xmlns='http://www.w3.org/2000/svg' width='29.8' height='17.88' viewBox='0 0 29.8 17.88'%3E%3Cpath id='Icon_awesome-bed-2' data-name='Icon awesome-bed' d='M8.195,13.44A3.725,3.725,0,1,0,4.47,9.715,3.729,3.729,0,0,0,8.195,13.44Zm16.39-5.96H14.155a.745.745,0,0,0-.745.745v6.7H2.98V5.245A.745.745,0,0,0,2.235,4.5H.745A.745.745,0,0,0,0,5.245v16.39a.745.745,0,0,0,.745.745h1.49a.745.745,0,0,0,.745-.745V19.4H26.82v2.235a.745.745,0,0,0,.745.745h1.49a.745.745,0,0,0,.745-.745v-8.94A5.215,5.215,0,0,0,24.585,7.48Z' transform='translate(0 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
-        background-position: right 10px center;
+        background-position: right 7px center;
         margin-top: 25px;
+    }
+
+    .select-schedule form fieldset .check-in, .check-out {
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-date-range' data-name='Icon material-date-range' xmlns='http://www.w3.org/2000/svg' width='19.8' height='22' viewBox='0 0 19.8 22'%3E%3Cpath id='Icon_material-date-range-2' data-name='Icon material-date-range' d='M11.1,12.9H8.9v2.2h2.2Zm4.4,0H13.3v2.2h2.2Zm4.4,0H17.7v2.2h2.2Zm2.2-7.7H21V3H18.8V5.2H10V3H7.8V5.2H6.7A2.19,2.19,0,0,0,4.511,7.4L4.5,22.8A2.2,2.2,0,0,0,6.7,25H22.1a2.206,2.206,0,0,0,2.2-2.2V7.4A2.206,2.206,0,0,0,22.1,5.2Zm0,17.6H6.7V10.7H22.1Z' transform='translate(-4.5 -3)' fill='%23707070'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right 7px bottom 3px;
     }
 
     .select-schedule form fieldset .check-in {
@@ -196,7 +211,11 @@
     border: none;
 }
 
-.select-schedule form fieldset .select-num span, input, .select-room input {
+.select-schedule form fieldset input {
+    outline: none;
+}
+
+.select-schedule form fieldset .select-num span, input, .select-room span, input {
     /* text style */
     font-family: 'Minion Pro';
     font-size: 13px;
@@ -212,28 +231,52 @@
 
 
 .select-schedule form fieldset .select-num input {
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* layout */
     width: 23px;
     height: 13px;
     padding: 0;
     padding-left: 5px;
+    border: none;
+
+    /* item layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .select-schedule form fieldset .select-room input {
     width: 75%;
     padding: 0;
     margin-left: 10px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: right center;
     border: none;
 }
 
+.select-schedule form fieldset .select-room>input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.select-schedule form fieldset .select-room li {
+    /* layout */
+    padding: 5px 0;
+
+    /* item layout */
+    display: flex;
+}
+
+.select-schedule form fieldset .select-room li input:first-child {
+    width: 50px;
+}
+
+.select-schedule form fieldset .select-room li input:last-child {
+    width: 100px;
+}
+
 .select-schedule form fieldset .check-in input, .check-out input {
-    width: 100%;
+    width: 70%;
     border: none;
+    margin-left: 10px;
 }
 
