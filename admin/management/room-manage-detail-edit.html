@@ -6,100 +6,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../../CSS/admin/management/room-manage-detail-edit.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin/management/room-manage-detail-edit.css" type="text/css">
+    <title>객실예약 - 객실상세수정 페이지</title>
 </head>
 <body>
-
-    <!-- header--------------------------------------------------- -->
-
+    <!-- --------header---------------------------------------------------- -->
     <header class="header">
-        <div><a class="btn-back" href="">뒤로 가기</a></div>
-        <div><a class="btn-menu" href="">메뉴 버튼</a></div> 
+        <h1>회원 관리<span class="d-none">- 회원상세</span></h1>
+
+        <div>
+            <a class="img-btn-go-back img-btn-go-back-bluewhite" href="">뒤로가기 버튼</a>
+            <a class="img-btn-menu img-btn-menu-bluewhite" href="">메뉴</a>
+        </div>
     </header>
 
-    <!-- top--------------------------------------------------- -->
+    <!-- --------회원상세---------------------------------------------------- -->
 
-    <div>
-        <div class="top1">
-            <spa class="header1">객실 관리</span>
-        </div>
+    <section class="edit-room-info">
+        <h1>객실상세</h1>
+        <form action="">
+            <fieldset>
+                <legend class="d-none">객실상세수정</legend>
 
-        <div class="top2">
-            <span class="header2">객실정보수정</span>
-        </div>
-    </div>
+                <section class="room-photo">
+                    <h1 class="d-none">객실 사진</h1>
+                    <div>
+                        <img src="../../images/객실/superior/superior-main1.jpg">
+                    </div>
+                    <div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30.621" height="30.621" viewBox="0 0 30.621 30.621">
+                                <g id="Icon_feather-image" data-name="Icon feather-image" transform="translate(1.5 1.5)">
+                                <path id="패스_257" data-name="패스 257" d="M7.5,4.5h21a3,3,0,0,1,3,3v21a3,3,0,0,1-3,3H7.5a3,3,0,0,1-3-3V7.5a3,3,0,0,1,3-3Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                <path id="패스_258" data-name="패스 258" d="M15,12.75a2.25,2.25,0,1,1-2.25-2.25A2.25,2.25,0,0,1,15,12.75Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                <path id="패스_259" data-name="패스 259" d="M31.5,22.5,24,15,7.5,31.5" transform="translate(-4.5 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                </g>
+                            </svg>
+                            <span>이미지 변경</span>
+                        </div>
+                    </div>
+                </section>
 
-    <!-- contents--------------------------------------------------- -->
-    
-    <div>
-        <div class="superior-photo">
-            <img src="../../../../images/객실/superior/superior-main1.jpg">  
-            
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30.621" height="30.621" viewBox="0 0 30.621 30.621">
-                    <g id="Icon_feather-image" data-name="Icon feather-image" transform="translate(1.5 1.5)">
-                      <path id="패스_257" data-name="패스 257" d="M7.5,4.5h21a3,3,0,0,1,3,3v21a3,3,0,0,1-3,3H7.5a3,3,0,0,1-3-3V7.5a3,3,0,0,1,3-3Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                      <path id="패스_258" data-name="패스 258" d="M15,12.75a2.25,2.25,0,1,1-2.25-2.25A2.25,2.25,0,0,1,15,12.75Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                      <path id="패스_259" data-name="패스 259" d="M31.5,22.5,24,15,7.5,31.5" transform="translate(-4.5 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                    </g>
-                  </svg>
-                <span>이미지 변경</span>
+                <section class="room-info">
+                    <ul>
+                        <li>
+                            <span>객실번호</span>
+                            <span>101호</span>
+                        </li>
+                        <li>
+                            <label>객실타입</label>
+                            <select name="reserv-condition" id="">
+                                <option value="0" selected>Superior</option>
+                                <option value="1">Standard</option>
+                                <option value="3">Studio Twin</option>
+                                <option value="4">Loyal Suite</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>인원</label>
+                            <select name="reserv-num" id="">
+                                <option value="0">1 명</option>
+                                <option value="1">2 명</option>
+                                <option value="2">3 명</option>
+                                <option value="3" selected>4 명</option>
+                                <option value="4">5 명</option>
+                                <option value="5">6 명</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>객실전망</label>
+                            <select name="reserv-condition" id="">
+                                <option value="0" selected>Village view</option>
+                                <option value="1">Ocean view</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>조식인원</label>
+                            <select name="breakfast-num" id="">
+                                <option value="0" selected>0 명</option>
+                                <option value="1">1 명</option>
+                                <option value="2">2 명</option>
+                                <option value="3">3 명</option>
+                                <option value="4">4 명</option>
+                                <option value="5">5 명</option>
+                                <option value="6">6 명</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>숙박요금</span>
+                            <div>
+                                <span>145,000원</span>
+                                <span><a class="btn-pencil" href="">pencil</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </fieldset>
+        
+        <!-- ----------------btn------------------------------------------------ -->
+            <div class="btn-box">
+                <input class="btn-edit-cancel btn-admin-edit" type="reset" value="수정취소">
+                <input class="btn-edit-confirm btn-admin-edit" type="submit" value="수정확인">
             </div>
-        </div>
-        
-        <div class="member-table">
-                <div>객실번호</div>
-                <div>101호</div>
 
-                <div>객실타입</div>
-                <div>
-                    <div>Superior</div>
-                    <div><a class="btn-bot" href="">화살표 버튼</a></div>
-                </div>
+        </form>
+    </section>
 
-                <div>객실전망</div>
-                <div>
-                    <div>Village view</div>
-                    <div><a class="btn-bot" href="">화살표 버튼</a></div>
-                </div>
-
-                <div>최대인원</div>
-                <div>
-                    <div>2명</div>
-                    <div><a class="btn-bot" href="">화살표 버튼</a></div>
-                </div>
-
-                <div>숙박요금</div>
-                <div>
-                    <div>145,000원</div>
-                    <div><a class="btn-pencil" href="">연필 버튼</a></div>
-                </div>
-                
-        </div>
-    </div>
-        
-    <!-- btn bottom--------------------------------------------------- -->
-
-    <div class="bg-btn-bottom">
-        <div class="btn-bottom">
-            <a href=""><input type="button" value="수정취소"></a>
-            <a href=""><input type="button" value="수정확인"></a>
-        </div>
-    </div>
-
-<!-- -------------footer--------------------------------------------------- -->
-
+    <!--  ---------------footer ---------------------------------------------------->  
     <footer class="footer">
         <div>
-            <img class="img-footer" src="../../../../images/Seanery_hotel-removebg-preview.png">
+            <img src="../../../images/Seanery_hotel-removebg-preview.png">
         </div>
             
-        <div class="text-footer">
-            <span>주소<br>제주특별자치도 서귀포시 표선면 민속해안로 537<br><br></span>
-            <span>이메일<br>info@seaneryhotel.co.kr</span>
+        <div class="footer-text">
+            <div>
+                <span>주소</span>
+                <span>제주특별자치도 서귀포시 표선면 민속해안로 537</span>
+            </div>
+            <div>
+                <span>이메일</span>
+                <span>info@seaneryhotel.co.kr</span>
+            </div>
         </div>
     </footer>
-
-
 </body>
 </html>

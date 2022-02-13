@@ -218,7 +218,7 @@
     background-color: #446FA9;
 }
 
-/* ============ footer=================== */
+/* =============================footer========================== */
 
 .footer{
     width: 100%;
@@ -233,13 +233,23 @@
     height: 125px;
 }
 
-.img-footer{ 
+.footer>div>img{ 
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.text-footer{
+.footer-text>*{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-size: 11px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 20px;
+}
+.footer-text>div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
 }

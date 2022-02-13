@@ -406,3 +406,42 @@
 .btn-admin-edit:hover {
     background-color: rgb(192, 204, 212);
 }
+
+/* ---------------pencil------------------ */
+.btn-pencil {
+    /* text  style */
+    text-indent: -999px;
+
+    /* content box style */
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-edit' data-name='Icon material-edit' xmlns='http://www.w3.org/2000/svg' width='13.406' height='13.406' viewBox='0 0 13.406 13.406'%3E%3Cpath id='Icon_material-edit-2' data-name='Icon material-edit' d='M4.5,15.11V17.9H7.292l8.236-8.236L12.736,6.874Zm13.188-7.6a.742.742,0,0,0,0-1.05L15.945,4.714a.742.742,0,0,0-1.05,0L13.533,6.077l2.792,2.792Z' transform='translate(-4.5 -4.496)' fill='%23707070'/%3E%3C/svg%3E%0A");    
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 27px;
+    height: 15.75px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* -----------------reserv-confirm/check-detail 버튼--------------- */
+.btn-go-main, .btn-check-reserv{
+
+    width: 120px;
+    height: 40px;
+    border-radius: 12px 15px 12px 15px;
+    
+    font-family: 'NanumSquareRound','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+    .btn-go-main{
+        color: #446FA9;
+        border: 1px solid #446FA9;
+        background-color: white;
+    }
+
+    .btn-check-reserv{
+        color: white;
+        border: 1px solid white;
+        background-color: #446FA9;
+    }
