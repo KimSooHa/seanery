@@ -84,7 +84,7 @@ section{
     padding-bottom: 20px;
 }
 
-.font-reserv{
+.notice-reserv{
     display: flex;
     justify-content: center;
 
@@ -95,7 +95,7 @@ section{
     padding-bottom: 30px;
 }
 
-.font-mid{
+.notice-reserv2{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,12 +108,12 @@ section{
 
 .btn-body{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 100px 50px;
 }
 
 
-.btn-go-main, .btn-check-reserv{
+.btn-font-blue, .btn-font-white{
 
     width: 120px;
     height: 40px;
@@ -124,16 +124,12 @@ section{
     font-weight: bold;
 
 }
-    .btn-go-main{
-        color: #446FA9;
-        border: 1px solid #446FA9;
-        background-color: white;
+    .btn-font-blue{
+        margin-right: 50px;
     }
 
-    .btn-check-reserv{
-        color: white;
-        border: 1px solid white;
-        background-color: #446FA9;
+    .btn-font-white{
+
     }
 
 /* =============================footer========================== */

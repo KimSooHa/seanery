@@ -426,7 +426,7 @@
 }
 
 /* -----------------reserv-confirm/check-detail 버튼--------------- */
-.btn-go-main, .btn-check-reserv{
+.btn-font-blue, .btn-font-white{
 
     width: 120px;
     height: 40px;
@@ -437,13 +437,13 @@
     font-weight: bold;
 
 }
-    .btn-go-main{
+    .btn-font-blue{
         color: #446FA9;
         border: 1px solid #446FA9;
         background-color: white;
     }
 
-    .btn-check-reserv{
+    .btn-font-white{
         color: white;
         border: 1px solid white;
         background-color: #446FA9;
