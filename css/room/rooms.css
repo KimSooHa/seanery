@@ -55,6 +55,7 @@
 }
 
     .header h1{
+        /* layout */
         z-index: 1;
         margin-top: 30px;
     }
@@ -115,6 +116,7 @@
     }
 
     .rooms .room-list:hover .room-list-introduct {
+        /* layout */
         display: flex;
     }
 
@@ -161,26 +163,30 @@
     margin-top: 127px;
 }
 
-.room-list img {
-    width: 255px;
-    height: 155px;
-}
 
 .rooms .room-list .room-list-title {
+    /* text */
     font-family: 'Times New Roman';
     font-size: 19px;
     font-weight: normal;
     color: #FFFFFF;
 
+    /* layout */
     position: absolute;
     left: 25px;
     bottom: 24px;
     margin: 0;
 }
 
-.room-list-img {
+.rooms .room-list div {
     width: 100%;
     height: 100%;
+}
+
+.rooms .room-list div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .rooms .room-list .room-list-introduct {
