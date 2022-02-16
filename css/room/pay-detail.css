@@ -98,7 +98,7 @@
 /* ====== outer block ================================================== */
 body {
     /* layout */
-    height: 100vh;
+    height: 100%;
     background: rgba(0, 0, 0, 0.72);
     display: flex;
     justify-content: center;
@@ -111,6 +111,9 @@ section {
     width: 360px;
     background-color: #EEEEEE;
     border-radius: 20px;
+    display: flex;
+    /* align-items: center; */
+    margin: 178px 0;
 }
 
 .top{
