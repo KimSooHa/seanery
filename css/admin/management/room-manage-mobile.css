@@ -131,11 +131,12 @@
         bottom: 15px;
     }
 
-.room-manage ol li{
+.room-manage ol li a{
     /* text */
     font-family: "Minion Pro";
     font-size: 15px;
     font-weight: bold;
+        color: #707070;
 
     /* layout */
     height: 50px;
@@ -144,39 +145,30 @@
     /* item layout */
     display: grid;
     grid-template: 
-        "padding1 room-no view link padding2" 50px
-        / 1fr 90px 270px 30px 1fr;
+        "padding1 room-no view padding2" 50px
+        / 1fr 90px 270px 1fr;
     align-items: center;
 }
+.room-manage ol li a:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
-    .room-manage ol li span {
-        /* text */
-        color: #707070;
-    }
-
-    .room-manage ol li>span:first-child{
+    .room-manage ol li a span:first-child{
         /* layout */
         grid-area: room-no;
         margin-top: 13.9px;
         margin-left: 25.8px;
     }
 
-    .room-manage ol li>span:nth-child(2){
+    .room-manage ol li a span:nth-child(2){
         /* layout */
         grid-area: view;
         margin-top: 13.9px;
     }
 
-    .room-manage ol li>a{
-        /* text */
-        text-indent: -9999px;
-
-        /* layout */
-        grid-area: link;
-        margin-top: 14.9px;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
+    .deco-arrow{
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.561' height='22.123' viewBox='0 0 12.561 22.123'%3E%3Cpath id='Icon_feather-chevron-right' data-name='Icon feather-chevron-right' d='M13.5,26.88l8.94-8.94L13.5,9' transform='translate(-11.379 -6.879)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
+        background-size: 15px 20px;
+        background-position: center right 0px;
     }
