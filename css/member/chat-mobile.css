@@ -19,11 +19,13 @@ body{
     background-color: #5782B9;
 
     /* item layout */
+    box-sizing: border-box;
     padding-left: 31px;
     padding-right: 21.5px;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 13.5px 1fr 27px;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -44,58 +46,24 @@ body{
 .header>h1{
     /* text */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* font-size: 14px; */
     font-size: 20px;
     font-weight: normal;
     color: #E6EEF2;
 
     /* layout*/
-    margin-left: 22.5px;
-    grid-column: 2/3;
-    grid-row: 1/2;
+    position: absolute;
+    left: 67px;
 }
 
-.header>div:nth-child(2){
+.header>div{
     /* layout */
-    grid-column: 1/2;
-    grid-row: 1/2;
-    display: inline-block;
+    flex-basis: 100%;
+    /* item layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-
-    .header>div:nth-child(2)>a{
-        /* text  */
-        text-indent: -999px;
-
-        /* layout */
-        background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back-2' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23fff'/%3E%3C/svg%3E%0A");
-        background-repeat: no-repeat;
-        background-size: contain;
-
-        display: inline-block;
-        width: 13.5px;
-        height: 23.6px;
-    }
-
-.header>div:nth-child(3){
-    /* layout */
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-
-    .header>div:nth-child(3)>a{
-        /* text */
-        text-indent: -9999px;
-
-        /* layout */
-        background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-
-        display: inline-block;
-        width: 27px;
-        height: 15.75px;
-    }
 
 /* --- inquiry ----------------------------------------*/
 .inquiry .inquiry-dialog {
