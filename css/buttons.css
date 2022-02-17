@@ -93,6 +93,7 @@
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+    opacity: 1;
 
     /* effect */
     cursor: pointer;
@@ -110,10 +111,12 @@
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+    opacity: 1;
 
     /* effect */
     cursor: pointer;
 }
+
 
 .btn-search{
    /* text  style */
@@ -421,3 +424,27 @@
     display: inline-block;
     overflow: hidden;
 }
+
+/* -----------------reserv-confirm/check-detail 버튼--------------- */
+.btn-font-blue, .btn-font-white{
+
+    width: 120px;
+    height: 40px;
+    border-radius: 12px 15px 12px 15px;
+    
+    font-family: 'NanumSquareRound','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+    .btn-font-blue{
+        color: #446FA9;
+        border: 1px solid #446FA9;
+        background-color: white;
+    }
+
+    .btn-font-white{
+        color: white;
+        border: 1px solid white;
+        background-color: #446FA9;
+    }

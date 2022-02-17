@@ -33,41 +33,70 @@
                 <legend class="d-none">객실검색 정보</legend>
 
                 <div class="select-num">
-                    <label class="d-none">인원수 선택</label>
-                    <span>Room</span>
-                    <input type="number" name="room-num" id="room-num" value="1" readonly>
-
-                    <span>&sol;</span>
-
-                    <span>Adults</span>
-                    <input type="number" name="room1_adult-num" id="room1_adult-num" value="1" readonly>
-
-                    <span>&sol;</span>
-
-                    <span>Kid</span>
-                    <input type="number" name="room1_kid-num" id="room1_kid-num" value="0" readonly>
+                    <ol>
+                        <li>
+                            <label class="d-none">인원수 선택</label>
+                            <span>Room</span>
+                            <input type="number" name="room-num" id="room-num" value="1" readonly>
+        
+                            <span>&sol;</span>
+        
+                            <span>Adults</span>
+                            <input type="number" name="room1_adult-num" id="room1_adult-num" value="1" readonly>
+        
+                            <span>&sol;</span>
+        
+                            <span>Kid</span>
+                            <input type="number" name="room1_kid-num" id="room1_kid-num" value="0" readonly>
+                        </li>
+                        <!-- <li class="d-none">
+                            <label class="d-none">인원수 선택</label>
+                            <span>Room</span>
+                            <input type="number" name="room-num" id="room-num" value="2" readonly>
+        
+                            <span>&sol;</span>
+        
+                            <span>Adults</span>
+                            <input type="number" name="room1_adult-num" id="room1_adult-num" value="1" readonly>
+        
+                            <span>&sol;</span>
+        
+                            <span>Kid</span>
+                            <input type="number" name="room1_kid-num" id="room1_kid-num" value="0" readonly>
+                        </li> -->
+                    </ol>
                 </div>
 
                 <div class="select-room">
                     <label class="d-none">객실 선택</label>
                     <input type="text" name="room-select" value="객실 선택" readonly>
-                    <!-- <ol>
+                    <ol class="d-none">
                         <li>
                             <input type="text" name="room" id="room1" value="Room 1" readonly>
                             <span>&minus;</span>
                             <input type="text" name="room1-type" id="room1-type" value="Superior/village" readonly>
                         </li>
-                    </ol> -->
+                        <li>
+                            <input type="text" name="room" id="room2" value="Room 2" readonly>
+                            <span>&minus;</span>
+                            <input type="text" name="room2-type" id="room2-type" value="Standard/ocean" readonly>
+                        </li>
+                        <li>
+                            <input type="text" name="room" id="room3" value="Room 3" readonly>
+                            <span>&minus;</span>
+                            <input type="text" name="room3-type" id="room3-type" value="Standard/ocean" readonly>
+                        </li>
+                    </ol>
                 </div>
 
                 <div class="check-in">
                     <label class="d-none">체크인</label>
-                    <input type="date" value="체크인 날짜" required>
+                    <input type="text" value="체크인 날짜" readonly>
                 </div>
                 
                 <div class="check-out">
                     <label class="d-none">체크아웃</label>
-                    <input type="date" value="체크아웃 날짜" required>
+                    <input type="text" value="체크아웃 날짜" readonly>
                 </div>
             </fieldset>
 

@@ -1,7 +1,9 @@
 /* 작성자 : psh */
-@import url(../reset.css);
-@import url(../utils.css);
-@import url(../style.css);
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/style.css);
+@import url(/css/buttons.css);
+@import url(/css/svg.css);
 
 /* ============== font================= */
 
@@ -28,86 +30,71 @@
 
 
 /* <!-- -----------윗부분 ----------------------------------- --> */
-/* <!-- -----------header 바 ----------------------------------- --> */
-
-
-
-.header{
-    width: 100%;
-    height: 73px;
-    background-color: #0005;
-
+.img-btn-go-back {
     /* layout */
-    position: fixed;
-    top: 0;
-    
+    margin-left: 30px;
+}
+
+.img-btn-menu {
+    /* layout */
+    margin-right: 21px;
+}
+
+/* ====== outer block ================================================== */
+
+/* -------- header --------------------------------------- */
+.header {
     /* layout */
     display: flex;
-    align-items: center;
+    flex-direction: column-reverse;
 
-    justify-content: space-between;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-
-.back-btn{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23eee'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: left top;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    overflow: hidden;
-    text-indent: -999px;
-}
-
-.menu-btn{
-    background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");    background-repeat: no-repeat;
-    background-position: left top;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    overflow: hidden;
-    text-indent: -999px;
-    padding-right: 25px;
-}
-
-
-/* ------------------main body----------------- */
-.main-body{
-    height: 1200px;
-    padding: 20px 20px;
-}
-
-/* <!-- -----------top ----------------------------------- --> */
-.top-bg{
-    display: flex;
-    width: 100%;
+    /* layout */
+    border-bottom-right-radius: 60px;
     height: 138px;
     background-image: url("../../images/ocean3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
-    border-bottom-right-radius: 60px;
-    align-items: flex-end;
-    padding: 0 0 20px 20px;
-
+    /* item layout */
+    display: flex;
+    align-items: flex-start;
+    position: relative;
 }
 
-
-.top-text{
-    display: inline-block;
-    font-family: sans-serif ,Verdana, Geneva, Tahoma, sans-serif;
+.header h1{
+    font-family: 'NanumSquareRound', sans-serif ,Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     color: #436A81;
+
+    padding: 0 0 20px 20px;
+    
 }
 
+.header div {
+    /* layout */
+    background-color: #0005;
+    width: 100%;
+    height: 73px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
 
+    /* item layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
+/* ------------------main body----------------- */
+.main-body{
+    height: 1200px;
+    padding: 20px 20px;
+}
 /* -------------- main--------------------------------------- */
-
 
 .sup-number{
     display: grid;
@@ -138,7 +125,7 @@
 }
 .bill{
     display: grid;
-    grid-template-columns: 70px 200px;
+    grid-template-columns: 70px 150px;
     grid-template-rows: repeat(2, 1fr);
     align-items: center;
     justify-items: right;
@@ -180,22 +167,17 @@
 }
 
 
-.btn-bottom{
-    width: 100%;
-    height: 100px;
-}
-
-.btn-main{
+.btn-body{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 100px 50px;
 }
 
 
-.btn-main>input{
+.btn-font-blue, .btn-font-white{
 
     width: 120px;
-    height: 45px;
+    height: 40px;
     border-radius: 12px 15px 12px 15px;
     
     font-family: 'NanumSquareRound','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -203,22 +185,16 @@
     font-weight: bold;
 
 }
+    .btn-font-blue{
+        margin-right: 50px;
+    }
+
+    .btn-font-white{
+
+    }
 
 
-.btn-white{
-    color: #446FA9;
-    border: 1px solid #446FA9;
-    background-color: white;
-}
-
-.btn-blue{
-   
-    color: white;
-    border: 1px solid white;
-    background-color: #446FA9;
-}
-
-/* ============ footer=================== */
+/* =============================footer========================== */
 
 .footer{
     width: 100%;
@@ -233,13 +209,23 @@
     height: 125px;
 }
 
-.img-footer{ 
+.footer>div>img{ 
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.text-footer{
+.footer-text>*{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-size: 11px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 20px;
+}
+.footer-text>div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
 }

@@ -1,7 +1,7 @@
 /* 저작자: 김수하 */
 /* ======utils style====================================== */
 .d-none {
-    display: none;
+    display: none !important; 
 }
 
 .d-initial {

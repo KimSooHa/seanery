@@ -32,3 +32,97 @@ flatpickr("#end-date", {
 // });
 
 
+// --- simple-search --------------------------------------
+
+// select-num
+window.addEventListener("load", function() {
+ 
+  var section = document.querySelector(".simple-search");
+  var selectNum = section.querySelector(".select-num");
+  var adult = selectNum.querySelector(".adult");
+  var kid = selectNum.querySelector(".kid");
+  var adultInput = adult.querySelector("input");
+  var kidInput = kid.querySelector("input");
+  var adultPlus = adult.querySelector(".img-btn-plus");
+  var adultMinus = adult.querySelector(".img-btn-minus");
+  var kidPlus = kid.querySelector(".img-btn-plus");
+  var kidMinus = kid.querySelector(".img-btn-minus");
+  // var minus = box.querySelector(".img-btn-minus");
+  
+
+
+  selectNum.addEventListener("click", function(e) {
+
+
+    if(e.target.nodeName != "SPAN")
+        return;
+
+    // console.log("clicked");
+
+    // 성인
+    var adultValue = adultInput.value;
+    var adultInt = parseInt(adultValue);
+
+    // 더하기 버튼
+    if(e.target == adultPlus) {
+      
+      if(adultInt >= 2)
+        return;
+        
+      adultInput.value = adultInt + 1;
+    } 
+    // 빼기 버튼
+    else if(e.target == adultMinus) {
+      if(adultInt <= 1)
+        return;
+
+      adultInput.value = adultInt - 1;
+
+    }
+
+    // 아동
+    var kidValue = kidInput.value;
+    var kidInt = parseInt(kidValue);
+
+    // 더하기 버튼
+    if(e.target == kidPlus) {
+      
+      if(kidInt >= 1)
+        return;
+        
+      kidInput.value = kidInt + 1;
+    } 
+    // 빼기 버튼
+    else if(e.target == kidMinus) {
+      if(kidInt <= 0)
+        return;
+
+      kidInput.value = kidInt - 1;
+
+    }
+
+    
+
+  });
+
+  // 마우스 눌릴때
+  selectNum.addEventListener("mousedown", function(e) {
+
+    if(e.target.nodeName != "SPAN")
+        return;
+
+    e.target.style.opacity = "0.7";
+    
+  });
+
+  // 마우스 올라갈 때
+  selectNum.addEventListener("mouseup", function(e) {
+
+    if(e.target.nodeName != "SPAN")
+        return;
+
+    e.target.style.opacity = "1";
+  });
+
+
+});

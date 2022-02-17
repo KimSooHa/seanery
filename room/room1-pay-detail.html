@@ -1,123 +1,100 @@
-<!-- 작성자 : psh -->
-
-
+<!-- 저작자: psh -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../CSS/room/room1-pay-detail.css" type="text/css" rel="stylesheet">
-
+    <link rel="stylesheet" href="/css/room/room1-pay-detail.css" type="text/css">
+    <title>room1 옵션사항</title>
 </head>
 <body>
-    <div class="total">
-        <form action="pay-detail.html"></form>
+    <h1 class="d-none">객실수/인원수 선택</h1>
 
-        <!-- -----------header----------------------------- -->
-        <header class="header">
-            <span class="font-bold">옵션사항</span>
-            <div><a class="btn-back" href="">취소버튼</a></div>
-        </header>
-        <!--------------조식-------------------------------  -->
-        <div>
-            <span class="font-c">조식</span>
-            <div class="breakfast">
-                <span>1박</span>
+    <section>
+        <h1 class="d-none">객실별 인원수</h1>
 
+        <form action="">
+            <div class="top">
+                <div>옵션사항</div>
+                <div class="img-btn-close">닫기버튼</div>
+            </div>
+            
+            
+            <div class="view-title">전망</div>
+            <fieldset>
+                <legend class="d-none">전망 선택</legend> 
 
-                <span>성인</span>
-                <div>
-                    <span class="btn-minus">-</span>
-                    <input type="number" value="0" >
-                    <span class="btn-plus">+</span>
+                <div class="room-view">
+                    <label class="d-none">객실 뷰</label>
+                    <label>오션 뷰</label><input type="radio" name="view">
+                    <label>빌리지 뷰</label><input type="radio" name="view">
                 </div>
 
-                <span>어린이</span>
-                <div>
-                    <span class="btn-minus">-</span>
-                    <input type="number" value="0" >
-                    <span class="btn-plus">+</span>
-                </div>          
-            </div>
-        </div>    
-        <!--------------전망-------------------------------  -->
+            </fieldset>
+            <div>현재 오션 뷰는 객실 마감 되었습니다.</div>
 
-        <div>
-            <span class="font-c">전망</span>
-            <div class="vieww">
-                    <div class="view">
-                        <label>오션 뷰</label><input name="a" id="room1" type="radio">
-                        <label>빌리지 뷰</label><input name="a" id="room1" type="radio">
+            <div class="div-line"></div>
+
+            <div class="ask-detail">
+                <div>
+                    <div>요청사항</div>
+                    <div>
+                        <span>성인 3인 투숙 시, 별도 요금 발생 <br></span>
+                        <span>※ 추가 요청 사항은 아래 기재 바랍니다.</span>
                     </div>
+                </div>
+                <fieldset>
+                    <legend class="d-none">요청사항</legend>
+                    <input type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 제공이 보장되지는 않습니다.">
+                </fieldset>
 
+                <div class="div-line"></div>
             </div>
-            <span class="notice">현재 오션 뷰는 객실마감되었습니다.</span>
-        </div>
 
- 
-        <div class="div-line"></div>
-        <!-- -----------------요청사항--------------------------------- -->
 
-        <div>
-            <div>
-                <span class="font-bold">요청사항</span>
-
+            <div class="opt-check">
+                <div>Superior</div>
                 <div>
-                    <span>성인 3인 투숙 시, 별도 요금 발생<br></span>
-                    <span>※추가 요청 사항은 아래 기재 바랍니다.</span>
-                </div>
-
-                <div class>
-                    <input class="box-size" type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 제공이 보장되지는 않습니다.">
+                    <span>객실1(성인1, 어린이1) <br></span>
                 </div>
             </div>
-        </div>
 
-        <div class="div-line"></div>
-        <!-- ---------------Superior----------------------------- -->
 
-        <div>
-            <span class="font-bold">Superior</span>
-            <div>
-                <span>객실1 (성인1, 어린이1)<br></span>
+            <div class="div-line"></div>
+
+
+            <div class="opt-total">
+                <div>Total</div>
+                <div>
+                    <div>
+                        <label>객실금액</label>
+                        <span>145,000(1박)<br>+오션뷰 20,000 (추가요금)</span>
+                    </div>
+                </div>
+
+                <div>옵션</div>
+                <div>
+                    <div>
+                        <label>조식</label>
+                        <span>0(1박)</span>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="div-line"></div>
-        <!-- -------------Total---------------------------- -->
+            <div class="div-line"></div>
 
-        <div>
-            <span class="font-bold">Total</span>
-
-            <div class="bill">
-                <span class="bill-category">객실금액</span>
-                <span>145,000(1박) + 오션뷰 20,000 (추가요금)</span>
-                
-                <span class="bill-category">옵션</span>
-                <span></span>
-
-                <span class="bill-category">조식</span>
-                <span>0(1박)</span>
+            <div class="total-pay">
+                <div>
+                    <span>총 예약금액</span>
+                    <span>165,000원</span>
+                </div>
             </div>
-        </div>
-
-        <div class="div-line"></div>
-        <!-- ------------------총예약금액----------------------- -->
-        <div class="font-d">
-            <span>총 예약금액</span>
-            <span>165,000원</span>
-        </div>
-        <!-- ---------------btn-rev-------------------------------------- -->
-    </div>
-    
-        <div class="btn-rev">
-            <input type="button" value="예약하기">
-        </div>
-
-
+            <div class="btn-reserv">
+                <input type="button" value="예약하기">
+            </div>
         
-    
+        </form>
+    </section>
 </body>
-
 </html>
