@@ -72,16 +72,19 @@ section {
     border-radius: 14px;
 }
 
+
 section form fieldset {
     /* layout */
-    height: 110px;
-    padding-top: 15px;
-    padding-left: 30px;
+    /* width: 300px; */
+    height: 120px;
+    /* padding-top: 15px; */
+    /* padding-left: 30px; */
+    padding: 0;
     overflow: hidden;
 
     /* item layout */
     display: grid;
-    grid-template-columns: 56px 2fr 11px;
+    grid-template-columns: 56px auto 11px;
     grid-template-rows: 11px 17px 17px;
     column-gap: 30px;
     row-gap: 25px;
@@ -89,15 +92,17 @@ section form fieldset {
     transition: height 0.5s;
 }
 
-section form fieldset.hide {
-    height: 0px;
-    padding: 0px;
-    border: none;
+section form fieldset:nth-child(2),
+section form fieldset:nth-child(3) {
+    /* padding-top: 0; */
+    height: 140px;
+    align-content: center;
 }
 
-
-section form fieldset:first-child {
-    padding-top: 0;
+section form fieldset.hide {
+    height: 0px;
+    /* padding: 0px; */
+    border: none;
 }
 
 
@@ -110,9 +115,10 @@ section form fieldset:first-child {
         grid-column: 1/2;
         grid-row: 2/4;
         align-self: center;
-    } 
+    }
     
     section form fieldset .adult-num {
+        width: 100%;
         grid-column: 2/4;
         grid-row: 2/3;
         display: flex;
@@ -121,11 +127,12 @@ section form fieldset:first-child {
     }
 
     section form fieldset .kid-num {
+        width: 100%;
         grid-column: 2/4;
         grid-row: 3/4;
         display: flex;
         justify-content: space-evenly;
-        padding-right: 10px;
+        /* padding-right: 10px; */
     }
 
 section form .btn-box {
