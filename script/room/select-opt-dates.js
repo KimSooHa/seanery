@@ -1,3 +1,4 @@
+// 저작자 : 조영인
 window.addEventListener("load", function(){
     /* 페이지를 열 때 현재 달로 수정되어 로드되기 */
     var monthSections = document.querySelectorAll(".month");
