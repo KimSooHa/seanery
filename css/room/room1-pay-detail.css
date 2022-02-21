@@ -71,7 +71,7 @@
     margin-top: 40px;
 }
 
-.btn-reserv>input{
+.btn-reserv>a>input{
     font-family: 'Minion Pro';
     font-size: 14px;
     font-weight: bold;
