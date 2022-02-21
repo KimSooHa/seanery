@@ -126,3 +126,60 @@ window.addEventListener("load", function() {
 
 
 });
+
+// --- rooms --------------------------------------
+
+window.addEventListener("load", function() {
+
+  var section = document.querySelector(".rooms");
+  var ul = section.querySelector("ul");
+  var imgBox = section.querySelector(".img-box");
+  var img = imgBox.querySelectorAll("img");
+  
+  var lis = ul.children;
+  
+  
+  ul.addEventListener("mouseover", function(e) {
+    
+    if(e.target.nodeName != "A")
+    return;
+    
+    for(var i=0; i<lis.length; i++) {
+      
+      if(imgBox.children[i].classList.contains("over"))
+        img[i].classList.remove("over");
+      
+      if(e.target == lis[i].firstElementChild)
+        img[i].classList.add("over");
+        img[i].style.transition = "1s";
+        
+      
+      // if(img[0].classList.contains("over"))
+      //   return;
+      
+    }
+
+  });
+
+  // ul.addEventListener("mouseleave", function(e) {
+    
+  //   if(e.target.nodeName != "LI")
+  //     return;
+
+  //   for(var i=0; i<lis.length; i++) {
+
+      
+  //     if(e.target == lis[i])
+  //     img[i].classList.remove("over");
+  //     // else
+  //     //   img.classList.remove("over");
+      
+  //     // if(img[0].classList.contains("over"))
+  //     //   return;
+      
+  //   }
+
+  // });
+
+  
+});
