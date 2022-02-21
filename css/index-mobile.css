@@ -322,10 +322,7 @@ body {
 /* -------- rooms --------------------------------------- */
 .rooms {
     height: 386px;
-    background: url("../images/객실/superior/superior-main2.jpg")
-                no-repeat -95px / cover;
     position: relative;
-
     transition: 0.7s;
 }
 
@@ -342,7 +339,28 @@ body {
         top: 18px;
     }
 
-    .rooms div {
+    .rooms .img-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .rooms .img-box::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .rooms .more {
         position: absolute;
         right: 17px;
         bottom: 16px;
@@ -862,6 +880,19 @@ body {
 
     .rooms-list>ul>li>a:hover {
         border-bottom: 1px solid #B19D74;
+    }
+
+    .rooms .img-box img {
+        object-fit: cover;
+        object-position: -95px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .rooms .img-box img.over {
+        z-index: 1;
     }
 
 /* -------- gallery --------------------------------------- */
