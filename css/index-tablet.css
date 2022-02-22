@@ -18,11 +18,17 @@
         /* height: 400px; */
     }
 
-    /* -------- rooms --------------------------------------- */
+/* -------- rooms --------------------------------------- */
     .rooms {
         height: 500px;
     }
 
+    .rooms .img-box img {
+        object-position: center;
+    }
+
+
+/* -------- facilities --------------------------------------- */
     .facilities {
         height: 1000px;
     }
@@ -37,7 +43,20 @@
 
      /* -------- rooms --------------------------------------- */
      .rooms {
-        height: 750px;
+        height: 700px;
+    }
+
+    .rooms-list {
+        width: 250px;
+        height: 300px;
+    }
+
+    .rooms-list>ul>li>a {
+        font-size: 17px;
+    }
+
+    .rooms .btn-more {
+        font-size: 15px;
     }
 
 
@@ -62,7 +81,7 @@
     }
 
     .facilities-list-title {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .facilities-list p {
