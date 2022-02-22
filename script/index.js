@@ -151,35 +151,9 @@ window.addEventListener("load", function() {
       
       if(e.target == lis[i].firstElementChild)
         img[i].classList.add("over");
-        img[i].style.transition = "1s";
-        
-      
-      // if(img[0].classList.contains("over"))
-      //   return;
       
     }
 
   });
-
-  // ul.addEventListener("mouseleave", function(e) {
-    
-  //   if(e.target.nodeName != "LI")
-  //     return;
-
-  //   for(var i=0; i<lis.length; i++) {
-
-      
-  //     if(e.target == lis[i])
-  //     img[i].classList.remove("over");
-  //     // else
-  //     //   img.classList.remove("over");
-      
-  //     // if(img[0].classList.contains("over"))
-  //     //   return;
-      
-  //   }
-
-  // });
-
   
 });

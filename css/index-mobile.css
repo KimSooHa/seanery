@@ -334,12 +334,20 @@ body {
     }
 
     .rooms .rooms-list>ul {
+        /* layout */
         position: absolute;
-        left: 18px;
-        top: 18px;
+        left: 10%;
+        /* top: 18px; */
+        height: 100%;
+
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     .rooms .img-box {
+        /* layout */
         position: absolute;
         left: 0;
         top: 0;
@@ -850,13 +858,14 @@ body {
     background-color: rgba(0, 0, 0, 0.66);
 }
     .rooms-list>ul {
+        /* utils */
         padding: 0;
         margin: 0;
     }
 
     .rooms-list>ul>li {
         list-style-type: none;
-        padding-top: 30px;
+        /* padding-top: 30px; */
     }
 
     .rooms-list>ul>li:first-child {
@@ -883,12 +892,13 @@ body {
     }
 
     .rooms .img-box img {
-        object-fit: cover;
-        object-position: -95px;
+        /* layout */
         height: 100%;
         position: absolute;
         left: 0px;
         top: 0px;
+        object-fit: cover;
+        object-position: -95px;
     }
 
     .rooms .img-box img.over {
