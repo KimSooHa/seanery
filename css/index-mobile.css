@@ -376,7 +376,17 @@ body {
 
 /* -------- gallery --------------------------------------- */
 .gallery {
+    /* layout */
     margin-top: 105px;
+}
+
+.gallery>ul {
+    /* layout */
+    margin-top: 54px;
+    padding: 0;
+
+    /* item layout */
+    display: flex;
 }
 
 
@@ -912,11 +922,6 @@ body {
     justify-content: center;
 }
 
-.gallery>ul {
-    display: flex;
-    margin-top: 54px;
-    padding: 0;
-}
 
 .gallery>ul>li {
     list-style-type: none;

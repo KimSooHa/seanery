@@ -41,38 +41,58 @@
         height: 450px;
     }
 
-     /* -------- rooms --------------------------------------- */
-     .rooms {
-        height: 700px;
-    }
-
-    .rooms-list {
-        width: 250px;
-        height: 300px;
-    }
-
-    .rooms-list>ul>li>a {
-        font-size: 17px;
-    }
-
-    .rooms .btn-more {
-        font-size: 15px;
-    }
 
 
     /* -------- facilities --------------------------------------- */
     .facilities {
         height: 1500px;
     }
-
+    
     .facilities-list {
         grid-template-rows: 1fr 3fr;
         grid-template-rows: 50px 120px;
-
+        
     }
 
+
+    
+    /* -------- rooms --------------------------------------- */
+    .rooms {
+        height: 700px;
+    }
+    
+    .rooms-list {
+        width: 250px;
+        height: 300px;
+    }
+    
+    
+    
+    /* -------- gallery --------------------------------------- */
+
+    .gallery ul {
+        /* layout */
+        margin-top: 80px;
+
+        /* item layout */
+        justify-content: center;
+    }
+    
+    .gallery>ul>li {
+        width: 160px;
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .gallery>ul>li:first-child {
+        margin-left: 0px;
+    }
+    
     
     /* ====== content block ============================================== */
+    
+    /* -------- facilities --------------------------------------- */
+
     .facilities-list {
         /* content box style */
         width: 600px;
@@ -83,8 +103,19 @@
     .facilities-list-title {
         font-size: 28px;
     }
-
+    
     .facilities-list p {
         font-size: 13px;
+    }
+
+
+    /* -------- rooms --------------------------------------- */
+    
+    .rooms-list>ul>li>a {
+        font-size: 17px;
+    }
+    
+    .rooms .btn-more {
+        font-size: 15px;
     }
 }
