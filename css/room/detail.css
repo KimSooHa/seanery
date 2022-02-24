@@ -100,7 +100,7 @@
     padding-top: 110px;
 }
 
-    .room-detail .room-detail-header {
+    .room-detail header {
         display: flex;
         /* justify-content: space-between; */
         /* margin: 0 38px 0 45px; */
@@ -150,28 +150,36 @@
 
 /* -----------notice---------------------------- */
     .room-detail .notice {
+        /* layout */
         width: 314px;
         margin-top: 46px;
+
+        /* item layout */
         display: flex;
         flex-direction: column;
     }
 
     .room-detail .notice div {
+        /* item layout */
         display: flex;
         flex-direction: column;
     }
 
 /* --------stay-price--------------------- */
     .room-detail .stay-price {
+        /* layout */
         width: 100%;
+
+        /* item layout */
         display: flex;
         flex-direction: column;
         align-items: start;
     }
 
 
-/*---------- service------------------------- */
-.room-detail .service ul {
+    /*---------- service------------------------- */
+    .room-detail .service ul {
+    /* item layout */
     display: flex;
     justify-content: space-evenly;
     
@@ -182,12 +190,13 @@
 }
 
 .next-room {
+    /* layout */
     width: 100%;
     padding-top: 21px;
     margin-top: 21px;
     border-top: 1px solid #D4D1D1;
 
-    /* layout */
+    /* item layout */
     display: flex;
     justify-content: end;
 }
@@ -198,7 +207,7 @@
 
 /* -------- room-detail --------------------------------------- */
 
-.room-detail-header h1 {
+.room-detail header h1 {
     /* text style */
     font-family: 'Times New Roman', "Minion Pro";
     font-weight: normal;
@@ -217,16 +226,16 @@
     
 }
 
-.room-detail-header div {
-    margin-top: 43px;
-}
 
-.room-detail-header>div {
+.room-detail header div {
     /* text style */
     font-family: 'Sitka Heading', "Minion Pro";
     font-weight: normal;
     font-size: 13px;
     color: #707070;
+
+    /* layout */
+    margin-top: 43px;
 }
 
 .room-detail .room-info .room-introduction {
@@ -296,6 +305,7 @@
 
 .room-detail .notice h1 {
     padding-left: 20px;
+    margin-bottom: 20px;
 }
 
 .room-detail .notice div {
@@ -322,6 +332,7 @@
 
     .room-detail .stay-price h1 {
         padding-left: 20px;
+        margin-bottom: 20px;
     }
 
     .room-detail .stay-price div {
@@ -347,12 +358,12 @@
 
     /* content box style */
     padding-left: 20px;
+    margin-bottom: 20px;
 }
 
 .room-detail .service ul {
     padding-left: 0;
     margin: 0;
-    margin-top: 21px;
     padding-top: 21px;
     border-top: 1px solid #D4D1D1;
 }
