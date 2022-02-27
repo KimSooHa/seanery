@@ -84,6 +84,13 @@
     height: 33px;
     border: none;
     border-bottom: 1px solid #DDDDDD;
+    box-sizing: border-box;
+}
+
+.user-reservation .user-reserv-info div input:focus {
+    /* content box style */
+    outline: none;
+    border-bottom: 2px solid #352641;
 }
 
 .user-reservation form textarea {
