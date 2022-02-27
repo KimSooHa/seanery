@@ -34,6 +34,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: 0.4s;
+}
+.btn-select-schedule:hover {
+    background-color: #977E4B;
 }
 
 /* ====== outer block ================================================== */

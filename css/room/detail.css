@@ -9,50 +9,6 @@
 /* ====== btn style ==================================================== */
 
 
-.img-btn-left-arrow {
-    /* text  style */
-    text-indent: -999px;
-
-    /* content box style */
-    display: flex;
-    background-image: url("data:image/svg+xml,%3Csvg id='Icon_metro-chevron-thin-left' data-name='Icon metro-chevron-thin-left' xmlns='http://www.w3.org/2000/svg' width='12.445' height='23.265' viewBox='0 0 12.445 23.265'%3E%3Cpath id='Icon_metro-chevron-thin-left-2' data-name='Icon metro-chevron-thin-left' d='M22.288,25.368a.942.942,0,0,1,0,1.324.92.92,0,0,1-1.311,0L10.387,16a.942.942,0,0,1,0-1.324l10.591-10.7a.921.921,0,0,1,1.311,0,.942.942,0,0,1,0,1.324L12.629,15.334l9.659,10.034Z' transform='translate(-10.115 -3.701)' fill='%23a9a9a9'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: left center;
-    width: 13px;
-    height: 23.27px;
-    overflow: hidden;
-    /* padding-left: 30px; */
-
-    /* effect */
-    cursor: pointer;
-}
-
-.img-btn-left-arrow:hover {
-    opacity: 0.7;
-}
-
-.img-btn-right-arrow {
-    /* text  style */
-    text-indent: -999px;
-
-    /* content box style */
-    display: flex;
-    background-image: url("data:image/svg+xml,%3Csvg id='Icon_metro-chevron-thin-right' data-name='Icon metro-chevron-thin-right' xmlns='http://www.w3.org/2000/svg' width='12.165' height='22.742' viewBox='0 0 12.165 22.742'%3E%3Cpath id='Icon_metro-chevron-thin-right-2' data-name='Icon metro-chevron-thin-right' d='M21.391,15.072l-9.442-9.81a.921.921,0,0,1,0-1.294.9.9,0,0,1,1.281,0L23.583,14.423a.921.921,0,0,1,0,1.294L13.23,26.173a.9.9,0,0,1-1.281,0,.921.921,0,0,1,0-1.294l9.442-9.806Z' transform='translate(-11.683 -3.7)' fill='%23a9a9a9'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: right center;
-    width: 13px;
-    height: 23.27px;
-    overflow: hidden;
-    /* padding-left: 30px; */
-
-     /* effect */
-     cursor: pointer;
-}
-
-.img-btn-right-arrow:hover {
-    opacity: 0.7;
-}
-
 .btn-reservation {
     /* text style */
     font-family: '나눔스퀘어라운드', "Minion Pro";
