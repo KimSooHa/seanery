@@ -109,12 +109,12 @@
     row-gap: 10px;
 }   
 
-.search-id form .confirm-num input[type="text"] {
-    /* layout */
-    grid-area: 1/1/2/3;
-}
+    .search-id form .confirm-num input[type="text"] {
+        /* layout */
+        grid-area: 1/1/2/3;
+    }
 
-.search-id form .confirm-num label {
+    .search-id form .confirm-num label {
         /* layout */
         grid-area: 2/1/3/3;
         margin-left: 7px;
@@ -156,6 +156,13 @@
     height: 33px;
     border: none;
     border-bottom: 1px solid #DDDDDD;
+    box-sizing: border-box;
+}
+
+.search-id form fieldset div input:focus {
+     /* content box style */
+     outline: none;
+     border-bottom: 2px solid #352641;
 }
 
 .search-id form fieldset div output {
