@@ -33,6 +33,17 @@
         height: 1000px;
     }
 
+
+/* -------- review --------------------------------------- */
+    .review {
+        height: 500px;
+    }
+
+    .review .review-full-list {
+        height: 100%;
+        margin-top: 0;
+    }
+
 }
 
 @media screen and (min-width: 700px) {
@@ -87,6 +98,12 @@
     .gallery>ul>li:first-child {
         margin-left: 0px;
     }
+
+    /* -------- review --------------------------------------- */
+    .review {
+        height: 650px;
+    }
+    
     
     
     /* ====== content block ============================================== */
@@ -118,4 +135,11 @@
     .rooms .btn-more {
         font-size: 15px;
     }
+    
+    /* -------- review --------------------------------------- */
+    
+    .review .btn-more {
+        font-size: 15px;
+    }
+
 }

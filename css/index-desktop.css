@@ -104,6 +104,19 @@
         margin-top: 120px;
     }
 
+    .review .review-full-list {
+        justify-content: center;
+    }
+
+    .review-list {
+        width: 285px;
+        height: 185px;
+    }
+
+    .review-list:first-child {
+        margin-left: 0;
+    }
+
 
 /* ====== content block ============================================== */
 
