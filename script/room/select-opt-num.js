@@ -61,10 +61,22 @@ window.addEventListener("load", function() {
   
       }
 
+      // x 버튼
       var btnClose = fieldset[i].querySelector(".img-btn-close");
       
       if(e.target == btnClose) {
+
+        // room3가 열려있는 상태에서 room2를 삭제할 때
+        if(e.target.parentElement == fieldset[1] && !(fieldset[2].classList.contains("hide"))) {
+          fieldset[i+1].classList.toggle("hide");
+          fieldset[i+1].querySelector(".adult-num>input").value = 1;
+          fieldset[i+1].querySelector(".kid-num>input").value = 0;
+          return;
+        }
+
         fieldset[i].classList.toggle("hide");
+        fieldset[i].querySelector(".adult-num>input").value = 1;
+        fieldset[i].querySelector(".kid-num>input").value = 0;
       }
     }
           
@@ -90,20 +102,7 @@ window.addEventListener("load", function() {
 
     var addRoom = form.querySelector(".btn-add-room");
 
-    // for(var i = 1; i < fieldset.length; i++) {
-    //   addRoom.onclick = (function(x) {
-    //       console.log("add!");
-      
-    //     return function(e) {
-    //       if(fieldset[i].classList.contains("d-none")) {
-    //         fieldset[i].classList.toggle("d-none");
-    //       }
-
-    //     }
-
-    //   })(i);
-    // }
-
+    // add Room 버튼
     addRoom.onclick = function() {
         console.log("add!");
         
