@@ -69,8 +69,11 @@
     }
 
     /* -------- facilities --------------------------------------- */
-
-    
+    .facilities-list {
+        grid-template-rows: 50px 120px;
+        
+    }
+   
 
     /* -------- services --------------------------------------- */
     .services {
@@ -88,6 +91,7 @@
     /* -------- gallery --------------------------------------- */
     .gallery {
         /* layout */
+        height: 320px;
         margin-top: 120px;
     }
     
@@ -161,6 +165,21 @@
 
     /* -------- facilities --------------------------------------- */
 
+
+    .facilities-list {
+        /* content box style */
+        width: 600px;
+        height: 250px;
+        padding: 40px;
+    }
+
+    .facilities-list h1 {
+        font-size: 25px;
+    }
+    
+    .facilities-list p {
+        font-size: 14px;
+    }
 
     /* -------- gallery --------------------------------------- */
     .gallery>ul>li {

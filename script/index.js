@@ -163,62 +163,54 @@ window.addEventListener("load", function() {
 window.addEventListener("load", function() {
   var section = document.querySelector(".gallery");
   var ul = section.querySelector("ul");
-  var img = ul.querySelector("img");
 
-  
   var mouseDown = false;
   var offsetX;
 
+  
   // 마우스 움직일 때
-
-  // section.addEventListener("mousemove", function(e) {
-  //   if(!mouseDown)
-  //     return;
-
-  //   e.preventDefault();
-
-  
-  //   console.log("ul");
-  
-  //   // e.target.style.left = e.pageX + "px";
-  //   e.target.style.left = e.pageX - section.offsetWidth + offsetX  + "px";
-
-  // });
-
   section.onmousemove = function(e) {
 
     if(!mouseDown)
       return;
+    
+    
+    // if(section.offsetHeight >= 250)
+    //   return;
 
     e.preventDefault();
-    e.target.style.left = e.pageX - section.offsetWidth + offsetX  + "px";
+    ul.style.left = e.pageX - e.target.offsetLeft - offsetX + "px"; // 문서기준 위치 - 타겟 이미지 위치 좌표 - 이미지로부터 현재 위치
+    console.log(e.target.offsetLeft);
+    console.log(offsetX);
   };
 
   
+  
   // 마우스 누를 때
-
   section.onmousedown = function(e) {
     e.preventDefault();
     
-    if(!(e.target.nodeName == "UL" || e.target.nodeName == "LI" || e.target.nodeName == "IMG"))
+    if(!(e.target.nodeName == "LI" || e.target.nodeName == "IMG"))
         return;
 
     mouseDown = true;
-    console.log("x:" + e.x + " offsetX:" + e.offsetX + " pageX:" + e.pageX + " offsetLeft:" + e.target.offsetLeft + " offsetWidth:" + section.offsetWidth);
-
     offsetX = e.offsetX;
+    
+    
+    // console.log(e.target);
+    console.log("x:" + e.x + " offsetX:" + offsetX + " pageX:" + e.pageX + " offsetLeft:" + e.target.offsetLeft + " offsetWidth:" + section.offsetWidth);
+
   };
 
+  
   // 마우스 뗄 때
-
   section.onmouseup = function(e) {
     e.preventDefault();
 
-    if(!(e.target.nodeName == "UL" || e.target.nodeName == "LI" || e.target.nodeName == "IMG"))
-        return;
+    // if(!(e.target.nodeName == "UL" || e.target.nodeName == "LI" || e.target.nodeName == "IMG"))
+    //     return;
 
     mouseDown = false;
-
     offsetX = 0;
   };
   

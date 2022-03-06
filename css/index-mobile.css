@@ -231,17 +231,17 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 20px 62px;
     column-gap: 11px;
+    row-gap: 9px;
     
     /* margin-top: 10px; */
 }
 
 .facilities-list:nth-child(2n) {
     /* item layout */
-    row-gap: 9px;
     align-self: start;
 }
 
-    .facilities-list:nth-child(2n) .facilities-list-title {
+    .facilities-list:nth-child(2n) h1 {
         grid-column: 1/2;
         grid-row: 1/2;
         margin-left: 19px;
@@ -268,11 +268,10 @@ body {
 
 .facilities-list:nth-child(2n+1) {
     /* layout */
-    row-gap: 16px;
     align-self: end;
 }
 
-    .facilities-list:nth-child(2n+1) .facilities-list-title {
+    .facilities-list:nth-child(2n+1) h1 {
         grid-column: 2/3;
         grid-row: 1/2;
         justify-self: end;
@@ -377,16 +376,20 @@ body {
 /* -------- gallery --------------------------------------- */
 .gallery {
     /* layout */
+    height: 180px;
     margin-top: 105px;
     /* position: relative; */
 }
 
-.gallery div {
+/* .gallery div {
+    width: 600px;
     display: inline-block;
-}
+    position: absolute;
+} */
 
 .gallery ul {
     /* layout */
+    /* width: 600px; */
     margin-top: 54px;
     padding: 0;
     position: relative;
@@ -760,7 +763,7 @@ body {
 }
 
 
-    .facilities-list-title {
+    .facilities-list h1 {
         /* text  style */
         font-family: 'Sitka Heading', "SimSun-ExtB";
         font-size: 20px;
