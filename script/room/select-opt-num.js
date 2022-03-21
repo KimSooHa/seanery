@@ -1,25 +1,33 @@
-function SelectOptNum() {
+class SelectOptNum {
 
-  this.section = document.createElement("section");
+  #section;
+  #onselect;
+  #form;
+  #fieldset;
+  #adult;
+  #kid;
+  #num;
 
-  document.body.append(this.section);
-  this.section.classList.add("select-opt-num");
 
-  this.onselect = null;
-
+  constructor() {
+    this.#section = document.createElement("section");
   
-  // params.arguments[0] = this.adult;
-  // params.arguments[1]= this.kid;
+    document.body.append(this.#section);
+    this.#section.classList.add("select-opt-num");
+    this.#form = null;
+    this.#fieldset = null;
+    this.#onselect = null;
+    this.#adult = [];
+    this.#kid = [];
+    this.#num = null;
 
-      
-}
+    
+  }
 
-SelectOptNum.prototype = {
-
-  open: function() {
+  open() {
     const html = `
     <h1 class="d-none">객실별 인원수</h1>
-
+  
     <form action="">
         <fieldset>
             <legend class="d-none">인원수 선택</legend>
@@ -38,12 +46,12 @@ SelectOptNum.prototype = {
                 <input type="number" value="0" name="room1_kid-num" id="kid-num" readonly disabled>
                 <span class="img-btn-plus">더하기 버튼</span>
             </div>
-
+  
         </fieldset>
-
+  
         <fieldset class="room2 hide">
             <legend class="d-none">인원수 선택</legend>
-
+  
             <div class="img-btn-close">닫기버튼</div>
             
             <div class="room-num-title">Room2</div>
@@ -53,19 +61,19 @@ SelectOptNum.prototype = {
                 <input type="number" value="1" name="room2_adult-num" id="adult-num" readonly disabled>
                 <span class="img-btn-plus">더하기 버튼</span>
             </div>
-
+  
             <div class="kid-num">
                 <label>Kid</label>
                 <span class="img-btn-minus">빼기 버튼</span>
                 <input type="number" value="0" name="room2_kid-num" id="kid-num" readonly disabled>
                 <span class="img-btn-plus">더하기 버튼</span>
             </div>
-
+  
         </fieldset>
-
+  
         <fieldset class="room3 hide">
             <legend class="d-none">인원수 선택</legend>
-
+  
             <div class="img-btn-close">닫기버튼</div>
             
             <div class="room-num-title">Room3</div>
@@ -75,14 +83,14 @@ SelectOptNum.prototype = {
                 <input type="number" value="1" name="room3_adult-num" id="adult-num" readonly disabled>
                 <span class="img-btn-plus">더하기 버튼</span>
             </div>
-
+  
             <div class="kid-num">
                 <label>Kid</label>
                 <span class="img-btn-minus">빼기 버튼</span>
                 <input type="number" value="0" name="room3_kid-num" id="kid-num" readonly disabled>
                 <span class="img-btn-plus">더하기 버튼</span>
             </div>
-
+  
         </fieldset>
         
         <div class="btn-box">
@@ -90,15 +98,15 @@ SelectOptNum.prototype = {
             <input class="btn-select" type="submit" value="Select">
         </div>
     </form>`;
-
+  
     // section.append(html);
-    this.section.insertAdjacentHTML("beforeend", html);
+    this.#section.insertAdjacentHTML("beforeend", html);
     const style = document.createElement("style");
-
+  
     style.textContent = `
-
+  
     /* ====== btn style ==================================================== */
-
+  
     .select-opt-num .img-btn-close {
         /* layout */
         background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-close' data-name='Icon ionic-ios-close' xmlns='http://www.w3.org/2000/svg' width='10.426' height='10.423' viewBox='0 0 10.426 10.423'%3E%3Cpath id='Icon_ionic-ios-close-2' data-name='Icon ionic-ios-close' d='M17.734,16.5l3.724-3.724a.873.873,0,0,0-1.234-1.234L16.5,15.266l-3.724-3.724a.873.873,0,1,0-1.234,1.234L15.266,16.5l-3.724,3.724a.873.873,0,0,0,1.234,1.234L16.5,17.734l3.724,3.724a.873.873,0,0,0,1.234-1.234Z' transform='translate(-11.285 -11.289)' fill='%23707070'/%3E%3C/svg%3E%0A");
@@ -157,7 +165,7 @@ SelectOptNum.prototype = {
         height: 100vh;
         background: rgba(0, 0, 0, 0.72);
         z-index: 1000;
-
+  
         /* item layout */
         display: flex;
         justify-content: center;
@@ -172,10 +180,10 @@ SelectOptNum.prototype = {
         position: relative;
         top: -100px;
         opacity: 0;
-
+  
         transition: top .5s, opacity .5s;
     }
-
+  
     /* 애니메이션 효과 */
     .select-opt-num form.show {
       top: 0px;
@@ -317,29 +325,30 @@ SelectOptNum.prototype = {
         display: flex;
         justify-content: center;
     }`;
-
+  
     document.head.append(style);  // head에 style 태그 추가
-
-    const form = this.section.querySelector("form");
-
+  
+    this.#form = this.#section.querySelector("form");
+    this.#fieldset = this.#form.querySelectorAll("fieldset");
+  
     setTimeout(function() {
-      form.classList.add("show");
-    }, 0);
-
-    const fieldset = form.querySelectorAll("fieldset");
-
-    form.addEventListener("click", function(e) {
-
+      this.#form.classList.add("show");
+    }.bind(this), 0);
+  
+  
+    // + / - 버튼 숫자 증감, x버튼
+    this.#form.addEventListener("click", function(e) {
+  
     
       if(e.target.nodeName != "SPAN" && e.target.className != "img-btn-close")
         return;
       
       
   
-      for(let i = 0; i < fieldset.length; i++) {
+      for(let i = 0; i < this.#fieldset.length; i++) {
         
-        const adult = fieldset[i].querySelector(".adult-num");
-        const kid = fieldset[i].querySelector(".kid-num");
+        const adult = this.#fieldset[i].querySelector(".adult-num");
+        const kid = this.#fieldset[i].querySelector(".kid-num");
         const adultInput = adult.querySelector("input");
         const kidInput = kid.querySelector("input");
         const adultPlus = adult.querySelector(".img-btn-plus");
@@ -358,15 +367,14 @@ SelectOptNum.prototype = {
           if(adultInt >= 2)
             return;
             
-          adultInput.value = adultInt + 1;
+            adultInput.value = adultInt + 1;
         } // adult 빼기 버튼
         else if(e.target == adultMinus) {
           if(adultInt <= 1)
             return;
             
             adultInput.value = adultInt - 1;
-            
-          }
+        }
           
           // kid 더하기 버튼
         if(e.target == kidPlus) {
@@ -385,28 +393,28 @@ SelectOptNum.prototype = {
         }
   
         // x 버튼
-        const btnClose = fieldset[i].querySelector(".img-btn-close");
+        const btnClose = this.#fieldset[i].querySelector(".img-btn-close");
         
         if(e.target == btnClose) {
   
           // room3가 열려있는 상태에서 room2를 삭제할 때
-          if(e.target.parentElement == fieldset[1] && !(fieldset[2].classList.contains("hide"))) {
-            fieldset[i+1].classList.toggle("hide");
-            fieldset[i+1].querySelector(".adult-num>input").value = 1;
-            fieldset[i+1].querySelector(".kid-num>input").value = 0;
+          if(e.target.parentElement == this.#fieldset[1] && !(this.#fieldset[2].classList.contains("hide"))) {
+            this.#fieldset[i+1].classList.toggle("hide");
+            this.#fieldset[i+1].querySelector(".adult-num>input").value = 1;
+            this.#fieldset[i+1].querySelector(".kid-num>input").value = 0;
             return;
           }
   
-          fieldset[i].classList.toggle("hide");
-          fieldset[i].querySelector(".adult-num>input").value = 1;
-          fieldset[i].querySelector(".kid-num>input").value = 0;
+          this.#fieldset[i].classList.toggle("hide");
+          this.#fieldset[i].querySelector(".adult-num>input").value = 1;
+          this.#fieldset[i].querySelector(".kid-num>input").value = 0;
         }
       }
             
-    });
+    }.bind(this));
       
-    // 더하기 빼기 버튼 마우스 누름
-    form.addEventListener("mousedown", function(e) {
+    // +/- 버튼 마우스 누름 효과
+    this.#form.addEventListener("mousedown", function(e) {
       
       if(!(e.target.nodeName == "SPAN" || e.target.classList.contains("btn-select")))
         return;
@@ -414,56 +422,112 @@ SelectOptNum.prototype = {
       e.target.style.opacity = "0.7";
       
     });
-    // 더하기 빼기 버튼 마우스 뗌
-    form.addEventListener("mouseup", function(e) {
+    // +/- 버튼 마우스 뗌 효과
+    this.#form.addEventListener("mouseup", function(e) {
       
       if(!(e.target.nodeName == "SPAN" || e.target.classList.contains("btn-select")))
       return;
       
       e.target.style.opacity = "1";
     });
-
-    const addRoom = form.querySelector(".btn-add-room");
-
+  
+    const addRoom = this.#form.querySelector(".btn-add-room");
+  
     // add Room 버튼
     addRoom.onclick = function() {
         console.log("add!");
         
         
-        for(let i = 1; i < fieldset.length; i++) {
+        for(let i = 1; i < this.#fieldset.length; i++) {
           
-          if(fieldset[i].classList.contains("hide")) {
-            fieldset[i].classList.toggle("hide");
+          if(this.#fieldset[i].classList.contains("hide")) {
+            this.#fieldset[i].classList.toggle("hide");
             return;
           }
-
-          if(fieldset[i+1] == null) {
+  
+          if(this.#fieldset[i+1] == null) {
             alert("다객실 예약은 최대 3개까지만 가능합니다.");
           }
         }
-    };
-
-    const selectBtn = form.querySelector(".btn-select");
+      }.bind(this);
+  
+      // select 버튼
+    const selectBtn = this.#form.querySelector(".btn-select");
     
     selectBtn.onclick = function(e) {
       e.preventDefault();
-
-      // for(let i = 0; i < fieldset.length; i++) {
-          
-      //   if(!(fieldset[i].classList.contains("hide"))) {
-      //      this.adult[i] = fieldset[i].adultValue;
-      //      this.kid[i] = fieldset[i].kidValue;
-      //      this.onselect({adult: this.adult[i], kid: this.kid[i], num: i});
-      //   }
+      // for(let i=0; i<this.roomNum+1; i++) {
+        this.onselect({count: this.roomNum, adult: this.adultNum, kid: this.kidNum});
       // }
+
+      this.#section.remove();
       
-      this.section.remove();
-
-    }.bind(this);
-
+    }.bind(this); // 위임함수라서 아웃터 객체 쓰기위해 bind
+    
   }
 
-};
+  get form() {
+    return this.#form;
+  }
+
+  get fieldset() {
+    return this.#fieldset;
+  }
+  
+  get adultNum() {
+    // const form = this.#section.querySelector("form");
+    // const fieldset = this.#form.querySelectorAll("fieldset");
+    
+    
+    for(let i = 0; i < this.fieldset.length; i++) {
+      const adult = this.fieldset[i].querySelector(".adult-num");
+      const adultInput = adult.querySelector("input");
+      const adultValue = adultInput.value;
+      
+      if(!(this.fieldset[i].classList.contains("hide"))) 
+         this.#adult.push(adultValue);
+        
+    }
+    console.log(this.#adult);
+
+    return this.#adult;
+    
+  }
+
+  get kidNum() {
+    // const form = this.#section.querySelector("form");
+    // const fieldset = this.#form.querySelectorAll("fieldset");
+    
+    
+    for(let i = 0; i < this.fieldset.length; i++) {
+      const kid = this.fieldset[i].querySelector(".kid-num");
+      const kidInput = kid.querySelector("input");
+      const kidValue = kidInput.value;
+      if(!(this.fieldset[i].classList.contains("hide"))) 
+         this.#kid.push(kidValue);
+      
+    }
+
+    return this.#kid;
+    
+  }
+
+  get roomNum() {
+    // const form = this.#section.querySelector("form");
+    // const fieldset = this.#form.querySelectorAll("fieldset");
+    
+    for(let i = 0; i < this.fieldset.length; i++) {
+        
+      if(!(this.fieldset[i].classList.contains("hide"))) {
+         this.#num = i;
+      }
+    }
+
+    return this.#num;
+  }
+}
+
+
 
 
 
