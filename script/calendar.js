@@ -1,14 +1,17 @@
-class Calendar{
+export default class Calendar{
     #selectedDates;
     #startDay;
     #endDay;
     #html;
     #css;
+    #document;
 
-    constructor(){
+    constructor(document){
+        this.#document = document;
         this.#selectedDates = [];
         this.#startDay = null;
         this.#endDay = null;
+
         this.#html =
         `
             <section id="young-in-calendar">
@@ -193,7 +196,17 @@ class Calendar{
             /* === layout block ========================= */
             /* --- section(#young-in-calendar)-------------------------- */
             #young-in-calendar{
+                /* layout */
                 background-color: rgba(0, 0, 0, 0.72);
+
+                position: fixed;
+                top: 0;
+                left: 0;
+
+                width: 100vw;
+                height: 100vh;
+
+                z-index: 1000;
 
                 /* item layout */
                 display: flex;
@@ -473,13 +486,14 @@ class Calendar{
 
     load(){
         /* embeding html, css template */
-        const styleElement = document.createElement("style");
+        const styleElement = this.#document.createElement("style");
         styleElement.insertAdjacentText("beforeend", this.#css);
-        document.head.insertAdjacentElement("afterbegin", styleElement);
-        document.body.insertAdjacentHTML("afterbegin", this.#html);
+        this.#document.head.insertAdjacentElement("afterbegin", styleElement);
+        this.#document.body.insertAdjacentHTML("afterbegin", this.#html);
+
+        let calendarSection = this.#document.querySelector("#young-in-calendar");
 
         /* 페이지를 열 때 현재 달로 수정되어 로드되기 */
-        const monthSections = document.querySelectorAll(".month");
 
         const h1OfFirstSec = monthSections[0].querySelector("h1");
         const h1OfSecondSec = monthSections[1].querySelector("h1");
@@ -496,6 +510,8 @@ class Calendar{
         this.#engraveDatesOfMonth();
 
         /* select-dates */
+        const monthSections = calendarSection.querySelectorAll(".month");
+
         for (let i = 0; i < monthSections.length; i++){
             monthSections[i].onclick = (x=>{
                 return (e)=>{
@@ -534,13 +550,13 @@ class Calendar{
         }
 
         /* Month navigator 조작*/
-        const nav = document.querySelector(".month-nav");
+        const nav = calendarSection.querySelector(".month-nav");
         const ol = nav.querySelector("ol");
 
-        const firstMonth = document.querySelector(".month-first>h1");
+        const firstMonth = calendarSection.querySelector(".month-first>h1");
         const yearOfFirstMonth = firstMonth.querySelector("span");
 
-        const secondMonth = document.querySelector(".month-second>h1");
+        const secondMonth = calendarSection.querySelector(".month-second>h1");
         const yearOfSecondMonth = secondMonth.querySelector("span");
 
         let firstMonthInt = parseInt(firstMonth.innerText);
@@ -735,7 +751,7 @@ class Calendar{
         const base = {"year": 1976, "month": 1, "date": 1, "day": 4}; // 윤년
         const addFactor = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]; // 다음달 첫날이 몇 요일인지 구하기위해 이번달 요일번호(예:일요일 0번, 수요일 3번)에 각 월마다 정해진 인자를 더함
 
-        const firstSection = document.querySelector(".month-first");
+        const firstSection = calendarSection.querySelector(".month-first");
         const firstMonth = firstSection.querySelector("h1").innerText.split('월')[0];
         const firstYear = firstSection.querySelector("h1>span").innerText;
 
@@ -767,7 +783,7 @@ class Calendar{
     }
 
     #clearDates(){
-        const bodies = document.querySelectorAll(".month-table-body");
+        const bodies = calendarSection.querySelectorAll(".month-table-body");
 
         for (let i = 0; i < bodies.length; i++){
             let spanList = bodies[i].querySelectorAll("span");
@@ -780,7 +796,7 @@ class Calendar{
     #writeDates(firstStartDayNumber, secondStartDayNumber, firstMonth, firstYear){
         let bodies = firstSection.querySelectorAll(".month-table-body");
 
-        const firstSection = document.querySelector(".month-first");
+        const firstSection = calendarSection.querySelector(".month-first");
 
         let datesSizeListOfMonth = null;
         if (Math.abs(firstYear - 2020) % 4 == 0)
