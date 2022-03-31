@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/user/search-id.css" type="text/css">
+    <script src="/script/user/search-id.js"></script>
     <title>아이디 찾기</title>
 </head>
 <body>
@@ -33,20 +34,22 @@
                 <legend class="d-none">회원정보</legend>
 
                 <div class="name">
-                    <input type="text" placeholder="이름" required pattern="\D{2,3,4}" autofocus autocomplete="off">
+                    <input type="text" placeholder="이름" required pattern="\D{2,3,4}" minlength="2" maxlength="5" autofocus autocomplete="off">
                     <output class="d-none">이름 2자리 이상 입력해주세요.</output>
                 </div>
                 
                 <div class="email">
-                    <input type="text" placeholder="Email" required name="email" autocomplete="off">
+                    <input type="email" placeholder="Email" required name="email" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
                     <output class="d-none">유효한 이메일 형식이 아닙니다.</output>
                     <input class="btn-send-num" type="submit" value="인증번호 발송">
                 </div>
 
                 <div class="confirm-num">
                     <input type="text" placeholder="인증번호" required pattern="\D{6}" autofocus autocomplete="off">
-                    <span>3:00</span>
-                    <label>email로 발송된 인증번호를 입력해주세요.</label>
+                    <span class="count-num">
+                        <span class="minutes">3</span>:<span class="seconds">00</span>
+                    </span>
+                    <label class="d-none">email로 발송된 인증번호를 입력해주세요.</label>
                 </div>
             </fieldset>
 
