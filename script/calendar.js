@@ -6,11 +6,25 @@ export default class Calendar{
     #css;
     #document;
 
+    #calendarSection;
+
+    /* select-dates */
+    #monthSections;
+
+    /* Month navigator 조작*/
+    #nav;
+    #ol;
+
     constructor(document){
         this.#document = document;
         this.#selectedDates = [];
         this.#startDay = null;
         this.#endDay = null;
+
+        this.#calendarSection = null;
+        this.#monthSections = null;
+        this.#nav = null;
+        this.#ol = null;
 
         this.#html =
         `
@@ -258,7 +272,7 @@ export default class Calendar{
                     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30.705' height='18.634' viewBox='0 0 30.705 18.634'%3E%3Cpath id='Icon_awesome-chevron-up' data-name='Icon awesome-chevron-up' d='M16.943,9.177,30.608,22.842a1.687,1.687,0,0,1,0,2.386l-1.594,1.594a1.687,1.687,0,0,1-2.384,0L15.75,16,4.869,26.825a1.687,1.687,0,0,1-2.384,0L.892,25.229a1.687,1.687,0,0,1,0-2.386L14.557,9.178A1.687,1.687,0,0,1,16.943,9.177Z' transform='translate(-0.398 -8.683)' fill='%23fff'/%3E%3C/svg%3E%0A");
                 }
 
-                .arrow-down-white{
+                #young-in-calendar .arrow-down-white{
                     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30.705' height='18.634' viewBox='0 0 30.705 18.634'%3E%3Cpath id='Icon_awesome-chevron-down' data-name='Icon awesome-chevron-down' d='M14.557,26.823.892,13.158a1.687,1.687,0,0,1,0-2.386L2.486,9.177a1.687,1.687,0,0,1,2.384,0L15.75,20,26.631,9.175a1.687,1.687,0,0,1,2.384,0l1.594,1.594a1.687,1.687,0,0,1,0,2.386L16.943,26.823A1.688,1.688,0,0,1,14.557,26.823Z' transform='translate(-0.398 -8.683)' fill='%23fff'/%3E%3C/svg%3E%0A");
                 }
 
@@ -491,12 +505,12 @@ export default class Calendar{
         this.#document.head.insertAdjacentElement("afterbegin", styleElement);
         this.#document.body.insertAdjacentHTML("afterbegin", this.#html);
 
-        let calendarSection = this.#document.querySelector("#young-in-calendar");
+        this.#calendarSection = this.#document.querySelector("#young-in-calendar");
 
         /* 페이지를 열 때 현재 달로 수정되어 로드되기 */
-
-        const h1OfFirstSec = monthSections[0].querySelector("h1");
-        const h1OfSecondSec = monthSections[1].querySelector("h1");
+        this.#monthSections = this.#calendarSection.querySelectorAll(".month");
+        const h1OfFirstSec = this.#monthSections[0].querySelector("h1");
+        const h1OfSecondSec = this.#monthSections[1].querySelector("h1");
 
         const today = new Date();
 
@@ -510,17 +524,15 @@ export default class Calendar{
         this.#engraveDatesOfMonth();
 
         /* select-dates */
-        const monthSections = calendarSection.querySelectorAll(".month");
-
-        for (let i = 0; i < monthSections.length; i++){
-            monthSections[i].onclick = (x=>{
+        for (let i = 0; i < this.#monthSections.length; i++){
+            this.#monthSections[i].onclick = (x=>{
                 return (e)=>{
                     if (!checkDateOrNot(e.target))
                         return;
 
                     const date = parseInt(e.target.innerText);
-                    const month = parseInt(monthSections[x].querySelector("h1").innerText.split("월")[0]);
-                    const year = parseInt(monthSections[x].querySelector("h1>span").innerText);
+                    const month = parseInt(this.#monthSections[x].querySelector("h1").innerText.split("월")[0]);
+                    const year = parseInt(this.#monthSections[x].querySelector("h1>span").innerText);
             
                     if (this.#startDay != null && this.#endDay != null) {
                         this.#clearIndicated();
@@ -550,25 +562,25 @@ export default class Calendar{
         }
 
         /* Month navigator 조작*/
-        const nav = calendarSection.querySelector(".month-nav");
-        const ol = nav.querySelector("ol");
+        this.#nav = this.#calendarSection.querySelector(".month-nav");
+        this.#ol = this.#nav.querySelector("ol");
 
-        const firstMonth = calendarSection.querySelector(".month-first>h1");
-        const yearOfFirstMonth = firstMonth.querySelector("span");
-
-        const secondMonth = calendarSection.querySelector(".month-second>h1");
-        const yearOfSecondMonth = secondMonth.querySelector("span");
-
-        let firstMonthInt = parseInt(firstMonth.innerText);
-        let secondMonthInt = parseInt(secondMonth.innerText);
-        let yearOfFirstMonthInt = parseInt(yearOfFirstMonth.innerText);
-        let yearOfSecondMonthInt = parseInt(yearOfSecondMonth.innerText);
-
-        ol.onclick = (e)=>{
+        this.#ol.onclick = (e)=>{
             if (e.target.nodeName != "A")
                 return;
 
             e.preventDefault();
+
+            const firstMonth = this.#calendarSection.querySelector(".month-first>h1");
+            const yearOfFirstMonth = firstMonth.querySelector("span");
+    
+            const secondMonth = this.#calendarSection.querySelector(".month-second>h1");
+            const yearOfSecondMonth = secondMonth.querySelector("span");
+    
+            let firstMonthInt = parseInt(firstMonth.innerText);
+            let secondMonthInt = parseInt(secondMonth.innerText);
+            let yearOfFirstMonthInt = parseInt(yearOfFirstMonth.innerText);
+            let yearOfSecondMonthInt = parseInt(yearOfSecondMonth.innerText);
 
 
             if (e.target.classList.contains("btn-next")){
@@ -627,13 +639,13 @@ export default class Calendar{
     }
 
     #indicateRangeOfDates(){
-        const monthOfFirstSec = parseInt(monthSections[0].querySelector("h1").innerText.split("월")[0]);
-        const yearOfFirstSec = parseInt(monthSections[0].querySelector("h1>span").innerText);
-        const spanListOfFirstSec = monthSections[0].querySelectorAll(".month-table-body span");
+        const monthOfFirstSec = parseInt(this.#monthSections[0].querySelector("h1").innerText.split("월")[0]);
+        const yearOfFirstSec = parseInt(this.#monthSections[0].querySelector("h1>span").innerText);
+        const spanListOfFirstSec = this.#monthSections[0].querySelectorAll(".month-table-body span");
 
-        const monthOfSecondSec = parseInt(monthSections[1].querySelector("h1").innerText.split("월")[0]);
-        const yearOfSecondSec = parseInt(monthSections[1].querySelector("h1>span").innerText);
-        const spanListOfSecondSec = monthSections[1].querySelectorAll(".month-table-body span");
+        const monthOfSecondSec = parseInt(this.#monthSections[1].querySelector("h1").innerText.split("월")[0]);
+        const yearOfSecondSec = parseInt(this.#monthSections[1].querySelector("h1>span").innerText);
+        const spanListOfSecondSec = this.#monthSections[1].querySelectorAll(".month-table-body span");
 
         for (let i = 0; i < spanListOfFirstSec.length; i++) {
             if (!this.#checkDateOrNot(spanListOfFirstSec[i]))
@@ -751,7 +763,7 @@ export default class Calendar{
         const base = {"year": 1976, "month": 1, "date": 1, "day": 4}; // 윤년
         const addFactor = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]; // 다음달 첫날이 몇 요일인지 구하기위해 이번달 요일번호(예:일요일 0번, 수요일 3번)에 각 월마다 정해진 인자를 더함
 
-        const firstSection = calendarSection.querySelector(".month-first");
+        const firstSection = this.#calendarSection.querySelector(".month-first");
         const firstMonth = firstSection.querySelector("h1").innerText.split('월')[0];
         const firstYear = firstSection.querySelector("h1>span").innerText;
 
@@ -783,7 +795,7 @@ export default class Calendar{
     }
 
     #clearDates(){
-        const bodies = calendarSection.querySelectorAll(".month-table-body");
+        const bodies = this.#calendarSection.querySelectorAll(".month-table-body");
 
         for (let i = 0; i < bodies.length; i++){
             let spanList = bodies[i].querySelectorAll("span");
@@ -794,9 +806,9 @@ export default class Calendar{
     }
 
     #writeDates(firstStartDayNumber, secondStartDayNumber, firstMonth, firstYear){
-        let bodies = firstSection.querySelectorAll(".month-table-body");
+        const firstSection = this.#calendarSection.querySelector(".month-first");
 
-        const firstSection = calendarSection.querySelector(".month-first");
+        let bodies = firstSection.querySelectorAll(".month-table-body");
 
         let datesSizeListOfMonth = null;
         if (Math.abs(firstYear - 2020) % 4 == 0)
@@ -818,10 +830,11 @@ export default class Calendar{
                 }
         }
 
-        bodies = secondSection.querySelectorAll(".month-table-body");
 
         const secondMonth = firstMonth == 12 ? 1 : parseInt(firstMonth)+ 1;
-        const secondSection = document.querySelector(".month-second");
+        const secondSection = this.#calendarSection.querySelector(".month-second");
+
+        bodies = secondSection.querySelectorAll(".month-table-body");
 
         date = 1;
         for (let i = 0; i < bodies.length; i++) {
