@@ -7,121 +7,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/room/pay-detail.css" type="text/css">
     <script src="../script/room/pay-detail.js"></script>
+    <script src="../script/room/pay-detail-dialog.js"></script>
     <title>옵션사항</title>
 </head>
 <body>
-    <h1 class="d-none">객실수/인원수 선택</h1>
+    <section id="s14">
+        <h1 class="d-none">객실수/인원수 선택</h1>
+        <div>
+            <a class="btn-reserv1" href="">예약하기</a>
+        </div>
 
-    <section>
-        <h1 class="d-none">객실별 인원수</h1>
+        <!-- <div class="screen">
+                <div class = "dlg">
+                    <h1 class="d-none">객실별 인원수</h1>
 
-        <form action="">
-            <div class="top">
-                <div>옵션사항</div>
-                <div class="img-btn-close">닫기버튼</div>
-            </div>
-            
-            <div class="breakfast-title">조식</div>
-            <fieldset class="breakfast">
-                <legend class="d-none">조식 선택</legend>
-                <div>1박</div>
-                <label>성인</label>
-                <div class="adults-num">
-                    <span class="img-btn-minus">빼기 버튼</span>
-                    <input type="number" value="1" name="room1_adult-num" id="adult-num" readonly disabled>
-                    <span class="img-btn-plus">더하기 버튼</span>
-                </div>
-                
-                <label>어린이</label>
-                <div class="kid-num">
-                    <span class="img-btn-minus">빼기 버튼</span>
-                    <input type="number" value="0" name="room1_kid-num" id="kid-num" readonly disabled>
-                    <span class="img-btn-plus">더하기 버튼</span>
-                </div>
-            </fieldset>
-
-            <div class="view-title">전망</div>
-            <fieldset>
-                <legend class="d-none">전망 선택</legend> 
-
-                <div class="room-num">객실1</div>
-                <div class="room-view">
-                    <label class="d-none">객실1 뷰</label>
-                    <label>오션 뷰</label><input type="radio" name="view">
-                    <label>빌리지 뷰</label><input type="radio" name="view">
-                </div>
-
-                <div class="room-num">객실2</div>
-                <div class="room-view">
-                    <label class="d-none">객실2 뷰</label>
-                    <label>오션 뷰</label><input type="radio" name="view">
-                    <label>빌리지 뷰</label><input type="radio" name="view">
-                </div>
-            </fieldset>
-            <div>현재 오션 뷰는 객실 마감 되었습니다.</div>
-
-            <div class="div-line"></div>
-
-            <div class="ask-detail">
-                <div>
-                    <div>요청사항</div>
-                    <div>
-                        <span>성인 3인 투숙 시, 별도 요금 발생 <br></span>
-                        <span>※ 추가 요청 사항은 아래 기재 바랍니다.</span>
+                    <div class="top">
+                        <div>옵션사항</div>
+                        <div class="img-btn-close">닫기버튼</div>
                     </div>
-                </div>
-                <fieldset>
-                    <legend class="d-none">요청사항</legend>
-                    <input type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 &#13;&#10; 제공이 보장되지는 않습니다.">
-                </fieldset>
+                    
+                    <div class="breakfast-title">조식</div>
+                    <fieldset class="breakfast">
+                        <legend class="d-none">조식 선택</legend>
+                        <div>1박</div>
+                        <label>성인</label>
+                        <div class="adults-num">
+                            <span class="img-btn-minus">빼기 버튼</span>
+                            <input type="number" value="1" name="room1_adult-num" id="adult-num" readonly disabled>
+                            <span class="img-btn-plus">더하기 버튼</span>
+                        </div>
+                        
+                        <label>어린이</label>
+                        <div class="kid-num">
+                            <span class="img-btn-minus">빼기 버튼</span>
+                            <input type="number" value="0" name="room1_kid-num" id="kid-num" readonly disabled>
+                            <span class="img-btn-plus">더하기 버튼</span>
+                        </div>
+                    </fieldset>
 
-                <div class="div-line"></div>
-            </div>
+                    <div class="view-title">전망</div>
+                    <fieldset>
+                        <legend class="d-none">전망 선택</legend> 
 
+                        <div class="room-num">객실1</div>
+                        <div class="room-view">
+                            <label class="d-none">객실1 뷰</label>
+                            <label>오션 뷰</label><div>선택</div>
+                            <label>빌리지 뷰</label><div>선택</div>
+                        </div>
 
-            <div class="opt-check">
-                <div>Superior</div>
-                <div>
-                    <span>객실1(성인1, 어린이1) <br></span>
-                    <span>객실2(성인1, 어린이0)</span>
-                </div>
-            </div>
+                        <div class="room-num">객실2</div>
+                        <div class="room-view">
+                            <label class="d-none">객실2 뷰</label>
+                            <label>오션 뷰</label><div>선택</div>
+                            <label>빌리지 뷰</label><div></div>
+                        </div>
+                    </fieldset>
+                    <div>현재 오션 뷰는 객실 마감 되었습니다.</div>
 
+                    <div class="div-line"></div>
 
-            <div class="div-line"></div>
+                    <div class="ask-detail">
+                        <div>
+                            <div>요청사항</div>
+                            <div>
+                                <span>성인 3인 투숙 시, 별도 요금 발생 <br></span>
+                                <span>※ 추가 요청 사항은 아래 기재 바랍니다.</span>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend class="d-none">요청사항</legend>
+                            <input type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 &#13;&#10; 제공이 보장되지는 않습니다.">
+                        </fieldset>
 
-
-            <div class="opt-total">
-                <div>Total</div>
-                <div>
-                    <div>
-                        <label>객실금액</label>
-                        <span>145,000(1박) x 2(객실 수)<br>+오션뷰 20,000 (추가요금)</span>
+                        <div class="div-line"></div>
                     </div>
-                </div>
 
-                <div>옵션</div>
-                <div>
-                    <div>
-                        <label>조식</label>
-                        <span>0(1박)</span>
+
+                    <div class="opt-check">
+                        <div>Superior</div>
+                        <div>
+                            <span>객실1(성인1, 어린이1) <br></span>
+                            <span>객실2(성인1, 어린이0)</span>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="div-line"></div>
 
-            <div class="total-pay">
-                <div>
-                    <span>총 예약금액</span>
-                    <span>310,000원</span>
-                </div>
+                    <div class="div-line"></div>
+
+
+                    <div class="opt-total">
+                        <div>Total</div>
+                        <div>
+                            <div>
+                                <label>객실금액</label>
+                                <span>145,000(1박) x 2(객실 수)<br>+오션뷰 20,000 (추가요금)</span>
+                            </div>
+                        </div>
+
+                        <div>옵션</div>
+                        <div>
+                            <div>
+                                <label>조식</label>
+                                <span>0(1박)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="div-line"></div>
+
+                    <div class="total-pay">
+                        <div>
+                            <span>총 예약금액</span>
+                            <span>310,000원</span>
+                        </div>
+                    </div>
+                    <div class="btn-reserv">
+                        <a href=""><input type="button" value="예약하기"></a>
+                    </div>
             </div>
-            <div class="btn-reserv">
-                <a href=""><input type="button" value="예약하기"></a>
-            </div>
-        
-        </form>
+        </div> -->
     </section>
 </body>
 </html>
