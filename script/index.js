@@ -1,3 +1,27 @@
+import Calendar from "./calendar.js"
+
+window.addEventListener("load", function(){
+  var section = document.querySelector(".simple-search");
+  var startDateBox = section.querySelector("#start-date");
+  var endDateBox = section.querySelector("#end-date");
+
+  var calendar = new Calendar(document);
+
+  startDateBox.onclick = (e)=>{
+    e.preventDefault();
+    calendar.load();
+  };
+
+  endDateBox.onclick = (e)=>{
+    e.preventDefault();
+    calendar.load();
+  };
+});
+
+
+
+// *************************************************
+
 // // commonjs
 // const flatpickr = require("flatpickr");
 const flapickr = document.querySelectorAll(".flatpickr");
