@@ -105,6 +105,7 @@
     height: 66px;
     background-color: white;
     border: 1px solid #707070;
+    resize: none;
 }
 
 .user-reservation .info-collect-agree label {
