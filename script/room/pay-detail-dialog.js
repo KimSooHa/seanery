@@ -75,7 +75,7 @@ class Dialog{
                         </div>
                         <fieldset>
                             <legend class="d-none">요청사항</legend>
-                            <input type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 &#13;&#10; 제공이 보장되지는 않습니다.">
+                            <textarea type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 &#13;&#10; 제공이 보장되지는 않습니다." readonly></textarea>
                         </fieldset>
 
                         <div class="div-line"></div>
@@ -407,10 +407,11 @@ class Dialog{
                 color: #707070;
             }
         
-            .ask-detail>fieldset>input{
+            .ask-detail>fieldset>textarea{
                 width: 280px;
                 height: 120px;
                 color: #707070;
+                resize:none;
             }
         
             
