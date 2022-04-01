@@ -45,6 +45,10 @@ body{
         margin-top: 30px;
     }
 
+    .menu-list ul li a {
+        padding-right: 7px;
+    }
+
     .menu-list ul li:first-child{
         margin-top: 58px;
     }
@@ -179,17 +183,27 @@ body{
 /*---- menu-list -------------------- */
 .menu-list ul li>a{
     /* text */
+    font-family: "Sitka Heading";
+    font-size: 17px;
+    font-weight: normal;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+
+    transition: border-color 0.7s;
+}
+
+.menu-list ul li:nth-child(1)>a {
+    /* text */
     font-family: "Minion Pro";
     font-size: 20px;
     font-weight: normal;
     color: #fff;
 
-    /* transition: border 0.2s; */
 }
 
 .menu-list ul li>a:hover{
     /* layout */
-    border-bottom: 2px solid #B19D74;
+    border-color: #B19D74;
 }
 
 /*---- setting -------------------- */
