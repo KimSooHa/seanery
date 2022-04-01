@@ -9,12 +9,12 @@ window.addEventListener("load", function(){
 
   startDateBox.onclick = (e)=>{
     e.preventDefault();
-
     calendar.load();
   };
 
   endDateBox.onclick = (e)=>{
-
+    e.preventDefault();
+    calendar.load();
   };
 });
 

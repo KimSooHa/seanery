@@ -15,6 +15,9 @@ export default class Calendar{
     #nav;
     #ol;
 
+    /* selection 버튼 조작 */
+    #btnSelection;
+
     constructor(document){
         this.#document = document;
         this.#selectedDates = [];
@@ -25,6 +28,7 @@ export default class Calendar{
         this.#monthSections = null;
         this.#nav = null;
         this.#ol = null;
+        this.#btnSelection = null;
 
         this.#html =
         `
@@ -228,6 +232,9 @@ export default class Calendar{
                 align-items: center;
                 justify-content: center;
             }
+                #young-in-calendar.calendar-d-none{
+                    display: none;
+                }
 
             /* --- month-nav -------------------------- */
             #young-in-calendar .month-nav{
@@ -499,6 +506,11 @@ export default class Calendar{
     }
 
     load(){
+        if(this.#calendarSection != null) {
+            this.#calendarSection.classList.remove("calendar-d-none");
+            return;
+        }
+
         /* embeding html, css template */
         const styleElement = this.#document.createElement("style");
         styleElement.insertAdjacentText("beforeend", this.#css);
@@ -509,6 +521,7 @@ export default class Calendar{
 
         /* 페이지를 열 때 현재 달로 수정되어 로드되기 */
         this.#monthSections = this.#calendarSection.querySelectorAll(".month");
+        console.log(this.#monthSections);
         const h1OfFirstSec = this.#monthSections[0].querySelector("h1");
         const h1OfSecondSec = this.#monthSections[1].querySelector("h1");
 
@@ -527,7 +540,7 @@ export default class Calendar{
         for (let i = 0; i < this.#monthSections.length; i++){
             this.#monthSections[i].onclick = (x=>{
                 return (e)=>{
-                    if (!checkDateOrNot(e.target))
+                    if (!this.#checkDateOrNot(e.target))
                         return;
 
                     const date = parseInt(e.target.innerText);
@@ -619,6 +632,22 @@ export default class Calendar{
             this.#clearIndicated()
             this.#indicateRangeOfDates();
         };
+
+
+        /* selection 버튼 조작 */
+        this.#btnSelection = this.#calendarSection.querySelector(".selection>button");
+        this.#btnSelection.onclick = (e)=>{
+
+            e.preventDefault();
+            
+            const viewerStartDate = this.#document.querySelector(".select-date #start-date");
+            const viewerEndDate = this.#document.querySelector(".select-date #end-date");
+
+            viewerStartDate.value = `${this.#startDay.year}-${this.#startDay.month}-${this.#startDay.date}`;
+            viewerEndDate.value = `${this.#endDay.year}-${this.#endDay.month}-${this.#endDay.date}`;
+
+            this.#calendarSection.classList.add("calendar-d-none");
+        }
     }
 
     #clearIndicated(){
@@ -714,8 +743,8 @@ export default class Calendar{
         if (startDay == null || endDay == null)
             return false;
 
-        const start = getStringYYYYMMDD(startDay.year, startDay.month, startDay.date);
-        const end = getStringYYYYMMDD(endDay.year, endDay.month, endDay.date);
+        const start = this.#getStringYYYYMMDD(startDay.year, startDay.month, startDay.date);
+        const end = this.#getStringYYYYMMDD(endDay.year, endDay.month, endDay.date);
 
         console.log(end-start);
 
