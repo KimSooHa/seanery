@@ -68,12 +68,18 @@
 .search-id form fieldset {
     /* layout */
     width: 340px;
+    height: 250px;
+}
+
+.search-id form .name {
+    height: 60px;
 }
 
 
 .search-id form .email {
     /* layout */
-    margin-top: 30px;
+    height: 60px;
+    margin-top: 25px;
     
     /* item layout */
     display: grid;
@@ -81,7 +87,7 @@
     row-gap: 10px;
 }
 
-.search-id form .email input[type="text"] {
+.search-id form .email input[type="email"] {
         /* layout */
         grid-area: 1/1/2/3;
     }
@@ -95,13 +101,14 @@
     .search-id form .email .btn-send-num {
         /* layout */
         grid-area: 1/2/2/3;
-        align-self: center;
+        align-items: center;
+        margin-top: 2px;
     }
     
     
 .search-id form .confirm-num {
     /* layout */
-    margin-top: 30px;
+    margin-top: 25px;
     
     /* item layout */
     display: grid;
@@ -120,11 +127,23 @@
         margin-left: 7px;
     }
     
-    .search-id form .confirm-num span {
+    .search-id form .confirm-num .count-num {
         /* layout */
         grid-area: 1/2/2/3;
         align-self: center;
         margin-right: 10px;
+    }
+
+    .search-id form .confirm-num .count-num .minutes {
+        margin-right: 3px;
+    }
+    
+    .search-id form .confirm-num .count-num .seconds {
+        /* layout */
+        display: inline-block;
+        width: 20px;
+        margin-left: 3px;
+        
     }
     
 .search-id form .btn-box {
@@ -180,6 +199,7 @@
     font-size: 13px;
     color: #B15252;
 }
+
 
 .confirm-num label {
     /* text style */
