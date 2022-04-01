@@ -226,6 +226,9 @@ export default class Calendar{
 
                 z-index: 1000;
 
+                overflow: scroll;
+                
+
                 /* item layout */
                 display: flex;
                 flex-direction: column;
