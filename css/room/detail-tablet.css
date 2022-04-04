@@ -13,7 +13,7 @@
 
     .room-detail header {
         width: 350px;
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
 
     .room-detail .room-info {
@@ -63,6 +63,10 @@
         /* layout */
         padding-top: 30px;
         margin-top: 40px;
+    }
+
+    .next-room a {
+        padding-right: 20px;
     }
 }
 

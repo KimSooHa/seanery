@@ -1,3 +1,5 @@
+// 저작자: 김수하
+
 // 이미지 슬라이드
 window.addEventListener("load", function() {
     var article = document.querySelector(".room-info");

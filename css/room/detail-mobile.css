@@ -63,9 +63,9 @@
 }
 
     .room-detail header {
-        width: 270px;
+        /* width: 270px; */
         display: flex;
-        /* justify-content: space-between; */
+        justify-content: space-between;
         /* margin: 0 38px 0 45px; */
         
         
@@ -399,8 +399,8 @@
 
     /* content box style */
     display: inline-block;
-    width: 80px;
-    padding-right: 5px;
+    /* width: 80px; */
+    padding-right: 20px;
     margin-right: 20px;
     background-image: url("data:image/svg+xml,%3Csvg id='Icon_metro-chevron-thin-right' data-name='Icon metro-chevron-thin-right' xmlns='http://www.w3.org/2000/svg' width='6.885' height='12.871' viewBox='0 0 6.885 12.871'%3E%3Cpath id='Icon_metro-chevron-thin-right-2' data-name='Icon metro-chevron-thin-right' d='M17.177,10.136,11.834,4.584a.521.521,0,0,1,0-.733.509.509,0,0,1,.725,0l5.859,5.917a.521.521,0,0,1,0,.733l-5.859,5.917a.509.509,0,0,1-.725,0,.521.521,0,0,1,0-.733l5.344-5.55Z' transform='translate(-11.683 -3.7)' fill='%23a9a9a9'/%3E%3C/svg%3E%0A");background-repeat: no-repeat;
     background-position: right top;
