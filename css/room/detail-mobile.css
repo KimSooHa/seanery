@@ -245,6 +245,10 @@
     transition: transform 0.5s;
 }
 
+.room-detail .room-info-img-box .img-box div.resize {
+    transition: none;
+}
+
 .room-detail .room-info-img-box .img-box div img {
     width: 100%;
     height: 100%;
