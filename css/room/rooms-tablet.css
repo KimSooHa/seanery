@@ -1,1 +1,89 @@
 /* 저작자: 김수하 */
+
+@media screen and (min-width: 550px) {
+
+    /* ====== btn style ==================================================== */
+    .btn-select-schedule  {
+        width: 300px;
+        height: 45px;
+    }
+
+    /* ------- header -------------------------------------- */
+    .header {
+        /* content box style */
+        background-position: 0 -20;
+        background-size: cover;
+    }
+    
+    .header h1 {
+        /* text style */
+        font-size: 18px;
+    }
+    
+    /* ------- rooms -------------------------------------- */
+    .rooms .rooms-introduct {
+        /* text style */
+        font-size: 13px;
+
+        /* content box style */
+        margin-top: 50px;
+    }
+
+    .rooms .select-schedule {
+        margin-top: 45px;
+    }
+
+    /* ------- room-list -------------------------------------- */
+    .rooms .room-list {
+        width: 300px;
+        height: 200px;
+        margin-top: 120px;
+    }
+
+    .rooms .room-list .room-list-introduct a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+     /* ====== btn style ==================================================== */
+     .btn-select-schedule  {
+        width: 350px;
+        height: 50px;
+    }
+    
+    .header {
+        /* content box style */
+        height: 225px;
+        background-size: cover;
+        background-position: 0 -45px;
+    }
+
+    .header .blur {
+        height: 225px;
+    }
+
+    /* ------- rooms -------------------------------------- */
+    
+    .rooms .rooms-introduct {
+        /* content box style */
+        margin-top: 60px;
+    }
+    
+    .rooms .select-schedule {
+        margin-top: 50px;
+    }
+    
+    /* ------- room-list -------------------------------------- */
+    
+    .rooms .room-list {
+        /* layout */
+        width: 350px;
+        height: 250px;
+        margin-top: 120px;
+    }
+
+    .rooms .room-list .room-list-introduct a {
+        font-size: 12px;
+    }
+}

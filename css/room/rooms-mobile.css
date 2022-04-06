@@ -43,8 +43,10 @@
     /* content box style */
     box-sizing: border-box;
     height: 181px;
-    background: url("/images/객실/studio-twin/studio-twin-main.jpeg")
-    no-repeat 0 -20px / 725px 340px;
+    background-image: url("/images/객실/studio-twin/studio-twin-main.jpeg");
+    background-repeat: no-repeat;
+    background-position: 0 -20px;
+    background-size: 725px 340px;
     padding-top: 73px;
     border-radius: 0 0 60px 0;
 
@@ -126,7 +128,7 @@
 /* ======= content block ========================================= */
 
 /* ------- header -------------------------------------- */
-.header-title {
+.header h1 {
     /* text style */
     font-family: 'Montserrat';
     font-size: 17px;
@@ -159,11 +161,6 @@
     height: 154px;
     margin-top: 111px;
 }
-
-.rooms .room-list:nth-child(4) {
-    margin-top: 127px;
-}
-
 
 .rooms .room-list .room-list-title {
     /* text */

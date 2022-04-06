@@ -11,6 +11,7 @@ window.addEventListener("load", function() {
     var imgIndex = 0;
     var imgWidth = imgBox.offsetWidth;
 
+    // 화면 너비 달라질 때
     window.onresize = () => {
         imgWidth = imgBox.offsetWidth;
         imgGroup.style.transform = "translateX("+-imgWidth*imgIndex+"px)";
