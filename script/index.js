@@ -55,6 +55,48 @@ window.addEventListener("load", function(){
 //   "plugins": [new rangePlugin({ input: ""#end-date"})]
 // });
 
+// --- header-bottom --------------------------------------
+// 날짜
+window.addEventListener("load", function() {
+  const section = document.querySelector(".date-weather-info");
+  const dateText = section.querySelector(".date");
+  const dayText = section.querySelector(".day");
+  
+  function getDate() {
+    
+    const today = new Date();
+    const dayNames = [
+      'SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'
+    ]
+    const day = dayNames[today.getDay()];
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+  
+    console.log(month + "월" + date + "일" + day + "요일");
+    
+    if(month < 10)
+      dateText.innerText ="0" + month + "/" + date;
+    else
+      dateText.innerText = month + "/" + date;
+    
+    if(date < 10)
+      dateText.innerText = month + "/" + "0" + date;
+    else
+      dateText.innerText = month + "/" + date;
+
+    dayText.innerText = day;
+    
+  }
+
+  function init() {
+    getDate();
+    setInterval(getDate, 1000);
+  }
+
+  init();
+
+});
+
 
 // --- simple-search --------------------------------------
 
