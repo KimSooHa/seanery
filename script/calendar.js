@@ -566,6 +566,11 @@ export default class Calendar{
                     }
             
                     if (this.#startDay == null) {
+                        if (this.#isPastDate(year, month, date)) {
+                            alert("입력이 잘 못되었습니다. 다시 입력하세요.");
+                            return;
+                        }
+
                         this.#startDay = {"year": year, "month": month, "date": date, "node": e.target};
                         this.#startDay.node.classList.add("select");
                         return;
