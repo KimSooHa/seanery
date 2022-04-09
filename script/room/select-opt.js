@@ -1,3 +1,23 @@
+import Calendar from "../calendar.js"
+
+window.addEventListener("load", function(){
+    const form = document.querySelector("form");
+    const startDateBox = form.querySelector(".select-date>#start-date");
+    const endDateBox = form.querySelector(".select-date>#end-date");
+
+    const calendar = new Calendar(document);
+
+    startDateBox.onclick = (e)=>{
+        e.preventDefault();
+        calendar.load();
+    }
+
+    endDateBox.onclick = (e)=>{
+        e.preventDefault();
+        calendar.load();
+    }
+});
+
 window.addEventListener("load", function() {
     const form = document.querySelector("form");
     const selectNum = document.querySelector(".select-num");
