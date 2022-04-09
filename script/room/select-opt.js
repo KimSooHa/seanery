@@ -18,6 +18,24 @@ window.addEventListener("load", function(){
     }
 });
 
+window.addEventListener("load", function(){
+    const form = document.querySelector("form");
+    const selectNum = form.querySelector(".select-num");
+    const listOfSelectNum = selectNum.querySelectorAll("li");
+
+    const selectRoom = form.querySelector(".select-room");
+
+    selectRoom.onclick = (e)=>{
+        let roomCount = 0;
+        for (let i = 0; i < listOfSelectNum.length; i++) 
+            if (!listOfSelectNum[i].classList.contains("d-none"))
+                roomCount++;
+
+        const dlg = new SelectOptRoom(roomCount);
+        dlg.load();
+    };
+});
+
 window.addEventListener("load", function() {
     const form = document.querySelector("form");
     const selectNum = document.querySelector(".select-num");
