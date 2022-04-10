@@ -71,13 +71,12 @@ window.addEventListener("load", function() {
     const day = dayNames[today.getDay()];
     const month = today.getMonth() + 1;
     const date = today.getDate();
+    let hour = today.getHours();
+    let minute = today.getMinutes();
+    let seconds = today.getSeconds();
   
     console.log(month + "월" + date + "일" + day + "요일");
     
-    if(month < 10)
-      dateText.innerText ="0" + month + "/" + date;
-    else
-      dateText.innerText = month + "/" + date;
     
     if(date < 10)
       dateText.innerText = month + "/" + "0" + date;
