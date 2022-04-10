@@ -1,0 +1,207 @@
+/* 저작자: 김수하 */
+
+@media screen and (min-width: 600px) {
+
+    /* ====== btn style ==================================================== */
+    .btn-reservation {
+        /* content box style */
+        width: 250px;
+        height: 50px;
+    }
+
+    /* ------- room-detail ------------------------------------------------- */
+
+    .room-detail header {
+        width: 350px;
+        /* justify-content: space-between; */
+    }
+
+    .room-detail .room-info {
+        width: 500px;
+    }
+
+    .room-detail .room-info .room-introduction {
+        width: 200px;
+        height: 140px;
+        right: 100px;
+    }
+
+    /* -------------room-info-img-box----------------- */
+    .room-detail .room-info-img-box .img-box {
+        width: 350px;
+        height: 210px;
+    }
+    
+    /* -----------notice---------------------------- */
+    .room-detail .notice {
+        /* laout */
+        width: 360px;
+        margin-top: 70px;
+    }
+
+    /* -------- stay-price ----------------------------- */
+
+    .room-detail .stay-price {
+        width: 360px;
+        margin-top: 40px;
+    }
+
+    /* -------- service ----------------------------- */
+    
+    .room-detail .service {
+        width: 360px;
+        margin-top: 50px;
+    }
+    
+    /* -------- reservation ----------------------------- */
+    
+    .room-detail .reservation {
+        padding-top: 60px;
+    }
+
+    .next-room {
+        /* layout */
+        padding-top: 30px;
+        margin-top: 40px;
+    }
+
+    .next-room a {
+        padding-right: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    /* -------- room-detail --------------------------------------- */
+    .room-detail {
+        /* layout */
+        padding-top: 150px;
+    }
+
+    .room-detail header {
+        width: 450px;
+    }
+
+    .room-detail header h1 {
+        /* text style */
+        font-size: 25px;
+    }
+
+    .room-detail header div {
+        /* text style */
+        font-size: 15px;
+    }
+
+    .room-detail .room-info {
+        width: 600px;
+        margin-top: 100px;
+    }
+
+    .room-detail .room-info .room-introduction {
+        width: 250px;
+        height: 160px;
+        right: 100px;
+    }
+
+    .room-detail .room-info .room-type {
+        /* text style */
+        font-size: 17px;
+    }
+    
+    .room-detail .room-info p  {
+        /* text style */
+        font-size: 13px;
+
+    }
+
+    .room-detail .room-info .room-detail-info {
+        /* text style */
+        font-size: 12px;
+    }
+
+    /* -------------room-info-img-box----------------- */
+    .room-detail .room-info-img-box .img-box {
+        width: 450px;
+        height: 270px;
+    }
+    
+    /* -----------notice---------------------------- */
+    .room-detail .notice>h1, .stay-price>h1 {
+        font-size: 17px;
+    }
+
+    .room-detail .notice div, .stay-price div {
+        /* text style */
+        font-size: 15px;
+    }
+    
+    .room-detail .notice {
+        /* laout */
+        width: 460px;
+        margin-top: 100px;
+    }
+
+    /* -------- stay-price ----------------------------- */
+
+    .room-detail .stay-price {
+        width: 460px;
+        margin-top: 70px;
+    }
+
+    /* -------- service ----------------------------- */
+    
+    .room-detail .service {
+        width: 460px;
+        margin-top: 80px;
+    }
+
+    .room-detail .service h1 {
+        font-size: 25px;
+    }
+    
+    /* -------- reservation ----------------------------- */
+    
+    .room-detail .reservation {
+        padding-top: 60px;
+    }
+
+    .room-detail .service ul li {
+        /* text style */
+        font-size: 15px;
+    }
+    
+    .room-detail .service ul li:nth-child(1) {
+        /* content box style */
+        width: 50px;
+    }
+
+    .room-detail .service ul li:nth-child(2) {
+        /* content box style */
+        width: 95px;
+    }
+
+    .room-detail .service ul li:nth-child(3) {
+        /* content box style */
+        width: 70px;
+    }
+
+    .room-detail .service ul li:nth-child(4) {
+         /* content box style */
+         width: 70px;
+    }
+
+    .room-detail .reservation {
+        padding-top: 70px;
+    }
+
+    .next-room {
+        /* layout */
+        padding-top: 40px;
+        margin-top: 50px;
+    }
+
+    .next-room a {
+        font-size: 15px;
+    }
+
+}

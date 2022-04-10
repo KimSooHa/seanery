@@ -1,0 +1,74 @@
+/* 저작자: 김수하 */
+
+@media screen and (min-width: 1000px) {
+    
+    /* ====== btn style ==================================================== */
+    .btn-select-schedule  {
+        width: 400px;
+        height: 50px;
+
+        font-size: 17px;
+    }
+
+    body {
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    body>* {
+        /* layout */
+        width: 1000px;
+    }
+
+    header {
+        width: 1000px;
+    }
+
+    .header h1 {
+        /* text style */
+        font-size: 20px;
+    }
+
+    .header .btn-header {
+        width: 1000px;
+    }
+
+    .header {
+        /* content box style */
+        height: 250px;
+        background-position: 0 -50px;
+    }
+
+    .header .blur {
+        height: 250px;
+    }
+
+    /* ------- rooms -------------------------------------- */
+    
+    .rooms .rooms-introduct {
+        /* text style */
+        font-size: 14px;
+
+        /* content box style */
+        margin-top: 80px;
+    }
+    
+    .rooms .select-schedule {
+        margin-top: 70px;
+    }
+
+    /* ------- room-list -------------------------------------- */
+    .rooms .room-list-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .rooms .room-list {
+        /* layout */
+        margin-top: 140px;
+    }
+
+}

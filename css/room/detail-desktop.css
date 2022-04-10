@@ -1,0 +1,149 @@
+/* 저작자: 김수하 */
+
+@media screen and (min-width: 1000px) {
+    /* ====== btn style ==================================================== */
+    .btn-reservation {
+        /* text style */
+        font-size: 17px;
+
+        /* content box style */
+        width: 300px;
+        height: 60px;
+    }
+
+
+    body {
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    body>* {
+        /* layout */
+        width: 1000px;
+    }
+
+        /* -------- room-detail --------------------------------------- */
+        .room-detail {
+            /* layout */
+            padding-top: 170px;
+        }
+    
+        .room-detail header {
+            width: 700px;
+        }
+    
+        .room-detail header h1 {
+            /* text style */
+            font-size: 30px;
+        }
+    
+        .room-detail header div {
+            /* text style */
+            font-size: 17px;
+        }
+    
+        .room-detail .room-info {
+            width: 900px;
+            margin-top: 150px;
+        }
+    
+        .room-detail .room-info .room-introduction {
+            width: 300px;
+            height: 200px;
+            top: 0;
+            right: 100px;
+        }
+    
+        .room-detail .room-info .room-type {
+            /* text style */
+            font-size: 18px;
+        }
+        
+    
+        /* -------------room-info-img-box----------------- */
+        .room-detail .room-info-img-box .img-box {
+            width: 800px;
+            height: 300px;
+        }
+        
+        /* -----------notice---------------------------- */
+        .room-detail .notice>h1, .stay-price>h1 {
+            font-size: 18px;
+        }
+    
+        .room-detail .notice div, .stay-price div {
+            /* text style */
+            font-size: 16px;
+        }
+        
+        .room-detail .notice {
+            /* laout */
+            width: 700px;
+            margin-top: 150px;
+        }
+    
+        /* -------- stay-price ----------------------------- */
+    
+        .room-detail .stay-price {
+            width: 700px;
+            margin-top: 70px;
+        }
+    
+        /* -------- service ----------------------------- */
+        
+        .room-detail .service {
+            width: 700px;
+            margin-top: 80px;
+        }
+    
+        .room-detail .service h1 {
+            font-size: 25px;
+        }
+        
+        /* -------- reservation ----------------------------- */
+        
+        .room-detail .reservation {
+            padding-top: 60px;
+        }
+    
+        .room-detail .service ul li {
+            /* text style */
+            font-size: 15px;
+        }
+        
+        .room-detail .service ul li:nth-child(1) {
+            /* content box style */
+            width: 50px;
+        }
+    
+        .room-detail .service ul li:nth-child(2) {
+            /* content box style */
+            width: 95px;
+        }
+    
+        .room-detail .service ul li:nth-child(3) {
+            /* content box style */
+            width: 70px;
+        }
+    
+        .room-detail .service ul li:nth-child(4) {
+             /* content box style */
+             width: 70px;
+        }
+
+        .room-detail .reservation {
+            padding-top: 100px;
+        }
+
+        .next-room {
+            /* layout */
+            padding-top: 40px;
+            margin-top: 50px;
+        }
+    
+        .next-room a {
+            font-size: 17px;
+        }
+}
