@@ -1,3 +1,41 @@
+import Calendar from "../calendar.js"
+
+window.addEventListener("load", function(){
+    const form = document.querySelector("form");
+    const startDateBox = form.querySelector(".select-date>#start-date");
+    const endDateBox = form.querySelector(".select-date>#end-date");
+
+    const calendar = new Calendar(document);
+
+    startDateBox.onclick = (e)=>{
+        e.preventDefault();
+        calendar.load();
+    }
+
+    endDateBox.onclick = (e)=>{
+        e.preventDefault();
+        calendar.load();
+    }
+});
+
+window.addEventListener("load", function(){
+    const form = document.querySelector("form");
+    const selectNum = form.querySelector(".select-num");
+    const listOfSelectNum = selectNum.querySelectorAll("li");
+
+    const selectRoom = form.querySelector(".select-room");
+
+    selectRoom.onclick = (e)=>{
+        let roomCount = 0;
+        for (let i = 0; i < listOfSelectNum.length; i++) 
+            if (!listOfSelectNum[i].classList.contains("d-none"))
+                roomCount++;
+
+        const dlg = new SelectOptRoom(roomCount);
+        dlg.load();
+    };
+});
+
 window.addEventListener("load", function() {
     const form = document.querySelector("form");
     const selectNum = document.querySelector(".select-num");

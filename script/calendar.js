@@ -2,6 +2,7 @@ export default class Calendar{
     #selectedDates;
     #startDay;
     #endDay;
+    #today;
     #html;
     #css;
     #document;
@@ -372,6 +373,14 @@ export default class Calendar{
                         cursor: pointer;
                     }
 
+                    #young-in-calendar .month .month-table .month-table-body>.past-date{
+                        /* text */
+                        font-family: "Montserrat";
+                        font-size: 9px;
+                        font-weight: 600;
+                        color: rgba(255, 255, 255, 0.2);
+                    }
+
                     #young-in-calendar .month .month-table .month-table-body span:hover{
                         /* text */
                         text-align: center;
@@ -528,14 +537,15 @@ export default class Calendar{
         const h1OfFirstSec = this.#monthSections[0].querySelector("h1");
         const h1OfSecondSec = this.#monthSections[1].querySelector("h1");
 
-        const today = new Date();
+        this.#today = new Date();
 
-        h1OfFirstSec.innerHTML = (today.getMonth() + 1) + "월" + "<span>" + today.getFullYear() + "</span>";
 
-        if (today.getMonth() + 1 == 12) 
-            h1OfSecondSec.innerHTML = "1월" + "<span>" + (today.getFullYear() + 1) + "</span>";
+        h1OfFirstSec.innerHTML = (this.#today.getMonth() + 1) + "월" + "<span>" + this.#today.getFullYear() + "</span>";
+
+        if (this.#today.getMonth() + 1 == 12) 
+            h1OfSecondSec.innerHTML = "1월" + "<span>" + (this.#today.getFullYear() + 1) + "</span>";
         else 
-            h1OfSecondSec.innerHTML = (today.getMonth() + 2) + "월" + "<span>" + today.getFullYear() + "</span>";
+            h1OfSecondSec.innerHTML = (this.#today.getMonth() + 2) + "월" + "<span>" + this.#today.getFullYear() + "</span>";
 
         this.#engraveDatesOfMonth();
 
@@ -556,6 +566,11 @@ export default class Calendar{
                     }
             
                     if (this.#startDay == null) {
+                        if (this.#isPastDate(year, month, date)) {
+                            alert("입력이 잘 못되었습니다. 다시 입력하세요.");
+                            return;
+                        }
+
                         this.#startDay = {"year": year, "month": month, "date": date, "node": e.target};
                         this.#startDay.node.classList.add("select");
                         return;
@@ -822,8 +837,10 @@ export default class Calendar{
         console.log("second 첫날 요일 : " + dayNumberOfSecond);
 
         this.#clearDates();
+        this.#deletePastDateStyle();
 
         this.#writeDates(dayNumberOfFirst, dayNumberOfSecond, firstMonth, firstYear);
+        this.#indicatePastDate();
     }
 
     #clearDates(){
@@ -880,6 +897,67 @@ export default class Calendar{
                     if (datesSizeListOfMonth[secondMonth - 1] >= date)
                         spanList[j].innerText = date++;
                 }
+        }
+    }
+
+    #indicatePastDate(){
+        const firstSection = this.#calendarSection.querySelector(".month-first");
+        const monthOfFirstSec = firstSection.querySelector("h1");
+        const yearOfFristSec = firstSection.querySelector("h1>span");
+        const tableBodiesOfFirstSec = firstSection.querySelectorAll(".month-table-body");
+
+        console.log(`year of first section is ${yearOfFristSec.innerText}`)
+        console.log(`month of first section is ${monthOfFirstSec.innerText.split("월")[0]}`);
+
+        for (let i = 0; i < tableBodiesOfFirstSec.length; i++) {
+            const spanList = tableBodiesOfFirstSec[i].querySelectorAll("span");
+            for (let j = 0; j < spanList.length; j++) {
+                if(!this.#checkDateOrNot(spanList[j]))
+                    continue;
+                
+                if (this.#isPastDate(parseInt(yearOfFristSec.innerText), parseInt(monthOfFirstSec.innerText.split("월")[0]), parseInt(spanList[j].innerText)))
+                    spanList[j].classList.add("past-date");
+            }
+        }
+
+        const secondSection = this.#calendarSection.querySelector(".month-second");
+        const monthOfSecondSec = secondSection.querySelector("h1");
+        const yearOfSecondSec = secondSection.querySelector("h1>span");
+        const tableBodiesOfSecondSec = secondSection.querySelectorAll(".month-table-body");
+
+        console.log(`year of second section is ${yearOfSecondSec.innerText}`);
+        console.log(`month of second section is ${monthOfSecondSec.innerText.split("월")[0]}`);
+
+        for (let i = 0; i < tableBodiesOfSecondSec.length; i++) {
+            const spanList = tableBodiesOfSecondSec[i].querySelectorAll("span");
+            for (let j = 0; j < spanList.length; j++) {
+                if(!this.#checkDateOrNot(spanList[j]))
+                    continue;
+                
+                if (this.#isPastDate(parseInt(yearOfSecondSec.innerText), parseInt(monthOfSecondSec.innerText.split("월")[0]), parseInt(spanList[j].innerText)))
+                    spanList[j].classList.add("past-date");
+            }
+        }
+
+    }
+
+    #isPastDate(year, month, date){
+        const yearOfToday = this.#today.getFullYear();
+        const monthOfToday = this.#today.getMonth() + 1;
+        const dateOfToday =  parseInt(this.#today.toString().split(" ")[2]);
+
+        const todayStringYYYYMMDD = this.#getStringYYYYMMDD(yearOfToday, monthOfToday, dateOfToday);
+        const paramStringYYYYMMDD = this.#getStringYYYYMMDD(year, month, date);
+
+        return todayStringYYYYMMDD - paramStringYYYYMMDD > 0 ? true : false;
+    }
+
+    #deletePastDateStyle() {
+        const bodies = this.#calendarSection.querySelectorAll(".month-table-body");
+        for (let i = 0; i < bodies.length; i++) {
+            const spanList = bodies[i].querySelectorAll("span");
+            for (let j = 0; j < spanList.length; j++) 
+                spanList[j].classList.remove("past-date");
         }
     }
 }

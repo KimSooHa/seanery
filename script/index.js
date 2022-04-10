@@ -1,11 +1,11 @@
 import Calendar from "./calendar.js"
 
 window.addEventListener("load", function(){
-  var section = document.querySelector(".simple-search");
-  var startDateBox = section.querySelector("#start-date");
-  var endDateBox = section.querySelector("#end-date");
+  const section = document.querySelector(".simple-search");
+  const startDateBox = section.querySelector("#start-date");
+  const endDateBox = section.querySelector("#end-date");
 
-  var calendar = new Calendar(document);
+  const calendar = new Calendar(document);
 
   startDateBox.onclick = (e)=>{
     e.preventDefault();

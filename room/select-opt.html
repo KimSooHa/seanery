@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/room/select-opt.css" type="text/css">
-    <script src="/script/room/select-opt.js"></script>
+    <script type="module" src="/script/room/select-opt.js"></script>
     <script src="/script/room/select-opt-num.js"></script>
+    <script src="/script/room/select-opt-room.js"></script>
     <script src="/script/dialog.js"></script>
 
     <title>Document</title>
@@ -108,14 +109,14 @@
                     </ol>
                 </div>
 
-                <div class="check-in">
+                <div class="check-in select-date">
                     <label class="d-none">체크인</label>
-                    <input type="text" value="체크인 날짜" readonly>
+                    <input type="text" id="start-date" value="체크인 날짜" readonly>
                 </div>
                 
-                <div class="check-out">
+                <div class="check-out select-date">
                     <label class="d-none">체크아웃</label>
-                    <input type="text" value="체크아웃 날짜" readonly>
+                    <input type="text" id="end-date" value="체크아웃 날짜" readonly>
                 </div>
             </fieldset>
 

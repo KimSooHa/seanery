@@ -75,7 +75,7 @@ class Dialog{
                         </div>
                         <fieldset>
                             <legend class="d-none">요청사항</legend>
-                            <input type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 &#13;&#10; 제공이 보장되지는 않습니다.">
+                            <textarea type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 &#13;&#10; 제공이 보장되지는 않습니다." readonly></textarea>
                         </fieldset>
 
                         <div class="div-line"></div>
@@ -134,8 +134,7 @@ class Dialog{
         style.textContent = `
         .img-btn-close {
             /* layout */
-            background-image: url("data:image/svg+xml,%3Csvg id='Icon_feather-plus' data-name='Icon feather-plus' xmlns='http://www.w3.org/2000/svg' width='31.776' height='31.776' viewBox='0 0 31.776 31.776'%3E%3Cg id='Icon_feather-plus-2' data-name='Icon feather-plus' trans.dlg='matrix(0.719, 0.695, -0.695, 0.719, 39.735, -35.779)'%3E%3Cpath id='패스_12' data-name='패스 12' d='M18,29.972V7.5' trans.dlg='translate(0.736 34.995)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='패스_13' data-name='패스 13' d='M7.5,18H29.972' trans.dlg='translate(0 35.731)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");
-            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg id='Icon_feather-plus' data-name='Icon feather-plus' xmlns='http://www.w3.org/2000/svg' width='31.776' height='31.776' viewBox='0 0 31.776 31.776'%3E%3Cg id='Icon_feather-plus-2' data-name='Icon feather-plus' transform='matrix(0.719, 0.695, -0.695, 0.719, 39.735, -35.779)'%3E%3Cpath id='패스_12' data-name='패스 12' d='M18,29.972V7.5' transform='translate(0.736 34.995)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='패스_13' data-name='패스 13' d='M7.5,18H29.972' transform='translate(0 35.731)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");            background-repeat: no-repeat;
             background-position: right center;
             height: 30px;
             width: 30px;
@@ -408,10 +407,11 @@ class Dialog{
                 color: #707070;
             }
         
-            .ask-detail>fieldset>input{
+            .ask-detail>fieldset>textarea{
                 width: 280px;
                 height: 120px;
                 color: #707070;
+                resize:none;
             }
         
             
