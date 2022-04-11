@@ -1,0 +1,209 @@
+/* 저작자: 김수하 */
+
+/* ====== btn style ==================================================== */
+
+/* ------- header -------------------------------------- */
+.img-btn-go-back {
+    margin-left: 30px;
+}
+
+.img-btn-menu {
+    margin-right: 21px;
+}
+
+/* ------- rooms -------------------------------------- */
+.btn-select-schedule  {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    /* content box style */
+    width: 262px;
+    height: 41px;
+    background-color: #B19D74;
+    border-radius: 10px;
+
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.4s;
+}
+.btn-select-schedule:hover {
+    background-color: #977E4B;
+}
+
+/* ====== outer block ================================================== */
+
+.header {
+    /* content box style */
+    box-sizing: border-box;
+    height: 181px;
+    background-image: url("/images/객실/studio-twin/studio-twin-main.jpeg");
+    background-repeat: no-repeat;
+    background-position: 0 -20px;
+    background-size: 725px 340px;
+    padding-top: 73px;
+    border-radius: 0 0 60px 0;
+
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .header h1{
+        /* layout */
+        z-index: 1;
+        margin-top: 30px;
+    }
+
+    .header .btn-header {
+        /* content box style */
+        background-color: rgba(67, 106, 129, 0.19);
+        width: 100%;
+        height: 73px;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+
+        /* layout */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .blur {
+        /* content box style */
+        height: 181px;
+        background-color: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(1px);
+        border-radius: 0 0 60px 0;
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+
+/* ------- rooms -------------------------------------- */
+
+.rooms {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+}
+
+.rooms .room-list {
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+    .rooms .room-list .room-list-introduct {
+        /* layout */
+        position: absolute;
+        display: none;
+        align-items: center;
+        
+        /* effect */
+        transition: 0.6s;
+    }
+
+    .rooms .room-list:hover .room-list-introduct {
+        /* layout */
+        display: flex;
+    }
+
+    
+
+/* ======= content block ========================================= */
+
+/* ------- header -------------------------------------- */
+.header h1 {
+    /* text style */
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+}
+
+/* ------- rooms -------------------------------------- */
+.rooms .rooms-introduct {
+    /* text style */
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: bold;
+    color: #707070;
+
+    /* content box style */
+    margin-top: 27px;
+
+}
+
+.rooms .select-schedule {
+    margin-top: 35px;
+}
+
+
+/* ------- room-list -------------------------------------- */
+.rooms .room-list {
+    width: 255px;
+    height: 154px;
+    margin-top: 111px;
+}
+
+.rooms .room-list .room-list-title {
+    /* text */
+    font-family: 'Times New Roman';
+    font-size: 19px;
+    font-weight: normal;
+    color: #FFFFFF;
+
+    /* layout */
+    position: absolute;
+    left: 25px;
+    bottom: 24px;
+    margin: 0;
+}
+
+.rooms .room-list div {
+    width: 100%;
+    height: 100%;
+}
+
+.rooms .room-list div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rooms .room-list .room-list-introduct {
+    /* content box style */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.57);
+    
+}
+
+    .rooms .room-list .room-list-introduct a {
+        font-family: 'Montserrat';
+        font-size: 10px;
+        font-weight: 600;
+        color: #FFFFFF;
+        text-decoration: none;
+        line-height: 2.5;
+
+        position: absolute;
+        left: 25px;
+    }
+

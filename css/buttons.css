@@ -136,7 +136,12 @@
    background-color: #B19D74;
 
    /* effect */
+   transition: 0.4s;
    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #977E4B;
 }
 
 .img-btn-chat {
