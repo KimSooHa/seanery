@@ -218,6 +218,8 @@ export default class Calendar{
                 /* layout */
                 background-color: rgba(0, 0, 0, 0.72);
 
+                padding-top: 35px;
+
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -291,24 +293,24 @@ export default class Calendar{
             #young-in-calendar .month{
                 /* layout */
                 width: 297px;
-                /* height: 294px; */
+                height: 294px;
 
                 /* item layout  */
             }
             /* --- month-first -------------------------- */
             #young-in-calendar .month-first{
                 /* layout */
-                margin-top: 33px;
+                padding-top: 33px;
             }
             /* --- month-second ------------------------- */
             #young-in-calendar .month-second{
                 /* layout */
-                margin-top: 43px;
+                padding-top: 43px;
             }
             /* --- expected-weather --------------------- */
             #young-in-calendar .expected-weather{
                 /* layout */
-                margin-top: 36.6px;
+                padding-top: 36.6px;
             }
 
             /* === content block ======================== */
