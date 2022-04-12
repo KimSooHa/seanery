@@ -637,6 +637,8 @@ body {
         width: 100%;
         height: 34px;
         border-bottom: 1px solid #949494;
+        background: url("data:image/svg+xml,%3Csvg id='Icon_material-date-range' data-name='Icon material-date-range' xmlns='http://www.w3.org/2000/svg' width='19.8' height='22' viewBox='0 0 19.8 22'%3E%3Cpath id='Icon_material-date-range-2' data-name='Icon material-date-range' d='M11.1,12.9H8.9v2.2h2.2Zm4.4,0H13.3v2.2h2.2Zm4.4,0H17.7v2.2h2.2Zm2.2-7.7H21V3H18.8V5.2H10V3H7.8V5.2H6.7A2.19,2.19,0,0,0,4.511,7.4L4.5,22.8A2.2,2.2,0,0,0,6.7,25H22.1a2.206,2.206,0,0,0,2.2-2.2V7.4A2.206,2.206,0,0,0,22.1,5.2Zm0,17.6H6.7V10.7H22.1Z' transform='translate(-4.5 -3)' fill='%23658090'/%3E%3C/svg%3E%0A")
+        no-repeat right 10px center;
 
         /* layout */
         display: flex;
