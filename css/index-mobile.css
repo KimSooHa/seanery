@@ -666,6 +666,7 @@ body {
 
     .select-date div input {
         /* text style */
+        color: #3b3b3b;
         text-align: center;
         
         /* content box style */
@@ -677,6 +678,13 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        /* effect */
+        cursor: pointer;
+    }
+
+    .select-date div input:focus {
+        outline: none;
     }
 
 .simple-search form .select-num {
