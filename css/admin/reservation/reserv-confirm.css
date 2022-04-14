@@ -96,7 +96,7 @@
     section form div {
         /* layout */
         width: 100%;
-        padding: 251px 0 11px 50px;
+        padding: 251px 0 11px 100px;
         /* height: 284px; */
         
         /* item layout */
@@ -110,7 +110,7 @@
     section form ul {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         /* justify-content: center; */
         width: 100%;
         padding: 0;
@@ -215,8 +215,41 @@
     }
     
     section form ul li input {
-        width: 19px;
-        height: 19px;
+        /* content box */
+        width: 1px;
+        height: 1px;
+        margin: 0;
+        margin-right: 15px;
+        overflow: hidden;
+        border: 0;
+        
+        /* effect */
+        cursor: pointer;
+    }
+    
+    section form ul li input::after {
+        /* content box */
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        display: flex;
+        left: -2px;
+        bottom: 29px;
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg id='icon_toggle_check_box_off_24px' data-name='icon/toggle/check_box_off_24px' xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21'%3E%3Crect id='Boundary' width='21' height='21' fill='none'/%3E%3Cpath id='_Color' data-name=' ↳Color' d='M18.667,21H2.333A2.336,2.336,0,0,1,0,18.667V2.333A2.336,2.336,0,0,1,2.333,0H18.667A2.336,2.336,0,0,1,21,2.333V18.667A2.336,2.336,0,0,1,18.667,21ZM2.333,2.333V18.667H18.667V2.333Z' fill='%23707070'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-position: left top;
+
+    }
+
+    section form ul li input:checked::after {
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        left: -2px;
+        bottom: 29px;
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-check-box' data-name='Icon material-check-box' xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21'%3E%3Cpath id='Icon_material-check-box-2' data-name='Icon material-check-box' d='M23.167,4.5H6.833A2.333,2.333,0,0,0,4.5,6.833V23.167A2.333,2.333,0,0,0,6.833,25.5H23.167A2.333,2.333,0,0,0,25.5,23.167V6.833A2.333,2.333,0,0,0,23.167,4.5Zm-10.5,16.333L6.833,15l1.645-1.645,4.188,4.177,8.855-8.855,1.645,1.657Z' transform='translate(-4.5 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
     }
     
     section form ul li a span {
