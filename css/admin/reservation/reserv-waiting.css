@@ -122,6 +122,7 @@
         height: 79px;
         align-content: center;
         padding-left: 35px;
+        position: relative;
     
         /* item layout */
         display: flex;
@@ -131,10 +132,16 @@
     section form ul li a {
         /* item layout */
         display: grid;
-        grid-template-columns: 17px auto 35px 35px 51px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        align-content: center;
+       
+        /* item layout */
+        grid-template-columns: auto auto auto auto 1fr;
         grid-template-rows: 19px 18px;
-        column-gap: 22px;
-        row-gap: 8px;
+        column-gap: 17px;
+        row-gap: 9px;
     }
     
     
@@ -152,6 +159,7 @@
         /* layout */
         grid-column: 2/3;
         grid-row: 1/2;
+        margin-left: 5px;
     }
     
     
@@ -173,10 +181,11 @@
         grid-row: 1/2;
     }
 
-    section form ul li a span:nth-child(6) {
+    section form ul li a span:last-child {
         /* layout */
         grid-column: 2/5;
         grid-row: 2/3;
+        padding-left: 5px;
     }
     
     /* ======= content block ========================================= */
@@ -222,6 +231,9 @@
         background-repeat: no-repeat;
         background-position: left center;
         padding-left: 25px;
+        padding-bottom: 3px;
+        margin-top: 4px;
+        margin-bottom: 5px;
         height: 17px;
     }
     
@@ -230,6 +242,8 @@
         background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-user' data-name='Icon awesome-user' xmlns='http://www.w3.org/2000/svg' width='12.513' height='14.301' viewBox='0 0 12.513 14.301'%3E%3Cpath id='Icon_awesome-user-2' data-name='Icon awesome-user' d='M6.257,7.15A3.575,3.575,0,1,0,2.681,3.575,3.575,3.575,0,0,0,6.257,7.15Zm2.5.894H8.293a4.862,4.862,0,0,1-4.072,0H3.754A3.755,3.755,0,0,0,0,11.8V12.96A1.341,1.341,0,0,0,1.341,14.3h9.832a1.341,1.341,0,0,0,1.341-1.341V11.8A3.755,3.755,0,0,0,8.759,8.044Z' fill='%23707070'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-position: left top;
+
+        /* layout */
         padding-left: 23px;
         height: 14px;
     }
