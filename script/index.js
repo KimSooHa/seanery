@@ -56,6 +56,8 @@ window.addEventListener("load", function(){
 // });
 
 // --- header-bottom --------------------------------------
+// --- date-weather-info -----------------------------------------
+
 // 날짜
 window.addEventListener("load", function() {
   const section = document.querySelector(".date-weather-info");
@@ -93,6 +95,36 @@ window.addEventListener("load", function() {
   }
 
   init();
+
+});
+
+// --- img-box --------------------------------------
+window.addEventListener("load", function() {
+
+  const section = document.querySelector(".header-bottom-bg-box");
+  const imgBox = section.querySelector(".img-box");
+  // const ul = imgBox.querySelector("ul");
+  // const li = ul.querySelectorAll("li");
+  const img = imgBox.querySelectorAll("img");
+  const imgCount = img.length;
+  let current = 0;
+
+  makeClone();
+  // init();
+
+  function makeClone() {
+    const cloneFirst = img[0].cloneNode(true);
+    const cloneLast = imgBox.lastElementChild.cloneNode(true);
+    imgBox.append(cloneFirst);
+    imgBox.insertBefore(cloneLast, imgBox.firstElementChild);
+  }
+
+  function init() {
+    let imgWidth = imgBox.clientWidth;
+    imgBox.style.left = -imgWidth + "px";
+    console.log(imgWidth);
+    console.log(imgCount);
+  }
 
 });
 

@@ -38,12 +38,22 @@ body {
 }
 
     .header-bottom-bg-box .img-box {
+        width: 100%;
         height: 100%;
-        overflow: hidden;
         display: flex;
         position: absolute;
         top: 0;
+        left: 0;
+        overflow: hidden;
         z-index: -1;
+    }
+
+    .header-bottom-bg-box .img-box ul {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
     }
 
     .header-bottom {
@@ -590,8 +600,16 @@ body {
         color: #fff;
     }
 
+    .header-bottom-bg-box .img-box li {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
     .header-bottom-bg-box .img-box img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         flex-shrink: 0;
     }
