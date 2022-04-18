@@ -106,25 +106,48 @@ window.addEventListener("load", function() {
   // const ul = imgBox.querySelector("ul");
   // const li = ul.querySelectorAll("li");
   const img = imgBox.querySelectorAll("img");
-  const imgCount = img.length;
-  let current = 0;
+  let imgCount = img.length;
+  let current = 1;
+  let imgWidth = imgBox.clientWidth;
 
   makeClone();
-  // init();
+  init();
 
+  // 화면 너비 달라질 때
+  window.onresize = () => {
+    imgWidth = imgBox.clientWidth;
+    imgBox.classList.add("init");
+    imgBox.style.left = -imgWidth*current + "px";
+  }
+
+  // 이미지 첫번째, 마지막 인덱스 복제하기
   function makeClone() {
     const cloneFirst = img[0].cloneNode(true);
     const cloneLast = imgBox.lastElementChild.cloneNode(true);
     imgBox.append(cloneFirst);
     imgBox.insertBefore(cloneLast, imgBox.firstElementChild);
+    imgCount = img.length;
   }
 
   function init() {
-    let imgWidth = imgBox.clientWidth;
-    imgBox.style.left = -imgWidth + "px";
-    console.log(imgWidth);
-    console.log(imgCount);
+    imgBox.style.left = -imgWidth*current + "px";
   }
+
+  setInterval(() => {
+    
+    if(current == imgCount-1) {
+      setTimeout(() => {
+        current = 0;
+        imgBox.classList.add("init");
+        imgBox.style.left = -imgWidth*current + "px";
+      }, 500);
+    }
+    
+    imgBox.classList.remove("init");
+    current++;
+    imgBox.style.left = -imgWidth*current + "px";
+
+  }, 7000);
 
 });
 
