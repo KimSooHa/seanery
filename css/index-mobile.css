@@ -7,7 +7,7 @@ body {
 .header {
     width: 100%;
     height: 73px;
-    background-color: rgba(134, 191, 255, 0.19);
+    background-color: rgba(134, 191, 255, 0.35);
     border-bottom: 1px solid #93BED6;
     
     /* layout */

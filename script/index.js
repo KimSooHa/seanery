@@ -129,10 +129,12 @@ window.addEventListener("load", function() {
     imgCount = img.length;
   }
 
+  // 이미지 위치 초기화
   function init() {
     imgBox.style.left = -imgWidth*current + "px";
   }
 
+  // 7초마다 이미지 넘기기
   setInterval(() => {
     
     if(current == imgCount-1) {
