@@ -1,15 +1,9 @@
+// 저작자: 김수하
+import allSelect, {checkbox} from "../../checkbox.js";
+
 window.addEventListener("load", function() {
-    const section = document.querySelector("section");
-    const allSelectBtn = section.querySelector(".btn-all-select");
-    const ul = section.querySelector("ul");
-    const li = ul.querySelectorAll("li");
     
-    
-    allSelectBtn.onclick = () => {
-        
-        for(let i=0; i<li.length; i++) {
-            const checkbox = li[i].querySelector("input[type=checkbox]");
-            checkbox.checked = true;
-        }
-    }
+    allSelect();
+   
+    checkbox();
 });

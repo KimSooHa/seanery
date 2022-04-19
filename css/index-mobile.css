@@ -47,7 +47,7 @@ body {
         left: 0;
         z-index: -1;
 
-        transition: left 0.7s;
+        transition: left 0.8s;
     }
 
     .header-bottom-bg-box .img-box.init {

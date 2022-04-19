@@ -103,8 +103,6 @@ window.addEventListener("load", function() {
 
   const section = document.querySelector(".header-bottom-bg-box");
   const imgBox = section.querySelector(".img-box");
-  // const ul = imgBox.querySelector("ul");
-  // const li = ul.querySelectorAll("li");
   const img = imgBox.querySelectorAll("img");
   let imgCount = img.length;
   let current = 1;
@@ -142,7 +140,7 @@ window.addEventListener("load", function() {
         current = 0;
         imgBox.classList.add("init");
         imgBox.style.left = -imgWidth*current + "px";
-      }, 500);
+      }, 800);
     }
     
     imgBox.classList.remove("init");
