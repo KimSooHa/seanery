@@ -56,6 +56,8 @@ window.addEventListener("load", function(){
 // });
 
 // --- header-bottom --------------------------------------
+// --- date-weather-info -----------------------------------------
+
 // 날짜
 window.addEventListener("load", function() {
   const section = document.querySelector(".date-weather-info");
@@ -93,6 +95,59 @@ window.addEventListener("load", function() {
   }
 
   init();
+
+});
+
+// --- img-box --------------------------------------
+window.addEventListener("load", function() {
+
+  const section = document.querySelector(".header-bottom-bg-box");
+  const imgBox = section.querySelector(".img-box");
+  const img = imgBox.querySelectorAll("img");
+  let imgCount = img.length;
+  let current = 1;
+  let imgWidth = imgBox.clientWidth;
+
+  makeClone();
+  init();
+
+  // 화면 너비 달라질 때
+  window.onresize = () => {
+    imgWidth = imgBox.clientWidth;
+    imgBox.classList.add("init");
+    imgBox.style.left = -imgWidth*current + "px";
+  }
+
+  // 이미지 첫번째, 마지막 인덱스 복제하기
+  function makeClone() {
+    const cloneFirst = img[0].cloneNode(true);
+    const cloneLast = imgBox.lastElementChild.cloneNode(true);
+    imgBox.append(cloneFirst);
+    imgBox.insertBefore(cloneLast, imgBox.firstElementChild);
+    imgCount = img.length;
+  }
+
+  // 이미지 위치 초기화
+  function init() {
+    imgBox.style.left = -imgWidth*current + "px";
+  }
+
+  // 7초마다 이미지 넘기기
+  setInterval(() => {
+    
+    if(current == imgCount-1) {
+      setTimeout(() => {
+        current = 0;
+        imgBox.classList.add("init");
+        imgBox.style.left = -imgWidth*current + "px";
+      }, 800);
+    }
+    
+    imgBox.classList.remove("init");
+    current++;
+    imgBox.style.left = -imgWidth*current + "px";
+
+  }, 7000);
 
 });
 

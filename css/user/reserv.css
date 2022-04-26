@@ -29,6 +29,26 @@
         margin-top: 58px;
     }
 
+    .user-reservation form .user-reserv-info {
+        /* width: 340px; */
+    }
+
+    .user-reservation form .user-reserv-info div {
+        /* layout */
+        height: 60px;
+
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-reservation form .user-reserv-info div output {
+        /* layout */
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
     .user-reservation form .user-reserv-info .phone-num {
         margin-top: 30px;
     }
@@ -91,6 +111,14 @@
     /* content box style */
     outline: none;
     border-bottom: 2px solid #352641;
+}
+
+.user-reservation .user-reserv-info div output {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 13px;
+    color: #707070;
 }
 
 .user-reservation form textarea {
