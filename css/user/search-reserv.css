@@ -38,6 +38,21 @@
     align-items: center;
 }
 
+.search-reserv form fieldset {
+    width: 340px;
+}
+
+.search-reserv form fieldset div {
+    height: 60px;
+}
+
+.search-reserv form fieldset div output {
+    /* layout */
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
 
 .search-reserv form .phone-num {
     margin-top: 30px;
@@ -77,4 +92,12 @@
     /* content box style */
     outline: none;
     border-bottom: 2px solid #352641;
+}
+
+.search-reserv form fieldset div output {
+    /* text style */
+    font-family: 'Montserrat', "Minion Pro";
+    font-weight: 500;
+    font-size: 13px;
+    color: #707070;
 }

@@ -1,3 +1,6 @@
+// 저작자: 김수하
+import {validNameCheck, validEmailCheck} from "../valid-check.js";
+
 window.addEventListener("load", function() {
     const form = document.querySelector("form");
     const nameInput = form.querySelector(".name>input");
@@ -103,18 +106,3 @@ window.addEventListener("load", function() {
     }
 
 });
-
-// 이메일 유효성 검사
-function validEmailCheck(email) {
-    const pattern = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
-
-    return pattern.test(email);   // email이 정규표현식 pattern과 매칭한 결과를 boolean으로 반환
-}
-
-// 이름 유효성 검사
-function validNameCheck(name) {
-
-    const pattern = /^[가-힣a-zA-Z]+$/;
-
-    return pattern.test(name);
-}

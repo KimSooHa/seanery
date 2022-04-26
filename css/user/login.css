@@ -39,8 +39,30 @@
         height: 120px; */
     }
 
+    .login form fieldset div output {
+        /* layout */
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .login form fieldset .id {
+        /* layout */
+        height: 55px;
+        
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+    }
+
     .login form fieldset .password {
+        /* layout */
+        height: 55px;
         margin-top: 30px;
+        
+        /* item layout */
+        display: flex;
+        flex-direction: column;
     }
 
     .login form .btn-submit {
@@ -112,6 +134,14 @@
         border: none;
         border-bottom: 1px solid #DDDDDD;
         box-sizing: border-box;
+    }
+
+    .login fieldset div output {
+        /* text style */
+        font-family: 'Montserrat', "Minion Pro";
+        font-weight: 500;
+        font-size: 13px;
+        color: #707070;
     }
 
     .login fieldset div input:focus {
