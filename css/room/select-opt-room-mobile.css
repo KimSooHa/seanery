@@ -18,7 +18,8 @@ form{
     /* layout */
     background-color: #EEEEEE;
     display: block;
-    width: 255px;
+    /* width: 255px; */
+    width: 330px;
     border-radius: 14px;
     border: 1px solid #707070;
 }
@@ -49,6 +50,7 @@ form{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+
         }
 
             form>fieldset header>legend{
@@ -60,15 +62,22 @@ form{
 
                 /* layout */
                 align-self: flex-start;
+                margin-top: 3px;
             }
 
             form>fieldset header>div{
                 /* layout */
                 display: inline-block;
-                width: 117px;
+
+                /* width: 117px; */
+                width: 180px;
+                height: 25px;
                 border-bottom: 1px solid #707070;
 
                 align-self: flex-end;
+
+                /* item layout */
+                position: relative;
             }
 
                 form>fieldset header>div>span{
@@ -95,6 +104,10 @@ form{
                     height: 5px;
 
                     margin-bottom: 3px;
+
+                    position: absolute;
+                    top: 10px;
+                    right: 5px;
                 }
 
                 form>fieldset header>div>a.open{
@@ -152,7 +165,7 @@ form{
 
         /* layout */
         margin-top: 15.8px;
-        margin-left: 97px;
+        margin-left: 140px;
         padding-bottom: 15px;
 
         /* utils */

@@ -18,6 +18,7 @@ window.addEventListener("load", function(){
     }
 });
 
+
 window.addEventListener("load", function(){
     const form = document.querySelector("form");
     const selectNum = form.querySelector(".select-num");
@@ -25,16 +26,37 @@ window.addEventListener("load", function(){
 
     const selectRoom = form.querySelector(".select-room");
 
+    let dlg = null;
+    let currentRoomCount = 0;
+
     selectRoom.onclick = (e)=>{
-        let roomCount = 0;
+        let teamCount = 0;
         for (let i = 0; i < listOfSelectNum.length; i++) 
             if (!listOfSelectNum[i].classList.contains("d-none"))
-                roomCount++;
+                teamCount++;
 
-        const dlg = new SelectOptRoom(roomCount);
+        if(dlg == null) {
+            dlg = new SelectOptRoom(teamCount);
+            currentRoomCount = teamCount;
+        }
+
+        if (currentRoomCount != teamCount) {
+            dlg.dispose();
+            dlg = new SelectOptRoom(teamCount);
+            currentRoomCount = teamCount;
+
+            const listOfSelectedRooms = document.querySelectorAll(".select-room ol li");
+            for (let i = 0; i < listOfSelectedRooms.length; i++) {
+                listOfSelectedRooms[i].querySelector(".room-type").value = "";
+                listOfSelectedRooms[i].classList.add("d-none");
+            }
+
+            console.log("dlg.dispose() complete");
+        }
+
         dlg.load();
     };
-});
+}); // edited by cho
 
 window.addEventListener("load", function() {
     const form = document.querySelector("form");
