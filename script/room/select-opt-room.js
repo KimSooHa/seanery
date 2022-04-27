@@ -358,16 +358,21 @@ class SelectOptRoom{
                     console.log(hiddenInput.value);
                     inputListOfRoomType[i].value = hiddenInput.value;
                     inputListOfRoomType[i].parentNode.classList.remove("d-none");
+
+                    document.querySelector(".select-room input[name='room-select']").classList.add("d-none");
+                    document.querySelector(".select-room").style.backgroundImage = "none";
                 }
             }
 
-            // for (let i = 0; i < inputListOfRoomType.length; ++i) {
-            //     if (inputListOfRoomType[i].value != "") {
-            //         document.querySelector(".select-room input[value='객실 선택']").classList.add("d-none");
-            //         document.querySelector(".select-room ol").classList.remove("d-none");
-            //         break;
-            //     }
-            // }
+            for (let i = 0; i < inputListOfRoomType.length; i++) {
+                if (inputListOfRoomType[i].value != "")
+                    break;
+                
+                if (i == (inputListOfRoomType.length - 1)) {
+                    document.querySelector(".select-room input[name='room-select']").classList.remove("d-none");
+                    document.querySelector(".select-room").style.backgroundImage = "url(\"data:image/svg+xml,%3Csvg id='Icon_awesome-bed' data-name='Icon awesome-bed' xmlns='http://www.w3.org/2000/svg' width='29.8' height='17.88' viewBox='0 0 29.8 17.88'%3E%3Cpath id='Icon_awesome-bed-2' data-name='Icon awesome-bed' d='M8.195,13.44A3.725,3.725,0,1,0,4.47,9.715,3.729,3.729,0,0,0,8.195,13.44Zm16.39-5.96H14.155a.745.745,0,0,0-.745.745v6.7H2.98V5.245A.745.745,0,0,0,2.235,4.5H.745A.745.745,0,0,0,0,5.245v16.39a.745.745,0,0,0,.745.745h1.49a.745.745,0,0,0,.745-.745V19.4H26.82v2.235a.745.745,0,0,0,.745.745h1.49a.745.745,0,0,0,.745-.745v-8.94A5.215,5.215,0,0,0,24.585,7.48Z' transform='translate(0 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A\")";
+                }
+            }
 
             document.querySelector(".select-opt-room").classList.add("d-none");
         });

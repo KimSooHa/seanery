@@ -248,7 +248,7 @@
 .select-schedule form fieldset .select-room input {
     width: 75%;
     padding: 0;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     background-repeat: no-repeat;
     background-position: right center;
     border: none;
@@ -271,12 +271,13 @@
 }
 
 .select-schedule form fieldset .select-room li input:last-child {
-    width: 100px;
+    /* width: 100px; */
+    width: 160px;
 }
 
 .select-schedule form fieldset .check-in input, .check-out input {
     width: 70%;
     border: none;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
