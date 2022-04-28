@@ -1,14 +1,30 @@
 class Dialog{
 
     #section;
+    #form;
+    #fieldset;
+    #adult;
+    #kid;
+    #roomView;
+    #checkBox;
+    #inCheckbox;
     
 
     constructor(params){
         this.#section = document.createElement("section");
+
+
         document.body.append(this.#section);
-    
-        this.oncancel = null;
-        this.onreserv = null; 
+        this.#section.classList.add("pay-detail");
+        this.#form = null;
+        this.#fieldset = null;
+        this.#adult = [];
+        this.#kid = [];
+        this.#roomView=null;
+        this.#checkBox=null;
+        this.#inCheckbox=[];
+        
+
 
         
     }
@@ -50,15 +66,39 @@ class Dialog{
                         <div class="room-num">객실1</div>
                         <div class="room-view">
                             <label class="d-none">객실1 뷰</label>
-                            <label>오션 뷰</label><div>a</div>
-                            <label>빌리지 뷰</label><div>a</div>
+                            <label>오션 뷰</label>
+                            <div class="checkbox">
+                                <div class="in-Checkbox">
+                                    <div class="img-btn-empty img-btn-empty-o d-none " id="ocean1" value="1">체크박스1</div>
+                                    <div class="img-btn-checked img-btn-checked-o " id="ocean2" value="1">체크박스1</div>
+                                </div>
+                            </div>
+                            <label>빌리지 뷰</label>
+                            <div class="checkbox">
+                                <div class="in-Checkbox">
+                                    <div class="img-btn-checked img-btn-empty-v " id="village1" value="2">체크박스2</div>
+                                    <div class="img-btn-checked img-btn-checked-v d-none " id="village2" value="2">체크박스2</div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="room-num">객실2</div>
                         <div class="room-view">
                             <label class="d-none">객실2 뷰</label>
-                            <label>오션 뷰</label><input type="radio" name="view">
-                            <label>빌리지 뷰</label><input type="radio" name="view">
+                            <label>오션 뷰</label>
+                            <div class="checkbox">
+                                <div class="in-Checkbox">
+                                    <div class="img-btn-empty">체크박스</div>
+                                    <div class="img-btn-checked d-none">체크박스</div>
+                                </div>
+                            </div>
+                            <label>빌리지 뷰</label>
+                            <div class="checkbox">
+                                <div class="in-Checkbox">
+                                    <div class="img-btn-empty">체크박스</div>
+                                    <div class="img-btn-checked d-none">체크박스</div>
+                                </div>
+                            </div>
                         </div>
                     </fieldset>
                     <div>현재 오션 뷰는 객실 마감 되었습니다.</div>
@@ -136,6 +176,7 @@ class Dialog{
             /* layout */
             background-image: url("data:image/svg+xml,%3Csvg id='Icon_feather-plus' data-name='Icon feather-plus' xmlns='http://www.w3.org/2000/svg' width='31.776' height='31.776' viewBox='0 0 31.776 31.776'%3E%3Cg id='Icon_feather-plus-2' data-name='Icon feather-plus' transform='matrix(0.719, 0.695, -0.695, 0.719, 39.735, -35.779)'%3E%3Cpath id='패스_12' data-name='패스 12' d='M18,29.972V7.5' transform='translate(0.736 34.995)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='패스_13' data-name='패스 13' d='M7.5,18H29.972' transform='translate(0 35.731)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");            background-repeat: no-repeat;
             background-position: right center;
+            background-repeat: no-repeat;
             height: 30px;
             width: 30px;
             display: inline-block;
@@ -189,6 +230,37 @@ class Dialog{
             
         
         }
+
+        .img-btn-empty {
+            /* layout */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.5' height='13.5' viewBox='0 0 13.5 13.5'%3E%3Cpath id='Icon_material-check-box-outline-blank' data-name='Icon material-check-box-outline-blank' d='M16.5,6V16.5H6V6H16.5m0-1.5H6A1.5,1.5,0,0,0,4.5,6V16.5A1.5,1.5,0,0,0,6,18H16.5A1.5,1.5,0,0,0,18,16.5V6A1.5,1.5,0,0,0,16.5,4.5Z' transform='translate(-4.5 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
+            background-position: right center;
+            background-repeat:no-repeat;
+            height: 15px;
+            width: 15px;
+            display: inline-block;
+            overflow: hidden;
+            text-indent: -999px;
+        
+            /* effect */
+            cursor: pointer;
+        }
+
+        .img-btn-checked {
+            /* layout */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.5' height='13.5' viewBox='0 0 13.5 13.5'%3E%3Cpath id='Icon_material-check-box' data-name='Icon material-check-box' d='M16.5,4.5H6A1.5,1.5,0,0,0,4.5,6V16.5A1.5,1.5,0,0,0,6,18H16.5A1.5,1.5,0,0,0,18,16.5V6A1.5,1.5,0,0,0,16.5,4.5ZM9.75,15,6,11.25l1.057-1.057L9.75,12.877l5.693-5.693L16.5,8.25Z' transform='translate(-4.5 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
+            background-position: right center;
+            background-repeat:no-repeat;
+            height: 15px;
+            width: 15px;
+            display: inline-block;
+            overflow: hidden;
+            text-indent: -999px;
+        
+            /* effect */
+            cursor: pointer;
+        }
+
         
         
         .btn-reserv{
@@ -380,17 +452,14 @@ class Dialog{
                 font-weight: normal;
             }
             
-            .room-view>div{
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.5' height='13.5' viewBox='0 0 13.5 13.5'%3E%3Cpath id='Icon_material-check-box-outline-blank' data-name='Icon material-check-box-outline-blank' d='M16.5,6V16.5H6V6H16.5m0-1.5H6A1.5,1.5,0,0,0,4.5,6V16.5A1.5,1.5,0,0,0,6,18H16.5A1.5,1.5,0,0,0,18,16.5V6A1.5,1.5,0,0,0,16.5,4.5Z' transform='translate(-4.5 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
-                background-repeat:no-repeat;
+            .room-view>div>svg{
                 height:13.5px;
                 width:13.5px;
                 
             }
 
             .room-view>div::visited{
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.5' height='13.5' viewBox='0 0 13.5 13.5'%3E%3Cpath id='Icon_material-check-box' data-name='Icon material-check-box' d='M16.5,4.5H6A1.5,1.5,0,0,0,4.5,6V16.5A1.5,1.5,0,0,0,6,18H16.5A1.5,1.5,0,0,0,18,16.5V6A1.5,1.5,0,0,0,16.5,4.5ZM9.75,15,6,11.25l1.057-1.057L9.75,12.877l5.693-5.693L16.5,8.25Z' transform='translate(-4.5 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
-                background-repeat:no-repeat;
+
             }
         
         .ask-detail{
@@ -483,8 +552,7 @@ class Dialog{
         `;
 
         document.head.append(style);
-
-        var dlg = this.#section.querySelector(".dlg");
+//-------------------- X 버튼 ---------------------------------------
 
         var cancelButton = this.#section.querySelector(".img-btn-close");
         
@@ -499,5 +567,229 @@ class Dialog{
 
 
         }.bind(this);
+
+
+// ------------------------checkbox------------------------------
+        this.#form = this.#section.querySelector(".screen");
+        this.#fieldset = this.#form.querySelectorAll("fieldset");
+        this.#checkBox = this.#form.querySelectorAll(".checkbox");
+        
+
+
+
+        // var emptyButton = this.#section.querySelector(".img-btn-empty");
+        // var checkedButton = this.#section.querySelector(".img-btn-checked");
+        
+        // emptyButton.onclick = function(e){
+
+        //     e.preventDefault();
+
+        //     emptyButton.classList.add("d-none");
+
+        //     checkedButton.classList.remove("d-none");
+
+
+
+        // }.bind(this);
+
+        // checkedButton.onclick = function(e){
+
+        //     e.preventDefault();
+
+        //     emptyButton.classList.remove("d-none");
+
+        //     checkedButton.classList.add("d-none");
+
+
+
+        // }.bind(this);
+
+        this.#form.addEventListener("click", function(e) {
+    
+            
+        
+            if(e.target.nodeName != "DIV")
+                return;
+            
+            //room-view.length
+            for(let i = 0; i < this.#checkBox.length; i++) {
+                const inCheckbox = this.#checkBox[i].querySelector(".in-Checkbox");
+
+                const emptyBtn = inCheckbox.querySelector(".img-btn-empty");
+                const checkedBtn = inCheckbox.querySelector(".img-btn-checked");
+
+                // const checkedValue = checkedBtn.value;
+                // const checkedValueInt = parseInt(checkedValue);
+
+                // console.log(checkedValueInt);
+                
+                // empty 버튼
+                if(e.target == emptyBtn) {
+                    e.preventDefault();
+
+                    emptyBtn.classList.add("d-none");
+                    
+                    checkedBtn.classList.remove("d-none");
+
+
+
+                } // checked 버튼
+                else if(e.target == checkedBtn) {
+                    e.preventDefault();
+
+                    emptyBtn.classList.remove("d-none");
+                    
+                    checkedBtn.classList.add("d-none");
+
+
+                }
+                
+        
+            }
+                    
+        }.bind(this));
+    
+        
+        
+                
+
+        
+        
+// ------------------   + / - 버튼 숫자 증감     -----------------------------------------------------------------------------------------------------
+
+
+
+
+        this.#form.addEventListener("click", function(e) {
+    
+        
+        if(e.target.nodeName != "SPAN")
+            return;
+        
+        
+        for(let i = 0; i < this.#fieldset.length; i++) {
+            
+            const adult = this.#fieldset[i].querySelector(".adults-num");
+            const kid = this.#fieldset[i].querySelector(".kid-num");
+            const adultInput = adult.querySelector("input");
+            const kidInput = kid.querySelector("input");
+            const adultPlus = adult.querySelector(".img-btn-plus");
+            const adultMinus = adult.querySelector(".img-btn-minus");
+            const kidPlus = kid.querySelector(".img-btn-plus");
+            const kidMinus = kid.querySelector(".img-btn-minus");
+            
+            const adultValue = adultInput.value;
+            const adultInt = parseInt(adultValue);
+            const kidValue = kidInput.value;
+            const kidInt = parseInt(kidValue);
+
+        
+            // adult 더하기 버튼
+            if(e.target == adultPlus) {
+            
+            if(adultInt >= 2)
+                return;
+                
+                adultInput.value = adultInt + 1;
+            } // adult 빼기 버튼
+            else if(e.target == adultMinus) {
+            if(adultInt <= 1)
+                return;
+                
+                adultInput.value = adultInt - 1;
+            }
+            
+            // kid 더하기 버튼
+            if(e.target == kidPlus) {
+            
+            if(kidInt >= 1)
+            return;
+            
+            kidInput.value = kidInt + 1;
+            }
+            // kid 빼기 버튼
+            else if(e.target == kidMinus) {
+            if(kidInt <= 0)
+            return;
+            
+            kidInput.value = kidInt - 1;
+        
+            }
+    
+        }
+                
+        }.bind(this));
+        
+
+
+        // +/- 버튼 마우스 누름 효과
+        this.#form.addEventListener("mousedown", function(e) {
+
+            if(!(e.target.nodeName == "SPAN" || e.target.classList.contains("btn-select")))
+                return;
+        
+            e.target.style.opacity = "0.7";
+            
+            });
+            // +/- 버튼 마우스 뗌 효과
+            this.#form.addEventListener("mouseup", function(e) {
+            
+            if(!(e.target.nodeName == "SPAN" || e.target.classList.contains("btn-select")))
+            return;
+            
+            e.target.style.opacity = "1";
+            });
+
+        }
+    // -----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+        get form() {
+            return this.#form;
+        }
+
+        get fieldset() {
+            return this.#fieldset;
+        }
+        
+        get adultNum() {
+        
+            for(let i = 0; i < this.fieldset.length; i++) {
+            const adult = this.fieldset[i].querySelector(".adult-num");
+            const adultInput = adult.querySelector("input");
+            const adultValue = adultInput.value;
+            
+            if(!(this.fieldset[i].classList.contains("hide"))) 
+                this.#adult.push(adultValue);
+                
+            }
+            console.log(this.#adult);
+
+            return this.#adult;
+            
+        }
+
+        get kidNum() {
+            
+            for(let i = 0; i < this.fieldset.length; i++) {
+            const kid = this.fieldset[i].querySelector(".kid-num");
+            const kidInput = kid.querySelector("input");
+            const kidValue = kidInput.value;
+
+
+            return this.#kid;
+            
+        }
+
+
     }
 }
+
+
+
+
+
