@@ -1,3 +1,5 @@
+// 저작자: 김수하
+
 class SelectOptNum {
 
   #section;
