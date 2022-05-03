@@ -311,10 +311,8 @@ class SelectOptRoom{
         form.addEventListener("click", (e)=>{
             e.preventDefault();
 
-            if (e.target.nodeName != "A" && !(e.target.nodeName == "SPAN" && e.target.parentNode.nodeName == "A")) {
-                console.log("Asdf");
+            if (e.target.nodeName != "A" && !(e.target.nodeName == "SPAN" && e.target.parentNode.nodeName == "A")) 
                 return;
-            }
 
             const target = e.target.nodeName == "A" ? e.target : e.target.parentNode;
 
