@@ -80,37 +80,37 @@ form{
                 position: relative;
             }
 
-                form>fieldset header>div>span{
+                form>fieldset header>div span{
                     /* text */
                     font-family: "Minion Pro";
                     font-size: 17px;
                     font-weight: normal;
                     color: #707070;
+                    line-height: 100%;
                 }
 
-                form>fieldset header>div>a{
+                form>fieldset header>div a{
                     /* text */
-                    text-indent: -9999px;
-                    overflow: hidden;
+                    /* text-indent: -9999px; */
+                    /* overflow: hidden; */
 
                     /* layout */
                     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
                     background-repeat: no-repeat;
-                    background-size: contain;
-                    background-position: center;
+                    background-size: 15px;
+                    background-position: center right;
+                    /* background-color: rebeccapurple; */
 
                     display: inline-block;
-                    width: 10px;
-                    height: 5px;
+                    width: 175px;
 
                     margin-bottom: 3px;
 
                     position: absolute;
-                    top: 10px;
-                    right: 5px;
+                    top: 2px;
                 }
 
-                form>fieldset header>div>a.open{
+                form>fieldset header>div a.open{
                     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(7.889 4.091) rotate(180)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
                     background-repeat: no-repeat;
                     background-size: contain;

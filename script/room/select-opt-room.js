@@ -16,9 +16,10 @@ class SelectOptRoom{
                         <header>
                             <legend>Room1</legend>
                             <div>
-                                <span>Select Room</span>
-                                <a href="">방 리스트 보기</a>
-                                <input type="hidden" name="room-1-select" value="">
+                                <a href="">
+                                    <span>Select Room</span>
+                                    <input type="hidden" name="room-1-select" value="">
+                                </a>
                             </div>
                         </header>
                         
@@ -38,9 +39,10 @@ class SelectOptRoom{
                         <header>
                             <legend>Room2</legend>
                             <div>
-                                <span>Select Room</span>
-                                <a href="">방 리스트 보기</a>
-                                <input type="hidden" name="room-2-select" value="">
+                                <a href="">
+                                    <span>Select Room</span>
+                                    <input type="hidden" name="room-2-select" value="">
+                                </a>
                             </div>
                         </header>
                         
@@ -59,9 +61,10 @@ class SelectOptRoom{
                         <header>
                             <legend>Room3</legend>
                             <div>
-                                <span>Select Room</span>
-                                <a href="">방 리스트 보기</a>
-                                <input type="hidden" name="room-3-select" value="">
+                                <a href="">
+                                    <span>Select Room</span>
+                                    <input type="hidden" name="room-3-select" value="">
+                                </a>
                             </div>
                         </header>
                         
@@ -172,7 +175,7 @@ class SelectOptRoom{
                             /* layout */
                             display: inline-block;
                             // width: 117px;
-                            width: 210px;
+                            width: 215px;
                             height: 25px;
                             border-bottom: 1px solid #707070;
 
@@ -182,41 +185,37 @@ class SelectOptRoom{
                             position: relative;
                         }
 
-                            .select-opt-room form>fieldset header>div>span{
+                            .select-opt-room form>fieldset header>div span{
                                 /* text */
                                 font-family: "Minion Pro";
                                 font-size: 17px;
                                 font-weight: normal;
                                 color: #707070;
+                                line-height: 100%;
+
                             }
 
-                            .select-opt-room form>fieldset header>div>a{
-                                /* text */
-                                text-indent: -9999px;
-                                overflow: hidden;
-
+                            .select-opt-room form>fieldset header>div a{
                                 /* layout */
                                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(0.707 0.707)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
                                 background-repeat: no-repeat;
-                                background-size: contain;
-                                background-position: center;
+                                background-size: 15px;
+                                background-position: center right;
 
                                 display: inline-block;
-                                width: 10px;
-                                height: 5px;
+                                width: 210px;
 
                                 margin-bottom: 3px;
 
                                 position: absolute;
-                                top: 10px;
-                                right: 5px;
+                                right: 2px;
                             }
 
-                            .select-opt-room form>fieldset header>div>a.open{
+                            .select-opt-room form>fieldset header>div a.open{
                                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.596' height='4.798' viewBox='0 0 8.596 4.798'%3E%3Cg id='Icon_feather-chevron-down' data-name='Icon feather-chevron-down' transform='translate(7.889 4.091) rotate(180)'%3E%3Cpath id='Icon_feather-chevron-down-2' data-name='Icon feather-chevron-down' d='M9,13.5l3.591,3.591L16.182,13.5' transform='translate(-9 -13.5)' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
                                 background-repeat: no-repeat;
-                                background-size: contain;
-                                background-position: center;
+                                background-size: 15px;
+                                background-position: center right;
                             }
 
                     .select-opt-room form .select-list, .select-opt-room form fieldset>div:nth-child(3){
@@ -238,20 +237,22 @@ class SelectOptRoom{
                     }
 
                     .select-opt-room form .select-list.active{
-                        height: 270px;
+                        height: 250px;
                     }
 
                         .select-opt-room form .select-list span{
                             /* layout */
                             display: block;
-                            margin-top: 10px;
+                            padding: 5px;
+
+                            /* effect */
+                            transition: background-color .2s, border-radius .2s;
                         }
 
                         .select-opt-room form .select-list span:hover{
                             /* layout */
                             background-color: #707070;
                             border-radius: 15px;
-                            padding: 5px;
 
                             /* util */
                             cursor: pointer;
@@ -308,19 +309,24 @@ class SelectOptRoom{
         }, 0);
     
         form.addEventListener("click", (e)=>{
-            if (e.target.nodeName != "A")
-                return;
-    
             e.preventDefault();
-    
+
+            if (e.target.nodeName != "A" && !(e.target.nodeName == "SPAN" && e.target.parentNode.nodeName == "A")) {
+                console.log("Asdf");
+                return;
+            }
+
+            const target = e.target.nodeName == "A" ? e.target : e.target.parentNode;
+
             for (let i = 0; i < roomBoxList.length; i++) {
                 const anchor = roomBoxList[i].querySelector("a");
     
-                if (e.target === anchor) {
+                if (target === anchor) {
                     roomBoxList[i].querySelector(".select-list").classList.toggle("active");
-                    e.target.classList.toggle("open");
+                    target.classList.toggle("open");
                 }
             }
+
         });
     
         form.addEventListener("click", (e)=>{
@@ -331,7 +337,7 @@ class SelectOptRoom{
     
             for (let i = 0; i < roomBoxList.length; i++) {
                 if (roomBoxList[i].querySelector(".select-list") === e.target.parentNode){
-                    const selectedSpan = roomBoxList[i].querySelector("header>div>span");
+                    const selectedSpan = roomBoxList[i].querySelector("header>div span");
                     selectedSpan.innerText = e.target.innerText;
     
                     const hiddenInput = roomBoxList[i].querySelector("input[type='hidden']");
