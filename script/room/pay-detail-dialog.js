@@ -1,29 +1,33 @@
 class Dialog{
 
     #section;
-    #form;
+
+    #screen;
     #fieldset;
+    #dlg;
+
     #adult;
     #kid;
-    #roomView;
-    #checkBox;
-    #inCheckbox;
+
+    #view;
+
     
 
     constructor(params){
         this.#section = document.createElement("section");
-
-
         document.body.append(this.#section);
         this.#section.classList.add("pay-detail");
-        this.#form = null;
+
+        this.#screen = null;
+        this.#dlg = null;
         this.#fieldset = null;
+
         this.#adult = [];
         this.#kid = [];
-        this.#roomView=null;
-        this.#checkBox=null;
-        this.#inCheckbox=[];
+
+        this.#view = [];
         
+
 
 
         
@@ -31,140 +35,123 @@ class Dialog{
 
     confirm(){
         var html = `
-        <div class="screen">
-                <div class = "dlg">
-                    <h1 class="d-none">객실별 인원수</h1>
+        <form action=""class="screen">
+            <div class = "dlg">
+                <h1 class="d-none">객실별 인원수</h1>
 
-                    <div class="top">
-                        <div>옵션사항</div>
-                        <div class="img-btn-close">닫기버튼</div>
+                <div class="top">
+                    <div>옵션사항</div>
+                    <div class="img-btn-close">닫기버튼</div>
+                </div>
+                
+                <div class="breakfast-title">조식</div>
+                <fieldset class="breakfast">
+                    <legend class="d-none">조식 선택</legend>
+                    <div>1박</div>
+                    <label>성인</label>
+                    <div class="adults-num">
+                        <span class="img-btn-minus">빼기 버튼</span>
+                        <input type="number" value="1" name="room1_adult-num" id="adult-num" readonly disabled>
+                        <span class="img-btn-plus">더하기 버튼</span>
                     </div>
                     
-                    <div class="breakfast-title">조식</div>
-                    <fieldset class="breakfast">
-                        <legend class="d-none">조식 선택</legend>
-                        <div>1박</div>
-                        <label>성인</label>
-                        <div class="adults-num">
-                            <span class="img-btn-minus">빼기 버튼</span>
-                            <input type="number" value="1" name="room1_adult-num" id="adult-num" readonly disabled>
-                            <span class="img-btn-plus">더하기 버튼</span>
-                        </div>
-                        
-                        <label>어린이</label>
-                        <div class="kid-num">
-                            <span class="img-btn-minus">빼기 버튼</span>
-                            <input type="number" value="0" name="room1_kid-num" id="kid-num" readonly disabled>
-                            <span class="img-btn-plus">더하기 버튼</span>
-                        </div>
-                    </fieldset>
+                    <label>어린이</label>
+                    <div class="kid-num">
+                        <span class="img-btn-minus">빼기 버튼</span>
+                        <input type="number" value="0" name="room1_kid-num" id="kid-num" readonly disabled>
+                        <span class="img-btn-plus">더하기 버튼</span>
+                    </div>
+                </fieldset>
 
-                    <div class="view-title">전망</div>
+                <div class="view-title">전망</div>
+                <fieldset class="view">
+                    <legend class="d-none">전망 선택</legend> 
+
+                    <div class="room-num">객실1</div>
+                    <div class="room-view">
+                        <label class="d-none">객실1 뷰</label>
+                        <label>오션 뷰</label>
+                        <input type="checkbox" name="view1" onclick="clickCheck1(this)" value="1" checked>
+
+                        <label>빌리지 뷰</label>
+                        <input type="checkbox" name="view1" onclick="clickCheck1(this)" value="2">
+
+                    </div>
+
+                    <div class="room-num">객실2</div>
+                    <div class="room-view">
+                        <label class="d-none">객실2 뷰</label>
+                        <label>오션 뷰</label>
+                        <input type="checkbox" name="view2" onclick="clickCheck2(this) value="1" checked>
+
+                        <label>빌리지 뷰</label>
+                        <input type="checkbox" name="view2" onclick="clickCheck2(this) value="2">
+
+                    </div>
+                </fieldset>
+                <div>현재 오션 뷰는 객실 마감 되었습니다.</div>
+
+                <div class="div-line"></div>
+
+                <div class="ask-detail">
+                    <div>
+                        <div>요청사항</div>
+                        <div>
+                            <span>성인 3인 투숙 시, 별도 요금 발생 <br></span>
+                            <span>※ 추가 요청 사항은 아래 기재 바랍니다.</span>
+                        </div>
+                    </div>
                     <fieldset>
-                        <legend class="d-none">전망 선택</legend> 
-
-                        <div class="room-num">객실1</div>
-                        <div class="room-view">
-                            <label class="d-none">객실1 뷰</label>
-                            <label>오션 뷰</label>
-                            <div class="checkbox">
-                                <div class="in-Checkbox">
-                                    <div class="img-btn-empty img-btn-empty-o d-none " id="ocean1" value="1">체크박스1</div>
-                                    <div class="img-btn-checked img-btn-checked-o " id="ocean2" value="1">체크박스1</div>
-                                </div>
-                            </div>
-                            <label>빌리지 뷰</label>
-                            <div class="checkbox">
-                                <div class="in-Checkbox">
-                                    <div class="img-btn-checked img-btn-empty-v " id="village1" value="2">체크박스2</div>
-                                    <div class="img-btn-checked img-btn-checked-v d-none " id="village2" value="2">체크박스2</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="room-num">객실2</div>
-                        <div class="room-view">
-                            <label class="d-none">객실2 뷰</label>
-                            <label>오션 뷰</label>
-                            <div class="checkbox">
-                                <div class="in-Checkbox">
-                                    <div class="img-btn-empty">체크박스</div>
-                                    <div class="img-btn-checked d-none">체크박스</div>
-                                </div>
-                            </div>
-                            <label>빌리지 뷰</label>
-                            <div class="checkbox">
-                                <div class="in-Checkbox">
-                                    <div class="img-btn-empty">체크박스</div>
-                                    <div class="img-btn-checked d-none">체크박스</div>
-                                </div>
-                            </div>
-                        </div>
+                        <legend class="d-none">요청사항</legend>
+                        <textarea type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 &#13;&#10; 제공이 보장되지는 않습니다." readonly></textarea>
                     </fieldset>
-                    <div>현재 오션 뷰는 객실 마감 되었습니다.</div>
 
                     <div class="div-line"></div>
+                </div>
 
-                    <div class="ask-detail">
-                        <div>
-                            <div>요청사항</div>
-                            <div>
-                                <span>성인 3인 투숙 시, 별도 요금 발생 <br></span>
-                                <span>※ 추가 요청 사항은 아래 기재 바랍니다.</span>
-                            </div>
-                        </div>
-                        <fieldset>
-                            <legend class="d-none">요청사항</legend>
-                            <textarea type="text" placeholder="기재해 주신 요청사항은 예약 시 참고되며 &#13;&#10; 제공이 보장되지는 않습니다." readonly></textarea>
-                        </fieldset>
 
-                        <div class="div-line"></div>
+                <div class="opt-check">
+                    <div>Superior</div>
+                    <div>
+                        <span>객실1(성인1, 어린이1) <br></span>
+                        <span>객실2(성인1, 어린이0)</span>
                     </div>
+                </div>
 
 
-                    <div class="opt-check">
-                        <div>Superior</div>
+                <div class="div-line"></div>
+
+
+                <div class="opt-total">
+                    <div>Total</div>
+                    <div>
                         <div>
-                            <span>객실1(성인1, 어린이1) <br></span>
-                            <span>객실2(성인1, 어린이0)</span>
+                            <label>객실금액</label>
+                            <span>145,000(1박) x 2(객실 수)<br>+오션뷰 20,000 (추가요금)</span>
                         </div>
                     </div>
 
-
-                    <div class="div-line"></div>
-
-
-                    <div class="opt-total">
-                        <div>Total</div>
+                    <div>옵션</div>
+                    <div>
                         <div>
-                            <div>
-                                <label>객실금액</label>
-                                <span>145,000(1박) x 2(객실 수)<br>+오션뷰 20,000 (추가요금)</span>
-                            </div>
-                        </div>
-
-                        <div>옵션</div>
-                        <div>
-                            <div>
-                                <label>조식</label>
-                                <span>0(1박)</span>
-                            </div>
+                            <label>조식</label>
+                            <span>0(1박)</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="div-line"></div>
+                <div class="div-line"></div>
 
-                    <div class="total-pay">
-                        <div>
-                            <span>총 예약금액</span>
-                            <span>310,000원</span>
-                        </div>
+                <div class="total-pay">
+                    <div>
+                        <span>총 예약금액</span>
+                        <span>310,000원</span>
                     </div>
-                    <div class="btn-reserv">
-                        <a href=""><input type="button" value="예약하기"></a>
-                    </div>
-            </div>
-        </div>
+                </div>
+                <div class="btn-reserv">
+                    <a href=""><input type="button" value="예약하기"></a>
+                </div>
+        </form>
         `;
     
 
@@ -280,6 +267,27 @@ class Dialog{
         
             width: 360px;
             height: 64px;
+        }
+
+        section form div fieldset .room-view input {
+            /* content box */
+            appearance:none;
+            width: 14px;
+            height: 14px;
+            display: flex;
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.5' height='13.5' viewBox='0 0 13.5 13.5'%3E%3Cpath id='Icon_material-check-box-outline-blank' data-name='Icon material-check-box-outline-blank' d='M16.5,6V16.5H6V6H16.5m0-1.5H6A1.5,1.5,0,0,0,4.5,6V16.5A1.5,1.5,0,0,0,6,18H16.5A1.5,1.5,0,0,0,18,16.5V6A1.5,1.5,0,0,0,16.5,4.5Z' transform='translate(-4.5 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
+            background-size: contain;
+            background-position: left top;
+            cursor: pointer;
+        }
+
+        
+        section form div fieldset .room-view input:checked {
+            width: 14px;
+            height: 14px;
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.5' height='13.5' viewBox='0 0 13.5 13.5'%3E%3Cpath id='Icon_material-check-box' data-name='Icon material-check-box' d='M16.5,4.5H6A1.5,1.5,0,0,0,4.5,6V16.5A1.5,1.5,0,0,0,6,18H16.5A1.5,1.5,0,0,0,18,16.5V6A1.5,1.5,0,0,0,16.5,4.5ZM9.75,15,6,11.25l1.057-1.057L9.75,12.877l5.693-5.693L16.5,8.25Z' transform='translate(-4.5 -4.5)' fill='%23707070'/%3E%3C/svg%3E%0A");
         }
         
         /* -----------------line------------------------------------- */
@@ -552,6 +560,13 @@ class Dialog{
         `;
 
         document.head.append(style);
+
+//--------공통부분-----------------------------------------------------
+        this.#screen = this.#section.querySelector("form");
+        this.#dlg = this.#screen.querySelector(".dlg");
+        this.#fieldset = this.#dlg.querySelectorAll("fieldset"); 
+
+
 //-------------------- X 버튼 ---------------------------------------
 
         var cancelButton = this.#section.querySelector(".img-btn-close");
@@ -563,193 +578,106 @@ class Dialog{
 
             this.#section.remove();
 
-            this.oncancel();
-
-
         }.bind(this);
 
 
-// ------------------------checkbox------------------------------
-        this.#form = this.#section.querySelector(".screen");
-        this.#fieldset = this.#form.querySelectorAll("fieldset");
-        this.#checkBox = this.#form.querySelectorAll(".checkbox");
+
+// ------------------   + / - 버튼 숫자 증감     -----------------------------------------------------------------------------------------------------
+// 첫번째 fieldset에서 받아온다.
+        this.#screen.addEventListener("click", function(e) {
         
-
-
-
-        // var emptyButton = this.#section.querySelector(".img-btn-empty");
-        // var checkedButton = this.#section.querySelector(".img-btn-checked");
-        
-        // emptyButton.onclick = function(e){
-
-        //     e.preventDefault();
-
-        //     emptyButton.classList.add("d-none");
-
-        //     checkedButton.classList.remove("d-none");
-
-
-
-        // }.bind(this);
-
-        // checkedButton.onclick = function(e){
-
-        //     e.preventDefault();
-
-        //     emptyButton.classList.remove("d-none");
-
-        //     checkedButton.classList.add("d-none");
-
-
-
-        // }.bind(this);
-
-        this.#form.addEventListener("click", function(e) {
-    
             
-        
-            if(e.target.nodeName != "DIV")
+            if(e.target.nodeName != "SPAN")
                 return;
             
-            //room-view.length
-            for(let i = 0; i < this.#checkBox.length; i++) {
-                const inCheckbox = this.#checkBox[i].querySelector(".in-Checkbox");
-
-                const emptyBtn = inCheckbox.querySelector(".img-btn-empty");
-                const checkedBtn = inCheckbox.querySelector(".img-btn-checked");
-
-                // const checkedValue = checkedBtn.value;
-                // const checkedValueInt = parseInt(checkedValue);
-
-                // console.log(checkedValueInt);
+            
+            for(let i = 0; i < 1; i++) {
                 
-                // empty 버튼
-                if(e.target == emptyBtn) {
-                    e.preventDefault();
+                const adult = this.#fieldset[i].querySelector(".adults-num");
+                const kid = this.#fieldset[i].querySelector(".kid-num");
+                const adultInput = adult.querySelector("input");
+                const kidInput = kid.querySelector("input");
+                const adultPlus = adult.querySelector(".img-btn-plus");
+                const adultMinus = adult.querySelector(".img-btn-minus");
+                const kidPlus = kid.querySelector(".img-btn-plus");
+                const kidMinus = kid.querySelector(".img-btn-minus");
+                
+                const adultValue = adultInput.value;
+                const adultInt = parseInt(adultValue);
+                const kidValue = kidInput.value;
+                const kidInt = parseInt(kidValue);
 
-                    emptyBtn.classList.add("d-none");
+            
+                // adult 더하기 버튼
+                if(e.target == adultPlus) {
+                
+                if(adultInt >= 2)
+                    return;
                     
-                    checkedBtn.classList.remove("d-none");
-
-
-
-                } // checked 버튼
-                else if(e.target == checkedBtn) {
-                    e.preventDefault();
-
-                    emptyBtn.classList.remove("d-none");
+                    adultInput.value = adultInt + 1;
+                } // adult 빼기 버튼
+                else if(e.target == adultMinus) {
+                if(adultInt <= 1)
+                    return;
                     
-                    checkedBtn.classList.add("d-none");
-
-
+                    adultInput.value = adultInt - 1;
                 }
                 
+                // kid 더하기 버튼
+                if(e.target == kidPlus) {
+                
+                if(kidInt >= 1)
+                return;
+                
+                kidInput.value = kidInt + 1;
+                }
+                // kid 빼기 버튼
+                else if(e.target == kidMinus) {
+                if(kidInt <= 0)
+                return;
+                
+                kidInput.value = kidInt - 1;
+            
+                }
         
             }
                     
-        }.bind(this));
-    
-        
-        
+            }.bind(this));
+            
+
+
+            // +/- 버튼 마우스 누름 효과
+            this.#screen.addEventListener("mousedown", function(e) {
+
+                if(!(e.target.nodeName == "SPAN" || e.target.classList.contains("btn-select")))
+                    return;
+            
+                e.target.style.opacity = "0.7";
                 
-
-        
-        
-// ------------------   + / - 버튼 숫자 증감     -----------------------------------------------------------------------------------------------------
-
-
-
-
-        this.#form.addEventListener("click", function(e) {
-    
-        
-        if(e.target.nodeName != "SPAN")
-            return;
-        
-        
-        for(let i = 0; i < this.#fieldset.length; i++) {
-            
-            const adult = this.#fieldset[i].querySelector(".adults-num");
-            const kid = this.#fieldset[i].querySelector(".kid-num");
-            const adultInput = adult.querySelector("input");
-            const kidInput = kid.querySelector("input");
-            const adultPlus = adult.querySelector(".img-btn-plus");
-            const adultMinus = adult.querySelector(".img-btn-minus");
-            const kidPlus = kid.querySelector(".img-btn-plus");
-            const kidMinus = kid.querySelector(".img-btn-minus");
-            
-            const adultValue = adultInput.value;
-            const adultInt = parseInt(adultValue);
-            const kidValue = kidInput.value;
-            const kidInt = parseInt(kidValue);
-
-        
-            // adult 더하기 버튼
-            if(e.target == adultPlus) {
-            
-            if(adultInt >= 2)
+                });
+                // +/- 버튼 마우스 뗌 효과
+                this.#screen.addEventListener("mouseup", function(e) {
+                
+                if(!(e.target.nodeName == "SPAN" || e.target.classList.contains("btn-select")))
                 return;
                 
-                adultInput.value = adultInt + 1;
-            } // adult 빼기 버튼
-            else if(e.target == adultMinus) {
-            if(adultInt <= 1)
-                return;
-                
-                adultInput.value = adultInt - 1;
-            }
-            
-            // kid 더하기 버튼
-            if(e.target == kidPlus) {
-            
-            if(kidInt >= 1)
-            return;
-            
-            kidInput.value = kidInt + 1;
-            }
-            // kid 빼기 버튼
-            else if(e.target == kidMinus) {
-            if(kidInt <= 0)
-            return;
-            
-            kidInput.value = kidInt - 1;
-        
-            }
-    
-        }
-                
-        }.bind(this));
-        
+                e.target.style.opacity = "1";
+                });
 
 
-        // +/- 버튼 마우스 누름 효과
-        this.#form.addEventListener("mousedown", function(e) {
+    // ------------------------checkbox------------------------------
+    // 두번째 fieldset에서 받아온다.
 
-            if(!(e.target.nodeName == "SPAN" || e.target.classList.contains("btn-select")))
-                return;
-        
-            e.target.style.opacity = "0.7";
-            
-            });
-            // +/- 버튼 마우스 뗌 효과
-            this.#form.addEventListener("mouseup", function(e) {
-            
-            if(!(e.target.nodeName == "SPAN" || e.target.classList.contains("btn-select")))
-            return;
-            
-            e.target.style.opacity = "1";
-            });
 
-        }
+
+
+    } //confirm 끝부분
+
+
     // -----------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-        get form() {
-            return this.#form;
+    // get으로 받아오는 부분
+        get screen() {
+            return this.#screen;
         }
 
         get fieldset() {
@@ -787,6 +715,12 @@ class Dialog{
 
 
     }
+
+
+
+
+    
+
 }
 
 
