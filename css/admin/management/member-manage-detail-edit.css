@@ -1,0 +1,326 @@
+/* ------ 저작자 : 김수하-------------- */
+@import url(/css/reset.css);
+@import url(/css/utils.css);
+@import url(/css/style.css);
+@import url(/css/buttons.css);
+@import url(/css/svg.css);
+/* ====== reset ==================================================== */
+fieldset {
+    padding: 0;
+}
+
+
+/* ====== btn style ==================================================== */
+.img-btn-go-back {
+    /* layout */
+    margin-left: 30px;
+}
+
+.img-btn-menu {
+    /* layout */
+    margin-right: 21px;
+}
+
+/* ====== outer block ================================================== */
+
+/* -------- header --------------------------------------- */
+.header {
+    /* layout */
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 73px;
+    /* align-items: center; */
+}
+
+.header div {
+    /* layout */
+    background-color: rgba(67, 106, 129, 0.6);
+    width: 100%;
+    height: 73px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+
+    /* item layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* --------- section ------------------------------------- */
+
+.edit-member-info .member-info ul li {
+    /* item layout */
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+.edit-member-info .member-info ul li span,
+.edit-member-info .member-info ul li input {
+    /* item layout */
+    display: flex;
+    align-items: center;
+}
+
+.edit-member-info .member-info ul li span:last-child,
+.edit-member-info .member-info ul li input {
+    /* layout */
+    padding: 16px 0;
+    margin-left: 25px;
+}
+
+
+.edit-member-info .room-info ul li {
+    /* layout */
+    /* box-sizing: border-box; */
+    
+    /* item layout */
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-rows: repeat(2, 40px);
+    row-gap: 7px;
+}
+
+    
+
+.edit-member-info form .btn-box {
+    /* layout */
+    background-color: #DAE5EA;
+    padding: 18px 0;
+    
+    /* item layout */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* ======= content block ========================================= */
+
+.header h1 {
+    /* text style */
+    font-family: 'Montserrat';
+    font-size: 19px;
+    font-weight: bold;
+    color: #1E3146;
+
+    /* layout */
+    background-color: rgba(67, 106, 129, 0.25);
+    padding: 16px 0 20px 47px;
+}
+
+.edit-member-info>h1 {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 17px;
+    font-weight: bold;
+    color: #436A81;
+
+    /* layout */
+    padding: 13px 0 13px 47px;
+    background-color: #E6EEF2;
+}
+
+.member-info>h1 {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 15px;
+    font-weight: bold;
+    color: #436A81;
+
+    /* layout */
+    width: 100%;
+    padding: 12px 0 12px 49px;
+    background-color: #E1E7EA;
+}
+
+/* ---------------photo---------------------------------------------- */
+
+.member-photo{
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-photo div {
+    /* layout */
+    width: 121px;
+    height: 121px;
+    background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-user' data-name='Icon awesome-user' xmlns='http://www.w3.org/2000/svg' width='47.689' height='54.726' viewBox='0 0 47.689 54.726'%3E%3Cpath id='Icon_awesome-user-2' data-name='Icon awesome-user' d='M23.845,27.363A13.682,13.682,0,1,0,10.219,13.682,13.653,13.653,0,0,0,23.845,27.363Zm9.538,3.42H31.6a18.461,18.461,0,0,1-15.52,0H14.307A14.34,14.34,0,0,0,0,45.149V49.6a5.121,5.121,0,0,0,5.11,5.131H42.58a5.121,5.121,0,0,0,5.11-5.131V45.149A14.34,14.34,0,0,0,33.382,30.784Z' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-color: #B1B1B1;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 82%;
+    position: relative;
+    border: 1px solid #A9A9A9;
+    border-radius: 90px;
+    overflow: hidden;
+    
+    /* item layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-photo div img {
+    /* layout */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-photo div label {
+    /* text */
+    color: #ffffff;
+    font-size: 15px;
+    font-family: '나눔스퀘어라운드';
+    font-weight: bold;
+    
+    /* layout */
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 5, 5, .35);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30.621' height='30.621' viewBox='0 0 30.621 30.621'%3E%3Cg id='Icon_feather-image' data-name='Icon feather-image' transform='translate(1.5 1.5)'%3E%3Cpath id='패스_257' data-name='패스 257' d='M7.5,4.5h21a3,3,0,0,1,3,3v21a3,3,0,0,1-3,3H7.5a3,3,0,0,1-3-3V7.5a3,3,0,0,1,3-3Z' transform='translate(-4.5 -4.5)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='패스_258' data-name='패스 258' d='M15,12.75a2.25,2.25,0,1,1-2.25-2.25A2.25,2.25,0,0,1,15,12.75Z' transform='translate(-4.5 -4.5)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3Cpath id='패스_259' data-name='패스 259' d='M31.5,22.5,24,15,7.5,31.5' transform='translate(-4.5 -4.5)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center top 50px;
+    border-radius: 100px;
+
+    /* effect */
+    cursor: pointer;
+}
+
+.member-photo div:hover label {
+    display: flex;
+}
+
+.member-photo div input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+section ul li {
+    /* layout */
+    border-bottom: 1px solid #A9A9A9;
+    
+}
+
+    section ul li:nth-child(1),
+    section ul li:nth-child(2),
+    section ul li:nth-child(3),
+    section ul li:nth-child(5) {
+        /* layout */
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.406' height='13.406' viewBox='0 0 13.406 13.406'%3E%3Cg id='Icon_material-edit' data-name='Icon material-edit' transform='translate(0 0)'%3E%3Cpath id='Icon_material-edit-2' data-name='Icon material-edit' d='M4.5,15.11V17.9H7.292l8.236-8.236L12.736,6.874Zm13.188-7.6a.742.742,0,0,0,0-1.05L15.945,4.714a.742.742,0,0,0-1.05,0L13.533,6.077l2.792,2.792Z' transform='translate(-4.5 -4.496)' fill='%23707070'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat right 30px center;
+    
+    }
+
+    section ul li:first-child {
+        /* layout */
+        border-top: 1px solid #A9A9A9;
+    }
+
+
+    section ul li input {
+        border: none;   
+    }
+
+    section ul li input:focus {
+        /* layout */
+        outline: none;
+    }
+
+section ul li span {
+    /* layout */
+    /* padding: 15px 0 16px 0; */
+    /* padding-right: 28px; */
+    box-sizing: border-box;
+}
+
+
+section ul li span:first-child,
+section ul li label {
+    /* layout */
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #A9A9A9;
+}
+
+section ul li label {
+    /* layout */
+    width: 89px;
+}
+
+
+section ul li span:nth-child(2), select {
+    /* layout */
+    margin-left: 25px; 
+}
+
+section ul li span,
+label,
+input
+{
+    /* text style */
+    font-family: 'Minion Pro';
+    font-size: 13px;
+    font-weight: bold;
+    color: #707070;
+}
+
+.edit-member-info .member-info ul li:last-child span:nth-child(2),
+.edit-member-info .member-info ul li:last-child span:nth-child(3) {
+    /* text */
+    font-weight: normal;
+}
+
+
+
+
+
+/* =============================footer========================== */
+
+.footer{
+    width: 100%;
+    height: 130px;
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+
+    background-color: #E6EFF2;
+    width: 100%;
+    height: 125px;
+}
+
+.footer>div>img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footer-text>*{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 11px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 20px;
+}
+.footer-text>div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
