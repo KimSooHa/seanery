@@ -51,19 +51,28 @@ body{
     background-color: #5782B9;
     border-radius: 0 0 0 60px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
 }
+    .modification>div div{
+        /* layout */
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        overflow: hidden;
+    }
 
-    .modification>div>img{
+    .modification>div div>img{
         /* layout */
         width: 100px;
         height: 100px;
         border-radius: 50px;
     }
 
-    .modification>div>a{
+    .modification>div div:hover>a{
+        display: inline-block;
+
         /* font style */
         font-family: "Montserrat";
         font-size: 14px;
@@ -82,6 +91,8 @@ body{
 
         position: relative;
         top: -100px;
+
+        cursor: pointer;
     }
 
 .modification>form{
