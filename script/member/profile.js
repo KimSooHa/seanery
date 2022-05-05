@@ -28,7 +28,6 @@ window.addEventListener("load", function(){
             form.querySelector("input[name='password-confirm']+output").classList.add("d-none");
 
 
-
         if (validPhoneNumCheck(phoneInput.value) == false)
             form.querySelector("input[name='phone']+output").classList.remove("d-none");
         else
