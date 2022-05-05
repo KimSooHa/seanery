@@ -1,5 +1,15 @@
 /* 저작자 : 조영인 */
 /* === LAYOUT ======================== */
+/* --- body ------------------------------- */
+body{
+    /* layout */
+    background-color: rgba(232, 237, 239, 1);
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* --- header ------------------------------- */
 .header{
     /* layout */
@@ -23,6 +33,7 @@
 /* --- main ------------------------------- */
 .main{
     /* layout */
+    width: 100%;
     height: 355.3px;
     background-image: url(../../images/hotel-intro1.jpg);
     background-repeat: no-repeat;
@@ -34,13 +45,32 @@
     flex-direction: column;
 }
 
+/* --- dash-board ------------------------------- */
+.dash-board{
+    /* layout */
+    width: 338px;
+    margin-top: 30px;
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "nav-bar nav-bar" 1fr
+        "gap gap" 20px
+        "total-booking total-members" 2fr
+        "gap2 gap2" 10px
+        "rooms-info rooms-info" 3fr
+        "gap3 gap3" 20px
+        "ratio-info ratio-info" 4fr
+        / 1fr 1fr;
+}
+
 /* --- menu ------------------------------- */
 .menu{
     /* layout */
     height: 489px;
 
     /* item layout */
-    padding-top: 77.6px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,17 +134,17 @@
         font-weight: normal;
         color: #fff;
 
-        /* layout */
-        margin-left: 25px;
-        width: 100px;
-        height: 44px;
-
         /* item layout */
         display: grid;
         grid-template: 
             "date weather no" 1fr
             "day weather temp" 1fr
             / 1fr 2fr 1fr;
+
+        /* layout */
+        width: 100px;
+        height: 44px;
+
     }
 
         .main dl dt{
@@ -173,6 +203,344 @@
             display: inline-block;
             padding-left: 15px;
         }
+
+/* --- dash-board ------------------------------- */
+/* nav-bar */
+.nav-bar{
+    /* layout */
+    box-sizing: border-box;
+    width: 338px;
+    height: 34px;
+    padding: 3px;
+    border-radius: 46px;
+    background-color: rgba(41, 41, 41, 0.9);
+
+    grid-area: nav-bar;
+
+    /* item layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .nav-bar li{
+        /* layout */
+        width: 106px;
+        height: 30px;
+
+        /* item layout*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-bar li a{
+        /* text */
+        font-family: "Poppins";
+        font-size: 12px;
+        font-weight: bold;
+        color: rgba(191, 191, 191, 1);
+    }
+
+    .nav-bar li.pointed{
+        /* layout */
+        background-color: rgba(151, 126, 75, 1);
+        border-radius: 46px;
+    }
+
+    .nav-bar li.pointed a{
+        /* text*/
+        color: white;
+    }
+
+/* board-type1 */
+.total-booking {
+    grid-area: total-booking;
+}
+
+.total-members {
+    grid-area: total-members;
+    justify-self: end;
+    margin-right: 4px;
+}
+
+.board-type1{
+    /* layout */
+    width: 158px;
+    height: 82px;
+    background-color: white;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+    padding: 5px 12px;
+
+    box-shadow: 0 1px 4px rgba(21, 34, 50, 0.08);
+
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+    .board-type1 h2{
+        /* text */
+        font-size: 16px;
+        font-weight: normal;
+        font-family: 'Poppins';
+        color: rgba(90, 96, 127, 1);
+
+        /* layout */
+        padding: 0;
+        margin: 0;
+    }
+
+    .board-type1 div{
+        /* text */
+        font-weight: normal;
+        font-family: 'Poppins';
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .board-type1 div span:nth-child(1){
+        /* layout */
+        display: block;
+        margin-bottom: auto;
+    }
+
+    .board-type1 div span:nth-child(2){
+        /* text */
+        font-size: 12px;
+        font-weight: bold;
+        color: rgba(45, 69, 96, 1);
+    }
+
+    .arrow.up{
+        /* text */
+        color: transparent;
+        /* layout */
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.04004 2.87402V12.126' stroke='%23436A81' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.9521 5.70703L7.95215 2.70703' stroke='%23436A81' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.12598 5.70703L8.12598 2.70703' stroke='%23436A81' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px;
+    }
+
+    .arrow.down{
+        /* text */
+        color: transparent;
+        /* layout */
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2004_1517)'%3E%3Cpath d='M7.50293 12.252L7.50293 2.99995' stroke='%2336679F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.59082 9.41895L7.59082 12.4189' stroke='%2336679F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.417 9.41895L7.41699 12.4189' stroke='%2336679F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2004_1517'%3E%3Crect width='15.126' height='15.126' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px;
+    }
+
+    .board-type1 div span:nth-child(4){
+        /* text */
+        font-size: 12px;
+        font-weight: normal;
+        color: rgba(126, 132, 163, 1);
+    }
+
+/* board-type2 */
+.rooms-info {
+    grid-area: rooms-info;
+}
+
+.board-type2{
+    /* layout */
+    width: 341px;
+    height: 146px;
+    border-radius: 20px;
+    background-color: white;
+
+    box-sizing: border-box;
+    padding: 9px;
+    padding-bottom: 18px;
+
+    box-shadow: 0 1px 4px rgba(21, 34, 50, 0.08);
+
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "title time space" 4fr
+        "info info info" 6fr
+        / 3fr 7fr 3fr;
+}
+    .board-type2 h2{
+        /* text */
+        font-family: "Minion Pro";
+        font-size: 13px;
+        font-weight: bold;
+
+        /* layout */
+        grid-area: title;
+        align-self: center;
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    .board-type2>div{
+        /* layout */
+        grid-area: time;
+        justify-self: center;
+
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .board-type2>div a{
+            /* layout */
+            width: 7.5px;
+            height: 14px;
+        }
+
+        .board-type2>div span{
+            /* text */
+            font-family: "Muli";
+            font-size: 13px;
+            color: rgba(45, 69, 96, 1);
+
+            /* layout */
+            margin-left: 17px;
+            margin-right: 17px;
+        }
+    
+
+    .board-type2 dl{
+        /* layout */
+        grid-area: info;
+
+        margin: 0;
+        border-radius: 20px;
+        padding: 17px 13px;
+        background-color: rgba(237, 242, 245, 1);
+
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .board-type2 dl li{
+            /* text */
+            font-size: 11px;
+            font-weight: normal;
+            color: rgba(112, 112, 112, 1);
+
+            /* item layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+/* board-type3 */
+.ratio-info {
+    grid-area: ratio-info;
+}
+
+.board-type3{
+    /* layout */
+    width: 341px;
+    height: 180px;
+
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 9px 18px 15px 18px;
+
+    background-color: white;
+
+    box-shadow: 0 1px 4px rgba(21, 34, 50, 0.08);
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "title title" 1fr
+        "graph table" 8fr
+        /1fr 1fr;
+}
+
+    .board-type3 h2{
+        /* text */
+        font-size: 13px;
+        font-weight: bold;
+        font-family: "Minion Pro";
+        color: rgba(30, 49, 70, 1);
+
+        /* layout */
+        grid-area: title;
+    }
+
+    .board-type3 .circle-graph{
+        /* layout */
+        width: 120px;
+        height: 120px;
+        background-color: grey;
+
+        grid-area: graph;
+    }
+
+    .board-type3 dl{
+        /* layout */
+        margin: 0;
+        width: 145px;
+        grid-area: table;
+        align-self: start;
+    }
+
+        .board-type3 dl li{
+            /* layout */
+            margin-bottom: 15px;
+
+            /* item layout */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+            .board-type3 dl li::before{
+                content: "";
+
+                /* layout */
+                width: 8px;
+                height: 8px;
+                border-radius: 2px;
+                background-color: rgba(30, 49, 70, 1);
+                margin-right: 15px;
+            }
+
+            .board-type3 dl li dt{
+                /* text */
+                font-family: "Poppins";
+                font-size: 11px;
+                font-weight: normal;
+                color: rgba(19, 21, 35, 1);
+
+                /* layout */
+                margin-right: auto;
+            }
+
+            .board-type3 dl li dd{
+                /* text */
+                font-family: "Poppins";
+                font-size: 14px;
+                font-weight: bold;
+                color: rgba(19, 21, 35, 1);
+            }
+
+
 /* --- menu ------------------------------- */
 .menu ul{
     /* layout */
@@ -303,15 +671,12 @@
 
 .menu ul>li:nth-child(5){
     /* layout */
-    grid-area: message;
-    display: inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
     width: 64px;
     height: 64px;
 
-    /* item layout */
-    position: relative;
-    top: -30px;
-    left : 80px;
 }
     .menu ul>li:nth-child(5)>a{
         /* text */

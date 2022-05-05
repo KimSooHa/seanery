@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/admin/index.css" type="text/css" rel="stylesheet">
+    <script src="/script/admin/index.js"></script>
     <title>관리자 페이지</title>
 </head>
 <body>
@@ -42,6 +43,152 @@
             <div>
                 <a href="">Review<span>></span></a>
             </div>
+        </div>
+    </section>
+
+    <section class="dash-board">
+        <h1 class="d-none">대시보드</h1>
+
+        <ul class="nav-bar">
+            <li class="pointed"><a href="">Today</a></li>
+            <li><a href="">Week</a></li>
+            <li><a href="">Month</a></li>
+        </ul>
+
+        <div class="total-booking board-type1">
+            <h2>Total Booking</h2>
+            <div>
+                <span>530명</span>
+                <span>1.3%</span>
+                <span class="arrow up">증가</span>
+                <span>than last year</sapn>
+            </div>
+        </div>
+
+        <div class="total-members board-type1">
+            <h2>Total Members</h2>
+            <div>
+                <span>200명</span>
+                <span>1.3%</span>
+                <span class="arrow down">감소</span>
+                <span>than last year</sapn>
+            </div>
+        </div>
+
+        <div class="today board-type2 rooms-info">
+            <h2><span class="d-none">Today</span>Rooms</h2>
+            <div>
+                <a class="img-btn-left-arrow" href="">이전</a>
+                <span>2021-4-20 수</span>
+                <a class="img-btn-right-arrow" href="">다음</a>
+            </div>
+            <dl>
+                <li>
+                    <dt>객실 예약</dt>
+                    <dd>3</dd>
+                </li>
+                <li>
+                    <dt>예약 대기</dt>
+                    <dd>2</dd>
+                </li>
+                <li>
+                    <dt>예약 완료</dt>
+                    <dd>1</dd>
+                </li>
+                <li>
+                    <dt>취소된 예약</dt>
+                    <dd>0</dd>
+                </li>
+                <li>
+                    <dt>남은 객실</dt>
+                    <dd>20</dd>
+                </li>
+            </dl>
+        </div>
+
+        <div class="week board-type2 d-none rooms-info">
+            <h2><span class="d-none">Today</span>Rooms</h2>
+            <div>
+                <a class="img-btn-left-arrow" href="">이전</a>
+                <span>2021.04.17 ~ 04.23</span>
+                <a class="img-btn-right-arrow" href="">다음</a>
+            </div>
+            <dl>
+                <li>
+                    <dt>객실 예약</dt>
+                    <dd>3</dd>
+                </li>
+                <li>
+                    <dt>예약 대기</dt>
+                    <dd>2</dd>
+                </li>
+                <li>
+                    <dt>예약 완료</dt>
+                    <dd>1</dd>
+                </li>
+                <li>
+                    <dt>취소된 예약</dt>
+                    <dd>0</dd>
+                </li>
+                <li>
+                    <dt>남은 객실</dt>
+                    <dd>20</dd>
+                </li>
+            </dl>
+        </div>
+
+        <div class="month board-type2 d-none rooms-info">
+            <h2><span class="d-none">Today</span>Rooms</h2>
+            <div>
+                <a class="img-btn-left-arrow" href="">이전</a>
+                <span>4월</span>
+                <a class="img-btn-right-arrow" href="">다음</a>
+            </div>
+            <dl>
+                <li>
+                    <dt>객실 예약</dt>
+                    <dd>3</dd>
+                </li>
+                <li>
+                    <dt>예약 대기</dt>
+                    <dd>2</dd>
+                </li>
+                <li>
+                    <dt>예약 완료</dt>
+                    <dd>1</dd>
+                </li>
+                <li>
+                    <dt>취소된 예약</dt>
+                    <dd>0</dd>
+                </li>
+                <li>
+                    <dt>남은 객실</dt>
+                    <dd>20</dd>
+                </li>
+            </dl>
+        </div>
+
+        <div class="ratio-info board-type3">
+            <h2>Percentage of reserved rooms</h2>
+            <div class="circle-graph"></div>
+            <dl>
+                <li>
+                    <dt>Superior</dt>
+                    <dd>50</dd>
+                </li>
+                <li>
+                    <dt>Standard</dt>
+                    <dd>25</dd>
+                </li>
+                <li>
+                    <dt>Studio Twin</dt>
+                    <dd>15</dd>
+                </li>
+                <li>
+                    <dt>Royal Suit</dt>
+                    <dd>10</dd>
+                </li>
+            </dl>
         </div>
     </section>
 
