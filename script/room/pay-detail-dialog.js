@@ -34,6 +34,8 @@ class Dialog{
     }
 
     confirm(){
+        console.log("요금보기 세부사항");
+        
         var html = `
         <form action=""class="screen">
             <div class = "dlg">
@@ -82,10 +84,10 @@ class Dialog{
                     <div class="room-view">
                         <label class="d-none">객실2 뷰</label>
                         <label>오션 뷰</label>
-                        <input type="checkbox" name="view2" onclick="clickCheck2(this) value="1" checked>
+                        <input type="checkbox" name="view2" onclick="clickCheck2(this)" value="1" checked>
 
                         <label>빌리지 뷰</label>
-                        <input type="checkbox" name="view2" onclick="clickCheck2(this) value="2">
+                        <input type="checkbox" name="view2" onclick="clickCheck2(this)" value="2">
 
                     </div>
                 </fieldset>
@@ -306,7 +308,7 @@ class Dialog{
             top:0;
             background-color: rgba(0, 0, 0, 0.486);
             width:100vw;
-            height: 120vh;
+            height: 1816px;
             z-index: 100;
         
             display: flex;
