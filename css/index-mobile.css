@@ -43,7 +43,7 @@ body {
     overflow: hidden;
 }
 
-.header-bottom-bg-box .img-box {
+    .header-bottom-bg-box .img-box {
         /* layout */
         width: 100%;
         height: 100%;
@@ -185,28 +185,27 @@ body {
 /* -------- simple-search --------------------------------------- */
 .simple-search {
     /* content box style */
-    /* width: 80%; */
+    /* width: 100%; */
     height: 252px;
 
     /* layout */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     position: relative;
     top: -35px;
-    /* margin: 0 18px; */
     /* flex-basis: 339px; */
-    flex-grow: 1;
+    flex-shrink: 0;
+    
 }
 
 .simple-search form {
     /* content box style */
-    /* min-width: 339px; */
-    /* max-width: 100%; */
     /* width: 100%; */
     height: 100%;
     padding: 19px 17px 20px 17px;
+    margin: 0 18px;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-sizing: border-box;
@@ -227,7 +226,9 @@ body {
         box-sizing: border-box;
         
         /* layout */
-        display: flex;
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(1fr, auto));
     }
     
     .simple-search form .select-date {
@@ -235,7 +236,8 @@ body {
         width: 100%;
         height: 83px;
         padding: 0;
-        margin: 0;
+        margin-right: 0;
+        position: relative;
         border: none;
         border-bottom: 1px solid #F0F0F0;
         
@@ -251,7 +253,9 @@ body {
         /* align-items: center; */
 
         /* content box style */
-        width: 155px;
+        /* width: 155px; */
+        /* width: 30%; */
+        /* position: absolute; */
     }
 
 
@@ -274,7 +278,7 @@ body {
             display: flex;
             align-items: center;
             /* content box style */
-            width: 155px;
+            /* width: 155px; */
         }
         
 
@@ -291,127 +295,68 @@ body {
 
 .introduce {
     /* content box style */
-    height: 281px;
-    background-color: rgba(210, 227, 235, 0.9);
-    border-radius: 50px 0 0 0;
-
+    height: 485px;
+    background-color: #FFFFFF;
+    padding: 0 18px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #F0F0F0;
+    
     /* layout */
-    display: grid;
+    /* display: grid;
     grid-template-columns: 174px 188px;
     grid-template-rows: 30px 87px;
     column-gap: 20px;
-    row-gap: 10px;
-    align-content: center;
-    justify-content: center;
+    row-gap: 10px; */
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
 }
 
-    .introduce h1 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
 
-    .introduce .introduce-img {
-        grid-column: 1/2;
-        grid-row: 1/3;
-    }
 
     .introduce p {
-        grid-column: 2/3;
-        grid-row: 2/3;
+        /* grid-column: 2/3;
+        grid-row: 2/3; */
+        margin-top: 16px;
+        margin-bottom: 0;
     }
 
 /* -------- facilities --------------------------------------- */
 .facilities {
-    /* width: 100%; */
-    height: 679px;
-    background: rgba(0, 0, 0, 0.4) url("../images/facilities-bg.jpg")
-                no-repeat -100px / cover;
+    /* content box style */
+    /* height: 1156px; */
+    background-color: #FFFFFF;
+    padding: 0 18px;
+    padding-top: 40.5px;
+
+    /* layout */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 .facilities-list {
-    display: grid;
-    align-content: center;
-    justify-content: center;
-
-    /* item layout */
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20px 62px;
-    column-gap: 11px;
-    row-gap: 9px;
-    
-    /* margin-top: 10px; */
-}
-
-.facilities-list:nth-child(2n) {
-    /* item layout */
-    align-self: start;
-}
-
-    .facilities-list:nth-child(2n) h1 {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        margin-left: 19px;
-    }
-
-    .facilities-list:nth-child(2n) div {
-        position: relative;
-        
-        grid-column: 2/3;
-        grid-row: 1/3;
-    }
-
-        .facilities-list:nth-child(2n) div>.btn-more {
-            position: absolute;
-            right: 5%;
-            bottom: 7%;
-        }
-
-    .facilities-list:nth-child(2n) p {
-        grid-column: 1/2;
-        grid-row: 2/3;
-        align-self: center;
-    }
-
-.facilities-list:nth-child(2n+1) {
     /* layout */
-    align-self: end;
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    /* justify-content: center; */
+
 }
-
-    .facilities-list:nth-child(2n+1) h1 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        justify-self: end;
-        margin-right: 19px;
-    }
-
-    .facilities-list:nth-child(2n+1) div {
-        position: relative;
-        
-        grid-column: 1/2;
-        grid-row: 1/3;
-    }
-
-        .facilities-list:nth-child(2n+1) div>.btn-more {
-            position: absolute;
-            left: 5%;
-            bottom: 7%;
-        }
-
-    .facilities-list:nth-child(2n+1) p {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        align-self: center;
-    }
 
 
 
 /* -------- services --------------------------------------- */
 
 .services {
-    padding-top: 62px;
+    /* content box style */
+    background-color: #FFFFFF;
+    padding-top: 40.5px;
+    padding-bottom: 80px;
+
+    /* layout */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -752,6 +697,15 @@ body {
     /* box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16); */
 }
 
+    .simple-search form .select-date .check-in {
+        padding-right: .5rem;
+    }
+
+
+    .simple-search form .select-date .check-out {
+           justify-content: end;
+    }
+
 
     .simple-search form .select-date label {
         /* text style */
@@ -781,7 +735,7 @@ body {
         text-align: center;
         
         /* content box style */
-        /* width: 100%; */
+        width: 100%;
         /* height: 25px; */
         /* padding: 0; */
         padding-left: 20px;
@@ -800,19 +754,27 @@ body {
         cursor: pointer;
     }
 
+        .simple-search form .select-date div input:placeholder-shown {
+            font-size: 15px;
+            font-family: 'NanumSquareOTF';
+            font-weight: normal;
+            color: #727272;
+        }
+
     .simple-search form .select-date div input:focus {
         outline: none;
     }
 
     .simple-search form .select-date .check-in input {
         /* text-align: start; */
-        padding-right: 34.5px;
+        /* padding-right: 34.5px; */
+        padding-right: .5rem;
         border-right: 1px solid #DEDEDE;
     }
 
     .simple-search form .select-date .check-out input {
         /* text-align: end; */
-        margin-left: 25px;
+        margin-left: 15px;
     }
 
 .simple-search form .select-num {
@@ -823,7 +785,7 @@ body {
 
     .simple-search form .select-num div {
         /* content box style */
-        /* width: 100%; */
+        width: 100%;
         height: 35px;
         /* padding: 0 20px 0 50px; */
         display: flex;
@@ -863,79 +825,103 @@ body {
 
 /* -------- introduce --------------------------------------- */
 
-.introduce {
-    color: #436A81;
-}
-
     .introduce .introduce-title {
-        font-family: 'Times New Roman';
-        font-size: 17px;
-        font-weight: normal;
+        /* text style */
+        font-family: '나눔명조';
+        font-size: 20px;
+        font-weight: 900;
+        color: #B19D74;
+        text-align: center;
+
+        /* content box style */
+        padding-top: 30px;
     }
 
     .introduce div {
+        /* content box style */
         position: relative;
+        left: 0;
+        top: 0;
         width: 100%;
-        height: 133px;
+        height: 240px;
+        order: -1;
     }
 
     .introduce img {
-        width: 163px;
-        height: 122px;
+        /* content box style */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .introduce img:first-child {
-        position: absolute;
-        left: 11px;
-        bottom: 0;
-    }
-
-    .introduce img:last-child {
-        position: absolute;
-        left: 21px;
-        /* z-index: 1; */
-    }
 
     .introduce p {
-        font-family: 'Sitka Heading', "Minion Pro" ;
-        font-size: 14px;
+        /* text style */
+        font-family: 'NanumSquareOTF', "Sitka Heading" ;
+        font-size: 18px;
+        color: #333333;
+        text-align: center;
     }
+
+
+/* ----------------------------------------------- */
+.facilities-title,
+.services-title,
+.rooms-title,
+.gallery-title,
+.review-title,
+.location-title {
+    /* text  style */
+    font-family: '나눔명조', "Sitka Heading";
+    font-size: 20px;
+    font-weight: 900;
+    color: #333333;
+
+    /* content box style */
+    padding: 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #AE9D79;
+}
+
 
 /* -------- facilities --------------------------------------- */
 
-.facilities-title {
-    /* text  style */
-    font-family: 'SimSun-ExtB', "Sitka Heading";
-    font-size: 25px;
-    font-weight: normal;
-    color: #fff;
-
-    /* content box style */
-
-    /* layout */
-    display: flex;
-    justify-content: center;
-}
 
 .facilities-list {
     /* content box style */
-    width: 332px;
-    height: 139px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-top: 16.5px;
+    /* height: 139px; */
+    /* box-sizing: border-box; */
+    border-bottom: 1px solid #F0F0F0;
 }
 
 
     .facilities-list h1 {
         /* text  style */
-        font-family: 'Sitka Heading', "SimSun-ExtB";
-        font-size: 20px;
+        font-family: 'Ebrima', "Sitka Heading";
+        font-size: 18px;
         font-weight: normal;
-        color: #FFFFFF;
+        color: #333333;
 
         /* content box style */
-        margin: 0;
+        width: 46px;
+        height: 24px;
+        padding-right: 15.5px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.143' height='10.478' viewBox='0 0 6.143 10.478'%3E%3Cpath id='패스_75' data-name='패스 75' d='M117.85,4.454l4.36-4.347a.365.365,0,0,1,.516.517l-4.1,4.089,4.1,4.089a.365.365,0,0,1-.516.517l-4.36-4.347a.365.365,0,0,1,0-.517Z' transform='translate(123.385 9.926) rotate(180)' fill='%23333' stroke='%23333' stroke-linecap='round' stroke-width='1'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
+    .facilities-list:nth-child(3) h1,
+    .facilities-list:nth-child(4) h1 {
+        padding-right: 7px;
+    }
+
+    .facilities-list div {
+        height: 210px;
+        margin-top: 15px;
     }
 
 
@@ -944,27 +930,17 @@ body {
         /* height: 98px; */
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 
     .facilities-list p {
         /* text  style */
         font-family: 'Nueva Std', "SimSun-ExtB";
-        font-size: 10px;
-        font-weight: bold;
-        color: #E6EEF2;
+        font-size: 15px;
+        font-weight: normal;
+        color: #333333;
     }
 
-/* ----------------------------------------------- */
-
-.services-title,
-.gallery-title,
-.review-title,
-.location-title {
-    font-family: 'SimSun-ExtB', "Sitka Heading";
-    font-size: 25px;
-    font-weight: normal;
-    color: #436A81;
-}
 
 /* -------- services --------------------------------------- */
 
@@ -1021,11 +997,6 @@ body {
 /* -------- rooms --------------------------------------- */
 
 .rooms-title {
-    /* text style */
-    font-family: 'SimSun-ExtB', "Sitka Heading";
-    font-size: 25px;
-    font-weight: normal;
-    color: #fff;
 
     /* content box style */
     margin: 0;
