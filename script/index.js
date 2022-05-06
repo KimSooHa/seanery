@@ -60,7 +60,7 @@ window.addEventListener("load", function(){
 
 // 날짜
 window.addEventListener("load", function() {
-  const section = document.querySelector(".date-weather-info");
+  const section = document.querySelector(".header-bottom-bg-box>section");
   const dateText = section.querySelector(".date");
   const dayText = section.querySelector(".day");
   
@@ -80,12 +80,12 @@ window.addEventListener("load", function() {
     console.log(month + "월" + date + "일" + day + "요일");
     
     
-    if(date < 10)
-      dateText.innerText = month + "/" + "0" + date;
-    else
-      dateText.innerText = month + "/" + date;
+    // if(date < 10)
+      // dateText.innerText = `${month}월0${date}일`;
+    // else
+    dateText.innerText = `${month}월 ${date}일`;;
 
-    dayText.innerText = day;
+    // dayText.innerText = day;
     
   }
 

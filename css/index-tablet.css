@@ -1,4 +1,11 @@
 /* 저작자: 김수하 */
+
+@media screen and (min-width: 400px) {
+    .header-bottom-bg-box .img-box img {
+        object-position: 0;
+    }
+}
+
 @media screen and (min-width: 450px) {
     
     /* -------- facilities --------------------------------------- */

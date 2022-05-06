@@ -5,7 +5,9 @@
     text-indent: -999px;
     
     /* content box style */
-    background-image: url("data:image/svg+xml,%3Csvg id='Icon_open-account-login' data-name='Icon open-account-login' xmlns='http://www.w3.org/2000/svg' width='23.703' height='20.74' viewBox='0 0 23.703 20.74'%3E%3Cpath id='Icon_open-account-login-2' data-name='Icon open-account-login' d='M8.889,0V2.963H20.74V17.777H8.889V20.74H23.7V0Zm2.963,5.926V8.889H0v2.963H11.852v2.963l5.926-4.444Z' fill='%23fff'/%3E%3C/svg%3E%0A");
+    /* background-image: url("data:image/svg+xml,%3Csvg id='Icon_open-account-login' data-name='Icon open-account-login' xmlns='http://www.w3.org/2000/svg' width='23.703' height='20.74' viewBox='0 0 23.703 20.74'%3E%3Cpath id='Icon_open-account-login-2' data-name='Icon open-account-login' d='M8.889,0V2.963H20.74V17.777H8.889V20.74H23.7V0Zm2.963,5.926V8.889H0v2.963H11.852v2.963l5.926-4.444Z' fill='%23fff'/%3E%3C/svg%3E%0A"); */
+    /* background-image: url("data:image/svg+xml,%3Csvg id='Icon_open-account-login' data-name='Icon open-account-login' xmlns='http://www.w3.org/2000/svg' width='23.703' height='20.74' viewBox='0 0 23.703 20.74'%3E%3Cpath id='Icon_open-account-login-2' data-name='Icon open-account-login' d='M8.889,0V2.963H20.74V17.777H8.889V20.74H23.7V0Zm2.963,5.926V8.889H0v2.963H11.852v2.963l5.926-4.444Z' fill='%23333'/%3E%3C/svg%3E%0A"); */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.895' height='20.785' viewBox='0 0 18.895 20.785'%3E%3Cg id='그룹_14367' data-name='그룹 14367' transform='translate(-2 -1)'%3E%3Cpath id='패스_11155' data-name='패스 11155' d='M12.945,19.9a.945.945,0,1,0,0,1.89H20.5a.945.945,0,0,0,.945-.945V1.945A.945.945,0,0,0,20.5,1H12.945a.945.945,0,0,0,0,1.89h6.613V19.9Z' transform='translate(-0.552)' fill='%23333'/%3E%3Cpath id='패스_11156' data-name='패스 11156' d='M2,11.724a.945.945,0,0,0,.945.945H13.891l-2.166,2.166a.945.945,0,1,0,1.336,1.336l3.779-3.779a.945.945,0,0,0,0-1.336L13.06,7.277a.945.945,0,1,0-1.336,1.336l2.166,2.166H2.945A.945.945,0,0,0,2,11.724Z' transform='translate(0 -0.331)' fill='%23333'/%3E%3C/g%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: right top;
     width: 23.7px;
@@ -33,6 +35,10 @@
 
     .img-btn-menu-white{
         background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    }
+
+    .img-btn-menu-black {
+        background-image: url("data:image/svg+xml,%3Csvg id='Icon_ionic-ios-menu' data-name='Icon ionic-ios-menu' xmlns='http://www.w3.org/2000/svg' width='27' height='15.75' viewBox='0 0 27 15.75'%3E%3Cpath id='패스_1' data-name='패스 1' d='M30.375,12.375H5.625A1.128,1.128,0,0,1,4.5,11.25h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,11.25h0A1.128,1.128,0,0,1,30.375,12.375Z' transform='translate(-4.5 -10.125)' fill='%23333'/%3E%3Cpath id='패스_2' data-name='패스 2' d='M30.375,19.125H5.625A1.128,1.128,0,0,1,4.5,18h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,18h0A1.128,1.128,0,0,1,30.375,19.125Z' transform='translate(-4.5 -10.125)' fill='%23333'/%3E%3Cpath id='패스_3' data-name='패스 3' d='M30.375,25.875H5.625A1.128,1.128,0,0,1,4.5,24.75h0a1.128,1.128,0,0,1,1.125-1.125h24.75A1.128,1.128,0,0,1,31.5,24.75h0A1.128,1.128,0,0,1,30.375,25.875Z' transform='translate(-4.5 -10.125)' fill='%23333'/%3E%3C/svg%3E%0A");
     }
 
     .img-btn-menu-bluewhite{
@@ -120,24 +126,26 @@
 
 .btn-search{
    /* text  style */
-   font-family: 'Nueva Std';
-   font-size: 20px;
+   font-family: '나눔명조';
+   font-size: 18px;
    font-weight: bold;
    color: #E6EEF2;
    
     /* content box style */
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 100%;
-   height: 38px;
-   border: 1px solid #B19D74;
-   border-radius: 5px;
-   background-color: #B19D74;
+    min-width: 309px;
+    height: 50px;
+    border: 1px solid #B19D74;
+    border-radius: 5px;
+    background-color: #B19D74;
+   
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-   /* effect */
-   transition: 0.4s;
-   cursor: pointer;
+    /* effect */
+    transition: 0.4s;
+    cursor: pointer;
 }
 
 .btn-search:hover {
@@ -149,7 +157,7 @@
     width: 70px;
     height: 70px;
     overflow: hidden;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='76' height='76' viewBox='0 0 76 76'%3E%3Cdefs%3E%3Cfilter id='패스_20' x='0' y='0' width='76' height='76' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='5' input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='3' result='blur'/%3E%3CfeFlood flood-opacity='0.161'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg transform='matrix(1, 0, 0, 1, 0, 0)' filter='url(%23패스_20)'%3E%3Cpath id='패스_20-2' data-name='패스 20' d='M29,0A29,29,0,1,1,0,29,29,29,0,0,1,29,0Z' transform='translate(9 4)' fill='%23479ddc'/%3E%3C/g%3E%3Cpath id='Icon_material-chat' data-name='Icon material-chat' d='M22.3,3H5.144A2.142,2.142,0,0,0,3.011,5.144L3,24.444l4.289-4.289H22.3a2.151,2.151,0,0,0,2.144-2.144V5.144A2.151,2.151,0,0,0,22.3,3ZM7.289,10.505H20.155V12.65H7.289Zm8.577,5.361H7.289V13.722h8.577Zm4.289-6.433H7.289V7.289H20.155Z' transform='translate(24 20.556)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='80' height='80' viewBox='0 0 80 80'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23d5c8b0'/%3E%3Cstop offset='1' stop-color='%23b19d74'/%3E%3C/linearGradient%3E%3Cfilter id='bg' x='0' y='0' width='80' height='80' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='5' input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='5' result='blur'/%3E%3CfeFlood flood-color='%234e421c' flood-opacity='0.2'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3CclipPath id='clip-path'%3E%3Ccircle id='bg-2' data-name='bg' cx='23' cy='23' r='23' transform='translate(312 651)' fill='%23a7996e'/%3E%3C/clipPath%3E%3ClinearGradient id='linear-gradient-2' x1='-0.24' y1='0.065' x2='0.597' y2='0.712' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23796949'/%3E%3Cstop offset='1' stop-color='%23b19d74'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='btn_add' transform='translate(15 10)'%3E%3Cg transform='matrix(1, 0, 0, 1, -15, -10)' filter='url(%23bg)'%3E%3Ccircle id='bg-3' data-name='bg' cx='25' cy='25' r='25' transform='translate(15 10)' fill='url(%23linear-gradient)'/%3E%3C/g%3E%3Ccircle id='bg-4' data-name='bg' cx='23' cy='23' r='23' transform='translate(2 2)' fill='%23b19d74'/%3E%3Cg id='마스크_그룹_5' data-name='마스크 그룹 5' transform='translate(-310 -649)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_11151' data-name='패스 11151' d='M812.84,2688.036l27.988,30.558-9.223,9.014-1.144,1.144-7.029,7.473-30.82-32.242,3.587-13.969' transform='translate(-468 -2024.452)' fill='url(%23linear-gradient-2)'/%3E%3C/g%3E%3Cpath id='Icon_material-chat' data-name='Icon material-chat' d='M5.144,3H22.3a2.142,2.142,0,0,1,2.134,2.144l.011,19.3-4.289-4.289H5.144A2.151,2.151,0,0,1,3,18.011V5.144A2.151,2.151,0,0,1,5.144,3Zm15.011,7.505H7.289V12.65H20.155Zm-8.577,5.361h8.577V13.722H11.577ZM7.289,9.433H20.155V7.289H7.289Z' transform='translate(11.278 11.278)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     text-indent: -999px;    
 }
