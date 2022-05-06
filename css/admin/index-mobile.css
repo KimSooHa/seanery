@@ -521,10 +521,42 @@ body{
         /* layout */
         width: 120px;
         height: 120px;
-        background-color: grey;
-
         grid-area: graph;
+
+            /* item layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
     }
+
+        .board-type3 .circle-graph .ring{
+            /* layout */
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+
+            /* gradient */
+            background: conic-gradient(
+                rgba(87, 139, 185, 1) 0deg 40deg ,
+                rgba(67, 106, 129, 1) 40deg 140deg,
+                rgba(30, 49, 70, 1) 140deg 330deg,
+                rgba(136, 165, 181, 1) 330deg 360deg
+            );
+
+            /* item layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .board-type3 .circle-graph .ring .white-circular-plate{
+                width: 105px;
+                height: 105px;
+                border-radius: 100px;
+                background-color: white;
+            }
 
     .board-type3 dl{
         /* layout */
