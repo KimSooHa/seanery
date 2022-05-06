@@ -1,3 +1,4 @@
+// 저작자 : 조영인
 // nav-bar, board-type2 관련
 window.addEventListener("load", function(){
     const dashBoardsection = document.querySelector(".dash-board");
@@ -71,30 +72,44 @@ window.addEventListener("load", function(){
     let transitionDeg3 = deg1 + deg2;
     let transitionDeg4 = deg1 + deg2 + deg3;
 
-    const intervalId = setInterval(() => {
-        ringGraph.style.background = 
-        `
-            conic-gradient(
-                rgba(87, 139, 185, 1) 0deg ${deg1 > transitionDeg1 ? transitionDeg1 += 1 : deg1}deg,
-                rgba(255, 255, 255, 1) ${deg1 > transitionDeg1 ? transitionDeg1 : deg1}deg ${deg1}deg,
+    let bTriggerInterval = false;
 
-                rgba(67, 106, 129, 1) ${deg1}deg ${(deg1 + deg2) > transitionDeg2 ? transitionDeg2 += 1 : deg1 + deg2}deg,
-                rgba(255, 255, 255, 1) ${(deg1 + deg2) > transitionDeg2 ? transitionDeg2 : deg1 + deg2}deg ${deg1 + deg2}deg,
+    const boardHeight = parseInt(window.getComputedStyle(board).getPropertyValue("height").split("px")[0]);
+    const boardOffsetTop = board.offsetTop;
+    document.onscroll = (e) =>{
 
-                rgba(30, 49, 70, 1) ${deg1 + deg2}deg ${(deg1 + deg2 + deg3) > transitionDeg3 ? transitionDeg3 += 1 : deg1 + deg2 + deg3}deg,
-                rgba(255, 255, 255, 1) ${(deg1 + deg2 + deg3) > transitionDeg3 ? transitionDeg3 : deg1 + deg2 + deg3}deg ${deg1 + deg2 + deg3}deg,
+        // 첫번째 조건식 : 그래프가 화면에 조금 보이기 시작하는 시점인지 확인. 조금 보이기 시작하는 시점부터 그래프가 그려짐
+        if (window.scrollY + window.innerHeight < boardHeight + boardOffsetTop - 100 || bTriggerInterval == true)
+            return;
 
-                rgba(136, 165, 181, 1) ${deg1 + deg2 + deg3}deg ${360 > transitionDeg4 ? transitionDeg4 += 1 : 360}deg,
-                rgba(255, 255, 255, 1) ${360 > transitionDeg4 ? transitionDeg4 : 360}deg 360deg
-            )
-        `;
+        bTriggerInterval = true;
 
-        if ((transitionDeg1 >= deg1) 
-            && (transitionDeg2 >= (deg1 + deg2))
-            && (transitionDeg3 >= (deg1 + deg2 + deg3))
-            && (transitionDeg4 >= 360)
-        ) 
-            clearInterval(intervalId);
-    }, 0.1);
+        const intervalId = setInterval(() => {
+            ringGraph.style.background = 
+            `
+                conic-gradient(
+                    rgba(87, 139, 185, 1) 0deg ${deg1 > transitionDeg1 ? transitionDeg1 += 1 : deg1}deg,
+                    rgba(255, 255, 255, 1) ${deg1 > transitionDeg1 ? transitionDeg1 : deg1}deg ${deg1}deg,
 
+                    rgba(67, 106, 129, 1) ${deg1}deg ${(deg1 + deg2) > transitionDeg2 ? transitionDeg2 += 1 : deg1 + deg2}deg,
+                    rgba(255, 255, 255, 1) ${(deg1 + deg2) > transitionDeg2 ? transitionDeg2 : deg1 + deg2}deg ${deg1 + deg2}deg,
+
+                    rgba(30, 49, 70, 1) ${deg1 + deg2}deg ${(deg1 + deg2 + deg3) > transitionDeg3 ? transitionDeg3 += 1 : deg1 + deg2 + deg3}deg,
+                    rgba(255, 255, 255, 1) ${(deg1 + deg2 + deg3) > transitionDeg3 ? transitionDeg3 : deg1 + deg2 + deg3}deg ${deg1 + deg2 + deg3}deg,
+
+                    rgba(136, 165, 181, 1) ${deg1 + deg2 + deg3}deg ${360 > transitionDeg4 ? transitionDeg4 += 1 : 360}deg,
+                    rgba(255, 255, 255, 1) ${360 > transitionDeg4 ? transitionDeg4 : 360}deg 360deg
+                )
+            `;
+
+            if ((transitionDeg1 >= deg1) 
+                && (transitionDeg2 >= (deg1 + deg2))
+                && (transitionDeg3 >= (deg1 + deg2 + deg3))
+                && (transitionDeg4 >= 360)
+            ) 
+                clearInterval(intervalId);
+        }, 1);
+    };
+
+    document.onscroll(); // 처음 페이지 로드 될 때 애니메이션이 실행가능하다면 실행하기 위해 한번 호출해줌
 });
