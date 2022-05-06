@@ -55,15 +55,25 @@ body{
     flex-direction: column;
     align-items: center;
 }
+    .modification>div div{
+        /* layout */
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        overflow: hidden;
 
-    .modification>div>img{
+    }
+
+    .modification>div div>img{
         /* layout */
         width: 100px;
         height: 100px;
         border-radius: 50px;
     }
 
-    .modification>div>a{
+    .modification>div div:hover>a{
+        display: inline-block;
+
         /* font style */
         font-family: "Montserrat";
         font-size: 14px;
@@ -71,17 +81,23 @@ body{
         color: #fff;
 
         text-align: center;
-        line-height: 100px;
+        line-height: 140px;
 
         /* layout */
         background-color: rgba(0, 0, 0, 0.2);
+        background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 2H26C26.7956 2 27.5587 2.31607 28.1213 2.87868C28.6839 3.44129 29 4.20435 29 5V26C29 26.7956 28.6839 27.5587 28.1213 28.1213C27.5587 28.6839 26.7956 29 26 29H5C4.20435 29 3.44129 28.6839 2.87868 28.1213C2.31607 27.5587 2 26.7956 2 26V5C2 4.20435 2.31607 3.44129 2.87868 2.87868C3.44129 2.31607 4.20435 2 5 2V2Z' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5 10.25C12.5 10.695 12.368 11.13 12.1208 11.5C11.8736 11.87 11.5222 12.1584 11.111 12.3287C10.6999 12.499 10.2475 12.5436 9.81105 12.4568C9.37459 12.37 8.97368 12.1557 8.65901 11.841C8.34434 11.5263 8.13005 11.1254 8.04323 10.689C7.95642 10.2525 8.00098 9.8001 8.17127 9.38896C8.34157 8.97783 8.62996 8.62643 8.99997 8.37919C9.36998 8.13196 9.80499 8 10.25 8C10.8467 8 11.419 8.23705 11.841 8.65901C12.2629 9.08097 12.5 9.65326 12.5 10.25V10.25Z' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29 20L21.5 12.5L5 29' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 27px, 27px;
+        background-position: 37px 20px;
 
         width: 100px;
         height: 100px;
         border-radius: 50px;
 
         position: relative;
-        top: -100px;
+        top: -105px;
+
+        cursor: pointer;
     }
 
 .modification>form{
@@ -101,26 +117,37 @@ body{
         flex-direction: column;
         align-items: center;
     }
+        .modification>form>fieldset div{
+            /* layout */
+            margin-top: 16px;
+            height: 70px;
 
-        .modification>form>fieldset>label{
+            /* item layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        .modification>form>fieldset div:nth-child(3){
+            height: 150px;
+        }
+            .modification>form>fieldset div:nth-child(3) label:nth-child(3){
+                margin-top: 30px;
+            }
+
+        .modification>form>fieldset div label{
             /* font style */
             font-family: "Montserrat";
             font-size: 14px;
             font-weight: normal;
             color: #707070;
-
-            /* layout */
-            margin-top: 16px;
-            margin-left: 31px;
-            align-self: flex-start;
         }
-
                 
-            .modification>form>fieldset>label:nth-child(2){
+            .modification>form>fieldset div:first-child{
                 margin-top: 23px;
             }
 
-        .modification>form>fieldset>input{
+        .modification>form>fieldset div input{
             /* reset */
             border: none;
 
@@ -136,7 +163,26 @@ body{
             height: 30px;
             border-bottom: 1px solid #DDDDDD;
 
-            margin-top: 15px;
+            margin-top: 5px;
+        }
+
+        .modification>form>fieldset div input::placeholder{
+            font-size: 12px;
+        }
+
+        .modification>form>fieldset div input:focus{
+            outline: none;
+        }
+
+        .modification>form>fieldset div output{
+            /* font style */
+            font-family: "Montserrat";
+            font-size: 11px;
+            font-weight: normal;
+            color: #707070;
+
+            /* layout */
+            margin-top: 3px;
         }
 
     .modification>form>button{

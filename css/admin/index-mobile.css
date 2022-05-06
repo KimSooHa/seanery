@@ -1,5 +1,15 @@
 /* 저작자 : 조영인 */
 /* === LAYOUT ======================== */
+/* --- body ------------------------------- */
+body{
+    /* layout */
+    background-color: rgba(232, 237, 239, 1);
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* --- header ------------------------------- */
 .header{
     /* layout */
@@ -13,6 +23,7 @@
     position: fixed;
     width: 100%;
 
+    z-index: 100;
     /* item layout */
     display: flex;
     flex-direction: row;
@@ -23,6 +34,7 @@
 /* --- main ------------------------------- */
 .main{
     /* layout */
+    width: 100%;
     height: 355.3px;
     background-image: url(../../images/hotel-intro1.jpg);
     background-repeat: no-repeat;
@@ -32,6 +44,44 @@
     /* item layout */
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.main::before{
+    /* layout */
+    content: "";
+    width: 100%;
+    height: 240px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='284.918' height='208.5' viewBox='0 0 284.918 208.5'%3E%3Ctext id='Visitors' transform='translate(99.351 19)' fill='%23e6eef2' font-size='18' font-family='SegoeUI-Bold, Segoe UI' font-weight='700' letter-spacing='0.07em'%3E%3Ctspan x='0' y='0'%3EVISITORS%3C/tspan%3E%3C/text%3E%3Cg id='graph' transform='translate(0 2.5)'%3E%3Cg id='btm' transform='translate(17.816 191)'%3E%3Ctext id='_10' data-name='10' transform='translate(178.731)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='18.266' y='11'%3E10%3C/tspan%3E%3C/text%3E%3Ctext id='_10-2' data-name='10' transform='translate(195.21)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='19.921' y='11'%3E11%3C/tspan%3E%3C/text%3E%3Ctext id='_10-3' data-name='10' transform='translate(219.103)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='18.783' y='11'%3E12%3C/tspan%3E%3C/text%3E%3Ctext id='_9' data-name='9' transform='translate(158.872)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='20.543' y='11'%3E9%3C/tspan%3E%3C/text%3E%3Ctext id='_8' data-name='8' transform='translate(139.013)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='20.383' y='11'%3E8%3C/tspan%3E%3C/text%3E%3Ctext id='_7' data-name='7' transform='translate(119.154)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat'%3E%3Ctspan x='20.653' y='11'%3E7%3C/tspan%3E%3C/text%3E%3Ctext id='_6' data-name='6' transform='translate(99.295)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='20.543' y='11'%3E6%3C/tspan%3E%3C/text%3E%3Ctext id='_5' data-name='5' transform='translate(79.436)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='20.779' y='11'%3E5%3C/tspan%3E%3C/text%3E%3Ctext id='_4' data-name='4' transform='translate(59.577)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='20.257' y='11'%3E4%3C/tspan%3E%3C/text%3E%3Ctext id='_3' data-name='3' transform='translate(41.223)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='20.79' y='11'%3E3%3C/tspan%3E%3C/text%3E%3Ctext id='_2' data-name='2' transform='translate(23.633)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='20.768' y='11'%3E2%3C/tspan%3E%3C/text%3E%3Ctext id='_1' data-name='1' transform='translate(0)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='21.907' y='11'%3E1%3C/tspan%3E%3C/text%3E%3C/g%3E%3Cg id='bars' transform='translate(42.141 31.209)' opacity='0.107'%3E%3Crect id='Bar' width='1' height='149.273' rx='0.5' transform='translate(176.302)' fill='%23fff'/%3E%3Crect id='Bar-2' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(194.963)' fill='%23fff'/%3E%3Crect id='Bar-3' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(220.047)' fill='%23fff'/%3E%3Crect id='Bar-4' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(158.491)' fill='%23fff'/%3E%3Crect id='Bar-5' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(138.239)' fill='%23fff'/%3E%3Crect id='Bar-6' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(98.617)' fill='%23fff'/%3E%3Crect id='Bar-7' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(79.245)' fill='%23fff'/%3E%3Crect id='Bar-8' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(58.153)' fill='%23fff'/%3E%3Crect id='Bar-9' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(43.479)' fill='%23fff'/%3E%3Crect id='Bar-10' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(22.036)' fill='%23fff'/%3E%3Crect id='Bar-11' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(0)' fill='%23fff'/%3E%3C/g%3E%3Cg id='left' transform='translate(0 29)'%3E%3Crect id='Bar-12' data-name='Bar' width='1' height='149.273' rx='0.5' transform='translate(158.217 2.209)' fill='%2388a5b5'/%3E%3Cpath id='패스_792' data-name='패스 792' d='M-6.71,89.826s37.027,76.216,84.039,42.918,40.462-121,144.215-95.441' transform='translate(40 6.291)' fill='none' stroke='%23c4d5eb' stroke-linecap='round' stroke-width='6'/%3E%3Ctext id='_5k' data-name='5k' transform='translate(0 152)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='0' y='0'%3E100%3C/tspan%3E%3C/text%3E%3Ctext id='_10k' data-name='10k' transform='translate(0 105)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='0' y='0'%3E200%3C/tspan%3E%3C/text%3E%3Ctext id='_15k' data-name='15k' transform='translate(0 58)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='0' y='0'%3E300%3C/tspan%3E%3C/text%3E%3Ctext id='_20k' data-name='20k' transform='translate(0 11)' fill='%23fff' font-size='11' font-family='Montserrat-Regular, Montserrat' opacity='0.6'%3E%3Ctspan x='0' y='0'%3E400%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 300px 250px;
+    background-position: center;
+
+    position: absolute;
+    top: 73px;
+}
+
+/* --- dash-board ------------------------------- */
+.dash-board{
+    /* layout */
+    width: 338px;
+    margin-top: 30px;
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "nav-bar nav-bar" 1fr
+        "gap gap" 20px
+        "total-booking total-members" 2fr
+        "gap2 gap2" 10px
+        "rooms-info rooms-info" 3fr
+        "gap3 gap3" 20px
+        "ratio-info ratio-info" 4fr
+        / 1fr 1fr;
 }
 
 /* --- menu ------------------------------- */
@@ -40,7 +90,7 @@
     height: 489px;
 
     /* item layout */
-    padding-top: 77.6px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,6 +138,7 @@
 .main>div{
     /* layout */
     margin-top: auto;
+    width: 100%;
     height: 43px;
     background-color: rgba(0, 0, 0, 0.56);
 
@@ -104,17 +155,17 @@
         font-weight: normal;
         color: #fff;
 
-        /* layout */
-        margin-left: 25px;
-        width: 100px;
-        height: 44px;
-
         /* item layout */
         display: grid;
         grid-template: 
             "date weather no" 1fr
             "day weather temp" 1fr
             / 1fr 2fr 1fr;
+
+        /* layout */
+        width: 100px;
+        height: 44px;
+
     }
 
         .main dl dt{
@@ -160,19 +211,434 @@
         margin-right: 30px;
     }
 
-    .main div>a{
+    .main div div{
         /* text */
         font-family: "Minion Pro";
         font-size: 20px;
         font-weight: normal;
         color: #fff;
+
+        /* layout */
+        display: inline-block;
+        padding-left: 15px;
     }
 
-        .main div>a>span{
+/* --- dash-board ------------------------------- */
+/* nav-bar */
+.nav-bar{
+    /* layout */
+    box-sizing: border-box;
+    width: 338px;
+    height: 34px;
+    padding: 3px;
+    border-radius: 46px;
+    background-color: rgba(41, 41, 41, 0.9);
+
+    grid-area: nav-bar;
+
+    /* item layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .nav-bar li{
+        /* layout */
+        width: 106px;
+        height: 30px;
+
+        /* item layout*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-bar li a{
+        /* text */
+        font-family: "Poppins";
+        font-size: 12px;
+        font-weight: bold;
+        color: rgba(191, 191, 191, 1);
+    }
+
+    .nav-bar li.pointed{
+        /* layout */
+        background-color: rgba(151, 126, 75, 1);
+        border-radius: 46px;
+    }
+
+    .nav-bar li.pointed a{
+        /* text*/
+        color: white;
+    }
+
+/* board-type1 */
+.total-booking {
+    grid-area: total-booking;
+}
+    .total-booking::after {
+        content: "";
+        width: 62px;
+        height: 62px;
+
+        position:absolute;
+        right: 10px;
+
+        background-image: url("data:image/svg+xml,%3Csvg id='Icons_Widget_Illustration' data-name='Icons / Widget Illustration' xmlns='http://www.w3.org/2000/svg' width='62' height='62' viewBox='0 0 62 62'%3E%3Cg id='ic-revenues'%3E%3Cg id='Oval' fill='rgba(0,88,255,0.1)' stroke='rgba(0,88,255,0.1)' stroke-miterlimit='10' stroke-width='1'%3E%3Ccircle cx='31' cy='31' r='31' stroke='none'/%3E%3Ccircle cx='31' cy='31' r='30.5' fill='none'/%3E%3C/g%3E%3Cpath id='usd-circle' d='M11.909,9.727h4.364a1.091,1.091,0,1,0,0-2.182H14.091V6.455a1.091,1.091,0,0,0-2.182,0V7.545a3.273,3.273,0,0,0,0,6.545h2.182a1.091,1.091,0,1,1,0,2.182H9.727a1.091,1.091,0,0,0,0,2.182h2.182v1.091a1.091,1.091,0,0,0,2.182,0V18.455a3.273,3.273,0,0,0,0-6.545H11.909a1.091,1.091,0,0,1,0-2.182ZM13,1A12,12,0,1,0,25,13,12,12,0,0,0,13,1Zm0,21.818A9.818,9.818,0,1,1,22.818,13,9.818,9.818,0,0,1,13,22.818Z' transform='translate(18 18)' fill='%235782b9'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 62px 62px;
+        background-position: center;
+    }
+
+.total-members {
+    grid-area: total-members;
+    justify-self: end;
+    margin-right: 4px;
+}
+    .total-members::after {
+        content: "";
+        width: 62px;
+        height: 62px;
+
+        position:absolute;
+        right: 10px;
+
+        background-image: url("data:image/svg+xml,%3Csvg id='Icons_Widget_Illustration' data-name='Icons / Widget Illustration' xmlns='http://www.w3.org/2000/svg' width='62' height='62' viewBox='0 0 62 62'%3E%3Cg id='ic-users'%3E%3Cg id='Oval' fill='rgba(0,88,255,0.1)' stroke='rgba(0,88,255,0.1)' stroke-miterlimit='10' stroke-width='1'%3E%3Ccircle cx='31' cy='31' r='31' stroke='none'/%3E%3Ccircle cx='31' cy='31' r='30.5' fill='none'/%3E%3C/g%3E%3Cg id='users' transform='translate(19 19)'%3E%3Cpath id='패스_450' data-name='패스 450' d='M0,0H24V24H0Z' fill='none'/%3E%3Ccircle id='타원_11' data-name='타원 11' cx='4' cy='4' r='4' transform='translate(5 3)' fill='none' stroke='%235782b9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='패스_451' data-name='패스 451' d='M3,21V19a4,4,0,0,1,4-4h4a4,4,0,0,1,4,4v2' fill='none' stroke='%235782b9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='패스_452' data-name='패스 452' d='M16,3.13a4,4,0,0,1,0,7.75' fill='none' stroke='%235782b9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='패스_453' data-name='패스 453' d='M21,21V19a4,4,0,0,0-3-3.85' fill='none' stroke='%235782b9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 62px 62px;
+        background-position: center;
+    }
+
+.board-type1{
+    /* layout */
+    width: 158px;
+    height: 82px;
+    background-color: white;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+    padding: 5px 12px;
+
+    box-shadow: 0 1px 4px rgba(21, 34, 50, 0.08);
+
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+}
+
+    .board-type1 h2{
+        /* text */
+        font-size: 16px;
+        font-weight: normal;
+        font-family: 'Poppins';
+        color: rgba(90, 96, 127, 1);
+
+        /* layout */
+        padding: 0;
+        margin: 0;
+    }
+
+    .board-type1 div{
+        /* text */
+        font-weight: normal;
+        font-family: 'Poppins';
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .board-type1 div span:nth-child(1){
+        /* layout */
+        display: block;
+        margin-bottom: auto;
+    }
+
+    .board-type1 div span:nth-child(2){
+        /* text */
+        font-size: 12px;
+        font-weight: bold;
+        color: rgba(45, 69, 96, 1);
+    }
+
+    .arrow.up{
+        /* text */
+        color: transparent;
+        /* layout */
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.04004 2.87402V12.126' stroke='%23436A81' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.9521 5.70703L7.95215 2.70703' stroke='%23436A81' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.12598 5.70703L8.12598 2.70703' stroke='%23436A81' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px;
+    }
+
+    .arrow.down{
+        /* text */
+        color: transparent;
+        /* layout */
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2004_1517)'%3E%3Cpath d='M7.50293 12.252L7.50293 2.99995' stroke='%2336679F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.59082 9.41895L7.59082 12.4189' stroke='%2336679F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.417 9.41895L7.41699 12.4189' stroke='%2336679F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2004_1517'%3E%3Crect width='15.126' height='15.126' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px;
+    }
+
+    .board-type1 div span:nth-child(4){
+        /* text */
+        font-size: 12px;
+        font-weight: normal;
+        color: rgba(126, 132, 163, 1);
+    }
+
+/* board-type2 */
+.rooms-info {
+    grid-area: rooms-info;
+}
+
+.board-type2{
+    /* layout */
+    width: 341px;
+    height: 146px;
+    border-radius: 20px;
+    background-color: white;
+
+    box-sizing: border-box;
+    padding: 9px;
+    padding-bottom: 18px;
+
+    box-shadow: 0 1px 4px rgba(21, 34, 50, 0.08);
+
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "title time space" 4fr
+        "info info info" 6fr
+        / 3fr 7fr 3fr;
+}
+    .board-type2 h2{
+        /* text */
+        font-family: "Minion Pro";
+        font-size: 13px;
+        font-weight: bold;
+
+        /* layout */
+        grid-area: title;
+        align-self: center;
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    .board-type2>div{
+        /* layout */
+        grid-area: time;
+        justify-self: center;
+
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .board-type2>div a{
             /* layout */
-            display: inline-block;
-            padding-left: 15px;
+            width: 7.5px;
+            height: 14px;
         }
+
+        .board-type2>div span{
+            /* text */
+            font-family: "Muli";
+            font-size: 13px;
+            font-weight: bold;
+            color: rgba(45, 69, 96, 1);
+
+            /* layout */
+            margin-left: 17px;
+            margin-right: 17px;
+        }
+    
+
+    .board-type2 dl{
+        /* layout */
+        grid-area: info;
+
+        margin: 0;
+        border-radius: 20px;
+        padding: 17px 13px;
+        background-color: rgba(237, 242, 245, 1);
+
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+        /* item layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .board-type2 dl li{
+            /* text */
+            font-size: 11px;
+            font-weight: normal;
+            color: rgba(112, 112, 112, 1);
+
+            /* item layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .board-type2 dl li dd{
+                /* layout */
+                margin: 0;
+                margin-top: 10px;
+            }
+
+/* board-type3 */
+.ratio-info {
+    grid-area: ratio-info;
+}
+
+.board-type3{
+    /* layout */
+    width: 341px;
+    height: 180px;
+
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 9px 18px 15px 18px;
+
+    background-color: white;
+
+    box-shadow: 0 1px 4px rgba(21, 34, 50, 0.08);
+
+    /* item layout */
+    display: grid;
+    grid-template: 
+        "title title" 1fr
+        "graph table" 8fr
+        /1fr 1fr;
+}
+
+    .board-type3 h2{
+        /* text */
+        font-size: 13px;
+        font-weight: bold;
+        font-family: "Minion Pro";
+        color: rgba(30, 49, 70, 1);
+
+        /* layout */
+        grid-area: title;
+    }
+
+    .board-type3 .circle-graph{
+        /* layout */
+        width: 120px;
+        height: 120px;
+        grid-area: graph;
+
+            /* item layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+    }
+
+        .board-type3 .circle-graph .ring{
+            /* layout */
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+
+            /* gradient */
+            /* background: conic-gradient(
+                rgba(87, 139, 185, 1) 0deg 40deg ,
+                rgba(67, 106, 129, 1) 40deg 140deg,
+                rgba(30, 49, 70, 1) 140deg 330deg,
+                rgba(136, 165, 181, 1) 330deg 360deg
+            ); */
+
+
+            /* item layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .board-type3 .circle-graph .ring .white-circular-plate{
+                width: 105px;
+                height: 105px;
+                border-radius: 100px;
+                background-color: white;
+            }
+
+    .board-type3 dl{
+        /* layout */
+        margin: 0;
+        width: 145px;
+        grid-area: table;
+        align-self: start;
+    }
+
+        .board-type3 dl li{
+            /* layout */
+            margin-bottom: 15px;
+
+            /* item layout */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+            .board-type3 dl li::before{
+                content: "";
+
+                /* layout */
+                width: 8px;
+                height: 8px;
+                border-radius: 2px;
+                background-color: rgba(30, 49, 70, 1);
+                margin-right: 15px;
+            }
+
+            .board-type3 dl li:nth-child(2)::before{
+                background-color: rgba(67, 106, 129, 1);
+            }
+
+            .board-type3 dl li:nth-child(3)::before{
+                background-color: rgba(87, 139, 185, 1);
+            }
+
+            .board-type3 dl li:nth-child(4)::before{
+                background-color: rgba(136, 165, 181, 1);
+            }
+
+            .board-type3 dl li dt{
+                /* text */
+                font-family: "Poppins";
+                font-size: 11px;
+                font-weight: normal;
+                color: rgba(19, 21, 35, 1);
+
+                /* layout */
+                margin-right: auto;
+            }
+
+            .board-type3 dl li dd{
+                /* text */
+                font-family: "Poppins";
+                font-size: 14px;
+                font-weight: bold;
+                color: rgba(19, 21, 35, 1);
+            }
+
+
 /* --- menu ------------------------------- */
 .menu ul{
     /* layout */
@@ -303,15 +769,12 @@
 
 .menu ul>li:nth-child(5){
     /* layout */
-    grid-area: message;
-    display: inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
     width: 64px;
     height: 64px;
 
-    /* item layout */
-    position: relative;
-    top: -30px;
-    left : 80px;
 }
     .menu ul>li:nth-child(5)>a{
         /* text */
