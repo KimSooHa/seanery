@@ -132,7 +132,8 @@
    color: #E6EEF2;
    
     /* content box style */
-    min-width: 309px;
+    width: 100%;
+    
     height: 50px;
     border: 1px solid #B19D74;
     border-radius: 5px;
