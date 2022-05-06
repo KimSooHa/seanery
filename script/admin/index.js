@@ -3,6 +3,11 @@ window.addEventListener("load", function(){
     const navBar = dashBoardsection.querySelector(".nav-bar");
     const navBarLis = navBar.querySelectorAll("li");
 
+    const todayBoard = dashBoardsection.querySelector(".today.board-type2");
+    const weekBoard = dashBoardsection.querySelector(".week.board-type2");
+    const monthBoard = dashBoardsection.querySelector(".month.board-type2");
+
+
     navBar.onclick = (e)=>{
         e.preventDefault();
 
@@ -20,9 +25,26 @@ window.addEventListener("load", function(){
             }
         }
 
-        if (pointedNavBarLi !== navAnchor.parentNode) {
-            navAnchor.parentNode.classList.add("pointed");
-            pointedNavBarLi.classList.remove("pointed");
-        }
+        if (pointedNavBarLi === navAnchor.parentNode) 
+            return;
+
+        navAnchor.parentNode.classList.add("pointed");
+        pointedNavBarLi.classList.remove("pointed");
+
+        const pointedBoard = 
+            pointedNavBarLi.querySelector("A").innerText == "Today" 
+            ? todayBoard 
+            : pointedNavBarLi.querySelector("A").innerText == "Week" 
+            ? weekBoard
+            : monthBoard;
+
+        pointedBoard.classList.add("d-none");
+
+        if (navAnchor.innerText == "Today") 
+            todayBoard.classList.remove("d-none");
+        else if (navAnchor.innerText == "Week") 
+            weekBoard.classList.remove("d-none");
+        else if (navAnchor.innerText == "Month") 
+            monthBoard.classList.remove("d-none");
     };
 });

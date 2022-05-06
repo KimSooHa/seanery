@@ -259,12 +259,38 @@ body{
 .total-booking {
     grid-area: total-booking;
 }
+    .total-booking::after {
+        content: "";
+        width: 62px;
+        height: 62px;
+
+        position:absolute;
+        right: 10px;
+
+        background-image: url("data:image/svg+xml,%3Csvg id='Icons_Widget_Illustration' data-name='Icons / Widget Illustration' xmlns='http://www.w3.org/2000/svg' width='62' height='62' viewBox='0 0 62 62'%3E%3Cg id='ic-revenues'%3E%3Cg id='Oval' fill='rgba(0,88,255,0.1)' stroke='rgba(0,88,255,0.1)' stroke-miterlimit='10' stroke-width='1'%3E%3Ccircle cx='31' cy='31' r='31' stroke='none'/%3E%3Ccircle cx='31' cy='31' r='30.5' fill='none'/%3E%3C/g%3E%3Cpath id='usd-circle' d='M11.909,9.727h4.364a1.091,1.091,0,1,0,0-2.182H14.091V6.455a1.091,1.091,0,0,0-2.182,0V7.545a3.273,3.273,0,0,0,0,6.545h2.182a1.091,1.091,0,1,1,0,2.182H9.727a1.091,1.091,0,0,0,0,2.182h2.182v1.091a1.091,1.091,0,0,0,2.182,0V18.455a3.273,3.273,0,0,0,0-6.545H11.909a1.091,1.091,0,0,1,0-2.182ZM13,1A12,12,0,1,0,25,13,12,12,0,0,0,13,1Zm0,21.818A9.818,9.818,0,1,1,22.818,13,9.818,9.818,0,0,1,13,22.818Z' transform='translate(18 18)' fill='%235782b9'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 62px 62px;
+        background-position: center;
+    }
 
 .total-members {
     grid-area: total-members;
     justify-self: end;
     margin-right: 4px;
 }
+    .total-members::after {
+        content: "";
+        width: 62px;
+        height: 62px;
+
+        position:absolute;
+        right: 10px;
+
+        background-image: url("data:image/svg+xml,%3Csvg id='Icons_Widget_Illustration' data-name='Icons / Widget Illustration' xmlns='http://www.w3.org/2000/svg' width='62' height='62' viewBox='0 0 62 62'%3E%3Cg id='ic-users'%3E%3Cg id='Oval' fill='rgba(0,88,255,0.1)' stroke='rgba(0,88,255,0.1)' stroke-miterlimit='10' stroke-width='1'%3E%3Ccircle cx='31' cy='31' r='31' stroke='none'/%3E%3Ccircle cx='31' cy='31' r='30.5' fill='none'/%3E%3C/g%3E%3Cg id='users' transform='translate(19 19)'%3E%3Cpath id='패스_450' data-name='패스 450' d='M0,0H24V24H0Z' fill='none'/%3E%3Ccircle id='타원_11' data-name='타원 11' cx='4' cy='4' r='4' transform='translate(5 3)' fill='none' stroke='%235782b9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='패스_451' data-name='패스 451' d='M3,21V19a4,4,0,0,1,4-4h4a4,4,0,0,1,4,4v2' fill='none' stroke='%235782b9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='패스_452' data-name='패스 452' d='M16,3.13a4,4,0,0,1,0,7.75' fill='none' stroke='%235782b9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='패스_453' data-name='패스 453' d='M21,21V19a4,4,0,0,0-3-3.85' fill='none' stroke='%235782b9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 62px 62px;
+        background-position: center;
+    }
 
 .board-type1{
     /* layout */
@@ -285,6 +311,7 @@ body{
     justify-content: center;
     align-items: flex-start;
 
+    position: relative;
 }
 
     .board-type1 h2{
@@ -407,6 +434,7 @@ body{
             /* text */
             font-family: "Muli";
             font-size: 13px;
+            font-weight: bold;
             color: rgba(45, 69, 96, 1);
 
             /* layout */
@@ -445,6 +473,12 @@ body{
             justify-content: center;
             align-items: center;
         }
+
+            .board-type2 dl li dd{
+                /* layout */
+                margin: 0;
+                margin-top: 10px;
+            }
 
 /* board-type3 */
 .ratio-info {
@@ -519,6 +553,18 @@ body{
                 border-radius: 2px;
                 background-color: rgba(30, 49, 70, 1);
                 margin-right: 15px;
+            }
+
+            .board-type3 dl li:nth-child(2)::before{
+                background-color: rgba(67, 106, 129, 1);
+            }
+
+            .board-type3 dl li:nth-child(3)::before{
+                background-color: rgba(87, 139, 185, 1);
+            }
+
+            .board-type3 dl li:nth-child(4)::before{
+                background-color: rgba(136, 165, 181, 1);
             }
 
             .board-type3 dl li dt{
