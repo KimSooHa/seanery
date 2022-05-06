@@ -1,3 +1,4 @@
+// nav-bar, board-type2 관련
 window.addEventListener("load", function(){
     const dashBoardsection = document.querySelector(".dash-board");
     const navBar = dashBoardsection.querySelector(".nav-bar");
@@ -47,4 +48,55 @@ window.addEventListener("load", function(){
         else if (navAnchor.innerText == "Month") 
             monthBoard.classList.remove("d-none");
     };
+});
+
+// board-type3 그래프 그리기 관련
+window.addEventListener("load", function(){
+    const dashBoardsection = document.querySelector(".dash-board");
+    const board = dashBoardsection.querySelector(".ratio-info.board-type3");
+    const numSuper = parseInt(board.querySelector("dl li:first-child dd").innerText);
+    const numStand = parseInt(board.querySelector("dl li:nth-child(2) dd").innerText);
+    const numStudio = parseInt(board.querySelector("dl li:nth-child(3) dd").innerText);
+    const numRoyal = parseInt(board.querySelector("dl li:nth-child(4) dd").innerText);
+
+    const numTotal = numSuper + numStand + numStudio + numRoyal;
+    const deg1 = 360 * (numStudio / numTotal);
+    const deg2 = 360 * (numStand / numTotal);
+    const deg3 = 360 * (numSuper / numTotal);
+
+    const ringGraph = board.querySelector(".circle-graph .ring");
+
+    let transitionDeg1 = 0;
+    let transitionDeg2 = deg1;
+    let transitionDeg3 = deg1 + deg2;
+    let transitionDeg4 = deg1 + deg2 + deg3;
+
+                // rgba(255, 255, 255, 1) ${deg1 > transitionDeg1 ? transitionDeg1 : deg1}deg ${deg1}deg,
+                // rgba(255, 255, 255, 1) ${(deg1 + deg2) > transitionDeg2 ? transitionDeg2 : deg1 + deg2}deg ${deg1 + deg2}deg,
+                // rgba(255, 255, 255, 1) ${(deg1 + deg2 + deg3) > transitionDeg3 ? transitionDeg3 : deg1 + deg2 + deg3}deg ${deg1 + deg2 + deg3}deg,
+                // rgba(255, 255, 255, 1) ${360 > transitionDeg4 ? transitionDeg4 : 360}deg 360deg,
+    const intervalId = setInterval(() => {
+        ringGraph.style.background = 
+        `
+            conic-gradient(
+                rgba(87, 139, 185, 1) 0deg ${deg1 > transitionDeg1 ? transitionDeg1 += 1 : deg1}deg,
+
+                rgba(67, 106, 129, 1) ${deg1}deg ${(deg1 + deg2) > transitionDeg2 ? transitionDeg2 += 1 : deg1 + deg2}deg,
+
+                rgba(30, 49, 70, 1) ${deg1 + deg2}deg ${(deg1 + deg2 + deg3) > transitionDeg3 ? transitionDeg3 += 1 : deg1 + deg2 + deg3}deg,
+
+                rgba(136, 165, 181, 1) ${deg1 + deg2 + deg3}deg ${360 > transitionDeg4 ? transitionDeg4 += 1 : 360}deg
+            )
+        `;
+
+        if ((transitionDeg1 >= deg1) 
+            && (transitionDeg2 >= (deg1 + deg2))
+            && (transitionDeg3 >= (deg1 + deg2 + deg3))
+            && (transitionDeg4 >= 360)
+        ) {
+            console.log("adf");
+            clearInterval(intervalId);
+        }
+    }, 0.1);
+
 });

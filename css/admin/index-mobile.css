@@ -537,12 +537,13 @@ body{
             border-radius: 100px;
 
             /* gradient */
-            background: conic-gradient(
+            /* background: conic-gradient(
                 rgba(87, 139, 185, 1) 0deg 40deg ,
                 rgba(67, 106, 129, 1) 40deg 140deg,
                 rgba(30, 49, 70, 1) 140deg 330deg,
                 rgba(136, 165, 181, 1) 330deg 360deg
-            );
+            ); */
+
 
             /* item layout */
             display: flex;
