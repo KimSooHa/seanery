@@ -36,7 +36,7 @@ class Dialog{
     confirm(){
         console.log("요금보기 세부사항");
         
-        var html = `
+        var html = String.raw`
         <form action=""class="screen">
             <div class = "dlg">
                 <h1 class="d-none">객실별 인원수</h1>
@@ -152,6 +152,7 @@ class Dialog{
                 </div>
                 <div class="btn-reserv">
                     <a href=""><input type="button" value="예약하기"></a>
+                    
                 </div>
         </form>
         `;
@@ -617,12 +618,16 @@ class Dialog{
                     return;
                     
                     adultInput.value = adultInt + 1;
+
+                    console.log("adult 더하기");
                 } // adult 빼기 버튼
                 else if(e.target == adultMinus) {
                 if(adultInt <= 1)
                     return;
                     
                     adultInput.value = adultInt - 1;
+
+                    console.log("adult 빼기");
                 }
                 
                 // kid 더하기 버튼
@@ -632,6 +637,8 @@ class Dialog{
                 return;
                 
                 kidInput.value = kidInt + 1;
+                
+                console.log("kid 더하기");
                 }
                 // kid 빼기 버튼
                 else if(e.target == kidMinus) {
@@ -639,6 +646,8 @@ class Dialog{
                 return;
                 
                 kidInput.value = kidInt - 1;
+
+                console.log("kid 더하기");
             
                 }
         
@@ -717,6 +726,7 @@ class Dialog{
 
 
     }
+    
 
 
 
