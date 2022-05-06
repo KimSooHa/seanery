@@ -211,19 +211,17 @@ body{
         margin-right: 30px;
     }
 
-    .main div>a{
+    .main div div{
         /* text */
         font-family: "Minion Pro";
         font-size: 20px;
         font-weight: normal;
         color: #fff;
-    }
 
-        .main div>a>span{
-            /* layout */
-            display: inline-block;
-            padding-left: 15px;
-        }
+        /* layout */
+        display: inline-block;
+        padding-left: 15px;
+    }
 
 /* --- dash-board ------------------------------- */
 /* nav-bar */
