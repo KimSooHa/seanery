@@ -249,34 +249,34 @@ window.addEventListener("load", function() {
 
 // --- rooms --------------------------------------
 
-window.addEventListener("load", function() {
+// window.addEventListener("load", function() {
 
-  var section = document.querySelector(".rooms");
-  var ul = section.querySelector("ul");
-  var imgBox = section.querySelector(".img-box");
-  var img = imgBox.querySelectorAll("img");
+//   var section = document.querySelector(".rooms");
+//   var ul = section.querySelector("ul");
+//   var imgBox = section.querySelector(".img-box");
+//   var img = imgBox.querySelectorAll("img");
   
-  var lis = ul.children;
+//   var lis = ul.children;
   
   
-  ul.addEventListener("mouseover", function(e) {
+//   ul.addEventListener("mouseover", function(e) {
     
-    if(e.target.nodeName != "A")
-    return;
+//     if(e.target.nodeName != "A")
+//     return;
     
-    for(var i=0; i<lis.length; i++) {
+//     for(var i=0; i<lis.length; i++) {
       
-      if(imgBox.children[i].classList.contains("over"))
-        img[i].classList.remove("over");
+//       if(imgBox.children[i].classList.contains("over"))
+//         img[i].classList.remove("over");
       
-      if(e.target == lis[i].firstElementChild)
-        img[i].classList.add("over");
+//       if(e.target == lis[i].firstElementChild)
+//         img[i].classList.add("over");
       
-    }
+//     }
 
-  });
+//   });
   
-});
+// });
 
 // --- gallery --------------------------------------
 

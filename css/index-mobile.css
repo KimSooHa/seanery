@@ -16,12 +16,14 @@ body {
     /* layout */
     position: fixed;
     z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-left: 16px;
     padding-right: 20px;
     box-sizing: border-box;
+
+    /* item layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header div {
@@ -95,6 +97,7 @@ body {
         grid-template-rows: repeat(2,16px); */
         /* column-gap: 7px; */
 
+        /* content box style */
         /* display: flex; */
         width: 100%;
         /* height: 100%; */
@@ -187,14 +190,16 @@ body {
     /* content box style */
     /* width: 100%; */
     height: 252px;
-
+    
     /* layout */
+    position: relative;
+    top: -35px;
+
+    /* item layout */
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
-    position: relative;
-    top: -35px;
     /* flex-basis: 339px; */
     flex-shrink: 0;
     
@@ -204,13 +209,15 @@ body {
     /* content box style */
     /* width: 100%; */
     height: 100%;
-    padding: 19px 17px 20px 17px;
-    margin: 0 18px;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-sizing: border-box;
-    
+
     /* layout */
+    padding: 19px 17px 20px 17px;
+    margin: 0 18px;
+    
+    /* item layout */
     display: flex;   
     flex-direction: column;
     justify-content: space-between;
@@ -225,7 +232,7 @@ body {
         /* margin: 0 15px; */
         box-sizing: border-box;
         
-        /* layout */
+        /* item layout */
         /* display: flex; */
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(1fr, auto));
@@ -238,12 +245,22 @@ body {
         padding: 0;
         margin-right: 0;
         position: relative;
-        border: none;
+        /* border: none; */
         border-bottom: 1px solid #F0F0F0;
         
         /* layout */
         display: flex;
         justify-content: space-between;
+    }
+
+    .simple-search form .select-date::after {
+        content: "";
+        height: 20px;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        margin-top: -35px;
+        border-right: 1px solid #DEDEDE;
     }
     
     .simple-search form .select-date div {
@@ -353,98 +370,98 @@ body {
 .services {
     /* content box style */
     background-color: #FFFFFF;
+    padding: 0 18px;
     padding-top: 40.5px;
     padding-bottom: 80px;
+    border-bottom: 1px solid #F0F0F0;
 
     /* layout */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .services ul {
+    /* layout */
+    width: 280px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 15px;
+    flex-shrink: 0;
 }
 
-.services ul li {
-    display: flex;
-}
 
 /* -------- rooms --------------------------------------- */
 .rooms {
-    height: 386px;
-    position: relative;
-    transition: 0.7s;
+    /* content box style */
+    /* height: 386px; */
+    /* position: relative; */
+    /* width: 100%; */
+    padding: 40px 18px;
+    /* padding-top: 40px; */
+    border-top: 1px solid #F0F0F0;
+    background-color: #FFFFFF;
+
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+
+    /* transition: 0.7s; */
 }
 
 
     .rooms .rooms-list {
-        position: absolute;
-        left: 28px;
-        bottom: 0;
+        /* content box style */
+        position: relative;
+        /* left: 28px; */
+        /* bottom: 0; */
+        /* width: 100%; */
+        height: 240px;
+        margin-top: 30px;
     }
 
     .rooms .rooms-list>ul {
         /* layout */
-        position: absolute;
-        left: 10%;
+        position: relative;
+        /* left: 0; */
         /* top: 18px; */
+        /* width: 100%; */
         height: 100%;
 
         /* item layout */
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        /* flex-direction: column; */
+        /* justify-content: space-around; */
     }
 
-    .rooms .img-box {
-        /* layout */
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        overflow: hidden;
-    }
-
-    .rooms .img-box::before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.1);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-    }
 
     .rooms .more {
-        position: absolute;
-        right: 17px;
-        bottom: 16px;
+        margin-top: 30px;
     }
 
 /* -------- gallery --------------------------------------- */
 .gallery {
+    /* content box style */
+    background-color: #FFFFFF;
+
     /* layout */
-    height: 180px;
-    margin-top: 105px;
-    /* position: relative; */
+    /* height: 180px; */
+    padding: 40px 18px;
+    margin-top: 10px;
 }
 
-/* .gallery div {
-    width: 600px;
-    display: inline-block;
-    position: absolute;
-} */
-
 .gallery ul {
+    
     /* layout */
     /* width: 600px; */
-    margin-top: 54px;
+    height: 240px;
+    margin-top: 31px;
     padding: 0;
     position: relative;
     left: 0;
@@ -457,13 +474,11 @@ body {
 
 /* -------- review --------------------------------------- */
 .review {
-    height: 380px;
-    /* background: url("../images/163701843.jpg")
-                no-repeat -120px 30px / 641px 361px; */
-    background: url("../images/outside-sunset.jpg")
-                no-repeat -120px 30px / cover;
+    border-top: 1px solid #F0F0F0;
+    /* height: 380px; */
+    background-color: #FFFFFF;
     position: relative;
-    margin-top: 100px;
+    padding: 40px 18px;
 
     /* layout */
     /* display: flex; */
@@ -492,9 +507,10 @@ body {
 
 /* -------- location --------------------------------------- */
 .location {
-    height: 600px;
     box-sizing: border-box;
-    margin-top: 100px;
+    margin-top: 10px;
+    padding: 40px 18px 80px 18px;
+    background-color: #FFFFFF;
 
     /* layout */
     display: flex;
@@ -544,16 +560,15 @@ body {
     /* text */
     /* layout */
     height: 184px;
-    background: rgba(112, 112, 112, 0.23) url("../images/sand.jpg")
-                no-repeat center / cover;
+    background-color: #DEDEDE;
     align-content: center;
     justify-content: center;
+
     /* item layout */
     display: grid;
     grid-template: 17px 40px 40px / 100px auto;
     column-gap: 21px;
     row-gap: 13px;
-    /* effect */
     
 }
 
@@ -695,11 +710,8 @@ body {
     /* height: 102px; */
     /* margin-left: 16px; */
     /* box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16); */
+    overflow: hidden;
 }
-
-    .simple-search form .select-date .check-in {
-        padding-right: .5rem;
-    }
 
 
     .simple-search form .select-date .check-out {
@@ -738,7 +750,7 @@ body {
         width: 100%;
         /* height: 25px; */
         /* padding: 0; */
-        padding-left: 20px;
+        /* padding-left: 20px; */
         margin-top: 15px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.4' height='14.4' viewBox='0 0 14.4 14.4'%3E%3Cg id='calendar' transform='translate(0.2 0.2)'%3E%3Cpath id='패스_1582' data-name='패스 1582' d='M12.2,1.094H10.938V.438a.438.438,0,0,0-.875,0v.656H3.938V.438a.438.438,0,0,0-.875,0v.656H1.8A1.807,1.807,0,0,0,0,2.9v9.3A1.807,1.807,0,0,0,1.8,14H12.2A1.807,1.807,0,0,0,14,12.2V2.9A1.807,1.807,0,0,0,12.2,1.094ZM1.8,1.969H3.063v.438a.438.438,0,0,0,.875,0V1.969h6.125v.438a.438.438,0,0,0,.875,0V1.969H12.2a.931.931,0,0,1,.93.93V3.938H.875V2.9A.931.931,0,0,1,1.8,1.969ZM12.2,13.125H1.8a.931.931,0,0,1-.93-.93V4.813h12.25V12.2A.931.931,0,0,1,12.2,13.125Z' fill='%23b19d74' stroke='%23b19d74' stroke-width='0.4'/%3E%3C/g%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
@@ -748,6 +760,7 @@ body {
 
         /* layout */
         display: flex;
+        justify-content: center;
         align-items: center;
 
         /* effect */
@@ -765,22 +778,14 @@ body {
         outline: none;
     }
 
-    .simple-search form .select-date .check-in input {
-        /* text-align: start; */
-        /* padding-right: 34.5px; */
-        padding-right: .5rem;
-        border-right: 1px solid #DEDEDE;
-    }
-
     .simple-search form .select-date .check-out input {
         /* text-align: end; */
-        margin-left: 15px;
+        margin-left: 20px;
     }
 
 .simple-search form .select-num {
     margin: 0;
     padding: 0;
-    /* box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.16); */
 }
 
     .simple-search form .select-num div {
@@ -877,10 +882,34 @@ body {
     font-size: 20px;
     font-weight: 900;
     color: #333333;
+}
 
+.facilities-title,
+.services-title,
+.location-title {
     /* content box style */
     padding: 0 10px;
     padding-bottom: 10px;
+    border-bottom: 1px solid #AE9D79;
+
+}
+
+.rooms-title,
+.gallery-title,
+.review-title {
+    /* content box style */
+    position: relative;
+}
+
+.rooms-title::after,
+.gallery-title::after,
+.review-title::after {
+    /* content box style */
+    content: "";
+    position: absolute;
+    /* width: 125px; */
+    padding: 0 60px;
+    padding-bottom: 40px;
     border-bottom: 1px solid #AE9D79;
 }
 
@@ -895,6 +924,7 @@ body {
     /* height: 139px; */
     /* box-sizing: border-box; */
     border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 22.5px;
 }
 
 
@@ -944,64 +974,79 @@ body {
 
 /* -------- services --------------------------------------- */
 
-.services .services-title {
+/* .services .services-title {
     margin: 0;
-}
+} */
 
 .services ul {
     padding-left: 0;
-    margin-top: 54px;
+    margin-top: 40.8px;
+    position: relative;
 }
 
 .services ul li {
     /* text style */
     font-family: '나눔스퀘어라운드';
     font-size: 15px;
-    font-weight: bold;
-    color: #6B6B6B;
+    font-weight: normal;
+    color: #727272;
     list-style-type: none;
-
+    
     /* content box style */
+    width: 114px;
+    height: 20px;
     background-repeat: no-repeat;
     background-position: center 0;
+
+    /* layout */
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
+.services ul li:nth-child(2n+1) {
+    /* margin-right: 60px; */
+
+}
+
+    .services ul li:nth-child(2n+1)::after {
+        content: "";
+        height: 25px;
+        position: absolute;
+        left: 50%;
+        margin-top: -35px;
+        border-right: 1px solid #DEDEDE;
+    }
+
     .services ul li:first-child {
-        width: 69px;
-        height: 63px;
-        padding-top: 50px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33.305' height='23.313' viewBox='0 0 33.305 23.313'%3E%3Cg id='Icon_awesome-wifi' data-name='Icon awesome-wifi' transform='translate(0)'%3E%3Cg id='Icon_awesome-wifi-2' data-name='Icon awesome-wifi' transform='translate(0)'%3E%3Cpath id='Icon_awesome-wifi-3' data-name='Icon awesome-wifi' d='M33.04,7.02a24.2,24.2,0,0,0-32.775,0,.827.827,0,0,0-.018,1.2L2.028,9.983A.845.845,0,0,0,3.194,10a19.966,19.966,0,0,1,26.917,0,.846.846,0,0,0,1.166-.02l1.782-1.768a.828.828,0,0,0-.019-1.2ZM16.652,17.277a3.33,3.33,0,1,0,3.33,3.33A3.33,3.33,0,0,0,16.652,17.277ZM27.2,12.928a15.976,15.976,0,0,0-21.093,0,.823.823,0,0,0-.03,1.2L7.868,15.9a.849.849,0,0,0,1.147.042,11.721,11.721,0,0,1,15.273,0,.849.849,0,0,0,1.147-.042l1.792-1.769A.823.823,0,0,0,27.2,12.928Z' transform='translate(0 -0.625)' fill='%236b6b6b'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");    
+        /* content box style */
+        padding-top: 55px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg id='ico_wifi' transform='translate(-74 -2425.813)'%3E%3Crect id='사각형_579' data-name='사각형 579' width='40' height='40' transform='translate(74 2425.813)' fill='none'/%3E%3Cg id='Icon_awesome-wifi' data-name='Icon awesome-wifi' transform='translate(77 2434.157)'%3E%3Cg id='Icon_awesome-wifi-2' data-name='Icon awesome-wifi' transform='translate(0)'%3E%3Cpath id='Icon_awesome-wifi-3' data-name='Icon awesome-wifi' d='M33.04,7.02a24.2,24.2,0,0,0-32.775,0,.827.827,0,0,0-.018,1.2L2.028,9.983A.845.845,0,0,0,3.194,10a19.966,19.966,0,0,1,26.917,0,.846.846,0,0,0,1.166-.02l1.782-1.768a.828.828,0,0,0-.019-1.2ZM16.652,17.277a3.33,3.33,0,1,0,3.33,3.33A3.33,3.33,0,0,0,16.652,17.277ZM27.2,12.928a15.976,15.976,0,0,0-21.093,0,.823.823,0,0,0-.03,1.2L7.868,15.9a.849.849,0,0,0,1.147.042,11.721,11.721,0,0,1,15.273,0,.849.849,0,0,0,1.147-.042l1.792-1.769A.823.823,0,0,0,27.2,12.928Z' transform='translate(0 -0.625)' fill='%23b19d74'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     }
 
     .services ul li:nth-child(2) {
-        width: 107px;
-        height: 79.95px;
-        padding-top: 62px;
-        background-image: url("data:image/svg+xml,%3Csvg id='Icon_map-laundry' data-name='Icon map-laundry' xmlns='http://www.w3.org/2000/svg' width='33.3' height='40.131' viewBox='0 0 33.3 40.131'%3E%3Cpath id='Icon_map-laundry-2' data-name='Icon map-laundry' d='M1.2,8.738V37.547c0,1.255,1.056,2.784,2.357,2.784H31.92a3,3,0,0,0,2.58-2.784V8.738ZM17.816,31.6a8.915,8.915,0,0,1-9.06-8.763,8.915,8.915,0,0,1,9.06-8.763,8.915,8.915,0,0,1,9.06,8.763A8.914,8.914,0,0,1,17.816,31.6ZM31.92.2H3.557A2.208,2.208,0,0,0,1.2,2.339V7.031H34.5V2.339A2.419,2.419,0,0,0,31.92.2ZM12.3,5.323H2.908V1.908H12.3V5.323Zm16.348-.239A1.9,1.9,0,0,1,26.72,3.216a1.93,1.93,0,0,1,3.859,0A1.9,1.9,0,0,1,28.648,5.084Z' transform='translate(-1.2 -0.2)' fill='%236b6b6b'/%3E%3C/svg%3E%0A");
+        /* content box style */
+        padding-top: 55px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg id='ico_washer' transform='translate(-261 -2425.813)'%3E%3Crect id='사각형_580' data-name='사각형 580' width='40' height='40' transform='translate(261 2425.813)' fill='none'/%3E%3Cg id='Icon_map-laundry' data-name='Icon map-laundry' transform='translate(267.957 2430.095)'%3E%3Cpath id='Icon_map-laundry-2' data-name='Icon map-laundry' d='M1.2,6.889V29.456a2.19,2.19,0,0,0,1.846,2.181H25.265a2.35,2.35,0,0,0,2.021-2.181V6.889ZM14.216,24.8a6.984,6.984,0,0,1-7.1-6.865,6.984,6.984,0,0,1,7.1-6.865,6.984,6.984,0,0,1,7.1,6.865A6.983,6.983,0,0,1,14.216,24.8ZM25.265.2H3.046A1.73,1.73,0,0,0,1.2,1.876V5.551H27.286V1.876A1.9,1.9,0,0,0,25.265.2ZM9.9,4.213H2.538V1.538H9.9V4.213ZM22.7,4.026a1.486,1.486,0,0,1-1.51-1.463,1.512,1.512,0,0,1,3.023,0A1.489,1.489,0,0,1,22.7,4.026Z' transform='translate(-1.2 -0.2)' fill='%23b19d74'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     }
-
+    
     .services ul li:nth-child(3) {
-        width: 60px;
-        height: 62.95px;
-        padding-top: 47px;
-        background-image: url("data:image/svg+xml,%3Csvg id='Icon_material-room-service' data-name='Icon material-room-service' xmlns='http://www.w3.org/2000/svg' width='33.3' height='23.31' viewBox='0 0 33.3 23.31'%3E%3Cpath id='Icon_material-room-service-2' data-name='Icon material-room-service' d='M.833,22.063h33.3v3.33H.833ZM20.547,6.729a3.435,3.435,0,0,0,.266-1.315,3.33,3.33,0,0,0-6.66,0,3.435,3.435,0,0,0,.266,1.315A15,15,0,0,0,2.5,20.4h29.97A15,15,0,0,0,20.547,6.729Z' transform='translate(-0.833 -2.083)' fill='%236b6b6b'/%3E%3C/svg%3E%0A");
+        /* content box style */
+        padding-top: 55px;
+        margin-top: 50px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg id='ico_room' transform='translate(-74 -2597)'%3E%3Crect id='사각형_581' data-name='사각형 581' width='40' height='40' transform='translate(74 2597)' fill='none'/%3E%3Cg id='Icon_material-room-service' data-name='Icon material-room-service' transform='translate(77.35 2605.345)'%3E%3Cpath id='Icon_material-room-service-2' data-name='Icon material-room-service' d='M.833,22.063h33.3v3.33H.833ZM20.547,6.729a3.435,3.435,0,0,0,.266-1.315,3.33,3.33,0,0,0-6.66,0,3.435,3.435,0,0,0,.266,1.315A15,15,0,0,0,2.5,20.4h29.97A15,15,0,0,0,20.547,6.729Z' transform='translate(-0.833 -2.083)' fill='%23b19d74'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     }
-
+    
     .services ul li:last-child {
-        width: 105px;
-        height: 62.95px;
-        padding-top: 47px;
-        background-image: url("data:image/svg+xml,%3Csvg id='Icon_awesome-swimming-pool' data-name='Icon awesome-swimming-pool' xmlns='http://www.w3.org/2000/svg' width='33.3' height='23.31' viewBox='0 0 33.3 23.31'%3E%3Cpath id='Icon_awesome-swimming-pool-2' data-name='Icon awesome-swimming-pool' d='M32.467,20.6h-.832a4.388,4.388,0,0,1-2.918-.931,2.465,2.465,0,0,0-1.653-.734h-.848a2.465,2.465,0,0,0-1.653.734,4.383,4.383,0,0,1-2.917.931,4.388,4.388,0,0,1-2.918-.931,2.465,2.465,0,0,0-1.653-.734h-.848a2.465,2.465,0,0,0-1.653.734,4.383,4.383,0,0,1-2.917.931,4.388,4.388,0,0,1-2.918-.931,2.465,2.465,0,0,0-1.653-.734H6.235a2.465,2.465,0,0,0-1.653.734,4.383,4.383,0,0,1-2.917.931H.832A.832.832,0,0,0,0,21.438V23.1a.832.832,0,0,0,.832.833h.832A7.758,7.758,0,0,0,6.66,22.278a7.755,7.755,0,0,0,4.995,1.657,7.758,7.758,0,0,0,4.995-1.657,7.755,7.755,0,0,0,5,1.657,7.758,7.758,0,0,0,4.995-1.657,7.755,7.755,0,0,0,5,1.657h.832A.832.832,0,0,0,33.3,23.1V21.438A.832.832,0,0,0,32.467,20.6ZM11.655,18.94V13.945h9.99V18.94a2.851,2.851,0,0,0,1.789-.49,4.5,4.5,0,0,1,1.541-.94V5.62a1.665,1.665,0,1,1,3.33,0v.833a.832.832,0,0,0,.833.832H30.8a.832.832,0,0,0,.833-.832V5.62a4.995,4.995,0,1,0-9.99,0v4.995h-9.99V5.62a1.665,1.665,0,0,1,3.33,0v.833a.832.832,0,0,0,.832.832h1.665a.832.832,0,0,0,.833-.832V5.62a5,5,0,0,0-9.99,0V17.509a4.506,4.506,0,0,1,1.541.94A2.846,2.846,0,0,0,11.655,18.94Z' transform='translate(0 -0.625)' fill='%236b6b6b'/%3E%3C/svg%3E%0A");
+        /* content box style */
+        padding-top: 55px;
+        margin-top: 50px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg id='ico_swim' transform='translate(-261 -2597)'%3E%3Crect id='사각형_582' data-name='사각형 582' width='40' height='40' transform='translate(261 2597)' fill='none'/%3E%3Cg id='Icon_awesome-swimming-pool' data-name='Icon awesome-swimming-pool' transform='translate(264.316 2605.321)'%3E%3Cpath id='Icon_awesome-swimming-pool-2' data-name='Icon awesome-swimming-pool' d='M32.534,20.646H31.7a4.4,4.4,0,0,1-2.924-.933,2.47,2.47,0,0,0-1.656-.735h-.85a2.47,2.47,0,0,0-1.656.735,4.392,4.392,0,0,1-2.923.933,4.4,4.4,0,0,1-2.924-.933,2.47,2.47,0,0,0-1.656-.735h-.85a2.47,2.47,0,0,0-1.656.735,4.392,4.392,0,0,1-2.923.933,4.4,4.4,0,0,1-2.924-.933A2.47,2.47,0,0,0,7.1,18.977h-.85a2.47,2.47,0,0,0-1.656.735,4.392,4.392,0,0,1-2.923.933H.834A.834.834,0,0,0,0,21.48v1.668a.834.834,0,0,0,.834.834h.834a7.774,7.774,0,0,0,5.005-1.66,7.771,7.771,0,0,0,5.005,1.66,7.774,7.774,0,0,0,5.005-1.66,7.771,7.771,0,0,0,5.005,1.66,7.774,7.774,0,0,0,5.005-1.66,7.771,7.771,0,0,0,5.005,1.66h.834a.834.834,0,0,0,.834-.834V21.48A.834.834,0,0,0,32.534,20.646ZM11.679,18.977V13.972h10.01v5.005a2.856,2.856,0,0,0,1.793-.491,4.507,4.507,0,0,1,1.544-.942V5.63a1.668,1.668,0,0,1,3.337,0v.834A.834.834,0,0,0,29.2,7.3h1.668a.834.834,0,0,0,.834-.834V5.63a5.005,5.005,0,0,0-10.01,0v5.005H11.679V5.63a1.668,1.668,0,0,1,3.337,0v.834a.834.834,0,0,0,.834.834h1.668a.834.834,0,0,0,.834-.834V5.63a5.005,5.005,0,0,0-10.01,0V17.544a4.515,4.515,0,0,1,1.544.942A2.852,2.852,0,0,0,11.679,18.977Z' transform='translate(0 -0.625)' fill='%23b19d74'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     }
 
 /* -------- rooms --------------------------------------- */
 
 .rooms-title {
-
-    /* content box style */
-    margin: 0;
-    padding-top: 30px;
-
     /* layout */
     display: flex;
     justify-content: center;
@@ -1010,8 +1055,6 @@ body {
 
 .rooms-list {
     /* content box style */
-    width: 167px;
-    height: 209px;
     background-color: rgba(0, 0, 0, 0.66);
 }
     .rooms-list>ul {
@@ -1021,24 +1064,37 @@ body {
     }
 
     .rooms-list>ul>li {
+        /* utils */
         list-style-type: none;
+
+        /* content box style */
         /* padding-top: 30px; */
+        margin-right: 9px;
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
     }
 
-    .rooms-list>ul>li:first-child {
-        padding: 0;
-    }
-
-    .rooms-list>ul>li>a {
+    .rooms-list ul li a {
         /* text style */
-        font-family: 'SimSun-ExtB', "Sitka Heading";
-        font-size: 15px;
+        font-family: '나눔명조', "Sitka Heading";
+        font-size: 20px;
+        font-weight: 900;
         color: #fff;
+
+        /* content box style */
+        position: absolute;
+        left: 7%;
+        bottom: 20px;
+        padding-right: 4px;
+        border: 1px solid transparent;
 
         /* layout */
         display: inline-block;
-        padding-right: 4px;
-        border: 1px solid transparent;
         
         /* effect */
         transition: 0.5s;
@@ -1048,27 +1104,25 @@ body {
         border-bottom: 1px solid #B19D74;
     }
 
-    .rooms .img-box img {
+    .rooms-list ul li img {
         /* layout */
+        width: 100%;
         height: 100%;
         position: absolute;
-        left: 0px;
-        top: 0px;
         object-fit: cover;
-        object-position: -95px;
-        opacity: 0;
-        /* z-index: 0; */
 
+        /* effect */
         transition: .6s;
     }
 
-    .rooms .img-box img.over {
+    .rooms img.over {
         opacity: 1;
         /* z-index: 1; */
     }
 
 /* -------- gallery --------------------------------------- */
 .gallery .gallery-title {
+    /* layout */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1076,18 +1130,21 @@ body {
 
 
 .gallery ul>li {
+    /* utils */
     list-style-type: none;
-    width: 131px;
-    height: 97px;
-    margin-left: 20px;
+
+    /* content box style */
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 9px;
     flex-shrink: 0;
 }
 
-.gallery ul>li:first-child {
-    margin-left: 18px;
-}
 
 .gallery ul>li>img {
+    /* content box style */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1098,7 +1155,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    /* margin: 0; */
 }
 
 
@@ -1282,10 +1339,10 @@ body {
 
 .footer .address span {
     /* text style */
-    font-family: 'Minion Pro';
-    font-size: 11px;
+    font-family: 'NanumSquareOTF';
+    font-size: 13px;
     font-weight: normal;
-    color: #fff;
+    color: #727272;
 }
 
 .footer .email {
