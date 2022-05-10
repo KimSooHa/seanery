@@ -1194,6 +1194,7 @@ body {
     padding-bottom: 20px;
     margin-left: 9px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
     .review-list .review-id {
@@ -1210,7 +1211,13 @@ body {
         font-size: 15px;
         font-weight: normal;
         color: #333333;
-        
+        /* overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; */
+        display: -webkit-inline-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
     }
 
 
@@ -1365,7 +1372,7 @@ body {
         .transport-route>span:nth-child(1) {
             /*  text style */
             font-size: 15px;
-            font-weight: bold;
+            font-weight: normal;
 
             /* content box style */
             display: inline-block;
@@ -1386,6 +1393,7 @@ body {
             background-image: url("data:image/svg+xml,%3Csvg id='ico_next' xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Crect id='bg' width='18' height='18' fill='none' opacity='0'/%3E%3Cpath id='패스_75' data-name='패스 75' d='M117.85,4.454l4.36-4.347a.365.365,0,0,1,.516.517l-4.1,4.089,4.1,4.089a.365.365,0,0,1-.516.517l-4.36-4.347a.365.365,0,0,1,0-.517Z' transform='translate(132.57 13.995) rotate(180)' fill='%23333'/%3E%3Cpath id='패스_11154' data-name='패스 11154' d='M13.761,9.283H2.879' transform='translate(0.293)' fill='none' stroke='%23333' stroke-linecap='round' stroke-width='0.8'/%3E%3C/svg%3E%0A");
             background-repeat: no-repeat;
             background-position: center;
+            margin-left: 5px;
         }
 
         .transport-route>span:nth-child(3) {
@@ -1398,6 +1406,7 @@ body {
             padding-left: 20px;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.977' height='16.5' viewBox='0 0 9.977 16.5'%3E%3Cpath id='Icon_material-directions-walk' data-name='Icon material-directions-walk' d='M14.756,5.32a1.535,1.535,0,1,0-1.535-1.535A1.539,1.539,0,0,0,14.756,5.32Zm-2.84,2.609L9.767,18.75h1.612l1.381-6.14,1.612,1.535v4.6h1.535V12.994L14.3,11.459l.46-2.3a5.62,5.62,0,0,0,4.221,1.919V9.541a3.775,3.775,0,0,1-3.3-1.842l-.767-1.228A1.583,1.583,0,0,0,13.6,5.7c-.23,0-.384.077-.614.077L9,7.469v3.607h1.535V8.466l1.381-.537' transform='translate(-9 -2.25)' fill='%23707070'/%3E%3C/svg%3E%0A");
             background-repeat: no-repeat;
+            margin-left: 11px;
         }
 
         .info-box .transport-btn-more {
