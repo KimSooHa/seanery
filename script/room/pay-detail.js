@@ -1,14 +1,17 @@
 window.addEventListener("load", function(){
-  var section = document.querySelector("#payDetail");
-  var reservButton = section.querySelector(".btn-reserv1");
 
-  
-  reservButton.onclick = function(e){
-      e.preventDefault();
+  const roomList = this.document.querySelectorAll(".room-list");
 
-      var dlg = new Dialog();
-      dlg.confirm("정말 예약하시겠습니까?");
+  for(let i = 0; i < roomList.length; i++) {
+    
+    const checkPrice = roomList[i].querySelector(".check-price");
 
+    checkPrice.onclick = function(e){
+        e.preventDefault();
+
+        const dlg = new Dialog();
+        dlg.confirm();
+    }
           
 
   };
@@ -16,16 +19,23 @@ window.addEventListener("load", function(){
 
 
 function clickCheck1(e) {
-  var checkBox = document.getElementsByName("view1");
+  const checkBox = document.getElementsByName("view1");
 
     checkBox.forEach((cb) => {
       cb.checked = false;
     })
     e.checked = true;
+
+    checkBox.forEach((cb) => {
+      cb.checked = false;
+    })
+    e.checked = true;
+
+
 }
 
 function clickCheck2(e) {
-  var checkBox = document.getElementsByName("view2");
+  const checkBox = document.getElementsByName("view2");
 
     checkBox.forEach((cb) => {
       cb.checked = false;

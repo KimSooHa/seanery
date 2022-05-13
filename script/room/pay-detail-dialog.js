@@ -34,7 +34,9 @@ class Dialog{
     }
 
     confirm(){
-        var html = `
+        console.log("요금보기 세부사항");
+        
+        var html = String.raw`
         <form action=""class="screen">
             <div class = "dlg">
                 <h1 class="d-none">객실별 인원수</h1>
@@ -82,10 +84,10 @@ class Dialog{
                     <div class="room-view">
                         <label class="d-none">객실2 뷰</label>
                         <label>오션 뷰</label>
-                        <input type="checkbox" name="view2" onclick="clickCheck2(this) value="1" checked>
+                        <input type="checkbox" name="view2" onclick="clickCheck2(this)" value="1" checked>
 
                         <label>빌리지 뷰</label>
-                        <input type="checkbox" name="view2" onclick="clickCheck2(this) value="2">
+                        <input type="checkbox" name="view2" onclick="clickCheck2(this)" value="2">
 
                     </div>
                 </fieldset>
@@ -150,6 +152,7 @@ class Dialog{
                 </div>
                 <div class="btn-reserv">
                     <a href=""><input type="button" value="예약하기"></a>
+                    
                 </div>
         </form>
         `;
@@ -306,7 +309,7 @@ class Dialog{
             top:0;
             background-color: rgba(0, 0, 0, 0.486);
             width:100vw;
-            height: 120vh;
+            height: 1816px;
             z-index: 100;
         
             display: flex;
@@ -615,12 +618,16 @@ class Dialog{
                     return;
                     
                     adultInput.value = adultInt + 1;
+
+                    console.log("adult 더하기");
                 } // adult 빼기 버튼
                 else if(e.target == adultMinus) {
                 if(adultInt <= 1)
                     return;
                     
                     adultInput.value = adultInt - 1;
+
+                    console.log("adult 빼기");
                 }
                 
                 // kid 더하기 버튼
@@ -630,6 +637,8 @@ class Dialog{
                 return;
                 
                 kidInput.value = kidInt + 1;
+                
+                console.log("kid 더하기");
                 }
                 // kid 빼기 버튼
                 else if(e.target == kidMinus) {
@@ -637,6 +646,8 @@ class Dialog{
                 return;
                 
                 kidInput.value = kidInt - 1;
+
+                console.log("kid 더하기");
             
                 }
         
@@ -715,6 +726,7 @@ class Dialog{
 
 
     }
+    
 
 
 
