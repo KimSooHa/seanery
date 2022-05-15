@@ -24,17 +24,21 @@
     background-position: -160px 0;
     background-size: cover;
     margin-top: 73px;
+    position: relative;
 
-    /* layout */
+    /* item layout */
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
 }
 
     .header h1{
         /* layout */
         z-index: 1;
         margin-top: 30px;
+        display: none;
     }
 
     .header .btn-header {
@@ -54,11 +58,10 @@
 
     .header .blur {
         /* content box style */
-        height: 250px;
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
         width: 100%;
-        margin-top: 73px;
         top: 0;
     }
 
@@ -72,6 +75,18 @@
     padding: 0 18px;
 }
 
+.rooms header {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.rooms header div {
+    /* layout */
+    display: none;
+
+}
+
 .rooms .room-list-box .room-list {
     /* content box style */
     /* width: 100%; */
@@ -83,7 +98,10 @@
     /* item layout */
     display: flex;
     flex-direction: column;
-    
+}
+
+.rooms .room-list-box .room-list:first-child {
+    border-top: none;
 }
 
 .rooms .room-list-box .room-list .img-box {
@@ -124,15 +142,14 @@
 /* ------- header -------------------------------------- */
 .header h1 {
     /* text style */
-    font-family: 'Montserrat';
+    font-family: '나눔명조';
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 900;
     color: #FFFFFF;
 
 }
 
 .header .btn-header span {
-
     /* text style */
     font-size: 15px;
     font-family: 'NanumSquareOTF';
@@ -171,7 +188,13 @@
 }
 
 /* ------- rooms -------------------------------------- */
-
+.rooms header div {
+    /* text style */
+    font-family: 'NanumSquareOTF';
+    font-size: 13px;
+    font-weight: normal;
+    color: #333333;
+}
 
 /* ------- room-list -------------------------------------- */
 
