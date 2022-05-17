@@ -28,16 +28,8 @@
 
 @media screen and (min-width: 700px) {
      /* ====== btn style ==================================================== */
-     .btn-select-schedule  {
-        /* width: 350px;
-        height: 50px; */
-    }
     
     .header {
-        /* content box style */
-        /* height: 225px;
-        background-size: cover;
-        background-position: 0 -45px; */
         height: 350px;
     }
 
@@ -75,20 +67,11 @@
     
     /* ------- room-list -------------------------------------- */
     
-    .rooms .room-list {
-        /* layout */
-        /* width: 350px;
-        height: 250px;
-        margin-top: 120px; */
-    }
 
     .rooms .room-list .img-box {
         height: 380px;
     }
 
-    .rooms .room-list .room-list-introduct a {
-        /* font-size: 12px; */
-    }
 }
 
 @media screen and (min-width: 800px) {
