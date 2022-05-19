@@ -1,0 +1,225 @@
+/* ===== reset======================================== */
+.admin-page-menu nav ul {
+    /* layout */
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== btn style ==================================================== */
+.img-btn-go-back {
+    /* layout */
+    margin-left: 30px;
+}
+
+.img-btn-menu {
+    /* layout */
+    margin-right: 21px;
+}
+
+/* ====== outer block ================================================== */
+.header {
+    /* layout */
+    box-sizing: border-box;
+    width: 100%;
+    height: 194px;
+    background: url("/images/ocean-wave.jpg")
+    no-repeat center / cover;
+    padding-top: 73px;
+    border-radius: 0 0 0 80px;
+    position: relative;
+
+    /* items layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    opacity: 0.15;
+    content: "";
+    top: 0;
+    /* z-index: -1; */
+}
+
+    .header div {
+        /* layout */
+        background-color: rgba(67, 106, 129, 0.5);
+        width: 100%;
+        height: 73px;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+
+        /* items layout */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .admin-page-menu {
+        /* layout */
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    .admin-page-menu .room-reservation h1 {
+        /* layout */
+        height: 238px;
+        padding: 0 0 13px 57px;
+        display: flex;
+        align-items: flex-end;
+        box-sizing: border-box;
+    }
+    
+    .admin-page-menu .hotel-manage h1, .other-lists h1 {
+        /* layout */
+        height: 44px;
+        display: flex;
+        align-items: center;
+        padding-left: 57px;
+    }
+
+    .admin-page-menu nav ul li {
+        /* layout */
+        height: 48px;
+        padding-left: 40px;
+    }
+    
+    .admin-page-menu nav ul li a {
+        /* layout */
+        width: 100%;
+        height: 100%;
+
+        /* items layout */
+        display: flex;
+        align-items: center;
+    }
+    
+    
+/* ======= content block ========================================= */
+.header h1 {
+    /* text style */
+    font-size: 19px;
+
+    /* layout */
+    z-index: 1;
+}
+
+
+.admin-page-menu nav h1 {
+    /* text */
+    font-family: '나눔스퀘어라운드';
+    font-size: 17px;
+    font-weight: bold;
+    color: #436A81;
+    
+    /* layout */
+    background-color: #E6EEF2;
+}
+
+.admin-page-menu nav ul li {
+    /* layout */
+    border-bottom: 1px solid #A9A9A9;
+}
+
+.admin-page-menu nav ul li a {
+    /* text style */
+    font-family: 'Minion Pro';
+    font-size: 15px;
+    font-weight: normal;
+    color: #707070;
+}
+
+.admin-page-menu nav ul li a span {
+    /* layout */
+    display: flex;
+    height: 24px;
+    align-items: center;
+}
+
+.admin-page-menu nav ul li a span:nth-child(2), span:nth-child(3) {
+    /* text style */
+    font-family: '나눔스퀘어라운드';
+    font-size: 15px;
+    font-weight: bold;
+    color: #6B6B6B;
+}
+
+.admin-page-menu nav ul li a span:nth-child(2) {
+    /* text style */
+    color: #977E4B;
+}
+
+/* -------room-reservation ------------------------------- */
+
+.room-reservation ul li a span:first-child {
+    /* layout */
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-right: auto;
+}
+
+
+.room-reservation ul .reserv-confirm {
+    /* layout */
+    border: none;
+}
+
+.room-reservation ul li a span:nth-child(3) {
+    /* layout */
+    margin-right: 28px;
+}
+
+/* -------hotel-manage ------------------------------- */
+.hotel-manage ul li a {
+    /* layout */
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.hotel-manage ul li:last-child {
+    /* layout */
+    border: none;
+}
+
+
+
+/* -------other-lists ------------------------------- */
+
+.other-lists ul li a span:first-child {
+    /* layout */
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-right: auto;
+}
+
+.other-lists ul li a span:last-child  {
+    /* layout */
+    margin-right: 28px;
+}
+
+
+.other-lists ul li:nth-child(1) a {
+    /* layout */
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.other-lists ul li:nth-child(2) a {
+    /* layout */
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    
+}
