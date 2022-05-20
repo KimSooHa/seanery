@@ -1,3 +1,4 @@
+/* 저작자: 김수하 */
 /* ===== reset======================================== */
 .admin-page-menu nav ul {
     /* layout */
@@ -17,6 +18,10 @@
 }
 
 /* ====== outer block ================================================== */
+body {
+    background-color: #E6EEF2;
+    }
+
 .header {
     /* layout */
     box-sizing: border-box;
@@ -41,6 +46,7 @@
     position: absolute;
     background-color: white;
     opacity: 0.15;
+    border-radius: 0 0 0 80px;
     content: "";
     top: 0;
     /* z-index: -1; */
@@ -62,16 +68,24 @@
     }
 
     .admin-page-menu {
+        /* content box style */
+        /* background-color: #DEDEDE; */
         /* layout */
         z-index: -1;
-        position: absolute;
-        top: 0;
         width: 100%;
+        
+
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .admin-page-menu nav h1 {
+        height: 44px;
     }
     
     .admin-page-menu .room-reservation h1 {
         /* layout */
-        height: 238px;
         padding: 0 0 13px 57px;
         display: flex;
         align-items: flex-end;
@@ -80,7 +94,6 @@
     
     .admin-page-menu .hotel-manage h1, .other-lists h1 {
         /* layout */
-        height: 44px;
         display: flex;
         align-items: center;
         padding-left: 57px;
@@ -89,7 +102,9 @@
     .admin-page-menu nav ul li {
         /* layout */
         height: 48px;
-        padding-left: 40px;
+        /* width: 100%; */
+        /* padding-left: 40px; */
+        background-color: #FFFFFF;
     }
     
     .admin-page-menu nav ul li a {
@@ -101,7 +116,18 @@
         display: flex;
         align-items: center;
     }
+
+    .other-lists {
+        background-color: #FFFFFF;
+        padding-bottom: 50px;
+    }
     
+
+/* -------footer ------------------------------- */
+.footer {
+    margin-top: 0;
+}
+
     
 /* ======= content block ========================================= */
 .header h1 {
@@ -124,9 +150,11 @@
     background-color: #E6EEF2;
 }
 
+
 .admin-page-menu nav ul li {
     /* layout */
     border-bottom: 1px solid #A9A9A9;
+    padding: 0 28px 0 40px;
 }
 
 .admin-page-menu nav ul li a {
@@ -175,7 +203,7 @@
 
 .room-reservation ul li a span:nth-child(3) {
     /* layout */
-    margin-right: 28px;
+    
 }
 
 /* -------hotel-manage ------------------------------- */
@@ -203,11 +231,6 @@
     margin-right: auto;
 }
 
-.other-lists ul li a span:last-child  {
-    /* layout */
-    margin-right: 28px;
-}
-
 
 .other-lists ul li:nth-child(1) a {
     /* layout */
@@ -223,3 +246,6 @@
     background-position: left center;
     
 }
+
+
+
