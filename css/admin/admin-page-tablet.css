@@ -1,5 +1,5 @@
 /* 저작자: 김수하 */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
 
     .header {
         height: 250px;
@@ -18,42 +18,47 @@
     .header {
         height: 300px;
     }
-}
 
-@media screen and (min-width: 800px) {
-    body {
-        /* background-color: #E6EEF2; */
-        /* background-color: #DEDEDE; */
-        /* background-color: #B6BFC5; */
-        /* background-color: transparent; */
-        background-color: #cad5db;
-
-        /* height: 100vw; */
-
-    }
-
-    body>* {
-        width: 800px;
-    }
-
-    .header {
-        height: 300px;
-    }
-
-    .admin-page-menu nav h1 {
-        /* width: 100vw; */
-        /* background-color: #DEDEDE; */
-    }
-
-    .admin-page-menu nav {
-        align-self: center;
-        width: 800px;
-        /* width: 100%; */
-
+    .header h1 {
+        font-size: 21px;
     }
 
     .admin-page-menu nav ul li {
-        /* height: 55px; */
+        height: 60px;
+    }
+
+    .admin-page-menu nav ul li a {
+        font-size: 18px;
+    }
+
+    .admin-page-menu nav ul li a span {
+        font-size: 18px;
+    }
+
+     .admin-page-menu nav ul li a span:nth-child(2), span:nth-child(3) {
+        font-size: 18px;
+    }
+
+    .admin-page-menu nav h1 {
+        height: 55px;
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    
+
+    .header {
+        height: 350px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+
+    .admin-page-menu nav ul li {
+        height: 65px;
     }
 
     .footer .footer-box {
