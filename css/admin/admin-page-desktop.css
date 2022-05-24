@@ -1,3 +1,4 @@
+/* 저작자: 김수하 */
 @media screen and (min-width: 1000px) {
     body {
         /* background-color: #E6EEF2; */
@@ -20,18 +21,13 @@
     .header h1 {
         font-size: 25px;
     }
-
-    .admin-page-menu nav h1 {
-        /* width: 100vw; */
-        /* background-color: #DEDEDE; */
-    }
-
+    
     .admin-page-menu nav {
         align-self: center;
         width: 1000px;
         /* width: 100%; */
-
     }
+    
 
     .admin-page-menu nav ul li {
         height: 65px;
