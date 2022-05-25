@@ -1,0 +1,144 @@
+/* 저작자: 김수하 */
+@media screen and (min-width: 550px) {
+
+    .header h1 {
+         /* content box style */
+        padding: 18px 0 22px 47px;
+    }
+
+    .reserv-detail>h1 {
+         /* content box style */
+        padding: 15px 0 15px 47px;
+    }
+
+    .reserv-info>h1, .room-info h1, .customer-info h1 {
+         /* content box style */
+        padding: 15px 0 15px 49px;
+    }
+
+    section ul li span {
+         /* content box style */
+        padding: 20px 0;
+    }
+
+    .reserv-detail form .btn-box {
+         /* content box style */
+        padding: 20px 0;
+    }
+
+}
+
+@media screen and (min-width: 650px) {
+    .header h1 {
+        /* text style */
+        font-size: 21px;
+    }
+    
+    .reserv-detail>h1 {
+        /* text style */
+        font-size: 19px;
+    }
+    
+    .reserv-info>h1, .room-info h1, .customer-info h1 {
+        /* text style */
+        font-size: 17px;
+    }
+    
+    section ul li span {
+        /* text style */
+        font-size: 15px;
+    }
+
+    section ul li span:first-child {
+        /* content box style */
+        width: 120px;
+    }
+    
+    section ul li span:nth-child(2) {
+        /* content box style */
+        margin-left: 30px;
+    }
+    
+    .reserv-detail .reserv-info ul li:last-child {
+        /* item layout */
+        grid-template-columns: 120px auto;
+    }
+
+    .reserv-detail .reserv-info ul li:last-child span:nth-child(2),
+    .reserv-detail .reserv-info ul li:last-child span:nth-child(3),
+    .reserv-detail .reserv-info ul li:last-child span:nth-child(4) {
+        /* content box style */
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .header h1 {
+        /* text style */
+        font-size: 24px;
+        
+        /* content box style */
+        padding: 20px 0 24px 55px;
+    }
+    
+    .reserv-detail>h1 {
+        /* text style */
+        font-size: 19px;
+        
+        /* content box style */
+        padding: 17px 0 17px 55px;
+        
+    }
+    
+    .reserv-info>h1, .room-info h1, .customer-info h1 {
+        /* text style */
+        font-size: 17px;
+        
+        /* content box style */
+        padding: 17px 0 17px 55px;
+    }
+    
+    section ul li span {
+        /* text style */
+        font-size: 17px;
+    }
+
+    section ul li span:first-child {
+        /* content box style */
+        width: 130px;
+    }
+    
+    section ul li span:nth-child(2) {
+        /* content box style */
+        margin-left: 35px;
+    }
+
+    .reserv-detail .reserv-info ul li:last-child {
+        /* item layout */
+        grid-template-columns: 130px auto;
+        grid-template-rows: repeat(3, 40px);
+    }
+    
+    .reserv-detail .reserv-info ul li:last-child span:nth-child(2),
+    .reserv-detail .reserv-info ul li:last-child span:nth-child(3),
+    .reserv-detail .reserv-info ul li:last-child span:nth-child(4) {
+        /* content box style */
+        margin-left: 35px;
+    }
+    
+    .btn-admin-edit {
+        /* text style */
+        font-size: 15px;
+        
+        /* content box style */
+        width: 85px;
+        height: 30px;
+    }
+    
+    .footer .footer-box {
+        /* content box style */
+        width: 800px;
+        margin-left: 70px;
+    }
+}

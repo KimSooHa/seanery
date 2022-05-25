@@ -1,0 +1,25 @@
+/* 저작자: 김수하 */
+@media screen and (min-width: 1000px) {
+       
+    .header h1 {
+         /* content box style */
+         width: 1000px;
+         align-self: center;
+         box-sizing: border-box;
+        }
+        
+        .reserv-detail {
+        /* item layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* width: 1000px; */
+    }
+    
+    .reserv-detail>* {
+        /* content box style */
+        box-sizing: border-box;
+        width: 1000px;
+    }
+
+}
