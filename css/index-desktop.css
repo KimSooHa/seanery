@@ -1,18 +1,23 @@
 /* 저작자: 김수하 */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1080px) {
    
 /* ====== btn style ==================================================== */
     .btn-search {
         /* text style */
-        font-size: 25px;
+        font-size: 20px;
 
         /* content box style */
-        height: 50px;
+        width: 25%;
+        height: 53px;
+        padding: 0 41px;
     }
 
 /* ======= layout ============================================ */
-    /* 각 방들의 너비를 1000px로 한정하시오. */
+    /* 각 방들의 너비를 1080px로 한정 */
     body {
+        /* content box style */
+        background-color: #FFFFFF;
+
         /* item layout */
         display: flex;
         flex-direction: column;
@@ -21,34 +26,85 @@
 
     body>* {
         /* layout */
-        width: 1000px;
+        width: 1080px;
     }
     
     .header {
         /* layout */
-        width: 1000px;
+        height: 90px;
+    }
+
+    .header-title {
+        /* content box style */
+        width: 100%;
+        background-position: center;
+        background-size: 198px 90px;
     }
     
     .header-bottom-bg-box {
+        /* content box style */
+        width: 100%;
+        height: 800px;
+
         /* layout */
-        height: 550px;
+        display: flex;
+        justify-content: center;
     }
     
-    .header-bottom {
+    .header-bottom-bg-box section {
         /* layout */
-        height: 60px;
+        width: 1080px;
+        /* height: 60px; */
+    }
+    
+    .header-bottom-bg-box section .today {
+        /* text style */
+        font-size: 60px;
+        bottom: 180px;
+    }
+
+    .header-bottom-bg-box section .temperature {
+        /* text style */
+        font-size: 36px;  
+    }
+
+    .header-bottom-bg-box section .weather {
+        /* content box style */
+        bottom: 100px;
+    }
+
+    .header-bottom-bg-box section .img-weather {
+        /* content box style */
+        width: 36px;
+        height: 36px;
+        background-size: 36px 36px;
+    }
+
+    .header-bottom-bg-box section .book-a-room {
+        bottom: 112px;
+        background-size: 8px;
+        padding-right: 20px;
+    }
+    
+    .header-bottom-bg-box section .book-a-room a {
+        /* text style */
+        font-size: 26px;
     }
 
     /* -------- simple-search --------------------------------------- */
     .simple-search {
-        /* layout */
-        height: 400px;
-        margin-top: 60px;
+        /* content box style */
+        height: 117px;
+        width: 1080px;
+        top: -50px;
     }
-
+    
     .simple-search form {
         /* layout */
-        width: 70%;
+        padding: 32px 35px 32px 35px;
+        margin: 0;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
 
@@ -60,18 +116,59 @@
     /* -------- introduce --------------------------------------- */
     .introduce {
         /* layout */
-        height: 400px;
+        border-bottom: none;
+        padding: 0;
+
+    }
+    
+    .introduce div {
+        /* content box style */
+        width: 1080px;
+        height: 496px;
+        order: 1;
+        margin-top: 60px;
 
         /* item layout */
-        grid-template-columns: 200px 300px;
-        column-gap: 50px;
-        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(1fr);
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+
+    .introduce div img:nth-child(1) {
+        grid-area: 1/1/3/2;
+    }
+    
+    .introduce div img:nth-child(2) {
+        display: block;
+        grid-area: 1/2/2/3;
+
+    }
+    
+    .introduce div img:nth-child(3) {
+        display: block;
+        grid-area: 2/2/3/3;
+    }
+
+    .introduce p {
+        margin-top: 35px;
     }
 
     /* -------- facilities --------------------------------------- */
+    
+    .facilities {
+        padding-top: 150px;
+    }
+
+    .facilities-box {
+        width: 100%;
+        display: flex;
+        margin-top: 46px;
+    }
+    
     .facilities-list {
-        grid-template-rows: 50px 120px;
-        
+        border-bottom: none;
     }
    
 
@@ -125,10 +222,23 @@
 /* ====== content block ============================================== */
 
     /* -------- simple-search --------------------------------------- */
+    .simple-search form .select-date {
+        /* content box style */
+        padding-right: 35px;
+        margin-right: 40px;
+        border-bottom: none;
+        border-right: 1px solid #F0F0F0;
+    }
+
+    .simple-search form .select-num {
+        margin-right: 40px;
+    }
+
+    
     .simple-search form .select-date div {
         /* layout */
-        width: 300px;
-        height: 150px;
+        /* width: 300px; */
+        /* height: 150px; */
     }
 
     .select-date div input {
@@ -138,29 +248,34 @@
 
     .simple-search form .select-num div {
         /* layout */
-        height: 50px;
+        /* height: 50px; */
     } 
+
+    .simple-search form .select-date .check-out input {
+        margin-left: 50px;
+        background-position: left 20px center;
+    }
+
     
     /* -------- introduce --------------------------------------- */
     .introduce .introduce-title {
         /* text style */
-        font-size: 23px;
+        font-size: 40px;
     }
     
     .introduce div {
         /* layout */
-        height: 170px;
     }
     
     .introduce img {
         /* layout */
-        width: 200px;
-        height: 160px;
+        width: 100%;
+        height: 100%;
     }
 
     .introduce p {
         /* text style */
-        font-size: 16px;
+        font-size: 20px;
     }
 
     /* -------- facilities --------------------------------------- */
@@ -168,17 +283,21 @@
 
     .facilities-list {
         /* content box style */
-        width: 600px;
-        height: 250px;
-        padding: 40px;
+        /* width: 600px;
+        height: 250px; */
+        padding-right: 31.5px;
+    }
+
+    .facilities-list:last-child {
+        padding-right: 0;
     }
 
     .facilities-list h1 {
-        font-size: 25px;
+        /* font-size: 18px; */
     }
     
     .facilities-list p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     /* -------- gallery --------------------------------------- */
@@ -197,6 +316,22 @@
     .gallery-title,
     .review-title,
     .location-title {
-        font-size: 30px;
+        font-size: 40px;
+    }
+
+    /* ------- footer -------------------------------------- */
+
+
+    .footer {
+        /* content box style */
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 180px;
+    }
+    
+    .footer .footer-box {
+    /* content box style */
+        width: 1080px;
+
     }
 }

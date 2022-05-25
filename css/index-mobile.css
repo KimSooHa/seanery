@@ -117,7 +117,6 @@ body {
     }
 
     .header-bottom-bg-box section .today {
-        position: absolute;
         height: 34px;
         left: 18px;
         bottom: 87px;
@@ -165,7 +164,7 @@ body {
         margin-top: 3px;
     } */
 
-    .header-bottom-bg-box .temperature {
+    .header-bottom-bg-box section .temperature {
         /* layout */
         /* margin-left: 4px;
         margin-top: 15px;
@@ -190,6 +189,7 @@ body {
     /* content box style */
     /* width: 100%; */
     height: 252px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
     
     /* layout */
     position: relative;
@@ -312,29 +312,20 @@ body {
 
 .introduce {
     /* content box style */
-    height: 485px;
+    /* height: 485px; */
     background-color: #FFFFFF;
-    padding: 0 18px;
-    padding-top: 30px;
+    padding: 30px 18px 40px 18px;
     box-sizing: border-box;
     border-bottom: 1px solid #F0F0F0;
-    
-    /* layout */
-    /* display: grid;
-    grid-template-columns: 174px 188px;
-    grid-template-rows: 30px 87px;
-    column-gap: 20px;
-    row-gap: 10px; */
+
+    /* item layout */
     display: flex;
     flex-direction: column;
     /* align-content: center; */
 }
 
 
-
     .introduce p {
-        /* grid-column: 2/3;
-        grid-row: 2/3; */
         margin-top: 16px;
         margin-bottom: 0;
     }
@@ -635,13 +626,13 @@ body {
         display: inline-block;
     }
 
-    .header-bottom-bg-box .today {
+    .header-bottom-bg-box section .today {
         font-family: '나눔명조', "Sika Heading";
         font-size: 30px;
         font-weight: bold;
     }
     
-    .header-bottom-bg-box .img-weather {
+    .header-bottom-bg-box section .img-weather {
         /* text style */
         text-indent: -999px;
         
@@ -656,7 +647,7 @@ body {
         /* background-position: bottom center; */
     }
     
-    .header-bottom-bg-box .temperature {
+    .header-bottom-bg-box section .temperature {
         /* text style */
         /* font-family: 'Minion Pro', "Sika Heading"; */
         font-family: 'Noto Sans CJK KR';
@@ -843,20 +834,21 @@ body {
 
     .introduce div {
         /* content box style */
-        position: relative;
-        left: 0;
-        top: 0;
         width: 100%;
         height: 240px;
         order: -1;
     }
 
-    .introduce img {
+    .introduce div img {
         /* content box style */
-        position: absolute;
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .introduce div img:nth-child(2),
+    .introduce div img:nth-child(3) {
+        display: none;
     }
 
 

@@ -10,7 +10,7 @@
     
     /* -------- facilities --------------------------------------- */
     .facilities {
-        height: 800px;
+        /* height: 800px; */
     }
 
     /* -------- rooms --------------------------------------- */
@@ -28,7 +28,7 @@
     
     /* -------- facilities --------------------------------------- */
     .facilities {
-        height: 1000px;
+        /* height: 1000px; */
     }
     
 
@@ -65,12 +65,12 @@
 
     /* -------- facilities --------------------------------------- */
     .facilities {
-        height: 1500px;
+        /* height: 1500px; */
     }
     
     .facilities-list {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50px 80px;
+        /* grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 80px; */
         
     }
 
@@ -127,17 +127,17 @@
 
     .facilities-list {
         /* content box style */
-        width: 500px;
+        /* width: 500px;
         height: 200px;
-        padding: 40px;
+        padding: 40px; */
     }
 
     .facilities-list h1 {
-        font-size: 24px;
+        /* font-size: 24px; */
     }
     
     .facilities-list p {
-        font-size: 12px;
+        /* font-size: 12px; */
     }
 
 
