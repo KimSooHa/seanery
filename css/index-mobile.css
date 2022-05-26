@@ -374,14 +374,15 @@ body {
 }
 
 .services ul {
-    /* layout */
+    /* content box style */
     width: 280px;
+    margin: 0 15px;
+    margin-top: 40.8px;
+    
+   /* item layout */
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 15px;
     flex-shrink: 0;
 }
 
@@ -971,7 +972,6 @@ body {
 
 .services ul {
     padding-left: 0;
-    margin-top: 40.8px;
     position: relative;
 }
 
@@ -988,6 +988,7 @@ body {
     height: 20px;
     background-repeat: no-repeat;
     background-position: center 0;
+    padding-top: 55px;
 
     /* layout */
     display: flex;
@@ -1011,26 +1012,22 @@ body {
 
     .services ul li:first-child {
         /* content box style */
-        padding-top: 55px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg id='ico_wifi' transform='translate(-74 -2425.813)'%3E%3Crect id='사각형_579' data-name='사각형 579' width='40' height='40' transform='translate(74 2425.813)' fill='none'/%3E%3Cg id='Icon_awesome-wifi' data-name='Icon awesome-wifi' transform='translate(77 2434.157)'%3E%3Cg id='Icon_awesome-wifi-2' data-name='Icon awesome-wifi' transform='translate(0)'%3E%3Cpath id='Icon_awesome-wifi-3' data-name='Icon awesome-wifi' d='M33.04,7.02a24.2,24.2,0,0,0-32.775,0,.827.827,0,0,0-.018,1.2L2.028,9.983A.845.845,0,0,0,3.194,10a19.966,19.966,0,0,1,26.917,0,.846.846,0,0,0,1.166-.02l1.782-1.768a.828.828,0,0,0-.019-1.2ZM16.652,17.277a3.33,3.33,0,1,0,3.33,3.33A3.33,3.33,0,0,0,16.652,17.277ZM27.2,12.928a15.976,15.976,0,0,0-21.093,0,.823.823,0,0,0-.03,1.2L7.868,15.9a.849.849,0,0,0,1.147.042,11.721,11.721,0,0,1,15.273,0,.849.849,0,0,0,1.147-.042l1.792-1.769A.823.823,0,0,0,27.2,12.928Z' transform='translate(0 -0.625)' fill='%23b19d74'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     }
 
     .services ul li:nth-child(2) {
         /* content box style */
-        padding-top: 55px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg id='ico_washer' transform='translate(-261 -2425.813)'%3E%3Crect id='사각형_580' data-name='사각형 580' width='40' height='40' transform='translate(261 2425.813)' fill='none'/%3E%3Cg id='Icon_map-laundry' data-name='Icon map-laundry' transform='translate(267.957 2430.095)'%3E%3Cpath id='Icon_map-laundry-2' data-name='Icon map-laundry' d='M1.2,6.889V29.456a2.19,2.19,0,0,0,1.846,2.181H25.265a2.35,2.35,0,0,0,2.021-2.181V6.889ZM14.216,24.8a6.984,6.984,0,0,1-7.1-6.865,6.984,6.984,0,0,1,7.1-6.865,6.984,6.984,0,0,1,7.1,6.865A6.983,6.983,0,0,1,14.216,24.8ZM25.265.2H3.046A1.73,1.73,0,0,0,1.2,1.876V5.551H27.286V1.876A1.9,1.9,0,0,0,25.265.2ZM9.9,4.213H2.538V1.538H9.9V4.213ZM22.7,4.026a1.486,1.486,0,0,1-1.51-1.463,1.512,1.512,0,0,1,3.023,0A1.489,1.489,0,0,1,22.7,4.026Z' transform='translate(-1.2 -0.2)' fill='%23b19d74'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     }
     
     .services ul li:nth-child(3) {
         /* content box style */
-        padding-top: 55px;
         margin-top: 50px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg id='ico_room' transform='translate(-74 -2597)'%3E%3Crect id='사각형_581' data-name='사각형 581' width='40' height='40' transform='translate(74 2597)' fill='none'/%3E%3Cg id='Icon_material-room-service' data-name='Icon material-room-service' transform='translate(77.35 2605.345)'%3E%3Cpath id='Icon_material-room-service-2' data-name='Icon material-room-service' d='M.833,22.063h33.3v3.33H.833ZM20.547,6.729a3.435,3.435,0,0,0,.266-1.315,3.33,3.33,0,0,0-6.66,0,3.435,3.435,0,0,0,.266,1.315A15,15,0,0,0,2.5,20.4h29.97A15,15,0,0,0,20.547,6.729Z' transform='translate(-0.833 -2.083)' fill='%23b19d74'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     }
     
     .services ul li:last-child {
         /* content box style */
-        padding-top: 55px;
         margin-top: 50px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg id='ico_swim' transform='translate(-261 -2597)'%3E%3Crect id='사각형_582' data-name='사각형 582' width='40' height='40' transform='translate(261 2597)' fill='none'/%3E%3Cg id='Icon_awesome-swimming-pool' data-name='Icon awesome-swimming-pool' transform='translate(264.316 2605.321)'%3E%3Cpath id='Icon_awesome-swimming-pool-2' data-name='Icon awesome-swimming-pool' d='M32.534,20.646H31.7a4.4,4.4,0,0,1-2.924-.933,2.47,2.47,0,0,0-1.656-.735h-.85a2.47,2.47,0,0,0-1.656.735,4.392,4.392,0,0,1-2.923.933,4.4,4.4,0,0,1-2.924-.933,2.47,2.47,0,0,0-1.656-.735h-.85a2.47,2.47,0,0,0-1.656.735,4.392,4.392,0,0,1-2.923.933,4.4,4.4,0,0,1-2.924-.933A2.47,2.47,0,0,0,7.1,18.977h-.85a2.47,2.47,0,0,0-1.656.735,4.392,4.392,0,0,1-2.923.933H.834A.834.834,0,0,0,0,21.48v1.668a.834.834,0,0,0,.834.834h.834a7.774,7.774,0,0,0,5.005-1.66,7.771,7.771,0,0,0,5.005,1.66,7.774,7.774,0,0,0,5.005-1.66,7.771,7.771,0,0,0,5.005,1.66,7.774,7.774,0,0,0,5.005-1.66,7.771,7.771,0,0,0,5.005,1.66h.834a.834.834,0,0,0,.834-.834V21.48A.834.834,0,0,0,32.534,20.646ZM11.679,18.977V13.972h10.01v5.005a2.856,2.856,0,0,0,1.793-.491,4.507,4.507,0,0,1,1.544-.942V5.63a1.668,1.668,0,0,1,3.337,0v.834A.834.834,0,0,0,29.2,7.3h1.668a.834.834,0,0,0,.834-.834V5.63a5.005,5.005,0,0,0-10.01,0v5.005H11.679V5.63a1.668,1.668,0,0,1,3.337,0v.834a.834.834,0,0,0,.834.834h1.668a.834.834,0,0,0,.834-.834V5.63a5.005,5.005,0,0,0-10.01,0V17.544a4.515,4.515,0,0,1,1.544.942A2.852,2.852,0,0,0,11.679,18.977Z' transform='translate(0 -0.625)' fill='%23b19d74'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     }
@@ -1044,10 +1041,6 @@ body {
     align-items: center;
 }
 
-.rooms-list {
-    /* content box style */
-    background-color: rgba(0, 0, 0, 0.66);
-}
     .rooms-list>ul {
         /* utils */
         padding: 0;

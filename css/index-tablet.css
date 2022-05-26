@@ -15,7 +15,7 @@
 
     /* -------- rooms --------------------------------------- */
     .rooms {
-        height: 400px;
+        /* height: 400px; */
     }
 }
 
@@ -34,23 +34,23 @@
 
     /* -------- rooms --------------------------------------- */
         .rooms {
-            height: 500px;
+            /* height: 500px; */
         }
     
         .rooms .img-box img {
-            object-position: center;
+            /* object-position: center; */
         }
 
 
 
     /* -------- review --------------------------------------- */
         .review {
-            height: 500px;
+            /* height: 500px; */
         }
 
         .review .review-full-list {
-            height: 100%;
-            margin-top: 0;
+            /* height: 100%; */
+            /* margin-top: 0; */
         }
 
 }
@@ -58,7 +58,7 @@
 @media screen and (min-width: 700px) {
     
     .header-bottom-bg-box {
-        height: 450px;
+        /* height: 450px; */
     }
 
 
@@ -78,12 +78,12 @@
     
     /* -------- rooms --------------------------------------- */
     .rooms {
-        height: 700px;
+        /* height: 700px; */
     }
     
     .rooms-list {
-        width: 250px;
-        height: 300px;
+        /* width: 250px; */
+        /* height: 300px; */
     }
     
     
@@ -92,26 +92,27 @@
 
     .gallery {
         /* layout */
-        height: 250px;
+        /* height: 250px; */
     }
 
     .gallery ul {
         /* layout */
-        margin-top: 80px;
-        position: static;   /* position 초기화 */
+        /* margin-top: 80px; */
+        /* position 초기화 */
+        /* position: static;    */
 
         /* item layout */
-        justify-content: center;
+        /* justify-content: center; */
     }
     
     .gallery>ul>li {
-        width: 160px;
+        /* width: 160px;
         height: auto;
-        margin-left: 20px;
+        margin-left: 20px; */
     }
 
     .gallery>ul>li:first-child {
-        margin-left: 0px;
+        /* margin-left: 0px; */
     }
 
     /* -------- review --------------------------------------- */
@@ -144,11 +145,11 @@
     /* -------- rooms --------------------------------------- */
     
     .rooms-list>ul>li>a {
-        font-size: 17px;
+        /* font-size: 17px; */
     }
     
     .rooms .btn-more {
-        font-size: 15px;
+        /* font-size: 15px; */
     }
     
     /* -------- review --------------------------------------- */
@@ -157,4 +158,43 @@
         font-size: 15px;
     }
 
+}
+
+@media screen and (min-width: 950px) {
+
+     /* -------- rooms --------------------------------------- */
+     .rooms {
+        /* layout */
+        /* height: 750px; */
+        /* padding: 0; */
+        padding-top: 151px;
+
+        
+        /* utils */
+        border-top: none;
+    }
+
+    .rooms .rooms-list {
+        margin-top: 40px;
+    }
+
+    .rooms-list>ul>li {
+        margin-right: 10px;
+        width: 25%;
+        box-sizing: border-box;
+        flex-shrink: 1;
+    }
+
+    .rooms .more {
+        /* content box style */
+        margin-top: 60px;
+
+        /* item layout */
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-more {
+        width: 30%;
+    }
 }

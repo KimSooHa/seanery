@@ -174,15 +174,70 @@
 
     /* -------- services --------------------------------------- */
     .services {
-        padding-top: 120px;
+        padding-top: 140px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .services ul {
+        /* content box style */
+        width: 1080px;
+        margin-top: 50.8px;
+        
+        /* item layout */
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+    .services ul li {
+        /* text style */
+       font-size: 17px;
+        
+       /* content box style */
+       width: 136px;
+       padding-top: 70px;
+    }
+
+    .services ul li:nth-child(3),
+    .services ul li:last-child {
+        margin-top: 0;
     }
 
     
     /* -------- rooms --------------------------------------- */
     .rooms {
         /* layout */
-        height: 750px;
-        margin-top: 120px;
+        /* height: 750px; */
+        /* padding: 0; */
+        padding-top: 151px;
+
+        
+        /* utils */
+        border-top: none;
+    }
+
+    .rooms .rooms-list {
+        margin-top: 40px;
+    }
+
+    .rooms-list>ul>li {
+        margin-right: 10px;
+        width: 25%;
+        box-sizing: border-box;
+        flex-shrink: 1;
+    }
+
+    .rooms .more {
+        /* content box style */
+        margin-top: 60px;
+
+        /* item layout */
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-more {
+        width: 30%;
     }
     
     /* -------- gallery --------------------------------------- */
@@ -294,6 +349,7 @@
 
     .facilities-list h1 {
         /* font-size: 18px; */
+        background-position: right top 7px;
     }
     
     .facilities-list p {
@@ -318,6 +374,13 @@
     .location-title {
         font-size: 40px;
     }
+
+    .rooms-title::after,
+    .gallery-title::after,
+    .review-title::after {
+        padding: 0 90px;
+        padding-bottom: 70px;
+    }   
 
     /* ------- footer -------------------------------------- */
 
