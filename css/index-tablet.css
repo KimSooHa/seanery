@@ -194,6 +194,36 @@
         justify-content: center;
     }
 
+    .review {
+        /* layout */
+        margin-top: 151px;
+        border-top: none;
+    }
+
+    .review .review-full-list {
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .review .review-full-list .review-list {
+        height: 200px;
+        margin-left: 31.5px;
+        flex-shrink: initial;
+    }
+
+    .review .review-full-list .review-list:first-child {
+        margin-left: 0;
+    }
+
+    .review .review-btn-more {
+        /* content box style */
+        margin-top: 60px;
+
+        /* item layout */
+        display: flex;
+        justify-content: center;
+    }
+
     .btn-more {
         width: 30%;
     }

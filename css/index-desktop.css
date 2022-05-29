@@ -1,5 +1,5 @@
 /* 저작자: 김수하 */
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1120px) {
    
 /* ====== btn style ==================================================== */
     .btn-search {
@@ -227,6 +227,10 @@
         flex-shrink: 1;
     }
 
+    .rooms-list>ul>li:last-child {
+        margin-right: 0;
+    }
+
     .rooms .more {
         /* content box style */
         margin-top: 60px;
@@ -235,21 +239,26 @@
         display: flex;
         justify-content: center;
     }
-
-    .btn-more {
-        width: 30%;
-    }
     
     /* -------- gallery --------------------------------------- */
     .gallery {
         /* layout */
-        height: 320px;
-        margin-top: 120px;
+        /* width: 1080px; */
+        margin-top: 151px;        
     }
     
     .gallery ul {
         /* layout */
-        margin-top: 100px;
+        /* width: 1080px; */
+        height: 600px;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 11px;
+    }
+
+    .gallery ul li:nth-child(1) {
+        grid-area: 1/1/4/2;
     }
 
    
@@ -257,21 +266,34 @@
     /* -------- review --------------------------------------- */
     .review {
         /* layout */
-        margin-top: 120px;
+        width: 1080px;
+        margin-top: 151px;
+        border-top: none;
     }
 
     .review .review-full-list {
+        margin-top: 40px;
         justify-content: center;
     }
 
-    .review-list {
-        width: 285px;
-        height: 185px;
+    .review .review-full-list .review-list {
+        height: 200px;
+        margin-left: 31.5px;
     }
 
-    .review-list:first-child {
+    .review .review-full-list .review-list:first-child {
         margin-left: 0;
     }
+
+    .review-list .review-id {
+        font-size: 18px;
+    }
+
+    .review .review-btn-more {
+        /* content box style */
+        margin-top: 60px;
+    }
+
 
 
 /* ====== content block ============================================== */
@@ -358,9 +380,9 @@
 
     /* -------- gallery --------------------------------------- */
     .gallery>ul>li {
-        width: 200px;
-        height: auto;
-        margin-left: 35px;
+        /* width: 200px; */
+        /* height: auto; */
+        /* margin-left: 35px; */
     }
 
 
