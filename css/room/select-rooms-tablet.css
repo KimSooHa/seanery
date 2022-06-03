@@ -1,0 +1,103 @@
+/* 저작자: 김수하 */
+
+@media screen and (min-width: 550px) {
+
+    /* ====== btn style ==================================================== */
+  
+    /* ------- header -------------------------------------- */
+    .header {
+        /* content box style */
+        background-position: 0;
+        /* background-size: cover; */
+        height: 300px;
+    }
+
+    .header .rooms-introduct {
+        margin-top: 80px;
+    }
+
+    
+    /* ------- rooms -------------------------------------- */
+
+    .reset-option {
+        margin-right: 80px;
+    }
+    .select-room .room-search-condition {
+        width: 400px;
+    }
+
+    .room-search-condition>h1 {
+        width: 400px;
+    }
+
+    .room-list {
+        width: 400px;
+        height: 500px;
+    }
+
+    .room-list .room-list-info {
+        width: 400px;
+        height: 300px;
+    }
+
+    .room-list .room-list-info img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .category {
+        width: 400px;
+    }
+    
+
+}
+
+@media screen and (min-width: 700px) {
+    /* ====== btn style ==================================================== */
+  
+    /* ------- header -------------------------------------- */
+    .header {
+        /* content box style */
+        background-position: 0;
+        /* background-size: cover; */
+        height: 350px;
+    }
+
+    .header .rooms-introduct {
+        margin-top: 100px;
+    }
+
+    .category {
+        width: 440px;
+    }
+
+    
+    /* ------- rooms -------------------------------------- */
+
+    .reset-option {
+        margin-right: 120px;
+    }
+    .select-room .room-search-condition {
+        width: 440px;
+    }
+
+    .room-search-condition>h1 {
+        width: 440px;
+    }
+
+    .room-list {
+        width: 440px;
+        height: 600px;
+    }
+
+    .room-list .room-list-info {
+        width: 440px;
+        height: 330px;
+    }
+
+    .room-list .room-list-info img {
+        width: 440px;
+        height: 330px;
+    }
+}
+

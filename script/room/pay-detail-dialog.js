@@ -37,7 +37,7 @@ class Dialog{
         console.log("요금보기 세부사항");
         
         var html = String.raw`
-        <form action=""class="screen">
+        <form action="post" class="screen" id="payDetail">
             <div class = "dlg">
                 <h1 class="d-none">객실별 인원수</h1>
 
@@ -588,7 +588,7 @@ class Dialog{
 // ------------------   + / - 버튼 숫자 증감     -----------------------------------------------------------------------------------------------------
 // 첫번째 fieldset에서 받아온다.
         this.#screen.addEventListener("click", function(e) {
-        
+
             
             if(e.target.nodeName != "SPAN")
                 return;
@@ -676,13 +676,9 @@ class Dialog{
                 });
 
 
-    // ------------------------checkbox------------------------------
-    // 두번째 fieldset에서 받아온다.
 
 
-
-
-    } //confirm 끝부분
+    } 
 
 
     // -----------------------------------------------------------------------------------------------------

@@ -4,7 +4,7 @@ window.addEventListener("load", function(){
 
   for(let i = 0; i < roomList.length; i++) {
     
-    const checkPrice = roomList[i].querySelector(".check-price");
+    const checkPrice = roomList[i].querySelector(".btn-check-price");
 
     checkPrice.onclick = function(e){
         e.preventDefault();
@@ -26,10 +26,6 @@ function clickCheck1(e) {
     })
     e.checked = true;
 
-    checkBox.forEach((cb) => {
-      cb.checked = false;
-    })
-    e.checked = true;
 
 
 }

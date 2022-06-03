@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/admin/management/room-manage-detail-edit.css" type="text/css">
+    <script src="/script/admin/management/room-manage-detail.edit.js"></script>
     <title>객실예약 - 객실상세수정 페이지</title>
 </head>
 <body>
@@ -31,10 +32,12 @@
                 <section class="room-photo">
                     <h1 class="d-none">객실 사진</h1>
                     <div>
-                        <img src="../../images/객실/superior/superior-main1.jpg">
+                        <img id="preview-image" src="../../images/객실/superior/superior-main1.jpg">
                     </div>
                     <div>
                         <div>
+                            <label for="trans-img">이미지 변경 </label>
+                            <input type="file" id="trans-img" >
                             <svg xmlns="http://www.w3.org/2000/svg" width="30.621" height="30.621" viewBox="0 0 30.621 30.621">
                                 <g id="Icon_feather-image" data-name="Icon feather-image" transform="translate(1.5 1.5)">
                                 <path id="패스_257" data-name="패스 257" d="M7.5,4.5h21a3,3,0,0,1,3,3v21a3,3,0,0,1-3,3H7.5a3,3,0,0,1-3-3V7.5a3,3,0,0,1,3-3Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
@@ -42,7 +45,6 @@
                                 <path id="패스_259" data-name="패스 259" d="M31.5,22.5,24,15,7.5,31.5" transform="translate(-4.5 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
                                 </g>
                             </svg>
-                            <span>이미지 변경</span>
                         </div>
                     </div>
                 </section>

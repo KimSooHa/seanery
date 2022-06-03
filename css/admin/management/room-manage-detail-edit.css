@@ -111,6 +111,14 @@ fieldset {
 
 }
 
+.room-photo>div>div>label{
+    color:#fff;
+}
+
+.room-photo>div>div>input[type=file]{
+    display: none;
+}
+
 .room-photo:hover>div>div{
     transform: translateY(-180px);
 }
